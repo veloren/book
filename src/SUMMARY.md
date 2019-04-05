@@ -10,6 +10,8 @@
 
 - [Project Structure](./dev/project-structure.md)
 
+- [Generating Docs](./dev/generating-docs.md)
+
 - [Contributing](./dev/contributing.md)
 
 - [Roadmap](./dev/roadmap.md)
