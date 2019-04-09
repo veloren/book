@@ -14,3 +14,5 @@ to develop the game.
 
 Veloren is currently undergoing a from-scratch rewrite. The old engine is playable and is rather
 fun to explore, although all new development work is focussed on the new engine.
+
+## [Contribute to this book](https://gitlab.com/veloren/book)
