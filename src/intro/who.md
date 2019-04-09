@@ -1,4 +1,4 @@
-# Who developers Veloren?
+# Who develops Veloren?
 
 Veloren is developed by a community of volunteers that have one unifying aim: creating a bright,
 colourful, fun world that can be explored and interacted with in unique and interesting ways.
