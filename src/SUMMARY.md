@@ -17,3 +17,5 @@
 - [Roadmap](./dev/roadmap.md)
 
 - [Troubleshooting](./dev/troubleshooting.md)
+
+*[Edit me!](https://gitlab.com/veloren/book)*
