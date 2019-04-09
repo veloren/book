@@ -4,6 +4,8 @@
 
 - [Who develops Veloren?](./intro/who.md)
 
+-[Running Veloren](./intro/running.md)
+
 # Development
 
 - [Getting Started](./dev/getting-started.md)
