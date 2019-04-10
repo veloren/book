@@ -10,13 +10,18 @@ This manual uses the [`mdbook`](https://github.com/rust-lang-nursery/mdBook) cra
 
 To view this manual, please ensure that you have a working copy of Rust installed.
 
-First, install `mdbook` with:
+First, install `mdbook` ([`detailed install steps`](https://rust-lang-nursery.github.io/mdBook/cli/index.html)) with:
 
 `cargo install mdbook`
 
 Then, serve the manual locally with:
 
 `mdbook serve`
+
+## Live version
+
+You can find the deployed version of this book under:
+https://book.veloren.net
 
 ## Editing the manual
 

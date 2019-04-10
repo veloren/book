@@ -5,7 +5,7 @@ Legend of Zelda: Breath of the Wild, Dwarf Fortress and Minecraft.
 
 ![A sunset over a desert town](../images/desert-sunset.png)
 
-Veloren is fully open-source, licensed under GPL 3. It uses original graphics, musics and other
+Veloren is fully open-source, licensed under [GPL 3](https://www.gnu.org/licenses/gpl-3.0.en.html). It uses original graphics, musics and other
 assets created by its volunteer community. Being contributor-driven, its development community
 and user community is one and the same: developers, players, artists and musicians come together
 to develop the game.
@@ -14,5 +14,3 @@ to develop the game.
 
 Veloren is currently undergoing a from-scratch rewrite. The old engine is playable and is rather
 fun to explore, although all new development work is focussed on the new engine.
-
-## [Contribute to this book](https://gitlab.com/veloren/book)

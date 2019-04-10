@@ -10,7 +10,7 @@ Below, you can find community information.
 The Veloren community (both developers and players) is most active on the Veloren Discord server.
 You can join the server using the link below:
 
-[https://discord.gg/BvQuGze](https://discord.gg/BvQuGze)
+<https://discord.gg/BvQuGze>
 
 ## Website
 
