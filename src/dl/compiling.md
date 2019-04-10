@@ -2,7 +2,7 @@
 
 Veloren can be compiled under Windows, MacOS and Linux.
 Install the programs described in [Toolchain](../contr/toolchain.md).
-The following commands needs to be executed in bash, if you run windows get familar with `git bash` ([Download here](https://git-scm.com/downloads)).
+The following commands needs to be executed in bash, if you run windows get familar with `git bash`.
 Open the git bash in the location you want to store veloren (around 100 MB needed).
 
 ## Download Source code
