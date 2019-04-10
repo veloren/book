@@ -16,5 +16,5 @@
   - [Extend this Book](./contr/extend-this-book.md)
 - [Dev Tricks](./dev/README.md)
   - [Git Workflow](./dev/workflow.md)
+  - [Troubleshooting](./dev/troubleshooting.md)
 - [Roadmap](./misc/roadmap.md)
-- [Troubleshooting](./misc/troubleshooting.md)
