@@ -31,3 +31,36 @@ For Windows, The ['Git for Windows'](https://gitforwindows.org/) suite is a sens
 # GitLab and forking Veloren
 
 By now, you should have both Rust and Git installed.
+
+The following assumes you're using bash shell (on Windows git bash) or a similar one.
+
+## Forking the project
+
+To work on Veloren, you first need to create your own fork of the codebase on gitlab. To do that, login or register on gitlab, and head to the main gitlab page of repository you want to fork (for example https://gitlab.com/veloren/book). Next click the fork button. You may be taken to a page asking to select namespace you wish to fork the project to, just choose your account. You will get redirected to the page of the forked repository
+
+## Local repository setup
+
+### For just compiling/trying it out
+
+1. Clone the repository locally: `git clone https://gitlab.com/veloren/veloren.git`
+2. Change your working directory to the cloned repository: `cd fresh`
+3. Initialize and download the submodules: `git submodule update --init --recursive`
+
+### For contributing
+
+1. Clone your fork of the repository locally: `git clone <clone url of your fork>`  
+· If you already cloned the main repository instead, then change the `origin` remote fetch address:  
+`git remote set-url origin <clone url of your fork>`
+2. Change your working directory to the cloned repository: `cd veloren`
+3. Add `upstream` remote: `git remote add upstream https://gitlab.com/veloren/veloren.git`
+
+## Compiling and running the client
+
+1. Change working directory to `$repo/voxygen` where `$repo` is the path to the repository
+2. To compile and run the client with compiler optimizations enabled: `cargo run --release`
+
+## Compiling and running the server
+
+1. Change working directory to `$repo/server-cli` where `$repo` is the path to the repository
+2. To compile and run the server with compiler optimizations enabled: `cargo run --release`  
+This will open a server listening on `0.0.0.0:59003` address. At the time of writing this section there is no way to change it without modifying the source code.
