@@ -35,3 +35,8 @@ RUST_BACKTRACE=1 cargo run --release
 ```
 
 If you are on a Windows system, you may need to use `set RUST_BACKTRACE 1` beforehand instead.
+
+## Running a local server
+
+You may wish to run a server locally. To do this, run the `server-cli` crate in a similar manner to that described above.
+You can now connect to it using Voxygen.
