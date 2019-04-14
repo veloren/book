@@ -15,7 +15,14 @@ cd veloren
 git submodule update --init --recursive
 ```
 
-All of the following commands should be executed from the root directory of the project (usually called "veloren").
+All of the following commands should be executed from the root directory of the project (usually called `veloren`).
+
+## Nightly Rust
+
+To switch to the nightly toolchain of Rust only for this repository:
+```bash
+rustup override set nightly
+```
 
 ## Run the server
 
