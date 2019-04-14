@@ -8,7 +8,7 @@ Rust can be easily installed on all major desktop operating systems. Follow this
 
 <https://www.rust-lang.org/tools/install>
 
-Because Veloren uses nightly version of Rust, please make sure you install it. You can find more details about nightly rust in [rustup repository](https://github.com/rust-lang/rustup.rs#working-with-nightly-rust). We also recommend to set up nightly only for Veloren directory, more details [here](https://github.com/rust-lang/rustup.rs#directory-overrides).
+Because Veloren uses nightly version of Rust, please make sure you install it. You can find more details about nightly rust in [rustup repository](https://github.com/rust-lang/rustup.rs#working-with-nightly-rust). We will set up nightly Rust for the Veloren directory in [Compiling](../dl/compiling.md), more details [here](https://github.com/rust-lang/rustup.rs#directory-overrides).
 
 ## Git
 
