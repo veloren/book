@@ -2,10 +2,10 @@
 
 Veloren can be compiled under Windows, MacOS and Linux.
 Install the programs described in [Toolchain](../contr/toolchain.md).
-The following commands needs to be executed in Bash. If you run Windows, get familar with `git bash`.
+The following commands needs to be executed in Bash. If you run Windows, get familiar with `git bash`.
 Open git bash in the location you want to store Veloren (around 100 MB needed).
 
-## Download Source code
+## Download source code
 ```bash
 #1 Clone the repository locally
 git clone https://gitlab.com/veloren/veloren.git
@@ -15,16 +15,16 @@ cd veloren
 git submodule update --init --recursive
 ```
 
-All of the following commands should be executed from the root directory of the project (usually called `veloren`).
+All of the following commands should be executed from the root directory of the project (usually called `veloren/`).
 
 ## Nightly Rust
 
-To switch to the nightly toolchain of Rust only for this repository:
+Veloren depends on the nightly toolchain of Rust. To switch to it for this project only:
 ```bash
 rustup override set nightly
 ```
 
-## Run the server
+## Start the server
 
 You need to start the server first, because the client needs it to connect to.
 ```bash
@@ -32,18 +32,17 @@ cargo run --release --bin veloren-server-cli
 ```
 
 This will open a server listening on `0.0.0.0:59003`. At the time of writing this section there is no way to change it without modifying the source code.
-We decided to include `RUST_LOG` into the command to give more details during runtime and `RUST_BACKTRACE` to give more details during crashes.
 
-## Run the client
+## Start the client
 
-Keep the server open and run the client in a seperate window:
+Keep the server open and start the client in a separate window:
 ```bash
 cargo run --release --bin veloren-voxygen
 ```
 
 ## Debugging
 
-You can prepend `RUST_LOG=info` to a command to give more details during runtime and `RUST_BACKTRACE=true` to give more details during crashes.
+You can prepend `RUST_LOG=info` to a command to give more details during runtime and `RUST_BACKTRACE=1` to give more details during crashes.
 
 For example, to start the server with more debug information, run this:
 ```bash
