@@ -13,4 +13,4 @@ to develop the game.
 ## What status is the project currently in?
 
 Veloren is currently undergoing a from-scratch rewrite. The old engine is playable and is rather
-fun to explore, although all new development work is focussed on the new engine.
+fun to explore, but all new development work is focussed on the new engine.
