@@ -1,4 +1,3 @@
-
 # Veloren: An Owner's Manual
 
 This manual is the primary source of documentation for Veloren, both for users and for developers.
