@@ -13,6 +13,7 @@
   - [Getting Started](./contr/getting-started.md)
   - [RFCs](./contr/rfcs.md)
   - [Generating Docs](./contr/generating-docs.md)
+  - [Development FAQ](./contr/Development-FAQ.md)
   - [Extend this Book](./contr/extend-this-book.md)
 - [Dev Tricks](./dev/README.md)
   - [Git Workflow](./dev/workflow.md)
