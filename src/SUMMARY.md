@@ -15,6 +15,7 @@
   - [Generating Docs](./contr/generating-docs.md)
   - [Development FAQ](./contr/Development-FAQ.md)
   - [Extend this Book](./contr/extend-this-book.md)
+  - [CI Runner](./contr/CI-runner.md)
 - [Dev Tricks](./dev/README.md)
   - [Git Workflow](./dev/workflow.md)
   - [Troubleshooting](./dev/troubleshooting.md)
