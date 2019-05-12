@@ -17,7 +17,7 @@ You can join the server using the link below:
 The Veloren website contains weekly blog updates, developer information and download links.
 You can find it at [www.veloren.net](https://www.veloren.net)
 
-The website also hosts a developer manual (you're probably reading it now!) at [manual.veloren.net](https://manual.veloren.net)
+The website also hosts a developer manual (you're probably reading it now!) at [book.veloren.net](https://book.veloren.net)
 
 ## Reddit
 
