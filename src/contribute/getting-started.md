@@ -25,5 +25,3 @@ Best strategy is to create a issue first and then link the MR to the issue so th
 Stay active in discord as well as GitLab to answer questions over the next days.
 
 If you contribute constantly you will get a developer role in both discord and GitLab, granting you some trust and the ability change more on your own.
-
-For code snippets and see [Git workflow](../dev/workflow.md)

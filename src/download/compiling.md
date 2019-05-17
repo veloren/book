@@ -1,7 +1,7 @@
 # Compile Veloren
 
 Veloren can be compiled under Windows, MacOS and Linux.
-Install the programs described in [Toolchain](../contr/toolchain.md).
+Install the programs described in [Toolchain](toolchain.md).
 The following commands needs to be executed in Bash. If you run Windows, get familiar with `git bash`.
 Open git bash in the location you want to store Veloren (around 100 MB needed).
 
@@ -18,6 +18,11 @@ cd veloren
 ```
 
 All of the following commands should be executed from the root directory of the project (usually called `veloren/`).
+
+Next, check if Git LFS works correctly:
+```
+git lfs status
+```
 
 ## Nightly Rust
 
