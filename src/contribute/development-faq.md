@@ -52,4 +52,4 @@ An existing engine, for us, would provide relatively few advantages despite prov
 We probably won't go that route, though i guess it's hard to say anything for sure. we see this as a volunteer project. it's more likely that any fundraising we do would go towards maintaining servers and such.
 
 ## 10) I got a question on how to compile the game?
-Everything should be described here: [Compiling](https://book.veloren.net/dl/compiling.html)
+Everything should be described here: [Compiling](/download/compiling.html)
