@@ -1,6 +1,6 @@
 # Installing tools
 
-In order to compile Veloren, you'll need to install a few things.
+This chapter describes which tools you need to install on your system to compile Veloren from source.
 
 ## Rust
 
@@ -21,4 +21,10 @@ For Windows, The ['Git for Windows'](https://gitforwindows.org/) suite is a sens
 *For Mac OS, there exists other methods. I personally have not used Mac OS, so you'll likely have a better time finding instructions just by searching for 'Install Git on Mac OS'. If someone wants to contribute appropriate instructions to this page, please do.*
 
 ### Git LFS
-You also need to make sure you have Git LFS installed. This allows us to store large files like images and audio files.
+You also need to make sure you have Git LFS installed. It's needed to store large files like images and audio files.
+Without Git Lfs you can't run the game
+
+## Bash
+All commands for compiling Veloren yourself are written for bash, if you run un windows use the `git bash` included in the git package.
+
+After you installed everything, continue with [Compiling from Source](./compiling.md)
