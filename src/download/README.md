@@ -1,7 +1,6 @@
 # Download
 
-Veloren is a cross-platform game and can run on Windows, Linux and Mac OS.
+Read this page carefully for a detailed description on how to run Veloren and to avoid common pitfalls.
 
-If you're only interested in binary builds of the game, check the website at <https://www.veloren.net>.
-
-(We currently don't provide official downloads of Veloren, you have to download the source code and compile it yourself, the rest of this chapter will explain how to do that.)
+- If you're only interested in playing Veloren, please read the pages [Download Releases](./releases.md), [Dependencies](./dependencies.md) and [Run](./run.md), you can skip the Toolchain and Compiling from Source pages.
+- If you want to contribute to Veloren you need to compile it yourself, follow the pages [Toolchain](download/toolchain.md), [Compiling from Source](./compiling.md), [Dependencies](./dependencies.md) and [Run](./run.md).
