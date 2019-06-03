@@ -25,10 +25,16 @@ All of the following commands should be executed from the root directory of the 
 You can use the following command to build the server and flag in release mode, you can omit that flag, to increase compilation speed and enable debug mode, but reduce performance of the game a bit.
 
 ```bash
-cargo build --release --bin veloren-server-cli && cargo build --release --bin veloren-voxygen
+cargo build --bin veloren-server-cli && cargo build --bin veloren-voxygen
 ```
 
 ## Troubleshooting
+
+### Optimized Release builds
+
+By default debug builds are created which compile faster but run a bit slower than optimized release builds.
+If you want to get optimized builds, add the `--release` flag when calling `cargo`.
+Compiling Release might be very slow!
 
 ### Git LFS
 
