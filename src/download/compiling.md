@@ -22,7 +22,7 @@ All of the following commands should be executed from the root directory of the 
 
 ## Compiling server and client
 
-You can use the following command to build the server and flag in release mode, you can omit that flag, to increase compilation speed and enable debug mode, but reduce performance of the game a bit.
+You can use the following command to build the server and flag in debug mode, see below on how to create a release build
 
 ```bash
 cargo build --bin veloren-server-cli && cargo build --bin veloren-voxygen
