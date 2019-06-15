@@ -1,6 +1,19 @@
 # Download
 
-Read this page carefully for a detailed description on how to run Veloren and to avoid common pitfalls.
+Read this chapter for a detailed description on how to run Veloren and to avoid common pitfalls.
 
-- If you're only interested in playing Veloren, please read the pages [Download Releases](./releases.md), [Dependencies](./dependencies.md) and [Run](./run.md), you can skip the Toolchain and Compiling from Source pages.
-- If you want to contribute to Veloren you need to compile it yourself, follow the pages [Toolchain](download/toolchain.md), [Compiling from Source](./compiling.md), [Dependencies](./dependencies.md) and [Run](./run.md).
+## Runtime dependencies
+
+These are programs needed for Veloren to run on your device. Refer to [Compile](../compile/README.md) section for build-time dependencies.
+
+**Currently there are no runtime dependencies**
+
+## Releases
+
+We provide pre-compiled versions of the game for Windows and Linux on <https://www.veloren.net/welcome>. You can run the Windows version on MacOS using [WINE](https://www.winehq.org/) or [compile a native version](./compile/README.md) yourself.
+
+Download the version for your operating system and extract it, then open the `veloren-voxygen.exe` (Windows and WINE) or `veloren-voxygen` (Linux) file.
+
+## Nightly
+
+You can download latest developement builds from our [CI pipelines](https://gitlab.com/veloren/veloren/pipelines). You can launch them in the same way as releases.
