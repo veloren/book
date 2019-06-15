@@ -1,0 +1,25 @@
+# Troubleshooting
+This section contains common issues and solutions.
+
+## Git LFS
+
+### Check status
+To check if Git LFS works correctly:
+```
+git lfs status
+```
+
+### When using Mingw64 (Windows)
+Git LFS fails download the files properly. The main issue seems to be that the askpass program is not spawned when using a normal CMD prompt, preventing Git LFS from authenticating via SSH to retrieve the temporary access token. Setting the SSH_ASKPASS, GIT_ASKPASS and DISPLAY variables seems to solve this issue:
+
+```bat
+SET "SSH_ASKPASS=C:\Program Files\Git\mingw64\libexec\git-core\git-gui--askpass"
+SET "GIT_ASKPASS=%SSH_ASKPASS%"
+SET "DISPLAY=required"
+```
+
+### Migrating from submodules
+If you used the previous submodules system, you can deactivate it with:
+```
+git submodule deinit --force --all
+```
