@@ -53,4 +53,4 @@ An existing engine, for us, would provide relatively few advantages despite prov
 We probably won't go that route, though I guess it's hard to say anything for sure. We see this as a volunteer project. It's more likely that any fundraising we do would go towards maintaining servers and such.
 
 ## 10) I got a question on how to compile the game?
-Everything should be described here: [Compiling](/download/compiling.html)
+Everything should be described in the [Compiling](./compile/README.md) section.
