@@ -42,7 +42,7 @@ git lfs install
 ```
 On **MacOs**
 ```
-git lfs install
+git-lfs install
 ```
 
 
