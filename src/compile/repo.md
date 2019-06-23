@@ -17,6 +17,19 @@ cd veloren
 
 **All commands** in this chapter from now on should be executed from there.
 
+## Download assets
+
+Assets are managed using [Git Large File Storage](https://git-lfs.github.com/).
+
+To setup LFS and download the asset files  
+```
+git lfs install
+git lfs fetch
+git lfs checkout
+```
+
+Note: Once this is run initially further asset updates should be automatically handled during a `git fetch`
+
 # Basic repo navigation
 
 ## Changing branches
