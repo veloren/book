@@ -10,6 +10,8 @@ Clone the repository
 git clone https://gitlab.com/veloren/veloren.git
 ```
 
+See [Troubleshooting](troubleshooting.md) if you cloned the repo before Git LFS was setup
+
 Change your working directory to the cloned repository  
 ```
 cd veloren
