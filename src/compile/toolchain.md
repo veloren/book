@@ -33,6 +33,11 @@ For **Windows** you can download an installer [here](https://github.com/git-lfs/
 
 On **MacOS** you can use [Homebrew](https://github.com/Homebrew/brew) via `brew install git-lfs` or [MacPorts](https://www.macports.org/) via `port install git-lfs`.
 
+On all platforms, after installation the setup needs to be completed:
+```
+git lfs install
+```
+
 # Bash
 All commands for compiling Veloren yourself are written for bash, if you run un windows use the `git bash` included in the git package.
 

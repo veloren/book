@@ -2,11 +2,20 @@
 This section contains common issues and solutions.
 
 ## Git LFS
+If LFS is not installed and setup properly the lfs pointers will not be replaced with actual assets. This produces an error when running Voxygen where it complains about the validity of whatever filetype it is trying to load.
 
 ### Check status
 To check if Git LFS works correctly:
 ```
 git lfs status
+```
+
+### When LFS was not setup before cloning the repo
+To setup LFS and download the asset files  
+```
+git lfs install
+git lfs fetch
+git lfs checkout
 ```
 
 ### When using Mingw64 (Windows)
