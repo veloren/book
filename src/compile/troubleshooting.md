@@ -11,11 +11,17 @@ git lfs status
 ```
 
 ### When LFS was not setup before cloning the repo
-To setup LFS and download the asset files  
+To setup LFS and download the asset files on **Linux** or **Windows**
 ```
 git lfs install
 git lfs fetch
 git lfs checkout
+```
+**MacOs**
+```
+git-lfs install
+git-lfs fetch
+git-lfs checkout
 ```
 
 ### When using Mingw64 (Windows)
