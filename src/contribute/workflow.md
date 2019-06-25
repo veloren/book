@@ -4,7 +4,7 @@ This chapter describes how we use git in order to contribute to Veloren.
 So assuming you have a great idea, might be to change a few lines of code, or add some images, modify some models, contribute to the music or fix a translation.
 We keep the source of our game in Git, hosted by [gitlab](https://gitlab.com/veloren/veloren.git).
 
-Please now get familiar with git (google) and compile the game once: [Download](../download/index.md)
+Please now get familiar with git (google) and compile the game once: [Download](/download/index.md)
 Then start your `bash` shell
 
 # Forking
