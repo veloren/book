@@ -56,7 +56,7 @@ git help <optional subcommand name>
 
 ## Modifying the source code
 
-If you want to modify the source code, refer to [contributing](../contribute/README.md) chapter.
+If you want to modify the source code, refer to [contributing](/contribute/index.html) chapter.
 
 To discard changes you've made to the source code
 ```
