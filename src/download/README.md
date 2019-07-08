@@ -17,3 +17,7 @@ Download the version for your operating system and extract it, then open the `ve
 ## Nightly
 
 You can download latest developement builds from our [CI pipelines](https://gitlab.com/veloren/veloren/pipelines). You can launch them in the same way as releases.
+
+Here's a short screencast showing how to do it: 
+
+![https://i.imgur.com/3h4k8Hk.gif](https://i.imgur.com/3h4k8Hk.gif)
