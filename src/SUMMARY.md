@@ -16,6 +16,7 @@
   - [Getting Started](contribute/getting-started.md)
   - [Git Workflow](contribute/workflow.md)
   - [Project Structure](contribute/project-structure.md)
+  - [Official Infrastructure](contribute/official-infrastructure.md)
   - [RFCs](contribute/rfcs.md)
   - [Generating Docs](contribute/generating-docs.md)
   - [Development FAQ](contribute/development-faq.md)
