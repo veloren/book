@@ -1,6 +1,6 @@
 # Official Infrastructure
 
-This page documents the official veloren infrastrucutre for developers and users.
+This page documents the official veloren infrastructure for developers and users.
 Everybody is free to host their own servers as they wish, when they are sponsored for the public veloren project, they are listed here.
 The following 2 tables show a quick comparision of all our hosts and the servers we run on them.
 Additional information regarding single hosts/servers can be listed below them in detail
