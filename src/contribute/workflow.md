@@ -4,8 +4,7 @@ This chapter describes how we use git in order to contribute to Veloren.
 So assuming you have a great idea, might be to change a few lines of code, or add some images, modify some models, contribute to the music or fix a translation.
 We keep the source of our game in Git, hosted by [gitlab](https://gitlab.com/veloren/veloren.git).
 
-Please now get familiar with git (google) and compile the game once: [Download](/download/index.md)
-Then start your `bash` shell
+Please now get familiar with git (google) and [compile](../compile/index.html) the game once.
 
 # Forking
 
@@ -57,5 +56,5 @@ To Squash Commit 2 and 3 into a single commit, write `squash` in front of the 3r
 
 Once your feature is ready for review create MR in GitLab out of your branch from `your-branch-name` to `master`.
 Feel free to add additional information to the description (optional).
-If you didn't not bother of Rules For Commits above, please cleanup your branch now or consider setting the "squash commits"
+If you didn't bother following Rules For Commits above, please cleanup your branch now or consider setting the "squash commits"
 Then create a post in the discord and mention @Code Reviewer, someone will eventually look over the MR and will work with you together to get it merged
