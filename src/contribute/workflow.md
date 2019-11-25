@@ -16,7 +16,7 @@ It has the advantage of included CI builds for all commits.
 
 We develop in feature branches, so before you start contributing, create your own branch:
 ```bash
-git checkout -b <some_branch_name>
+git checkout -b <your-nickname/some_branch_name>
 ```
 In your own branch you can then create commits and push them to your branch how you like it. (see Rule For Commits)
 
@@ -34,9 +34,9 @@ Otherwise, describe shortly but precisely what a commit is about, e.g. `fixup se
 Tip: If you struggle finding one title that covers you whole commit, it might be better to split in in 2 parts next time.
 
 3. Use `git commit --amend` in case you forgot to include something in your commit.
-E.g. you pushed your change and now fml is failing, than instead of creating a separate commit fixing this commit, run fml locally, run git add and then run `git commit --amend` and `git push -f` to fixup the incomplete commit instead of creating a new one.
+E.g. you pushed your change and now format check is failing, than instead of creating a separate commit fixing this commit, run ``cargo fmt`` locally, run ``git add`` and then run `git commit --amend` and `git push -f` to fixup the incomplete commit instead of creating a new one.
 The same applies to smaller fixes like spelling errors introduced by yourself, fix the commit where the mistake was made instead creating a new one on top.
-Exception: Sometimes fmt changes their rules and untouched code becomes invalid, in case the fml failure is related to fml and not us, it's okay to use `apply fml on whole codebase`. Please don't include other changes in such a commit.
+Exception: Sometimes fmt changes their rules and untouched code becomes invalid, in case the formatting failure is related to fmt and not us, it's okay to use `apply fmt on whole codebase`. Please don't include other changes in such a commit.
 
 4. Rebase on master
 If some time has passed since you started your feature branch, rebase it on top of master from time to time to avoid merge conflicts.
@@ -54,7 +54,8 @@ To Squash Commit 2 and 3 into a single commit, write `squash` in front of the 3r
 
 # Create a Merge Request
 
-Once your feature is ready for review create MR in GitLab out of your branch from `your-branch-name` to `master`.
+Once your feature is ready for review create MR in GitLab out of your branch from `your-nickname/your-branch-name` to `master`.
+Make sure to select ``Delete source branch`` for the MR.
 Feel free to add additional information to the description (optional).
 If you didn't bother following Rules For Commits above, please cleanup your branch now or consider setting the "squash commits"
 Then create a post in the discord and mention @Code Reviewer, someone will eventually look over the MR and will work with you together to get it merged
