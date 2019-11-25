@@ -17,11 +17,6 @@ We use GitLab to manage the source code, assets, our website and this book.
 We make heavy usage of the continuous integration of GitLab, we run tests and do code reviews.
 Use the issue tracker of GitLab with the corresponding tags to track feature requests as well as bugs.
 
-If you want to contribute source code, meet us at our [Discord](https://discord.gg/BvQuGze) and discuss what needs to be done.
-Or just prepare a MR the way you like.
-The default way of doing so is fork the project, create a branch in your fork, make changes, and then create a Merge Request in `veloren/veloren` to include your changes.
-The MR should go to `master` branch.
-Best strategy is to create a issue first and then link the MR to the issue so that reviewers know why this change is needed.
-Stay active in discord as well as GitLab to answer questions over the next days.
+For details on how to contribute visit [the workflow page](workflow.html).
 
 If your contributions are good and regular we might give you a developer role in both discord and GitLab, granting you some trust and the ability change more on your own.
