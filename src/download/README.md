@@ -4,15 +4,15 @@ Read this chapter for a detailed description on how to run Veloren and to avoid 
 
 ## Download
 
-- **[Windows](https://www.download.veloren.net/latest/windows)**
-- **[Linux](https://www.download.veloren.net/latest/linux)** or check [the packaging section](#packaging-status)
+- **[Windows](https://download.veloren.net/latest/windows)**
+- **[Linux](https://download.veloren.net/latest/linux)** or check [the packaging section](#packaging-status)
 - **MacOS**: You can run the Windows version using [WINE](https://www.winehq.org/) or [compile a native version](/compile/index.md) yourself
 
 ## Stable
 
 If you want to download a stable release (e.g. 0.3, 0.4) you can visit our [website](https://www.veloren.net/welcome).
 
-*Note: Due to rapid development stable releases (e.g. 0.3, 0.4) are out of date pretty fast.*
+*Note: Due to rapid development stable releases are out of date pretty fast.*
 
 ## Runtime dependencies
 
