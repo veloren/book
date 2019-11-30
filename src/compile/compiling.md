@@ -6,7 +6,7 @@ Reminder that **all commands** need to be run from the repo directory.
 
 To compile and run the client
 ```
-cargo run --bin veloren-voxygen
+cargo run
 ```
 
 To compile and run standalone server
