@@ -8,12 +8,7 @@ Rust can be easily installed on all major desktop operating systems. Follow this
 
 <https://www.rust-lang.org/tools/install>
 
-Because Veloren uses the nightly version of Rust, please make sure you install it:
-```
-rustup toolchain install nightly
-```
-
-We have a [toolchain file](https://github.com/rust-lang/rustup.rs#the-toolchain-file) in the repository so you only need to have rust nightly installed and it will be chosen automatically.
+We have a [toolchain file](https://github.com/rust-lang/rustup.rs#the-toolchain-file) in the repository so rustup will automatically install the correct toolchain for you.
 
 # Git
 
