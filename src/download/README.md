@@ -31,7 +31,7 @@ On **Debian** systems additional libraries may need to be downloaded, below is a
 - libgtk-3-dev
 
 And a one liner to download and install them all:
-`sudo apt install libglib2.0-dev libasound2-dev libcairo2-dev libpangol1.0-dev libatk1.0-dev libgtk3.0-dev`
+`sudo apt-get install libglib2.0-dev libcairo2-dev libasound2-dev libpango1.0-dev libatk1.0-dev libgdk-pixbuf2.0-dev libgtk-3-dev`
 
 ### Packaging status
 
