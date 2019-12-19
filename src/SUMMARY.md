@@ -10,6 +10,7 @@
   - [Installing developement tools](compile/toolchain.md)
   - [Setting up and maintaining the local repository](compile/repo.md)
   - [Compiling Veloren](compile/compiling.md)
+  - [Debugging Veloren](compile/debugging.md)
   - [Troubleshooting](compile/troubleshooting.md)
 - [Contribute](contribute/README.md)
   - [Report Bugs](contribute/bug.md)
