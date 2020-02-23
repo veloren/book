@@ -6,6 +6,7 @@ Read this chapter for a detailed description on how to run Veloren and to avoid 
 
 - **[Windows](https://download.veloren.net/latest/windows)**
 - **[Linux](https://download.veloren.net/latest/linux)** or check [the packaging section](#packaging-status)
+- **[Airshipper](https://www.songtronix.com)** (Launcher)
 - **MacOS**: You can run the Windows version using [WINE](https://www.winehq.org/) or [compile a native version](/compile/index.md) yourself
 
 ## Stable
