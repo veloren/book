@@ -4,20 +4,20 @@
 >
 > **Rust is safe**
 > Code written in vanilla Rust cannot trigger undefined behaviour. Rust's design helps us avoid a plethora of bugs common in other compiled languages such as dangling pointers, buffer overflow, invalid/null pointers, data races, array bound errors, and many more. This makes it particularly suitable for a large collaborative project such as this because it makes it difficult for new code to introduce difficult to fix bugs into the codebase.
-> 
+>
 > **Rust is fast**
 > Rust is a compiled language that doesn't require a garbage collector, exceptions, or many of the other runtime systems that make other languages so slow. In most scenarios, well-written Rust is at least as fast (and often faster) than well-written C++.
-> 
+>
 > **Rust is modular**
 > Rust comes with the Cargo build system and package manager. It allows Rust to be compiled in a modular manner, borrowing other libraries (known as crates) from the rest of the Rust ecosystem with ease.
-> 
+>
 > **Rust is portable**
 > Rust's compiler uses LLVM to target most major hardware platforms. By using Cargo as its build system, it allows for consistent compilation across many platforms. No more searching for header files or fighting linker errors!
-> 
+>
 > **Rust is well-designed**
 > Rust's syntax is designed to be user-friendly (wherever it can without compromising on features) and well-suited to system programming. Its unique combination of low-level control and safety makes it perfect for building both game engines and high-level game logic.
 
-## 2) Why use gitlab over github? 
+## 2) Why use gitlab over github?
 
 Gitlab has better integrated ci/cd, offers everything else the same. Both of them are only a service on top of git on the computer, so not too much different.
 
@@ -31,10 +31,10 @@ Generally speaking, you can help in every area you want to. You don't have to be
 
 ## 5) How is the movement/physics/mechanics programming handled?
 
-That's implemented in common, which is a crate for code that's common between both the server and the client 
+That's implemented in common, which is a crate for code that's common between both the server and the client
 (because the server needs to be the ultimate authority on physics, but the client needs to do physics prediction so that lag/latency doesn't look bad)
 
-## 6) Just curious, how does animation work in this game? Like, what  program do you guys use to animate and how many FPS is an average animation?
+## 6) Just curious, how does animation work in this game? Like, what program do you guys use to animate and how many FPS is an average animation?
 
 So currently animation doesn't exist, we're building up the system that'll be used to add it in though
 
@@ -45,7 +45,7 @@ One of the common trip-ups new developers make is to try to force Rust to behave
 
 ## 8) What flexibility does Rust provide that Unreal Engine does not? Is it simply because Rust makes the project modular while Unreal Engine is not modular enough for open source development?
 
-A voxel game is a rather specific kind of game. It deals with a lot of data that most engines simply aren't really designed to deal with. Along with that, a lot of the game is procedural, something that existing asset-driven engines aren't too well equipped to deal with either. 
+A voxel game is a rather specific kind of game. It deals with a lot of data that most engines simply aren't really designed to deal with. Along with that, a lot of the game is procedural, something that existing asset-driven engines aren't too well equipped to deal with either.
 An existing engine, for us, would provide relatively few advantages despite providing several pretty significant disadvantages
 
 ## 9) Do you guys ever want to take this project to a fundraising platform like Kickstarter so that someone can work on it full time? Is it possible that this could become a goal one day? Or will this never be a goal?
@@ -53,4 +53,5 @@ An existing engine, for us, would provide relatively few advantages despite prov
 We probably won't go that route, though I guess it's hard to say anything for sure. We see this as a volunteer project. It's more likely that any fundraising we do would go towards maintaining servers and such.
 
 ## 10) I got a question on how to compile the game?
-Everything should be described in the [Compiling](/compile/index.html) section.
+
+Everything should be described in the [Compiling](#) section. TODO: Link!
