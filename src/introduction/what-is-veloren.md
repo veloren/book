@@ -3,7 +3,7 @@
 Veloren is a multiplayer voxel RPG written in Rust. It is inspired by games such as Cube World,
 Legend of Zelda: Breath of the Wild, Dwarf Fortress and Minecraft.
 
-![Beautiful trees and a cliff](../images/introduction.png)
+![Beautiful trees and a cliff](introduction.png)
 
 Veloren is fully open-source, licensed under [GPL 3](https://www.gnu.org/licenses/gpl-3.0.en.html). It uses original graphics, musics and other
 assets created by its community. Being contributor-driven, its development community

@@ -14,11 +14,12 @@ The website also hosts a developer manual (you're reading it right now!) at [boo
 
 ## Discord
 
-The Veloren community (both developers and players) is most active on the Veloren Discord server.
+The Veloren community (both developers and players) are most active on the Veloren Discord server.
 You can join the server using the link below:
 
 <https://discord.gg/BvQuGze>
 
 ## Social Media
-We're on [Youtube](https://www.youtube.com/channel/UCmRjlnKnSRRihWPPNasl_Qw) 
+
+We're on [Youtube](https://www.youtube.com/channel/UCmRjlnKnSRRihWPPNasl_Qw)
 and [Reddit](https://www.reddit.com/r/veloren) and don't forget to follow us on [Twitter](https://twitter.com/velorenproject).
