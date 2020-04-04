@@ -54,4 +54,6 @@ We probably won't go that route, though I guess it's hard to say anything for su
 
 ## 10) I got a question on how to compile the game?
 
-Everything should be described in the [Compiling](#) section. TODO: Link!
+Everything should be described in the [Developers][1] section.
+
+[1]: developers

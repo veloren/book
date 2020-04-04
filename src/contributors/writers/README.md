@@ -1,1 +1,1 @@
-# Writers section
+# Writers vocabulary hub

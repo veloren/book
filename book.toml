@@ -6,4 +6,4 @@ title = "Veloren: An Owner's Manual"
 
 # TODO: do we want to depend on `mdbook-linkcheck`?
 [output.html]
-[output.linkcheck]
+#[output.linkcheck]
