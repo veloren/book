@@ -8,9 +8,9 @@ Below, you can find community information.
 ## Website
 
 The Veloren website contains weekly blog updates, developer information and download links.
-You can find it at [www.veloren.net](https://www.veloren.net)
+You can find it at [www.veloren.net][1]
 
-The website also hosts a developer manual (you're reading it right now!) at [book.veloren.net](https://book.veloren.net)
+The website also hosts a developer manual (you're reading it right now!) at [book.veloren.net][2]
 
 ## Discord
 
@@ -21,5 +21,11 @@ You can join the server using the link below:
 
 ## Social Media
 
-We're on [Youtube](https://www.youtube.com/channel/UCmRjlnKnSRRihWPPNasl_Qw)
-and [Reddit](https://www.reddit.com/r/veloren) and don't forget to follow us on [Twitter](https://twitter.com/velorenproject).
+We're on [Youtube][3]
+and [Reddit][4] and don't forget to follow us on [Twitter][5].
+
+[1]: https://www.veloren.net
+[2]: https://book.veloren.net
+[3]: https://www.youtube.com/channel/UCmRjlnKnSRRihWPPNasl_Qw
+[4]: https://www.reddit.com/r/veloren
+[5]: https://twitter.com/velorenproject

@@ -1,1 +1,1 @@
-# Translator section
+# Translators multilingual society

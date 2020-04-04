@@ -1,0 +1,1 @@
+# Consider this before contributing

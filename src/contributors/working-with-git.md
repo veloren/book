@@ -11,8 +11,6 @@ Clone the repository
 git clone https://gitlab.com/veloren/veloren.git
 ```
 
-See [Troubleshooting][1] if you cloned the repo before Git LFS was setup
-
 Change your working directory to the cloned repository
 
 ```
@@ -63,7 +61,7 @@ git help <optional subcommand name>
 
 ## Modifying the source code
 
-If you want to modify the source code, refer to the [developer][2] section.
+If you want to modify the source code, refer to the [developer][1] section.
 
 To discard changes you've made to the source code
 
@@ -102,3 +100,5 @@ To update the rust toolchain run:
 ```
 rustup update
 ```
+
+[1]: developers

@@ -1,1 +1,1 @@
-# Artists section
+# Artists creative heaven

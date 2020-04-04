@@ -1,1 +1,1 @@
-# DevOps section
+# DevOps automated introduction
