@@ -7,6 +7,10 @@ _Note: Due to rapid development stable releases are out of date pretty fast._
 
 ### Packaging status
 
+#### Flatpak
+
+`flatpak install flathub net.veloren.veloren`
+
 #### Fedora
 
 [COPR repo][2]: `sudo dnf copr enable atim/veloren -y && sudo dnf install veloren -y`
