@@ -24,9 +24,9 @@ Git LFS is a Git extension used to store large files like images and audio files
 
 2. Git LFS needs to be set up by running `git lfs install` or `git-lfs install` (macOS) in a terminal.
 
-**Note**: Throughout the book we will mention alot of commands. Therefore we highly recommend getting comfortable with one via online tutorials!
+_**Note**: Throughout the book we will mention alot of commands. Therefore we highly recommend getting comfortable with one._
 
-[1]: https://lmgtfy.com/?q=Source+Code
+[1]: https://en.wikipedia.org/wiki/Source_code
 [2]: https://gitforwindows.org/
 [3]: https://github.com/Homebrew/brew
 [4]: https://www.macports.org/

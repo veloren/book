@@ -1,7 +1,7 @@
 # Local repository setup and maintenance
 
 This section describes the initial setup and maintenance of your local repository.<br>
-**Note**: To understand the following we highly recommend reading about git!
+_**Note**: To understand the following we highly recommend reading about git!_
 
 ## Download source code
 
@@ -95,10 +95,8 @@ cargo clean
 
 ## Updating the toolchain
 
-To update the rust toolchain run:
-
-```
-rustup update
-```
+We use a [`rust-toolchain`][2] file in the repository which will automatically update
+your rust toolchain to whichever version we use.
 
 [1]: developers
+[2]: https://github.com/rust-lang/rustup#the-toolchain-file
