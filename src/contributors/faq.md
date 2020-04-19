@@ -19,26 +19,22 @@
 
 ## 2) Why use gitlab over github?
 
-Gitlab has better integrated ci/cd, offers everything else the same. Both of them are only a service on top of git on the computer, so not too much different.
+Gitlab has better integrated ci/cd, offers everything else what Github has. Both of them are only a service on top of git on the computer, so not too much different.
 
 ## 3) What noise function do we actually use?
 
 Perlin, worley, simplex, value, gradient, and a few Zesterer invented
 
-## 4) How can I help? I have to be part of a team? I dont have experience in Rust but really want to learn and help you guys.
+## 4) How can I help? Do I have to be part of a team? I dont have experience in Rust but really want to learn and help.
 
-Generally speaking, you can help in every area you want to. You don't have to become part of a team. But as soon as you helped a bit and showed that you are interested you will get in the respective "team".
+Generally speaking, you can help in every area you want to. You don't have to become part of a team. But as soon as you helped a bit and showed that you are interested you can get in the respective "team".
 
 ## 5) How is the movement/physics/mechanics programming handled?
 
-That's implemented in common, which is a crate for code that's common between both the server and the client
+That's implemented in `common`, which is a crate for code that's common between both the server and the client
 (because the server needs to be the ultimate authority on physics, but the client needs to do physics prediction so that lag/latency doesn't look bad)
 
-## 6) Just curious, how does animation work in this game? Like, what program do you guys use to animate and how many FPS is an average animation?
-
-So currently animation doesn't exist, we're building up the system that'll be used to add it in though
-
-## 7) Does it have all the OOP stuff you need for a project like this? Are there times when you are coding in Rust and there is something you feel could be expressed much better in C++? I originally dismissed Rust when I first encountered it since it looked like it was just C with different syntax and some functional programming stuff, but I heard recently it is supposedly much more than that.
+### 7) Does it have all the OOP stuff you need for a project like this? Are there times when you are coding in Rust and there is something you feel could be expressed much better in C++? I originally dismissed Rust when I first encountered it since it looked like it was just C with different syntax and some functional programming stuff, but I heard recently it is supposedly much more than that.
 
 Although Rust has features that on the surface appear to make it an object-oriented language (it has objects, methods, interfaces, etc.) it's not actually an object-oriented language.
 One of the common trip-ups new developers make is to try to force Rust to behave like an OO language when a particular problem is better solved in a more Rust-y way

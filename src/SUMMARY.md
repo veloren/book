@@ -38,5 +38,5 @@
     - [Extend the book](contributors/writers/extend-this-book.md)
     - [Write Lore](contributors/writers/write-lore.md)
   - [For DevOps](contributors/devops/README.md)
-- [Guides](guides/introduction.md)
-  - [Adding Armor](guides/adding-armor/guide.md)
+  - [Guides](contributors/guides/README.md)
+    - [Adding Armor](contributors/guides/adding-armor/guide.md)
