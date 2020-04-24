@@ -11,9 +11,9 @@ _Note: Due to rapid development stable releases are out of date pretty fast._
 
 `flatpak install flathub net.veloren.veloren`
 
-#### Fedora
+#### Snap
 
-[COPR repo][2]: `sudo dnf copr enable atim/veloren -y && sudo dnf install veloren -y`
+`sudo snap install veloren --edge`
 
 #### Arch
 
@@ -22,6 +22,10 @@ _Note: Due to rapid development stable releases are out of date pretty fast._
 [AUR latest release][4]: `yay -Sy veloren`
 
 [AUR latest master][5]: `yay -Sy veloren-git`
+
+#### Fedora
+
+[COPR repo][2]: `sudo dnf copr enable atim/veloren -y && sudo dnf install veloren -y`
 
 ## Runtime dependencies
 
