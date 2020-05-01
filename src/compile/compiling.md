@@ -4,7 +4,7 @@ Reminder that **all commands** need to be run from the repo directory.
 
 ## Compile-time dependencies
 
-Before compiling you must install the following denendencies:
+On Linux, you might need to install the following dependencies:
 
 - ld (binutils)
 - libudev-dev
