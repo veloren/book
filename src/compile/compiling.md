@@ -2,6 +2,19 @@
 This section covers building Veloren from source and running it.  
 Reminder that **all commands** need to be run from the repo directory.
 
+## Compile-time dependencies
+
+On Linux, you might need to install the following dependencies:
+
+- build-essential
+- libudev-dev
+- libxcb-shape0-dev
+- libxcb-xfixes0-dev
+
+And a one liner to download and install them all (apt based systems):
+
+`sudo apt-get install build-essential libudev-dev libxcb-shape0-dev libxcb-xfixes0-dev`
+
 ## Compiling
 
 To compile and run the client
