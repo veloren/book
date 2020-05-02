@@ -6,14 +6,14 @@ Reminder that **all commands** need to be run from the repo directory.
 
 On Linux, you might need to install the following dependencies:
 
-- ld (binutils)
+- build-essential
 - libudev-dev
 - libxcb-shape0-dev
 - libxcb-xfixes0-dev
 
 And a one liner to download and install them all (apt based systems):
 
-`sudo apt-get install binutils libudev-dev libxcb-shape0-dev libxcb-xfixes0-dev`
+`sudo apt-get install build-essential libudev-dev libxcb-shape0-dev libxcb-xfixes0-dev`
 
 ## Compiling
 
