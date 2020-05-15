@@ -1,8 +1,5 @@
 # Guide: Adding armour to Veloren
 
-TODO: Match link style like everywhere else in the book<br/>
-TODO: Make sure links work
-
 \\\_ made by @Pfau
 
 ![Image1](image1.png)
@@ -131,18 +128,17 @@ Armour types that need a 3d .vox file need to be listed in every file above.
 
 ![Image5](image5.png)
 
-![Image6](image6.png)
+**The offset will be determined at a later point!** Just keeping the numbers from the example you copied should be good for now.
 
-Copy this part (make sure to include the brackets and comma!)
+![Image6](image8.png)
 
-![Image7](image7.png)
-Paste it…
+Copy this part (make sure to include the brackets and comma!) and paste it:
 
-![Image8](image8.png)
+![Image8](image6.png)
 
-Fill in the name **of the item style. **This is the name you’ll add in \_armor.rs \_later.
+Fill in the name **of the item style.** This is the name you’ll add in _armor.rs_ later.
 
-Note: \_color: None \_indicates that grey parts won’t be recoloured.
+Note: `color: None` indicates that grey parts won’t be recoloured.
 
 To colour those parts put in “`color: Some((<R>, <G>, <B>))`” here.
 
@@ -155,18 +151,16 @@ Brown: (
 ),
 ```
 
-2. New Entry in `assets/common/items/armor/<armour type>`
+#### 2. New Entry in `assets/common/items/armor/<armour type>`
 
-![Image9](image9.png)
+![Image9](image13.png)
 
-Copy and paste one of the existing .ron files
-
-(Note: Use numbers here, too.)
+Copy and paste one of the existing .ron files (Note: Use numbers here too).
 
 ```rust,ignore
 Item(
     name: "New Cape",
-    description: "Example Item ",
+    description: "Example Item",
     kind: Armor(
         kind: Back(NewCape),
         stats: (20),
@@ -180,7 +174,7 @@ Edit the file to have the right `kind.`(The same kind you put in before.)
 
 This creates a tooltip text similar to this.
 
-3. Adding the armour style to `common/src/comp/inventory/item/armor.rs`
+#### 3. Adding the armour style to `common/src/comp/inventory/item/armor.rs`
 
 Look for the armour style you want to add. If it’s not listed you are probably trying to add a style that doesn’t need a 3D asset.
 
@@ -211,10 +205,9 @@ pub enum Back {
     NewCape= 3,
 }
 pub const ALL_BACKS: [Back; 3] = [Back::Short0, Back::Admin, Back::NewCape];
-
 ```
 
-4. Add a new item image in `assets\voxygen\item_image_manifest.ron`
+#### 4. Add a new item image in `assets\voxygen\item_image_manifest.ron`
 
 You can either use a .png or .vox file as an item image.
 
@@ -247,9 +240,9 @@ Armor(Back(NewCape)): VoxTrans(
 
 You can use the same .vox as the actual 3D asset shown equipped on the character later.
 
-![Image11](image11.png)
+![Image11](image7.png)
 
-5. Finding the right offset for your item
+#### 5. Finding the right offset for your item
 
 In order to test your item in-game you need to compile your game now.
 
@@ -258,10 +251,10 @@ Your new item will **only be available locally**, so make sure to connect to a l
 To drop the item into your inventory use the chat command`/give_item:`
 
 ```
-/give_item common/items/armor/back/new_cape
+/give_item common.items.armor.back.new_cape
 ```
 
-![Image12](image12.png)
+![Image12](image11.png)
 
 When equipping your new item you might be presented with this sight.
 
@@ -282,25 +275,12 @@ They represent the coordinates:
 (X, Y, Z)
 ```
 
-X = Left (lower the number) and Right (increase the number)
-
-Y = Back (lower the number) and Forth (increase the number)
-
-Z = Up(increase the number) and Down (lower the number)
+X = Left (lower the number) and Right (increase the number) <br/>
+Y = Back (lower the number) and Forth (increase the number) <br/>
+Z = Up(increase the number) and Down (lower the number) <br/>
 
 Change the numbers until you get the desired offset.
 
-![Image13](image13.png)
+![Image13](image12.png)
 
 **Done. You added a new armour style and item to Veloren. :)**
-
-[1]:
-[2]:
-[3]:
-[4]:
-[5]:
-[6]:
-[7]:
-[8]:
-[9]:
-[10]:
