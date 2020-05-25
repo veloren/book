@@ -42,6 +42,6 @@ git-lfs install
 
 
 # Bash
-All commands for compiling Veloren yourself are written for bash, if you run un windows use the `git bash` included in the git package.
+All commands for compiling Veloren yourself are written for bash, if you run on windows use the `git bash` included in the git package.
 
 After you installed everything, continue with [local repository setup](repo.md)
