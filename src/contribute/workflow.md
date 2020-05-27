@@ -31,7 +31,7 @@ Often a feature can be split up in smaller sizes of work, try to make use of it 
 Find a good caption for each commit and name it. `fix things` is to unspecific, if a issue exists link it and it's title, e.g. `fixing #123 - UDP buffer overflow when to much player on server`.
 If no issue exists, evaluate creating one.
 Otherwise, describe shortly but precisely what a commit is about, e.g. `fixup several issues in physics related to collisions`.
-Tip: If you struggle finding one title that covers you whole commit, it might be better to split in in 2 parts next time.
+Tip: If you struggle finding one title that covers you whole commit, it might be better to split it into parts next time.
 
 3. Use `git commit --amend` in case you forgot to include something in your commit.
 E.g. you pushed your change and now format check is failing, than instead of creating a separate commit fixing this commit, run ``cargo fmt`` locally, run ``git add`` and then run `git commit --amend` and `git push -f` to fixup the incomplete commit instead of creating a new one.
@@ -46,11 +46,11 @@ If it returns with no error you are fine, if it returns some, fix the errors and
 Tip: Use `git status` to show next instructions.
 
 5. Fixup your commits afterwards.
-In case you didn't created clean commits in the first place, you can squash and change the names now.
+In case you didn't create clean commits in the first place, you can squash and change the names now.
 First, count how many commits your branch contains, e.g. in `git status`.
 Use the number in `git rebase -i HEAD~4`, e.g. for 4 commits on top of master.
 Read the instructions in the editor. You can change a commit name by modifying the text in a line.
-To Squash Commit 2 and 3 into a single commit, write `squash` in front of the 3rd commit, don't change the second one
+To squash commit 2 and 3 into a single commit, write `squash` in front of the 3rd commit, don't change the second one
 
 # Create a Merge Request
 
