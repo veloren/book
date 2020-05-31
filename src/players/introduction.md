@@ -13,7 +13,7 @@ This section of the book will explain basic game concepts for players and genera
 - Veloren
   - Gameplay
 - Torvus
-- Hosting a Server
-  - Setup
-  - Configuring authentication
-  - Best practices
+- [Hosting a Server](hostingaserver)
+  - [Setup the World Server](hostingaserver/world-server-setup.md)
+  - [Configuring authentication](hostingaserver/auth-server-setup.md)
+  - [Best practices](hostingaserver/best-practices.md)
