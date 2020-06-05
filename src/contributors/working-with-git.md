@@ -1,6 +1,7 @@
 # Local repository setup and maintenance
 
 This section describes the initial setup and maintenance of your local repository.<br>
+
 _**Note**: To understand the following we highly recommend reading about git!_
 
 ## Download source code
@@ -17,7 +18,7 @@ Change your working directory to the cloned repository
 cd veloren
 ```
 
-**All commands** in this chapter from now on should be executed from there.
+**Note**: _All commands in this chapter from now on should be executed from there._
 
 # Basic repo navigation
 
@@ -61,7 +62,7 @@ git help <optional subcommand name>
 
 ## Modifying the source code
 
-If you want to modify the source code, refer to the [developer][1] section.
+If you want to modify the source code, refer to the [developer](developers) section.
 
 To discard changes you've made to the source code
 
@@ -93,10 +94,7 @@ cargo clean
 
 **NOTE**: Keep in mind that cargo will need to recompile all dependencies which can take a long time.
 
-## Updating the toolchain
+## Updating the Rust toolchain
 
-We use a [`rust-toolchain`][2] file in the repository which will automatically update
-your rust toolchain to whichever version we use.
-
-[1]: developers
-[2]: https://github.com/rust-lang/rustup#the-toolchain-file
+We use a [`rust-toolchain`](https://github.com/rust-lang/rustup#the-toolchain-file) file in the repository which will automatically update
+your rust toolchain to whichever version we use. There shouldn't be any additional effort needed on your side.

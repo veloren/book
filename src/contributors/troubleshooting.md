@@ -10,7 +10,7 @@ If LFS is not installed and setup properly the lfs pointers will not be replaced
 
 To check if Git LFS works correctly:
 
-```
+```bash
 git lfs status
 ```
 
@@ -18,7 +18,7 @@ git lfs status
 
 To setup LFS and download the asset files on **Linux** or **Windows**
 
-```
+```bash
 git lfs install
 git lfs fetch
 git lfs checkout
@@ -26,7 +26,7 @@ git lfs checkout
 
 **MacOs**
 
-```
+```bash
 git-lfs install
 git-lfs fetch
 git-lfs checkout
@@ -36,7 +36,7 @@ git-lfs checkout
 
 Git LFS fails download the files properly. The main issue seems to be that the askpass program is not spawned when using a normal CMD prompt, preventing Git LFS from authenticating via SSH to retrieve the temporary access token. Setting the SSH_ASKPASS, GIT_ASKPASS and DISPLAY variables seems to solve this issue:
 
-```bat
+```bash
 SET "SSH_ASKPASS=C:\Program Files\Git\mingw64\libexec\git-core\git-gui--askpass"
 SET "GIT_ASKPASS=%SSH_ASKPASS%"
 SET "DISPLAY=required"
@@ -46,10 +46,10 @@ SET "DISPLAY=required"
 
 If you used the previous submodules system, you can deactivate it with:
 
-```
+```bash
 git submodule deinit --force --all
 ```
 
 ### Dependencies
 
-Make sure you have all [runtime dependencies](../download/index.html#runtime-dependencies) installed.
+Make sure you have all [runtime dependencies](../introduction/download.md#runtime-dependencies) installed.
