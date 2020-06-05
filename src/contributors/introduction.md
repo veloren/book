@@ -9,7 +9,7 @@ _**Note:** In this guide we assume basic computer knowledge and some curiosity t
   - [Development tools](development-tools.md)
   - [Working with git](working-with-git.md)
   - [Before you contribute](before-you-contribute.md)
-  - [Why we use...](faq.md)
+  - [FAQ](faq.md)
   - [Troubleshooting](troubleshooting.md)
 - [For Developers](developers)
   - [Install Rust](developers/install-rust.md)

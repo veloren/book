@@ -1,23 +1,22 @@
-# This book is used by developers and users
-
-# Yet, we should sort it to make it easy for new users to try it out. We don't want to scare them with to much contributing info
-
-# Developers and power users know the book already and will find their section quite quickly after some time
-
 - [Introduction](introduction/README.md)
   - [What is Veloren?](introduction/what-is-veloren.md)
   - [Who develops Veloren?](introduction/who-builds-veloren.md)
   - [Download](introduction/download.md)
 - [Veloren for Players](players/introduction.md)
+  - [Introduction](players/introduction.md)
+    - [Reporting Bugs](players/reporting-bugs.md)
+    - [Changelog](players/changelog.md)
+    - [Roadmap](players/roadmap.md)
+  - [Airshipper - Veloren Launcher](players/airshipper.md)
+  - [Hosting a Server](players/hosting-a-server.md)
 - [Veloren for Contributors](contributors/introduction.md)
   - [Introduction](contributors/introduction.md)
     - [Development tools](contributors/development-tools.md)
     - [Working with git](contributors/working-with-git.md)
     - [Before you contribute](contributors/before-you-contribute.md)
-    - [Why we use...](contributors/faq.md)
+    - [FAQ](contributors/faq.md)
     - [Troubleshooting](contributors/troubleshooting.md)
   - [For Developers](contributors/developers/README.md)
-    - [Install Rust](contributors/developers/install-rust.md)
     - [Install IDE](contributors/developers/install-ide.md)
     - [Learn Rust](contributors/developers/learn-rust.md)
     - [The codebase structure](contributors/developers/codebase-structure.md)
