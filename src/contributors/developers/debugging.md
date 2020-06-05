@@ -2,48 +2,42 @@
 
 This section covers some helpful debugging tips within the Veloren project. This should help if you wish to explore the code base at runtime, or work on implementing a feature.
 
-So far, debugging has been reported to be working on the following IDE configurations:
-
-- Visual Studio Code (Windows)
-- Visual Studio (Windows)
-
 # Compiling With Debug Symbols
 
 In order for debug symbols to be generated for the project, the `debuginfo` profile must be used. You can build the project with debug symbols included by running this command:
 
-```
+```bash
 cargo build -Z unstable-options --profile debuginfo
 ```
 
 # Visual Studio Code
 
-In order to debug using VSCode, the following extensions must be installed:
+Follow [this guide](https://www.forrestthewoods.com/blog/how-to-debug-rust-with-visual-studio-code/) to setup your vscode installation.
 
-```
-C/C++ (Microsoft)
-Rust (kalitaalexy)
-Native Debug (WebFreak)
-```
-
-Once the extensions have been installed and configured, the following `launch.json` file will launch the project with debug mode enabled (remember to build with the `cargo` command listed above!)
+After that make the following modifcations to `launch.json` (remember to build with the `cargo` command listed above!)
 
 ```json
 {
-  // Use IntelliSense to learn about possible attributes.
-  // Hover to view descriptions of existing attributes.
-  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
     {
       "name": "(Windows) Launch",
       "type": "cppvsdbg",
       "request": "launch",
-      "program": "${workspaceFolder}\\target\\debuginfo\\veloren-voxygen.exe",
+      "program": "${workspaceRoot}\\target\\debuginfo\\veloren-voxygen.exe",
       "args": [],
       "stopAtEntry": false,
+      "cwd": "${workspaceRoot}",
       "environment": [],
-      "externalConsole": false,
-      "symbolSearchPath": ""
+      "externalConsole": true
+    },
+    {
+      "name": "(OSX) Launch",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceRoot}/target/debuginfo/veloren-voxygen",
+      "args": [],
+      "cwd": "${workspaceRoot}"
     }
   ]
 }
