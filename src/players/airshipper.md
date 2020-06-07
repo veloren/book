@@ -7,4 +7,12 @@ Currently due to our irregular and frequent updates we recommend using it.
 
 ### Download
 
-Visit the [download](https://veloren.net/download) section of the website.
+Visit the [website](https://songtronix.com) of the developer to download it.
+
+### Files
+
+|   OS    |                    Path                    |
+| :-----: | :----------------------------------------: |
+| Windows |           `%appdata%/airshipper`           |
+|  Linux  |        `~/.local/share/airshipper`         |
+|  MacOS  | `~/Library/Application Support/airshipper` |
