@@ -19,9 +19,8 @@ If you want to play with your friends and do not have a dedicated server follow 
 
 1. Setup
    1. Port forward `14004` on your router.
-2. Launch game server
-   - Airshipper on **Windows**: `%appdata%/airshipper/profiles/default/veloren-server-cli.exe`
-   - Airshipper on **Linux/MacOS**: `~/.local/share/airshipper/default/veloren-server-cli`
+2. Launch game server `veloren-server-cli(.exe)`
+   - check [Airshipper](airshipper.md#files) section to find out where the files are
    - or download Nightly from the [website](https://veloren.net/download).
      > **Note**: _The `assets` folder is required to be next to the game server._
 3. [Give out your IP](https://www.showmyipaddress.eu/)
