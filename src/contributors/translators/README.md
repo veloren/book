@@ -1,1 +1,0 @@
-# Translators multilingual society
