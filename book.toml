@@ -3,7 +3,3 @@ authors = ["Joshua Barretto", "Marcel Märtens"]
 multilingual = false
 src = "src"
 title = "Veloren: An Owner's Manual"
-
-# TODO: do we want to depend on `mdbook-linkcheck`?
-[output.html]
-#[output.linkcheck]
