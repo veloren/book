@@ -2,13 +2,6 @@
 
 Welcome to the section about getting your voxel models into Veloren!
 
-## Saying 'Hello' in one of the art-channels 
-
-This is the best way to get in contact with our art-team on Discord. 
-Plus you already get an idea of how we work together as a team and maybe even get to know some of us.
-
-Artists are showing off their creations on those channels to get feedback or an 'OK' from Core-Devs that their model is ready for being animated and placed into the game.
-
 ## Software to create Voxel files
 
 Most of our artists use the freely available [MagicaVoxel](https://ephtracy.github.io/) from ephtracy.
@@ -21,9 +14,9 @@ At some point we might create our own voxel editor with built in model rigging a
 ## Getting started - Useful links
 
 Magica is easy to begin with but hard to master.
-[YouTube] (https://www.youtube.com/results?search_query=magica+voxel) is always a great idea to start with.
+[YouTube](https://www.youtube.com/results?search_query=magica+voxel) is always a great idea to start with.
 
-You should totally have a look at [controls] (https://ephtracy.github.io/index.html?page=mv_controls) in Magica as they highly optimise your workflow.
+You should totally have a look at [controls](https://ephtracy.github.io/index.html?page=mv_controls) in Magica as they highly optimise your workflow.
 
 Our [GitLab assets repo](https://gitlab.com/veloren/veloren/-/tree/master/assets) will give you an idea of how assets are organized and what kind of style we try to achieve with them.
 
@@ -40,7 +33,7 @@ Objects, figures and sprites (i.e. crops) are made from small scale blocks.
 
 One landscape block is **11x11x11** small scale voxels big.
 
-While creating models you should always keep their scale in mind. A character model is around **22** small scale voxels tall and **10** voxels wide. 
+While creating models you should always keep their scale in mind. A character model is around **22** small scale voxels tall and **10** voxels wide.
 So that's 1x2 landscape blocks.
 
 Objects/figures made from small scale voxels can be arbitrarily scaled to change their size in relation to the world.
@@ -64,14 +57,13 @@ This working group is for the most dedicated and skilled artists having constant
 
 ## Is creating art for a game like playing it and mostly fun?
 
-Yes and no. Creating models will feel like work. Usually following an initial rush of motivation right after discovering Veloren people quickly realize how much there is to do and that they can't invest the required time into this hobby due to their other commitments. We are used to that so please don't feel bad if you have to vanish for some weeks. 
+Yes and no. Creating models will feel like work. Usually following an initial rush of motivation right after discovering Veloren people quickly realize how much there is to do and that they can't invest the required time into this hobby due to their other commitments. We are used to that so please don't feel bad if you have to vanish for some weeks.
 
-Keeping intrinsic motivation and working self organized isn't for everyone. 
+Keeping intrinsic motivation and working self organized isn't for everyone.
 
-Seeing people actually playing with your models and ideas feels like a massive achievement though. 
-This is why most of us chose to become artists on this project: 
+Seeing people actually playing with your models and ideas feels like a massive achievement though.
+This is why most of us chose to become artists on this project:
 
 To create a beautiful world for everyone to enjoy.
 
 **If you feel like you want to join us on this great journey: We are looking forward to welcome you to our team and seeing your creations!**
-

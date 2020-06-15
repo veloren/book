@@ -34,3 +34,8 @@ Brown: (
 ```
 
 ---
+
+content<br/>
+**Tip**: notice which can help reduce time and effort.
+
+---
