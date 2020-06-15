@@ -18,6 +18,8 @@ Then, serve the manual locally with:
 
 `mdbook serve`
 
+You can then read the book in a web-browser using: http://localhost:3000
+
 ## Live version
 
 You can find the deployed version of this book under:
