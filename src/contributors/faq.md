@@ -34,20 +34,20 @@
 > That's implemented in [`common`](developers/codebase-structure.md#common), which is a crate for code that's common between both the server and the client
 > (because the server needs to be the ultimate authority on physics, but the client needs to do physics prediction so that lag/latency doesn't look bad)
 
-### 7) Does it have all the OOP stuff you need for a project like this? Are there times when you are coding in Rust and there is something you feel could be expressed much better in C++? I originally dismissed Rust when I first encountered it since it looked like it was just C with different syntax and some functional programming stuff, but I heard recently it is supposedly much more than that.
+### 6) Does it have all the OOP stuff you need for a project like this? Are there times when you are coding in Rust and there is something you feel could be expressed much better in C++? I originally dismissed Rust when I first encountered it since it looked like it was just C with different syntax and some functional programming stuff, but I heard recently it is supposedly much more than that.
 
 > Although Rust has features that on the surface appear to make it an object-oriented language (it has objects, methods, interfaces, etc.) it's not actually an object-oriented language.
 > One of the common trip-ups new developers make is to try to force Rust to behave like an OO language when a particular problem is better solved in a more Rust-y way
 
-## 8) What flexibility does Rust provide that Unreal Engine does not? Is it simply because Rust makes the project modular while Unreal Engine is not modular enough for open source development?
+## 7) What flexibility does Rust provide that Unreal Engine does not? Is it simply because Rust makes the project modular while Unreal Engine is not modular enough for open source development?
 
 > A voxel game is a rather specific kind of game. It deals with a lot of data that most engines simply aren't really designed to deal with. Along with that, a lot of the game is procedural, something that existing asset-driven engines aren't too well equipped to deal with either.
 > An existing engine, for us, would provide relatively few advantages despite providing several pretty significant disadvantages
 
-## 9) Do you guys ever want to take this project to a fundraising platform like Kickstarter so that someone can work on it full time? Is it possible that this could become a goal one day? Or will this never be a goal?
+## 8) Do you guys ever want to take this project to a fundraising platform like Kickstarter so that someone can work on it full time? Is it possible that this could become a goal one day? Or will this never be a goal?
 
 > We probably won't go that route, though I guess it's hard to say anything for sure. We see this as a volunteer project. It's more likely that any fundraising we do would go towards maintaining servers and such.
 
-## 10) I got a question on how to compile the game?
+## 9) I got a question on how to compile the game?
 
 > Everything should be described in the [Contributors](introduction.md) section.
