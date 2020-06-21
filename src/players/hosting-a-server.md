@@ -1,6 +1,6 @@
 # Hosting a Server
 
-This section will describe how to a Veloren server.<br/>
+This section will describe how to setup a Veloren server.<br/>
 
 **Note**: _There are multiple ways to setup a Veloren server therefore this book explains the most common and easiest approaches._
 
