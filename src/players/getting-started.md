@@ -105,7 +105,7 @@ Chests can be found nestled in tree branches, on the very tops of trees, and ins
 
 ![chest](chest.jpg)
 
-#FINDING FOOD
+# FINDING FOOD
 
 While killing creatures and looting chests can sometimes give you food and potions, you can also forage for food in the wild by picking apples and mushrooms.
 
