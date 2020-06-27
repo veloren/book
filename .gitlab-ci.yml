@@ -1,0 +1,16 @@
+image: tutum/curl:latest
+
+before_script:
+  - curl -L https://github.com/rust-lang/mdBook/releases/download/v0.3.7/mdbook-v0.3.7-x86_64-unknown-linux-gnu.tar.gz | tar -xvz -C /usr/local/bin
+  - chmod 0755 /usr/local/bin/mdbook
+
+# the 'pages' job will build your site and deploy if on master
+pages:
+  stage: deploy
+  script:
+    - ls
+    - mdbook build -d public # build to public path on master
+  artifacts:
+    paths:
+      - public
+    expire_in: 1 day
