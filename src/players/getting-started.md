@@ -41,7 +41,6 @@ The first nine slots of your bag space, across the topmost row, correspond to sl
 
 All gear in the game is currently aesthetic only; there are no stats. The weapons have slightly different base stats, and there is one weapon sometimes dropped by the cultist leaders at the bottoms of dungeons that has slightly better stats than all other weapons in the game, but otherwise which weapon you choose will come down to your preferred playstyle, and the gear you equip will be a matter of how stylish you want to look ;)
 
-
 # WEAPONS AND COMBAT
 
 The weapons and combat systems are still very *very* early in development, are currently not fully implemented, and are being discussed constantly in the Discord with regard to how they’ll work. What you see in-game currently is subject to great change, and should not be considered the final implementation of a system.
@@ -51,7 +50,6 @@ The weapons and combat systems are still very *very* early in development, are c
 Each weapon has a left- and right- mouse button attack. The mouse-left attack can be considered a ‘light’ attack, while the mouse-right attack is heavier and consumes stamina. Some weapons, such as the axe I’m currently wielding in the screenshot above, don’t show an icon for the mouse-right attack, but do still have one.
 
 Each weapon has its own ‘style’. The sword attacks are very mobile, whereas the hammer is stationary. Ranged requires good aim, and the magical attacks can do things like destroy blocks. The slower weapons have a couple of points higher base damage, while the faster weapons have slightly lower base stats but hit more often. Most creatures in the game are stationary when attacking, but you will find more mobile enemies in the dungeons and might want to switch to a different weapon to deal with those.
-
 
 # CHARACTER PROGRESSION
 
@@ -72,7 +70,6 @@ When you kill a creature, it will drop a sack of loot. Pick up this sack by hove
 
 ![sack of loot](lootsack.jpg)
 
-
 Currently there is no indication of what loot you received, but that’s also something that’s being worked on.
 
 # TAMING
@@ -81,7 +78,7 @@ If you’re lucky, something you kill or a chest you loot will drop a Collar. Th
 
 ![taming](taming.jpg)
 
-Tamed creatures will follow you around (though be careful as they sometimes get stuck behind objects) and will attack anything that attacks you. 
+Tamed creatures will follow you around (though be careful as they sometimes get stuck behind objects) and will attack anything that attacks you.
 
 Friendly fire is currently a thing. If you’ve tamed a creature, make sure that during combat you position yourself such that there’s less risk of you hitting your pet and less risk of it hitting you. This is particularly important with the giants as their attacks pack a punch!
 
@@ -146,7 +143,6 @@ Dungeons are dark - equip your lantern by pressing the G key!
 On every level there’ll be a room with a staircase leading down to the next level. There are several levels to traverse before you’ll find the last level with the Cultist Leader, the dungeon boss.
 
 ![dungeon corridors](dungeon2.jpg)
-
 
 It’s currently possible to clip the camera through the side wall, allowing you to see the floors below you, and sometimes a glimpse at what they contain;
 

@@ -3,6 +3,7 @@
   - [Who develops Veloren?](introduction/who-builds-veloren.md)
   - [Download](introduction/download.md)
 - [Veloren for Players](players/introduction.md)
+  - [Getting Started](players/getting-started.md)
   - [Introduction](players/introduction.md)
     - [Reporting Bugs](players/reporting-bugs.md)
     - [Changelog](players/changelog.md)
