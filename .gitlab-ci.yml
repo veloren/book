@@ -14,3 +14,5 @@ pages:
     paths:
       - public
     expire_in: 1 day
+  rules:
+    - if: $CI_COMMIT_REF_NAME =~ /^master$/
