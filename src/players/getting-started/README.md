@@ -1,4 +1,4 @@
-# CHARACTER CREATION
+# Character Creation
 
 ![character creation](character_creation.jpg)
 
@@ -14,7 +14,7 @@ You can set your hair style and colour, skin colour, eye details, eye colour, an
 
 When you’ve finished creating your character, enter a name, and then click Create. Choose your character from the list, click Enter World, and you’ll enter the game world.
 
-# GETTING STARTED
+# Getting Started
 
 ![getting started](getting_started.jpg)
 
@@ -28,20 +28,20 @@ Look around your interface. At the top left you’ll see that you can press F1 t
 - N - Opens your settings
 - B - Opens your bag / inventory
 
-You’ll notice NPCs and animals wandering around town. Currently nothing on the surface of the world is hostile; the only hostile enemies you’ll encounter are in the dungeons (more on that later). There are also currently no guards; if you attack an NPC they will cry for help, but otherwise there are no consequences and you can kill them (meanie).
+You’ll notice NPCs and animals wandering around town. Currently nothing on the surface of the world is hostile; the only hostile enemies you’ll encounter are in the dungeons (more on that later). There are also currently no guards; if you attack an NPC they will cry for help and they will attack you in return, but otherwise there are no consequences and you can kill them (meanie).
 
-# MANAGING YOUR INVENTORY
+# Managing Your Inventory
 
 ![managing your inventory](managing_your_inventory.jpg)
 
 
 The first nine slots of your bag space, across the topmost row, correspond to slots 1 - 9 in your hotbar. If you drag something from slot 1 of your bag to slot 1 of your hotbar, it binds that slot in your bag to slot 1 of the hotbar. Right now I’ve moved my cheese there, but if I run out of cheese and move an apple into that first slot in my bag, slot 1 of my hotbar will change to the apple. If I run out of cheese and meanwhile loot a weapon that falls into slot 1 of my bag, I’ll see that weapon in slot 1 of my hotbar.
 
-# GEAR
+# Gear
 
 All gear in the game is currently aesthetic only; there are no stats. The weapons have slightly different base stats, and there is one weapon sometimes dropped by the cultist leaders at the bottoms of dungeons that has slightly better stats than all other weapons in the game, but otherwise which weapon you choose will come down to your preferred playstyle, and the gear you equip will be a matter of how stylish you want to look ;)
 
-# WEAPONS AND COMBAT
+# Weapons And Combat
 
 The weapons and combat systems are still very *very* early in development, are currently not fully implemented, and are being discussed constantly in the Discord with regard to how they’ll work. What you see in-game currently is subject to great change, and should not be considered the final implementation of a system.
 
@@ -49,16 +49,17 @@ The weapons and combat systems are still very *very* early in development, are c
 
 Each weapon has a left- and right- mouse button attack. The mouse-left attack can be considered a ‘light’ attack, while the mouse-right attack is heavier and consumes stamina. Some weapons, such as the axe I’m currently wielding in the screenshot above, don’t show an icon for the mouse-right attack, but do still have one.
 
-Each weapon has its own ‘style’. The sword attacks are very mobile, whereas the hammer is stationary. Ranged requires good aim, and the magical attacks can do things like destroy blocks. The slower weapons have a couple of points higher base damage, while the faster weapons have slightly lower base stats but hit more often. Most creatures in the game are stationary when attacking, but you will find more mobile enemies in the dungeons and might want to switch to a different weapon to deal with those.
+Each weapon has its own 'style'. The sword attacks are very mobile, whereas the hammer is stationary. Ranged requires good aim, and the magical attacks can do things like destroy blocks. The slower weapons have a couple of points higher base damage, while the faster weapons have slightly lower base stats but hit more often. Most creatures in the game are stationary when attacking, but you will find more mobile enemies in the dungeons and might want to switch to a different weapon to deal with those.
 
-# CHARACTER PROGRESSION
+# Character Progression
 
-Currently the only thing that changes when you level up is that you’ll get a few more health points. This can be difficult to notice as by default your health and stamina bars don’t show numbers; you can change this in the Interface tab of the Settings-
+Currently the only thing that changes when you level up is that you’ll get a few more health points. This can be difficult to notice as by default your health and stamina bars don’t show numbers; you can change this in the Interface tab of the Settings -
+
 ![character progression](character_progression.jpg)
 
 Considering this, if you want to advance to beating the more difficult creatures in the game, currently the only way to make yourself more powerful is to level up a whole bunch!
 
-# ENEMIES
+# Enemies
 
 There are two kinds of creature in the game right now; normal-sized creatures that only go as high as level 8, and ‘giant’ creatures whose levels begin around level 30. There’s a big gap there, and to cross it you may have to do some grinding of the lower level mobs.
 
@@ -70,11 +71,11 @@ When you kill a creature, it will drop a sack of loot. Pick up this sack by hove
 
 ![sack of loot](lootsack.jpg)
 
-Currently there is no indication of what loot you received, but that’s also something that’s being worked on.
+When you loot an item, either from a chest or a lootsack or from harvesting, you'll see a notice in your chat log telling you what you've picked up.
 
-# TAMING
+# Taming
 
-If you’re lucky, something you kill or a chest you loot will drop a Collar. These are special items that let you tame creatures; any creatures, of any level. If you’re a level 1 character and manage to find a Collar, you can use it to tame a skull-level Gentle Giant. :D
+If you’re lucky, something you kill or a chest you loot will drop a Collar. These are special items that let you tame creatures, and the current maximum number of creatures you can have tamed at once is three. You can tame creatures of any level - if you’re a level 1 character and manage to find a Collar, you can use it to tame a skull-level Gentle Giant. :D
 
 ![taming](taming.jpg)
 
@@ -86,23 +87,23 @@ There’s currently no way of healing your pets (there is a Rod of Regeneration 
 
 Due to aforementioned pathfinding issues, it’s difficult getting pets to go down into dungeons with you, and even more difficult getting them back out again - something to keep in mind.
 
-# MOUNTS
+# Mounts
 
 Being able to mount your tamed creatures is a planned feature, but currently not available.
 
-# CAMPFIRES
+# Campfires
 
 ![campfire](campfire.jpg)
 
 Approaching a campfire will show the message ‘Waypoint Saved’. When you die, you will respawn at the last campfire that saved your waypoint. This currently does not extend to storing your in-game position when you log out; you’ll always log on at the first starting town.
 
-# CHESTS
+# Chests
 
 Chests can be found nestled in tree branches, on the very tops of trees, and inside houses. Keep your eyes peeled!
 
 ![chest](chest.jpg)
 
-# FINDING FOOD
+# Finding Food
 
 While killing creatures and looting chests can sometimes give you food and potions, you can also forage for food in the wild by picking apples and mushrooms.
 
@@ -111,7 +112,7 @@ While killing creatures and looting chests can sometimes give you food and potio
 Gather-able items will highlight when you move your reticle over them. This can be a little difficult with the smaller mushrooms as the reticle is quite tiny!
 
 
-# GLIDING
+# Gliding
 
 The gliding system is still being developed. Until recently it was possible to open the glider mid-air, but his has been changed in favour of a toggle system that keeps the danger of fall damage a reasonable threat.
 
@@ -123,7 +124,7 @@ Pressing the Shift key will equip the glider. You can run around with it equippe
 When gliding, holding the W key will maintain altitude, and letting go of the W key will make you slowly descend.
 
 
-# DUNGEONS
+# Dungeons
 
 ![points of interest](poi.jpg)
 
