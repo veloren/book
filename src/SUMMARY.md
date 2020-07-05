@@ -12,6 +12,7 @@
   - [Getting started - A Short Guide](players/getting-started/README.md)
   - [Airshipper - Veloren Launcher](players/airshipper.md)
   - [Hosting a Server](players/hosting-a-server.md)
+  - [Troubleshooting](players/troubleshooting.md)
 - [Veloren for Contributors](contributors/introduction.md)
   - [Introduction](contributors/introduction.md)
     - [Development tools](contributors/development-tools.md)
