@@ -41,8 +41,7 @@ If you want to run a dedicated Veloren server 24/7 follow this.<br/>
 2. Configuration
    1. Go into the folder `cd /opt/veloren-server`.
    2. Add `- "./server_settings.ron:/opt/server_settings.ron"` to the `volumes` section of the `docker-compose.yml` file.
-   3. Run `docker-compose up` as root and after startup stop it with CTRL+C.
-   4. The defaults settings should have been created. Now adjust it as needed.
+   3. Now create the file `touch server_settings.ron` as docker would create a folder otherwise.
 3. Start it
    1. Run `docker-compose up -d` as root.
    2. View logs with `sudo docker logs veloren-game-server-master`.
