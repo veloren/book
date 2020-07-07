@@ -17,6 +17,7 @@
   - [Introduction](contributors/introduction.md)
     - [Development tools](contributors/development-tools.md)
     - [Working with git](contributors/working-with-git.md)
+    - [Compiling](contributors/compiling.md)
     - [Before you contribute](contributors/before-you-contribute.md)
     - [FAQ](contributors/faq.md)
     - [Troubleshooting](contributors/troubleshooting.md)
