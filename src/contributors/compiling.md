@@ -4,6 +4,29 @@ This section covers building Veloren from rust source with `cargo` and running i
 
 **Note**: _all commands need to be run from the repository._
 
+## Required Libraries
+
+On **Windows** you should be all good.
+
+On **Linux** you need to have GTK3 installed.
+
+On **Debian** systems additional libraries may need to be downloaded, below is a non-exhaustive list:
+
+- libglib2.0-dev
+- libcairo2-dev
+- libasound2-dev
+- libpango1.0-dev
+- libatk1.0-dev
+- libgdk-pixbuf2.0-dev
+- libgtk-3-dev
+
+And a one liner to download and install them all:<br/>
+`sudo apt install libglib2.0-dev libasound2-dev libcairo2-dev libpangol1.0-dev libatk1.0-dev libgtk3.0-dev`
+
+On **Fedora** you can follow this [awesome guide](https://kwiecien.us/building-veloren-on-fedora.html).
+
+**Note**: _Feel free to open an issue incase these dependencies are incorrect._
+
 ## Compile and Run Veloren
 
 Run this in a terminal to compile and run Veloren:
