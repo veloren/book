@@ -12,6 +12,7 @@
   - [Getting started - A Short Guide](players/getting-started/README.md)
   - [Airshipper - Veloren Launcher](players/airshipper.md)
   - [Hosting a Server](players/hosting-a-server.md)
+  	- [Hosting on the Raspberry Pi](players/hosting-server-on-rpi.md)
   - [Troubleshooting](players/troubleshooting.md)
 - [Veloren for Contributors](contributors/README.md)
   - [Introduction](contributors/introduction.md)
