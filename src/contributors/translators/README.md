@@ -1,7 +1,5 @@
 # Translators multilingual society
 
-_Section under construction. Be careful out there._
+_Introduction on translating content to your language._
 
 - [Game](game.md)
-- [Book](book.md)
-- [Website](website.md)
