@@ -2,19 +2,19 @@
 
 \\\_ made by @Pfau
 
+\\\_ updated by @BottledByte
+
 ![Image1](image1.png)
 
-### What you need:
+## What you need
 
 An **IDE** of your choice (A programme that lets you view and edit code)
 
-Examples: [VSC](https://code.visualstudio.com/), [Atom](https://atom.io/), [Notepad++](https://notepad-plus-plus.org/downloads/)
+Examples: [VSCode](https://code.visualstudio.com/), [Atom](https://atom.io/), [Notepad++](https://notepad-plus-plus.org/downloads/)
 
 A **Voxel Editor** (To create the armour model)
 
 Example: [Magicavoxel](https://ephtracy.github.io/)
-
-A [guide](https://book.veloren.net/compile/index.html) on how to compile and run Veloren on your OS.
 
 The [character template](https://drive.google.com/file/d/1IUp35fsX1gKXEKpC2k_uDcNJ36cHChLI/view). (Can be opened with any voxel-editor that supports layers; i.e. Magicavoxel.)
 
@@ -44,7 +44,7 @@ To make the game actually load your creation there are several steps you have to
 
 They can be done in any order.
 
-### Copying the .vox into the asset folder:
+### Copying the .vox into the asset folder
 
 Make sure to **export your model(s) as .vox** and NOT just copy a saved .vox file from magicavoxel. Just copying will result in a ~10x bigger file size.
 
@@ -62,7 +62,7 @@ So for a chest armour called “leather_vest-0.vox” it is:
 assets/voxygen/voxel/armor/chest/leather_vest-0.vox
 ```
 
-### Naming scheme for .vox files:
+### Naming scheme for .vox files
 
 Single words are parted with an underscore (“\_”)
 
@@ -100,11 +100,13 @@ assets\voxygen\item_image_manifest.ron
 common/src/comp/inventory/item/armor.rs
 ```
 
-**ONLY needed for armour with .vox files**
+**Note:** _ONLY needed for armour with .vox files_
 
 (list your new armour style in here)
 
-### Veloren has 12 types of armour:
+### Veloren has 12 types of armour
+
+**Types in bold** need a 3D .vox file
 
 - Head
 - Neck (Necklaces)
@@ -118,13 +120,12 @@ common/src/comp/inventory/item/armor.rs
 - **Back** (Capes, Backpacks...)
 - **Legs**
 - **Feet**
-- **Red** – Needs a 3d .vox file
 
-Armour types that need a 3d .vox file need to be listed in every file above.
+Armour types that need a 3D .vox file need to be listed in every file above.
 
-### Example for adding a new cape:
+### Example for adding a new cape
 
-1. New entry in `assets\voxygen\voxel\humanoid_armor_back_manifest.ron`
+#### 1. New entry in `assets\voxygen\voxel\humanoid_armor_back_manifest.ron`
 
 ![Image5](image5.png)
 
@@ -136,22 +137,22 @@ Copy this part (make sure to include the brackets and comma!) and paste it:
 
 ![Image8](image6.png)
 
-Fill in the name **of the item style.** This is the name you’ll add in _armor.rs_ later.
+Fill in the name **of the item style (kind).** This is the name you’ll use to later to match up assets.
 
 Note: `color: None` indicates that grey parts won’t be recoloured.
 
 To colour those parts put in “`color: Some((<R>, <G>, <B>))`” here.
 
-### Example of recoloured armour:
+##### Example of recoloured armour
 
 ```rust,ignore
-Brown: (
+"Brown": (
     vox_spec: ("armor.chest.grayscale", (-7.0, -3.5, 2.0)),
     color: Some((90, 49, 43))
 ),
 ```
 
-#### 2. New Entry in `assets/common/items/armor/<armour type>`
+#### 2. New entry in `assets/common/items/armor/<armour type>`
 
 ![Image9](image13.png)
 
@@ -162,52 +163,19 @@ Item(
     name: "New Cape",
     description: "Example Item",
     kind: Armor(
-        kind: Back(NewCape),
+        kind: Back("NewCape"),
         stats: (20),
     ),
 )
 ```
 
-Edit the file to have the right `kind.`(The same kind you put in before.)
+Edit the file to have the right `kind`. (The same kind you put in before.)
 
 ![Image10](image10.png)
 
-This creates a tooltip text similar to this.
+`description` field in Item creates a tooltip text similar to this.
 
-#### 3. Adding the armour style to `common/src/comp/inventory/item/armor.rs`
-
-Look for the armour style you want to add. If it’s not listed you are probably trying to add a style that doesn’t need a 3D asset.
-
-```rust,ignore
-#[derive(Copy, Clone, Debug, PartialEq, Eq, Hash, Serialize, Deserialize)]
-#[repr(u32)]
-pub enum Back {
-    Short0 = 1,
-    Admin = 2,
-}
-pub const ALL_BACKS: [Back; 2] = [Back::Short0, Back::Admin];
-```
-
-Every armour style has an `enum` and a `const.`
-
-In the `enum` you need to define the name and assign a number to it.
-
-Inside the `const` definition you need to increase the number of available styles and add the name like it’s done for the other parts.
-
-Example for the “NewCape”:
-
-```rust,ignore
-#[derive(Copy, Clone, Debug, PartialEq, Eq, Hash, Serialize, Deserialize)]
-#[repr(u32)]
-pub enum Back {
-    Short0 = 1,
-    Admin = 2,
-    NewCape= 3,
-}
-pub const ALL_BACKS: [Back; 3] = [Back::Short0, Back::Admin, Back::NewCape];
-```
-
-#### 4. Add a new item image in `assets\voxygen\item_image_manifest.ron`
+#### 3. Add a new item image in `assets\voxygen\item_image_manifest.ron`
 
 You can either use a .png or .vox file as an item image.
 
@@ -215,7 +183,7 @@ Example for a .png:
 
 ```rust,ignore
 // Lanterns
-Lantern(Black0): Png(
+Lantern("Black0"): Png(
     "element.icons.lantern_black-0",
 ),
 ```
@@ -223,7 +191,7 @@ Lantern(Black0): Png(
 Example for a .vox:
 
 ```rust,ignore
-Armor(Back(Short0)): VoxTrans(
+Armor(Back("Short0")): VoxTrans(
     "voxel.armor.back.short-0",
     (0.0, 0.0, 0.0), (-90.0, 180.0, 0.0), 1.0,
 ),
@@ -232,7 +200,7 @@ Armor(Back(Short0)): VoxTrans(
 In order to find the right posing numbers for the .vox it’s often a good idea to look for a similar item.
 
 ```rust,ignore
-Armor(Back(NewCape)): VoxTrans(
+Armor(Back("NewCape")): VoxTrans(
     "voxel.armor.back.new_cape-0",
     (0.0, 0.0, 0.0), (-90.0, 180.0, 0.0), 1.0,
 ),
@@ -242,13 +210,13 @@ You can use the same .vox as the actual 3D asset shown equipped on the character
 
 ![Image11](image7.png)
 
-#### 5. Finding the right offset for your item
+#### 4. Finding the right offset for your item
 
 In order to test your item in-game you need to compile your game now.
 
 Your new item will **only be available locally**, so make sure to connect to a local server or choose “Singleplayer”.
 
-To drop the item into your inventory use the chat command`/give_item:`
+To drop the item into your inventory use the chat command `/give_item:`
 
 ```
 /give_item common.items.armor.back.new_cape
@@ -263,7 +231,7 @@ To set the right offset you need to revisit `ssets/voxygen/voxel/humanoid/<armou
 The values in there can be hot-reloaded. That means just saving them will immediately take effect ingame.
 
 ```rust,ignore
-Admin: (
+"Admin": (
     vox_spec: ("armor.back.admin", (-5.0, -1.0, -0.0)),
     color: None
 ),
@@ -277,10 +245,20 @@ They represent the coordinates:
 
 X = Left (lower the number) and Right (increase the number) <br/>
 Y = Back (lower the number) and Forth (increase the number) <br/>
-Z = Up(increase the number) and Down (lower the number) <br/>
+Z = Up (increase the number) and Down (lower the number) <br/>
 
 Change the numbers until you get the desired offset.
 
 ![Image13](image12.png)
 
-**Done. You added a new armour style and item to Veloren. :)**
+## Done. You added a new armour style and item to Veloren. :)
+
+### But just in case something went wrong, a little troubleshooting advice
+
+It may happen that your armor displays as a big pink box with a question mark (in the world or in the inventory).
+
+If this happens, some entry is invalid, probably due to a typo in your style
+(kind; like "NewCape") or one of the asset paths. See the log for details to pin-point the source.
+
+If the game panics when loading your armor, it mostly means that the syntax
+of one or more entries in `.ron` files got garbled (like a missing parenthesis or a quote mark).
