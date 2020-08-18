@@ -6,9 +6,11 @@ This section covers building Veloren from rust source with `cargo` and running i
 
 ## Required Libraries
 
-On **Windows** you should be all good.
+On **Windows** you will need [Visual Studio Build Tools](https://visualstudio.microsoft.com/de/downloads/).
 
-On **Linux** you need to have GTK3 installed.
+**Note**: _Install "C++ tools" and "Windows 10 SDK", you won't need to install Visual Studio itself so scroll down and open "Tools for Visual Studio \<year\>" to find the latest buildtools._
+
+On **Linux** you need to have `GTK3` installed.
 
 On **Debian** systems additional libraries may need to be downloaded, below is a non-exhaustive list:
 
