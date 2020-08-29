@@ -23,9 +23,10 @@ On **Debian** systems additional libraries may need to be downloaded, below is a
 - libgtk-3-dev
 - libxcb-shape0-dev
 - libxcb-xfixes0-dev
+- libudev-dev
 
 And a one liner to download and install them all:<br/>
-`sudo apt install libglib2.0-dev libasound2-dev libcairo2-dev libpango1.0-dev libatk1.0-dev libgtk-3-dev libxcb-shape0-dev libxcb-xfixes0-dev`
+`sudo apt install libglib2.0-dev libasound2-dev libcairo2-dev libpango1.0-dev libatk1.0-dev libgtk-3-dev libxcb-shape0-dev libxcb-xfixes0-dev libudev-dev`
 
 On **Fedora** you can follow this [awesome guide](https://kwiecien.us/building-veloren-on-fedora.html).
 
