@@ -48,4 +48,5 @@
     - [Adding Sprites](contributors/guides/adding-sprites/guide.md)
 	- [Adding Weapons](contributors/guides/adding-weapons/guide.md)
 	- [Using const_tweaker](contributors/guides/using-const_tweaker/guide.md)
+	- [Adding Weapon Skills](contributors/guides/adding-weapon-skills/guide.md)
 
