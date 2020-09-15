@@ -42,11 +42,11 @@ The first nine slots of your bag space, across the topmost row, correspond to sl
 
 # Looting and Gathering
 
-If you look carefully you may notice certain objects in the world will highlight when you move your crosshair over them. This indicates you can interact with them ("E" by default), which will give you an item. Chests will give random loot, and objects will give a food or crafting item.
+If you look carefully you may notice certain objects in the world will highlight when you move your crosshair over them. This indicates you can interact with them (E by default), which will give you an item. Chests will give random loot, and objects will give a food or crafting item.
 
 ![apples](apples.jpg)![mushrooms](mushrooms.jpg)
 
-Try switching to first person view by scrolling all the way in (or pressing "0") to make gathering easier.
+Try switching to first person view by scrolling all the way in (or pressing the 0 key) to make gathering easier.
 
 # Gear
 
@@ -56,11 +56,9 @@ Gear can be crafted or looted from fallen enemies and chests. Currently, the onl
 
 ![the crafting menu](crafting_menu.jpg)
 
-You can open the crafting menu with "C". Items can be crafted with gatherable materials such as Twigs, which can be picked up off the ground, and other materials that may drop from enemies. Food items can be crafted into even more effective foods, and some weapons and armor can also be crafted.
+You can open the crafting menu with the C key. Items can be crafted with gatherable materials such as Twigs, which can be picked up off the ground, and other materials that may drop from enemies. Food items can be crafted into even more effective foods, and some weapons and armor can also be crafted.
 
 The fireworks are for celebratory use only; ignite responsibly.
-
-A note on Velorite: Velorite is an item that either gives XP (when used) or can be used in crafting. Currently, Velorite (and Velorite fragments) is an extremely rare resource that is only obtained from a specific enemy. The balance of consumables and loot tables is always under evaluation, so this will probably change.
 
 # Weapons And Combat
 
@@ -68,7 +66,7 @@ The weapons and combat systems are still very *very* early in development, are c
 
 ![weapons and combat](weapons_and_combat.jpg)
 
-Each weapon has a left- and right- mouse button attack. The mouse-left attack can be considered a ‘light’ attack, while the mouse-right attack is heavier and usually consumes stamina. Some weapons, namely staves, have a second ability activated by pressing "1" in the hotbar. The ability will replace whatever item is in that hotbar slot when you equip the weapon. 
+Each weapon has a left- and right- mouse button attack. The mouse-left attack can be considered a ‘light’ attack, while the mouse-right attack is heavier and usually consumes stamina. Some weapons, namely staves, have a second ability activated by pressing 1 in the hotbar. The ability will replace whatever item is in that hotbar slot when you equip the weapon. 
 
 Each weapon has its own 'style'. The sword attacks are very mobile, whereas the hammer is stationary. Ranged requires good aim, and the magical attacks can do things like destroy blocks. The slower weapons have a couple of points higher base damage, while the faster weapons have slightly lower base stats but hit more often. Most creatures in the game are stationary when attacking, but you will find more mobile enemies in the dungeons and might want to switch to a different weapon to deal with those.
 
@@ -98,7 +96,7 @@ When you loot an item, either from a chest or a lootsack or from harvesting, you
 
 # Taming
 
-If you’re lucky, something you kill or a chest you loot will drop a Shiny Gem, or even more rarely a Collar. Shiny Gems are special items that, when crafted into a Collar, let you tame creatures, and the current maximum number of creatures you can have tamed at once is three. You can only tame non-hostile normal-sized creatures. Choose carefully!
+If you’re lucky, something you kill or a chest you loot will drop a Shiny Gem, or even a Collar. Shiny Gems are special items that, when crafted into a Collar, let you tame creatures, and the current maximum number of creatures you can have tamed at once is three. You can only tame non-hostile normal-sized creatures. Choose carefully!
 
 ![taming](taming.jpg)
 
@@ -158,3 +156,12 @@ On every level there’ll be a room with a staircase leading down to the next le
 ![dungeon corridors](dungeon2.jpg)
 
 Make sure you’re well stocked up on food and have some levels under your belt before attempting your first dungeon!
+
+# Caves
+
+Caves are marked by gray lines on the map. Look for the places those lines end to find the entrance.
+
+![potential cave entrance](cave_map.jpg)
+![cave mouth](cave_entrance.jpg)
+
+Caves are where several resources can spawn, including Velorite! Are you prepared to plumb the depths, adventurer?
