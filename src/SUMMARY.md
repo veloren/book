@@ -12,7 +12,7 @@
   - [Getting started - A Short Guide](players/getting-started/README.md)
   - [Airshipper - Veloren Launcher](players/airshipper.md)
   - [Hosting a Server](players/hosting-a-server.md)
-  	- [Hosting on the Raspberry Pi](players/hosting-server-on-rpi.md)
+    - [Hosting on the Raspberry Pi](players/hosting-server-on-rpi.md)
   - [Troubleshooting](players/troubleshooting.md)
 - [Veloren for Contributors](contributors/README.md)
   - [Introduction](contributors/introduction.md)
@@ -20,6 +20,7 @@
     - [Working with git](contributors/working-with-git.md)
     - [Compiling](contributors/compiling.md)
     - [Before you contribute](contributors/before-you-contribute.md)
+    - [Joining a team](contributors/join-a-team.md)
     - [FAQ](contributors/faq.md)
     - [Troubleshooting](contributors/troubleshooting.md)
   - [For Developers](contributors/developers/README.md)
@@ -49,4 +50,3 @@
 	- [Adding Weapons](contributors/guides/adding-weapons/guide.md)
 	- [Using const_tweaker](contributors/guides/using-const_tweaker/guide.md)
 	- [Adding Weapon Skills](contributors/guides/adding-weapon-skills/guide.md)
-
