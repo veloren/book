@@ -20,7 +20,7 @@
     - [Working with git](contributors/working-with-git.md)
     - [Compiling](contributors/compiling.md)
     - [Before you contribute](contributors/before-you-contribute.md)
-    - [Joining a team](contributors/join-a-team.md)
+    - [Joining a team](contributors/joining-a-team.md)
     - [FAQ](contributors/faq.md)
     - [Troubleshooting](contributors/troubleshooting.md)
   - [For Developers](contributors/developers/README.md)
