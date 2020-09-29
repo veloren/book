@@ -6,6 +6,8 @@ _**Note**: To understand the following we highly recommend reading about git!_
 
 ## Download source code
 
+**Note**: Veloren needs [git LFS installed](development-tools.md#git-lfs) before cloning to be able to download the assets. If you already cloned the repository before setting up git LFS use [these steps](troubleshooting.md#when-lfs-was-not-setup-before-cloning-the-repo) to get the assets downloaded.
+
 Clone the repository
 
 ```
