@@ -6,3 +6,4 @@ _Introducing the power of Rust development_
 - [Learning Rust](learn-rust.md)
 - [The codebase structure](codebase-structure.md)
 - [Debugging](debugging.md)
+- [Performance Analysis](performance-analysis.md)

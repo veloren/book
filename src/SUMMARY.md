@@ -29,6 +29,7 @@
     - [Learning Rust](contributors/developers/learn-rust.md)
     - [The codebase structure](contributors/developers/codebase-structure.md)
     - [Debugging](contributors/developers/debugging.md)
+    - [Performance Analysis](contributors/developers/performance-analysis.md)
   - [For Artists](contributors/artists/README.md)
     - [Voxel Models](contributors/artists/voxel-models.md)
     - [Audio]()
