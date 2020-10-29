@@ -42,6 +42,10 @@ cargo -Zunstable-options -Zpackage-features run --bin veloren-voxygen --no-defau
 
 Connect to the running process via you tracy tool https://aur.archlinux.org/packages/tracy/
 
+## 'cargo build -Z timings'
+
+When you want to analyse compile time, you can use cargos feature `-Z timings`. It will output a .html file with individual compile times, and dependencies and a total graph showing inactive, active and indling projects.
+
 # External tooling
 
 ## rust: flamegraph
