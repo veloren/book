@@ -27,6 +27,7 @@ Look around your interface. At the top left you’ll see that you can press F1 t
 - O - Opens your social tab
 - N - Opens your settings
 - B - Opens your bag / inventory
+- C - Opens the crafting menu
 
 You’ll notice NPCs and animals wandering around town. In general, predatory animals and monsters will attack the player on sight, while docile creatures and NPCs will ignore the player until attacked. Observe carefully and you may notice wildlife interacting with each other. A player might even be able to score easy loot this way!
 

@@ -11,6 +11,7 @@
     - [Roadmap](players/roadmap.md)
   - [Getting started - A Short Guide](players/getting-started/README.md)
   - [Airshipper - Veloren Launcher](players/airshipper.md)
+  - [Userdata Folder Structure](players/userdata-folder-structure.md)
   - [Hosting a Server](players/hosting-a-server.md)
     - [Hosting on the Raspberry Pi](players/hosting-server-on-rpi.md)
   - [Generating a Custom World](players/world-generation.md)
