@@ -29,7 +29,19 @@ To change terrain scale, edit [here](https://gitlab.com/veloren/veloren/-/blob/3
 
 ## Map Viewer
 
-If you are able to compile, you can also try an example map generator and viewer application. Run `RUST_LOG="info,veloren_world=debug" cargo run --release --example water` from your local repository.
+If you are able to compile, you can also try an example map generator and viewer application. Run the following command from your local repository, depending on preferred terminal.
+
+Unix-like:
+
+`RUST_LOG="info,veloren_world=debug" cargo run --release --example water`
+
+Windows, cmd:
+
+`set RUST_LOG="info,veloren_world=debug" && cargo run --release --example water`
+
+Windows, PowerShell:
+
+`$env:RUST_LOG="info,veloren_world=debug"; cargo run --release --example water`
 
 By default it will load the default world from the `assets` folder. Input a custom seed [here](https://gitlab.com/veloren/veloren/-/blob/34c3bab6ad5046b059f824b94118cbe657f6c286/world/examples/water.rs#L42), and change two lines below if you want to generate or load a different world.
 
