@@ -48,6 +48,9 @@ We want our code basis to be clean and make it easy to keep track of our past, t
    > Use the number in `git rebase -i HEAD~4`, e.g. for 4 commits on top of master.
    > Read the instructions in the editor. You can change a commit name by modifying the text in a line.
    > To Squash Commit 2 and 3 into a single commit, write `squash` in front of the 3rd commit, don't change the second one
+   > 
+   > Run fmt on every commit in your branch
+   > `git filter-branch -f --tree-filter "cargo fmt" $(git merge-base origin/master HEAD)..HEAD`
 
 5. Keeping your feature up to date
 
