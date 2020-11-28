@@ -58,8 +58,6 @@ Search for a message called `Tracing is successfully set to TRACE` to verify `TR
 ##### Cmd
 
 1. Open a CMD.
-2. Write `setx RUST_LOG "trace"` and hit enter.
-3. Close this CMD, and open a new CMD.
-4. Go to your veloren folder with the `cd` command, e.g. `cd C:\Users\<Your Username>\Desktop\veloren`.
-5. Run `veloren-voxygen.exe`.
-6. The logs will now be printed to the CMD and the folder `userdata\voxygen\logs` or `%appdata%\veloren\`.
+2. Go to your veloren folder with the `cd` command, e.g. `cd C:\Users\<Your Username>\Desktop\veloren`.
+3. Write `set RUST_LOG=trace&& veloren-voxygen.exe` and hit enter (exactly like here, without whitespace before `&&`)
+4. The logs will now be printed to the CMD and the folder `userdata\voxygen\logs` or `%appdata%\veloren\`.
