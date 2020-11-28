@@ -1,16 +1,16 @@
+*If you are planning on playing multiplayer, make sure you register at [account.veloren.net](https://account.veloren.net/) before connecting to an auth-enabled server. Otherwise, things remain mostly the same for both singleplayer and multiplayer. Keep in mind that every aspect of the game is subject to change, and this guide may not be 100% up to date when you read it.*
+
 # Character Creation
 
 ![character creation](character_creation.jpg)
 
-Welcome to the character creation screen! Currently only aesthetic choices are shown; eventually this interface will be expanded to contain lore on each species, guidance on chosen weapons, and starting stats of each species.
+Welcome to the character creation screen! Currently only aesthetic choices are shown; eventually this interface will be expanded to contain lore on each species, guidance on chosen weapons, and starting stats of each species. As of now, however, your choice of species matters little.
 
 There are currently six playable species in Veloren; Human, Orc, Dwarf, Elf, Undead, and Danari. The Danari are the only species you won’t be familiar with; they’re a special species created for the game.
 
-Each species has slightly different starting stats. At this point in the game these have negligible effect on playstyle and can be ignored - they’re not even displayed in the Character Creation screen. The size differences between the species have no bearing on how they play in-game and is just an aesthetic difference.
+As well as choosing your species, here you choose your starting weapon. There are no species restrictions on weapons, and choosing your starter weapon does not lock you into that choice; as you play you’ll find weapons of the other types and can switch to those with no penalty.
 
-As well as choosing your species, here you choose your starting weapon. Daggers are still being implemented, and so their icon is greyed out and un-selectable. There are no species restrictions on weapons, and choosing your starter weapon does not lock you into that choice; as you play you’ll find weapons of the other types and can switch to those with no penalty.
-
-You can set your hair style and colour, skin colour, eye details, eye colour, and - only available to some species - accessories.
+You can set your hair style and colour, skin colour, eye details, eye colour, and - only available to some species - accessories. Use the randomize button (the dice icon) to randomize your character's appearance and name.
 
 When you’ve finished creating your character, enter a name, and then click Create. Choose your character from the list, click Enter World, and you’ll enter the game world.
 
@@ -29,105 +29,96 @@ Look around your interface. At the top left you’ll see that you can press F1 t
 - B - Opens your bag / inventory
 - C - Opens the crafting menu
 
-You’ll notice NPCs and animals wandering around town. In general, predatory animals and monsters will attack the player on sight, while docile creatures and NPCs will ignore the player until attacked. Observe carefully and you may notice wildlife interacting with each other. A player might even be able to score easy loot this way!
+You can change most key bindings in the settings.
 
-There are also currently no guards; if you attack an NPC they will cry for help and will attack you in return, but otherwise there are no consequences and you can kill them (meanie). 
 
 # Managing Your Inventory
 
 ![managing your inventory](managing_your_inventory.jpg)
 
+Inventory slots can be assigned to hotbar slots by clicking and dragging the item stored in the slot to the hotbar. Any items in that inventory slot will then appear in the assigned hotbar slot. Hotbar slots can be reassigned by dragging an item in a different inventory slot to it. Here, 7 will use the cheese, but if I run out of cheese and another item takes its slot in the inventory, for example, 7 will use that item instead.
 
-The first nine slots of your bag space, across the topmost row, correspond to slots 1 - 9 in your hotbar. If you drag something from slot 1 of your bag to slot 1 of your hotbar, it binds that slot in your bag to slot 1 of the hotbar. Right now I’ve moved my cheese there, but if I run out of cheese and move an apple into that first slot in my bag, slot 1 of my hotbar will change to the apple. If I run out of cheese and meanwhile loot a weapon that falls into slot 1 of my bag, I’ll see that weapon in slot 1 of my hotbar.
+*Depending on your equipped weapon, some hotbar slots will be reserved for abilities.*
+
+If your inventory is getting cluttered or full, you can rearrange the items by dragging them around, or throw them away by dragging them outside the inventory window.
 
 
 # Looting and Gathering
 
-If you look carefully you may notice certain objects in the world will highlight when you move your crosshair over them. This indicates you can interact with them (E by default), which will give you an item. Chests will give random loot, and objects will give a food or crafting item.
+![a mushroom](mushroom.jpg)
 
-![apples](apples.jpg)![mushrooms](mushrooms.jpg)
+If you look carefully you may notice certain objects in the world will highlight when you move your crosshair near them. This indicates you can interact with them (E by default), which will usually give you an item.
 
-Try switching to first person view by scrolling all the way in (or pressing the 0 key) to make gathering easier.
 
 # Gear
 
-Gear can be crafted or looted from fallen enemies and chests. Currently, the only stats associated with gear are "power" and "armor" values. Higher power gives a weapon more damage. Higher armor on worn gear gives damage reduction scaled to your total armor. Gear is the fastest and easiest method of progressing, so get started early!
+![gear example](gear.jpg)
+
+Gear can be crafted from materials or looted from enemies and chests. It comes in several rarities. Gear is one of the main ways to progress in the game, so get started early!
+
+# Consumables
+
+![consumable example](consumable.jpg)
+
+Consumables currently come in two varieties: food and potions. Food affects you at a certain rate for its duration while potions take effect instantaneously.
 
 # Crafting
 
 ![the crafting menu](crafting_menu.jpg)
 
-You can open the crafting menu with the C key. Items can be crafted with gatherable materials such as Twigs, which can be picked up off the ground, and other materials that may drop from enemies. Food items can be crafted into even more effective foods, and some weapons and armor can also be crafted.
+You can open the crafting menu with the C key. You'll see a list of craftable items, some of which may be greyed out - that means you have insufficient materials or tools to craft them. Items can be crafted with materials either gathered from the world or dropped by enemies. Food items can be crafted into even more effective foods, and some basic weapons and armor can also be crafted.
 
-The fireworks are for celebratory use only; ignite responsibly.
+*The fireworks are for celebratory use only. Ignite responsibly.*
 
 # Weapons And Combat
 
-The weapons and combat systems are still very *very* early in development, are currently not fully implemented, and are being discussed constantly in the Discord with regard to how they’ll work. What you see in-game currently is subject to great change, and should not be considered the final implementation of a system.
+![a challenging encounter](combat.jpg)
 
-![weapons and combat](weapons_and_combat.jpg)
+As you wander the world of Veloren, you'll encounter all manner of animals, monsters, NPCs, and maybe even players. In general, predatory animals and monsters will attack the player on sight, while docile creatures and NPCs will ignore the player unless attacked.
 
-Each weapon has a left- and right- mouse button attack. The mouse-left attack can be considered a ‘light’ attack, while the mouse-right attack is heavier and usually consumes stamina. Some weapons, namely staves, have a second ability activated by pressing 1 in the hotbar. The ability will replace whatever item is in that hotbar slot when you equip the weapon. 
+Each weapon has a left-click basic attack and one or more abilites on right click and the hotbar. Each weapon has its own playstyle, and serve to replace conventional 'classes.' 
 
-Each weapon has its own 'style'. The sword attacks are very mobile, whereas the hammer is stationary. Ranged requires good aim, and the magical attacks can do things like destroy blocks. The slower weapons have a couple of points higher base damage, while the faster weapons have slightly lower base stats but hit more often. Most creatures in the game are stationary when attacking, but you will find more mobile enemies in the dungeons and might want to switch to a different weapon to deal with those.
+Using more than one weapon by equipping it to the 'offhand' will increase your combat options immensely! Switch to your offhand weapon by pressing Tab.
 
-**Note**: *The entire weapon system is undergoing an overhaul. What is described above is accurate to the system at the time of writing. Expect combat to change as time goes on.*
+Dodging enemy attacks is important. Middle-click will swiftly roll you out of the way.
+
 
 # Character Progression
 
-Currently the only thing that changes when you level up is that you’ll get a few more health points. If the health and stamina bars aren't showing numbers, you can change this in the Interface tab of the Settings.
-
 ![character progression](character_progression.jpg)
 
-The main way to progress currently is through gear. Thus, it is recommended to loot everything you find, since you never know when you might come across better gear!
+Defeating enemies earns you experience, which allows you to level up your character.
 
-# Enemies
+Currently the only thing that changes when you level up is that you’ll get a few more health points. In the future, skill trees will be implemented to give more weight to leveling up. Otherwise, obtaining better gear is essential to progression.
 
-There are two kinds of creature in the game right now; normal-sized creatures that only go as high as around level 10, and ‘giant’ creatures whose levels begin around level 30. There’s a big gap there, and to cross it you may have to do some grinding of the lower level mobs.
-
-![enemies](enemies.jpg)
-
-Whether you’re able to see the level of a creature depends on your own level; anything significantly above you in level will show as a skull icon. Creatures close to your level will have their level number visible; if they’re white they’re considered a fair challenge, and if red, maybe a little too high.
-
-When you kill a creature, it will drop a sack of loot. Pick up this sack by hovering over it and pressing the E key.
-
-![sack of loot](lootsack.jpg)
-
-When you loot an item, either from a chest or a lootsack or from harvesting, you'll see a notice in your chat log telling you what you've picked up.
 
 # Taming
 
-If you’re lucky, something you kill or a chest you loot will drop a Shiny Gem, or even a Collar. Shiny Gems are special items that, when crafted into a Collar, let you tame creatures, and the current maximum number of creatures you can have tamed at once is three. You can only tame non-hostile normal-sized creatures. Choose carefully!
+In the course of playing the game, you'll be able to craft Collars, which let you tame creatures. The current maximum number of creatures you can have tamed at once is three. You can only tame non-hostile creatures. Choose carefully!
 
 ![taming](taming.jpg)
 
-Tamed creatures will follow you around (though be careful as they sometimes get stuck behind objects) and will attack anything that attacks you.
+Tamed creatures will follow you around and will attack anything that attacks you. They can be healed with a healing sceptre. 
 
-You can heal your pets with the Sceptre of Regeneration, but it is currently bugged and undergoing an overhaul.
+Due to pathfinding issues, pets may have difficulty keeping up with you when you go off gliding or delve into dungeons.
 
-Due to pathfinding issues, it’s difficult getting pets to go down into dungeons with you, and even more difficult getting them back out again - something to keep in mind.
+*Currently, pets do not persist through logins. Don't get too attached.*
 
-Currently, pets do not persist through logins. Don't get too attached.
-
-# Mounts
-
-Being able to mount your tamed creatures is a planned feature, but currently not available.
 
 # Campfires
 
 ![campfire](campfire.jpg)
 
-Approaching a campfire will show the message ‘Waypoint Saved’. When you die, you will respawn at the last campfire that saved your waypoint. This currently does not extend to storing your in-game position when you log out; you’ll always log on at the first starting town.
+Campfires are interspersed across the world, marked by tall pillars of smoke. Approaching a campfire will show the message ‘Waypoint Saved’. When you die, you will respawn at the last campfire that saved your waypoint. Your waypoint persists through logins, so you can start each session approximately where you left off!
 
-# Chests
 
-Chests can be found nestled in tree branches, on the very tops of trees, and inside houses. Keep your eyes peeled!
+# Map
 
-![chest](chest.jpg)
+![map](map_icons.jpg)
+
+Access the map by pressing M. You'll see icons representing dungeons, towns, and cave entrances along with brown lines denoting roads. The difficulty level of a dungeon is represented by the number of dots that appear above the icon. Your current location is initially at the center of the screen, but the map can be shifted around by clicking and dragging. The mouse wheel zooms in and out. There is also a minimap seen in regular play at the top right. 
 
 # Gliding
-
-The gliding system is still being developed. Until recently it was possible to open the glider mid-air, but his has been changed in favour of a toggle system that keeps the danger of fall damage a reasonable threat.
 
 ![glider](glider.jpg)
 
@@ -135,34 +126,45 @@ Pressing the Shift key will equip the glider. You can run around with it equippe
 
 When gliding, holding the W key will maintain altitude, and letting go of the W key will make you slowly descend.
 
+*Note that you are not able to re-equip the glider if you retract it early in midair.*
+
 
 # Dungeons
 
-![points of interest](poi.jpg)
+Dungeons are marked on the map with a 'ruins' icon, along with a difficulty level.
 
-Towns and dungeons are marked on your map with brown circles. Look out for them while traveling!
+On entering the dungeon you’ll descend a long, spiral staircase that will eventually exit at the first dungeon level, deep below ground. Each level has a series of corridors and rooms containing hostile enemies and treasure chests. The most rare and powerful loot in the game can be obtained from dungeons!
 
-Dungeon entrances are all uniquely themed, and usually have a campfire somewhere nearby, either just outside, or sometimes just inside the entrance.
+![dungeon internals](dungeon2.jpg)
 
-![dungeon campfire](dungeon_camp.jpg)
+*Dungeons are dark - equip your lantern by pressing the G key!*
 
-On entering the dungeon you’ll descend a long, spiral staircase that will eventually exit at the first dungeon level, deep below ground. Each level has a series of corridors and rooms containing hostile enemies (both small and giant) and treasure chests. The most rare and powerful loot in the game can be obtained from dungeons!
-
-![dungeon stairs](dungeon1.jpg)
-
-Dungeons are dark - equip your lantern by pressing the G key!
-
-On every level there’ll be a room with a staircase leading down to the next level. There may also be a campfire at the top of each staircase. There are several levels to traverse before you’ll find the last level with the Cultist Leader, the dungeon boss.
-
-![dungeon corridors](dungeon2.jpg)
-
-Make sure you’re well stocked up on food and have some levels under your belt before attempting your first dungeon!
+Make sure you’re well stocked up on healing items and have some levels under your belt before attempting your first dungeon!
 
 # Caves
 
-Caves are marked by gray lines on the map. Look for the places those lines end to find the entrance.
-
-![potential cave entrance](cave_map.jpg)
+![cave on map](cave_names.jpg)
 ![cave mouth](cave_entrance.jpg)
 
-Caves are where several resources can spawn, including Velorite! Are you prepared to plumb the depths, adventurer?
+Caves are marked with cave entrance icons on the map.
+
+Several resources can be found in caves, some of which are exclusive to them. Are you prepared to plumb the depths, adventurer?
+
+# Grouping Up
+
+When playing in a multiplayer server, you may wish to team up with other players in order to conquer content without losing track of or hurting each other. The grouping function is your friend here. To invite other players to your group, press O to open the player list, click on the character you want to invite, and press Invite. Hovering over the character names will show you the player's account name.
+
+![player menu and grouping up](invite.jpg)
+
+
+# Useful Commands
+
+`/home` - Teleports you to the default spawn and resets your waypoint.
+
+`/w` - global chat
+
+`/r` - regional chat
+
+`/g` - group chat
+
+`/t` - direct chat
