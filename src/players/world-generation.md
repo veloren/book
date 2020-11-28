@@ -37,7 +37,7 @@ Unix-like:
 
 Windows, cmd:
 
-`set RUST_LOG="info,veloren_world=debug" && cargo run --release --example water`
+`set RUST_LOG=info,veloren_world=debug&& cargo run --release --example water`
 
 Windows, PowerShell:
 
