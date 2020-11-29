@@ -80,7 +80,18 @@ Each weapon has a left-click basic attack and one or more abilites on right clic
 
 Using more than one weapon by equipping it to the 'offhand' will increase your combat options immensely! Switch to your offhand weapon by pressing Tab.
 
-Dodging enemy attacks is important. Middle-click will swiftly roll you out of the way.
+Dodging enemy attacks is important. Middle-click will swiftly roll you out of the way. Use sideways movement to avoid ranged attacks while closing in or returning fire. If you use ranged weapons against a melee weapon consider moving backwards. Also you can leverage the fact that NPCs don't change weapons or might not figure out how to climb. Use the training dummy to familiarize yourself with the more complicated attacks offered by your weaponry.
+
+
+# Additional Hints For Beginners
+
+Look for helpful equipment inside the houses of towns you visit.
+
+You might want to practice combat with small animals first, attacking villagers or travellers will get you killed quickly. If you follow a traveller you can avoid the more dangerous wildlife and even collect loot from animals killed for you.
+
+Once you have enough leather straps you can craft yourself initial armor. Look for Apples or Mushrooms and Twigs (common in moderate forests), combine them to get Apple Sticks which give good healing.
+
+Look for campfires as they offer you a position to restart from and might even offer other benefits in the future. This is especially important if you travel large distances using your glider and don't want to lose progress. You might want to land and pause at campfires before climbing the next hill to continue your glide. Flying at night makes it more easy to spot campfires close to your destination.
 
 
 # Character Progression
@@ -159,7 +170,7 @@ When playing in a multiplayer server, you may wish to team up with other players
 
 # Useful Commands
 
-`/home` - Teleports you to the default spawn and resets your waypoint.
+`/home` - Teleports you to the default spawn and resets your waypoint. This is your best option if the map has changed and you enter the game stuck in solid ground.
 
 `/w` - global chat
 
