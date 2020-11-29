@@ -89,7 +89,7 @@ Look for helpful equipment inside the houses of towns you visit.
 
 You might want to practice combat with small animals first, attacking villagers or travellers will get you killed quickly. If you follow a traveller you can avoid the more dangerous wildlife and even collect loot from animals killed for you.
 
-Once you have enough leather straps you can craft yourself initial armor. Look for Apples or Mushrooms and Twigs (common in moderate forests), combine them to get Apple Sticks which give good healing.
+Once you have enough leather scraps you can craft yourself initial armor. Look for Apples or Mushrooms and Twigs (common in moderate forests), combine them to get Apple Sticks which give good healing.
 
 Look for campfires as they offer you a position to restart from and might even offer other benefits in the future. This is especially important if you travel large distances using your glider and don't want to lose progress. You might want to land and pause at campfires before climbing the next hill to continue your glide. Flying at night makes it more easy to spot campfires close to your destination.
 
