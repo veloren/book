@@ -1,5 +1,6 @@
 *If you are planning on playing multiplayer, make sure you register at [account.veloren.net](https://account.veloren.net/) before connecting to an auth-enabled server. Otherwise, things remain mostly the same for both singleplayer and multiplayer. Keep in mind that every aspect of the game is subject to change, and this guide may not be 100% up to date when you read it.*
 
+
 # Character Creation
 
 ![character creation](character_creation.jpg)
@@ -13,6 +14,7 @@ As well as choosing your species, here you choose your starting weapon. There ar
 You can set your hair style and colour, skin colour, eye details, eye colour, and - only available to some species - accessories. Use the randomize button (the dice icon) to randomize your character's appearance and name.
 
 When you’ve finished creating your character, enter a name, and then click Create. Choose your character from the list, click Enter World, and you’ll enter the game world.
+
 
 # Getting Started
 
@@ -31,6 +33,8 @@ Look around your interface. At the top left you’ll see that you can press F1 t
 
 You can change most key bindings in the settings.
 
+Movement follows the conventions of other similar games, but you will want to know how to pull out your glider (Shift) and how to climb vertical surfaces (hold Space).
+
 
 # Managing Your Inventory
 
@@ -40,7 +44,7 @@ Inventory slots can be assigned to hotbar slots by clicking and dragging the ite
 
 *Depending on your equipped weapon, some hotbar slots will be reserved for abilities.*
 
-If your inventory is getting cluttered or full, you can rearrange the items by dragging them around, or throw them away by dragging them outside the inventory window.
+If your inventory is getting cluttered or full, you can rearrange the items by dragging them around, or throw them away by dragging them outside the inventory window. Items you throw away can of course be picked back up as long as you stay near them.
 
 
 # Looting and Gathering
@@ -56,11 +60,13 @@ If you look carefully you may notice certain objects in the world will highlight
 
 Gear can be crafted from materials or looted from enemies and chests. It comes in several rarities. Gear is one of the main ways to progress in the game, so get started early!
 
+
 # Consumables
 
 ![consumable example](consumable.jpg)
 
 Consumables currently come in two varieties: food and potions. Food affects you at a certain rate for its duration while potions take effect instantaneously.
+
 
 # Crafting
 
@@ -69,6 +75,7 @@ Consumables currently come in two varieties: food and potions. Food affects you 
 You can open the crafting menu with the C key. You'll see a list of craftable items, some of which may be greyed out - that means you have insufficient materials or tools to craft them. Items can be crafted with materials either gathered from the world or dropped by enemies. Food items can be crafted into even more effective foods, and some basic weapons and armor can also be crafted.
 
 *The fireworks are for celebratory use only. Ignite responsibly.*
+
 
 # Weapons And Combat
 
@@ -83,24 +90,13 @@ Using more than one weapon by equipping it to the 'offhand' will increase your c
 Dodging enemy attacks is important. Middle-click will swiftly roll you out of the way. Use sideways movement to avoid ranged attacks while closing in or returning fire. If you use ranged weapons against a melee weapon consider moving backwards. Also you can leverage the fact that NPCs don't change weapons or might not figure out how to climb. Use the training dummy to familiarize yourself with the more complicated attacks offered by your weaponry.
 
 
-# Additional Hints For Beginners
-
-Look for helpful equipment inside the houses of towns you visit.
-
-You might want to practice combat with small animals first, attacking villagers or travellers will get you killed quickly. If you follow a traveller you can avoid the more dangerous wildlife and even collect loot from animals killed for you.
-
-Once you have enough leather scraps you can craft yourself initial armor. Look for Apples or Mushrooms and Twigs (common in moderate forests), combine them to get Apple Sticks which give good healing.
-
-Look for campfires as they offer you a position to restart from and might even offer other benefits in the future. This is especially important if you travel large distances using your glider and don't want to lose progress. You might want to land and pause at campfires before climbing the next hill to continue your glide. Flying at night makes it more easy to spot campfires close to your destination.
-
-
 # Character Progression
 
 ![character progression](character_progression.jpg)
 
 Defeating enemies earns you experience, which allows you to level up your character.
 
-Currently the only thing that changes when you level up is that you’ll get a few more health points. In the future, skill trees will be implemented to give more weight to leveling up. Otherwise, obtaining better gear is essential to progression.
+Currently the only thing that changes when you level up is that you’ll get a few more health points. Otherwise, obtaining better gear is essential for progression.
 
 
 # Taming
@@ -122,6 +118,7 @@ Due to pathfinding issues, pets may have difficulty keeping up with you when you
 
 Campfires are interspersed across the world, marked by tall pillars of smoke. Approaching a campfire will show the message ‘Waypoint Saved’. When you die, you will respawn at the last campfire that saved your waypoint. Your waypoint persists through logins, so you can start each session approximately where you left off!
 
+Sitting near a campfire (with the K key) will heal you over time. If you ever need respite from your travels, campfires are what you should look for!
 
 # Map
 
@@ -142,7 +139,7 @@ When gliding, holding the W key will maintain altitude, and letting go of the W 
 
 # Dungeons
 
-Dungeons are marked on the map with a 'ruins' icon, along with a difficulty level.
+Dungeons are marked on the map with a 'ruins' icon, along with a difficulty level. Dungeons with difficulties 0-3 are doable by a solo player; above that, you may want to [find a group](https://book.veloren.net/players/getting-started/index.html#grouping-up).
 
 On entering the dungeon you’ll descend a long, spiral staircase that will eventually exit at the first dungeon level, deep below ground. Each level has a series of corridors and rooms containing hostile enemies and treasure chests. The most rare and powerful loot in the game can be obtained from dungeons!
 
@@ -152,20 +149,34 @@ On entering the dungeon you’ll descend a long, spiral staircase that will even
 
 Make sure you’re well stocked up on healing items and have some levels under your belt before attempting your first dungeon!
 
+
 # Caves
 
 ![cave on map](cave_names.jpg)
-![cave mouth](cave_entrance.jpg)
 
 Caves are marked with cave entrance icons on the map.
 
+![cave mouth](cave_entrance.jpg)
+
 Several resources can be found in caves, some of which are exclusive to them. Are you prepared to plumb the depths, adventurer?
+
 
 # Grouping Up
 
 When playing in a multiplayer server, you may wish to team up with other players in order to conquer content without losing track of or hurting each other. The grouping function is your friend here. To invite other players to your group, press O to open the player list, click on the character you want to invite, and press Invite. Hovering over the character names will show you the player's account name.
 
 ![player menu and grouping up](invite.jpg)
+
+
+# Additional Hints For Beginners
+
+Houses can contain useful items and equipment for you to pick up!
+
+You might want to practice combat with small animals first; attacking denizens will get you killed quickly. Consider instead what help they may offer you in a time of need!
+
+Once you have enough leather scraps you can craft yourself some initial armor. Look for Apples or Mushrooms and Twigs (common in moderate forests), combine them to get Apple Sticks which give good healing.
+
+Nighttime can make it easier to spot campfires. If you're alone in the night, light sources are likely indications of safety.
 
 
 # Useful Commands
@@ -179,3 +190,15 @@ When playing in a multiplayer server, you may wish to team up with other players
 `/g` - group chat
 
 `/t` - direct chat
+
+**Admin Only**
+
+`/give_item [filepath] [amount]` - Gives you items. Use Tab to autocomplete.
+
+`/tp [player]` - Teleports you to a player.
+
+`/spawn [argument 1] [argument 2]` - Press Tab to cycle through options. Allows you to spawn entities.
+
+`/goto [x,y,z]` - Teleports you to the specified coordinates.
+
+`/debug` - Gives you some special equipment ;)
