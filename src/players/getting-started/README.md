@@ -24,55 +24,49 @@ You’ll enter the world in a little village nestled at the foot of a mountain. 
 
 Look around your interface. At the top left you’ll see that you can press F1 to show keybinds; have a look at this. On the bottom right, you’ll see a few icons and their corresponding keybinds.
 
-- P - Opens spells (not currently implemented)
-- M - Opens the map (this isn’t the final map; the map system is being reworked)
-- O - Opens your social tab
-- N - Opens your settings
-- B - Opens your bag / inventory
-- C - Opens the crafting menu
+- `P` - Opens spells (not currently implemented)
+- `M` - Opens the map (this isn’t the final map; the map system is being reworked)
+- `O` - Opens your social tab
+- `N` - Opens your settings
+- `B` - Opens your bag / inventory
+- `C` - Opens the crafting menu
 
 You can change most key bindings in the settings.
 
-Movement follows the conventions of other similar games, but you will want to know how to pull out your glider (Shift) and how to climb vertical surfaces (hold Space).
+Movement follows the conventions of other similar games, but you will want to know how to pull out your glider (`Shift`) and how to climb vertical surfaces (hold `Space`).
 
 
-# Managing Your Inventory
+# Inventory and Items
+
+Press `B` to open your inventory.
+
+Items in your inventory can be used by right-clicking them, which usually either equips it on your character, swapping with whatever gear was in its slot, or consumes the item, applying its effects.
+
+Inventory slots can be assigned to hotbar slots by clicking and dragging the item stored in the slot to the hotbar. Any items in that inventory slot will then appear in the assigned hotbar slot. Hotbar slots can be reassigned by dragging an item in a different inventory slot to it. Using an item from a hotbar slot has the same effect as right-clicking it from the inventory.
 
 ![managing your inventory](managing_your_inventory.jpg)
 
-Inventory slots can be assigned to hotbar slots by clicking and dragging the item stored in the slot to the hotbar. Any items in that inventory slot will then appear in the assigned hotbar slot. Hotbar slots can be reassigned by dragging an item in a different inventory slot to it. Here, 7 will use the cheese, but if I run out of cheese and another item takes its slot in the inventory, for example, 7 will use that item instead.
+Here, `7` will use the Dwarven cheese, but if I run out of cheese and another item takes its slot in the inventory, for example, `7` will use that item instead.
 
 *Depending on your equipped weapon, some hotbar slots will be reserved for abilities.*
 
-If your inventory is getting cluttered or full, you can rearrange the items by dragging them around, or throw them away by dragging them outside the inventory window. Items you throw away can of course be picked back up as long as you stay near them.
+If your inventory is getting cluttered or full, you can rearrange the items by dragging them around, or throw them away by dragging them outside the inventory window. Items you throw away can be picked back up as long as you stay near them.
 
+There are many items to collect, and they come in the form of tools, crafting materials, gear, and consumables.
 
-# Looting and Gathering
+Gear items are items that can be equipped on your character. They can be crafted from materials or looted from enemies and chests and come in several rarities. Gear is one of the main ways to progress your character.
+
+Consumables are items that are, well, consumed on use. They come in several varieties, the most prominent of which are food and potions. Food affects you at a certain rate for its duration while potions take effect instantaneously.
 
 ![a mushroom](mushroom.jpg)
 
-If you look carefully you may notice certain objects in the world will highlight when you move your crosshair near them. This indicates you can interact with them (E by default), which will usually give you an item.
-
-
-# Gear
-
-![gear example](gear.jpg)
-
-Gear can be crafted from materials or looted from enemies and chests. It comes in several rarities. Gear is one of the main ways to progress in the game, so get started early!
-
-
-# Consumables
-
-![consumable example](consumable.jpg)
-
-Consumables currently come in two varieties: food and potions. Food affects you at a certain rate for its duration while potions take effect instantaneously.
-
+If you look carefully you may notice certain objects in the world will highlight when you move your crosshair near them. This indicates you can interact with them (`E` by default), which will usually give you an item.
 
 # Crafting
 
 ![the crafting menu](crafting_menu.jpg)
 
-You can open the crafting menu with the C key. You'll see a list of craftable items, some of which may be greyed out - that means you have insufficient materials or tools to craft them. Items can be crafted with materials either gathered from the world or dropped by enemies. Food items can be crafted into even more effective foods, and some basic weapons and armor can also be crafted.
+You can open the crafting menu with the `C` key. You'll see a list of craftable items, some of which may be greyed out - that means you have insufficient materials or tools to craft them. Items can be crafted with materials either gathered from the world or dropped by enemies. Food items can be crafted into even more effective foods, and some basic weapons and armor can also be crafted.
 
 *The fireworks are for celebratory use only. Ignite responsibly.*
 
@@ -81,16 +75,15 @@ You can open the crafting menu with the C key. You'll see a list of craftable it
 
 ![a challenging encounter](combat.jpg)
 
-As you wander the world of Veloren, you'll encounter all manner of animals, monsters, NPCs, and maybe even players. In general, predatory animals and monsters will attack the player on sight, while docile creatures and NPCs will ignore the player unless attacked.
+As you wander the world of Veloren, you'll encounter all manner of animals, monsters, NPCs, and maybe even players. In general, predatory animals and monsters will attack you on sight, while docile creatures and NPCs will ignore you unless attacked.
 
 Each weapon has a left-click basic attack and one or more abilites on right click and the hotbar. Each weapon has its own playstyle, and serve to replace conventional 'classes.' 
 
-Using more than one weapon by equipping it to the 'offhand' will increase your combat options immensely! Switch to your offhand weapon by pressing Tab.
+Using more than one weapon by equipping it to the 'offhand' will increase your combat options immensely! Switch to your offhand weapon by pressing `Tab`.
 
-Dodging enemy attacks is important. Middle-click will swiftly roll you out of the way. Use sideways movement to avoid ranged attacks while closing in or returning fire. If you use ranged weapons against a melee weapon consider moving backwards. Also you can leverage the fact that NPCs don't change weapons or might not figure out how to climb. Use the training dummy to familiarize yourself with the more complicated attacks offered by your weaponry.
+Dodging enemy attacks is important. Middle-click will swiftly roll you out of the way. Use sideways movement to avoid ranged attacks while closing in or returning fire. If you use ranged weapons against a melee attacker, try to keep your distance. 
 
-
-# Character Progression
+Use a training dummy (found in towns) to familiarize yourself with your weapons' attacks and abilities.
 
 ![character progression](character_progression.jpg)
 
@@ -103,13 +96,18 @@ Currently the only thing that changes when you level up is that you’ll get a f
 
 In the course of playing the game, you'll be able to craft Collars, which let you tame creatures. The current maximum number of creatures you can have tamed at once is three. You can only tame non-hostile creatures. Choose carefully!
 
-![taming](taming.jpg)
-
 Tamed creatures will follow you around and will attack anything that attacks you. They can be healed with a healing sceptre. 
 
 Due to pathfinding issues, pets may have difficulty keeping up with you when you go off gliding or delve into dungeons.
 
 *Currently, pets do not persist through logins. Don't get too attached.*
+
+
+# Map
+
+![map](map_icons.jpg)
+
+Access the map by pressing `M`. You'll see icons representing dungeons, towns, and cave entrances along with brown lines denoting roads. The difficulty level of a dungeon is represented by the number of dots that appear above the icon. Your current location is initially at the center of the screen, but the map can be shifted around by clicking and dragging. The mouse wheel zooms in and out. There is also a minimap seen in regular play at the top right. 
 
 
 # Campfires
@@ -118,21 +116,16 @@ Due to pathfinding issues, pets may have difficulty keeping up with you when you
 
 Campfires are interspersed across the world, marked by tall pillars of smoke. Approaching a campfire will show the message ‘Waypoint Saved’. When you die, you will respawn at the last campfire that saved your waypoint. Your waypoint persists through logins, so you can start each session approximately where you left off!
 
-Sitting near a campfire (with the K key) will heal you over time. If you ever need respite from your travels, campfires are what you should look for!
+Sitting near a campfire (with the `K` key) will heal you over time. If you ever need respite from your travels, campfires are what you should look for!
 
-# Map
-
-![map](map_icons.jpg)
-
-Access the map by pressing M. You'll see icons representing dungeons, towns, and cave entrances along with brown lines denoting roads. The difficulty level of a dungeon is represented by the number of dots that appear above the icon. Your current location is initially at the center of the screen, but the map can be shifted around by clicking and dragging. The mouse wheel zooms in and out. There is also a minimap seen in regular play at the top right. 
 
 # Gliding
 
 ![glider](glider.jpg)
 
-Pressing the Shift key will equip the glider. You can run around with it equipped, but you won’t be able to roll or draw your weapon at the same time.
+Pressing the `Shift` key will equip the glider. You can run around with it equipped, but you won’t be able to roll or draw your weapon at the same time.
 
-When gliding, holding the W key will maintain altitude, and letting go of the W key will make you slowly descend.
+When gliding, holding a direction key will maintain your altitude, and holding no direction keys will make you slowly descend.
 
 *Note that you are not able to re-equip the glider if you retract it early in midair.*
 
@@ -145,14 +138,12 @@ On entering the dungeon you’ll descend a long, spiral staircase that will even
 
 ![dungeon internals](dungeon2.jpg)
 
-*Dungeons are dark - equip your lantern by pressing the G key!*
+*Dungeons are dark - equip your lantern by pressing the `G` key!*
 
 Make sure you’re well stocked up on healing items and have some levels under your belt before attempting your first dungeon!
 
 
 # Caves
-
-![cave on map](cave_names.jpg)
 
 Caves are marked with cave entrance icons on the map.
 
@@ -163,7 +154,7 @@ Several resources can be found in caves, some of which are exclusive to them. Ar
 
 # Grouping Up
 
-When playing in a multiplayer server, you may wish to team up with other players in order to conquer content without losing track of or hurting each other. The grouping function is your friend here. To invite other players to your group, press O to open the player list, click on the character you want to invite, and press Invite. Hovering over the character names will show you the player's account name.
+When playing in a multiplayer server, you may wish to team up with other players in order to conquer content without losing track of or hurting each other. The grouping function is your friend here. To invite other players to your group, press `O` to open the player list, click on the character you want to invite, and press Invite. Hovering over the character names will show you the player's account name.
 
 ![player menu and grouping up](invite.jpg)
 
@@ -174,9 +165,11 @@ Houses can contain useful items and equipment for you to pick up!
 
 You might want to practice combat with small animals first; attacking denizens will get you killed quickly. Consider instead what help they may offer you in a time of need!
 
-Once you have enough leather scraps you can craft yourself some initial armor. Look for Apples or Mushrooms and Twigs (common in moderate forests), combine them to get Apple Sticks which give good healing.
+Once you have enough leather scraps you can craft yourself some initial armor. Look for Apples or Mushrooms and Twigs (common in moderate forests). Combine them in the crafting menu to get Apple/Mushroom Sticks which give superior healing.
 
 Nighttime can make it easier to spot campfires. If you're alone in the night, light sources are likely indications of safety.
+
+You may have noticed that you're able to crouch with `Ctrl`. This is more than just an animation! If a threat is in your path, consider sneaking around it. Once you draw your weapon, though, the jig's up.
 
 
 # Useful Commands
