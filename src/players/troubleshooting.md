@@ -12,7 +12,9 @@ thread 'main' panicked at 'build_output_stream failed with all supported formats
 note: run with RUST_BACKTRACE=1 environment variable to display a backtrace
 ```
 
-then you have to manually disable audio by
+If you are using Arch Linux, try installing the `pulseaudio-alsa` package, `pacman -S pulseaudio-alsa`.
+
+Otherwise you have to manually disable audio by
 
 1.  making sure Veloren is closed.
 2.  locating `settings.ron` (See where [Airshipper](airshipper.md#files) stores files)
