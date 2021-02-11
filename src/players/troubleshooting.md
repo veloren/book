@@ -1,10 +1,10 @@
 # Troubleshooting
 
-Incase you've hit an issue this section might help you resolve it.
+In case you've hit an issue this section might help you resolve it.
 
 ## Audio issues
 
-Incase the game crashes with something similar like:
+In case the game crashes with something similar like:
 
 ```rust,ignore
 INFO veloren_voxygen::logging: Setup terminal and file logging. logdir="<some_path>"
@@ -28,4 +28,11 @@ Otherwise you have to manually disable audio by
         output: Off, // The important line!
     ),
     ```
-4.  Save file and retry. Incase it didn't help visit [Reporting Bugs](reporting-bugs.md) page.
+4.  Save file and retry. In case it didn't help visit [Reporting Bugs](reporting-bugs.md) page.
+
+## PS4 or other controller not working
+
+Currently only XInput controllers are supported on Windows. This means that controllers like the PS4, Switch, and some older generic controllers won't work with Veloren.
+
+In order to work around this, a program such as [DS4Windows](https://github.com/Ryochan7/DS4Windows/releases) can be used. Both a text and video tutorial on how to use DS4Windows can be found [here](https://ryochan7.github.io/ds4windows-site/#howto).
+
