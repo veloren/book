@@ -113,6 +113,13 @@ Example: Result of using `admin add Treeco`.
 ]
 ```
 
+If you have the TUI disabled or are otherwise unable to use it, you can instead use the server CLI to add/remove admins.
+
+Example:
+```
+veloren-server-cli admin add Treeco
+```
+
 ## settings.ron (server-cli edition)
 
 The settings in this file govern the warning period the server gives for automatic shutdowns for updates.
