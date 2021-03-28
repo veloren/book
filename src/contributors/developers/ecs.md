@@ -14,7 +14,7 @@ struct Entity {
 }
 ```
 
-When represneting multiple entities, it's common to use an array-like data structure.
+When representing multiple entities, it's common to use an array-like data structure.
 
 ```rust
 struct World {
