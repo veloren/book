@@ -89,7 +89,26 @@ Use a training dummy (found in towns) to familiarize yourself with your weapons'
 
 Defeating enemies earns you experience, which allows you to level up your character.
 
-Currently the only thing that changes when you level up is that you’ll get a few more health points. Otherwise, obtaining better gear is essential for progression.
+Getting levels allows you to get skill points to spend in a skill tree.
+There is currently one skill tree for each weapon, and a general combat skill tree.
+
+![general combat skill tree](SP_general_combat.jpg)
+
+The general combat gives access to some general skills, as well as unlocking weapon-specific skill trees.
+
+![bow skill tree](SP_bow.jpg)
+
+When you earn X experience points, they go into the following skill tree experience bar:
+
+- X for general combat
+- X/2 for main weapon, if you've unlocked the corresponding skill tree
+- X/2 for secondary weapon, if you've unlocked the corresponding skill tree
+
+So, if you get 4 XP when killing something with the bow equipped as main weapon, the sword equipped at secondary, both unlocked,
+you'll get 4 XP in general combat, 2 in bow, 2 in sword.
+
+If you have two bows equipped, you'll have 4 XP in the bow skill tree.
+If you have one bow as main weapon and nothing as secondary, you'll also get 4 XP in the bow skill tree.
 
 
 # Taming
