@@ -15,12 +15,16 @@ When working off a fork instead of on a branch in the main repo, you'll need to 
 
 1. Configure git-lfs to ignore smudging:
 
-        `git config filter.lfs.smudge "git-lfs smudge --skip -- %f"`
-        `git config filter.lfs.process "git-lfs filter-process --skip"`
+   ```bash
+   git config filter.lfs.smudge "git-lfs smudge --skip -- %f"
+   git config filter.lfs.process "git-lfs filter-process --skip"
+   ```
 
 2. Add Veloren as your upstream remote:
 
-        `git remote add upstream https://gitlab.com/Veloren/veloren`
+   ```bash
+   git remote add upstream https://gitlab.com/veloren/veloren
+   ```
 
 3. Go ahead and run `git lfs pull upstream`, and continue to do so when new assets are added to the repo.
 
