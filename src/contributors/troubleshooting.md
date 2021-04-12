@@ -32,6 +32,10 @@ git-lfs fetch
 git-lfs checkout
 ```
 
+### Git pull/rebase failed due to a smudging error/404
+
+This is a known bug with git-lfs itself and has a nice workaround. Refer to [this section here](https://book.veloren.net/contributors/before-you-contribute.html#forking).
+
 ### When using Mingw64 (Windows)
 
 Git LFS fails download the files properly. The main issue seems to be that the askpass program is not spawned when using a normal CMD prompt, preventing Git LFS from authenticating via SSH to retrieve the temporary access token. Setting the SSH_ASKPASS, GIT_ASKPASS and DISPLAY variables seems to solve this issue:

@@ -22,11 +22,13 @@ _Keeping track of the really big giants out there (aka. asset files)_
 
 1. For **Windows** you can download an installer [here](https://github.com/git-lfs/git-lfs/releases).
 
-   On **Linux** you can use the package manager to install Git LFS, usually the package is called `git-lfs`.
+    On **Linux** you can use the package manager to install Git LFS, usually the package is called `git-lfs`.
 
-   On **MacOS** you can use [Homebrew](https://github.com/homebrew/brew) via `brew install git-lfs` or [MacPorts](https://www.macports.org/) via `port install git-lfs`.
+    On **MacOS** you can use [Homebrew](https://github.com/homebrew/brew) via `brew install git-lfs` or [MacPorts](https://www.macports.org/) via `port install git-lfs`.
 
 2. Git LFS needs to be set up by running `git lfs install` or `git-lfs install` (macOS) in a terminal.
+
+**Note**: git-lfs has a known bug with working off remotes. If you plan to work off a fork, [refer to this section].(https://book.veloren.net/contributors/before-you-contribute.html#forking)
 
 ## Rust
 
