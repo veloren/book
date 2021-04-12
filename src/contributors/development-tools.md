@@ -28,7 +28,7 @@ _Keeping track of the really big giants out there (aka. asset files)_
 
 2. Git LFS needs to be set up by running `git lfs install` or `git-lfs install` (macOS) in a terminal.
 
-**Note**: git-lfs has a known bug with working off remotes. If you plan to work off a fork, [refer to this section].(https://book.veloren.net/contributors/before-you-contribute.html#forking)
+**Note**: _git-lfs has a known bug with working off remotes. If you plan to work off a fork, [refer to this section](before-you-contribute.html#forking)._
 
 ## Rust
 

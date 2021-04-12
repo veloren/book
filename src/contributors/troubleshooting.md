@@ -34,7 +34,7 @@ git-lfs checkout
 
 ### Git pull/rebase failed due to a smudging error/404
 
-This is a known bug with git-lfs itself and has a nice workaround. Refer to [this section here](https://book.veloren.net/contributors/before-you-contribute.html#forking).
+This is a known bug with git-lfs itself and has a nice workaround. Refer to [this section here](before-you-contribute.html#forking).
 
 ### When using Mingw64 (Windows)
 
