@@ -34,7 +34,7 @@
     - [Performance Analysis](contributors/developers/performance-analysis.md)
   - [For Artists](contributors/artists/README.md)
     - [Voxel Models](contributors/artists/voxel-models.md)
-    - [Audio]()
+    - [Audio](contributors/artists/audio.md)
     - [Graphics]()
   - [For Translators](contributors/translators/README.md)
     - [Game](contributors/translators/game.md)
