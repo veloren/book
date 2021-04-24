@@ -5,7 +5,7 @@ Welcome to the section about getting your voxel models into Veloren!
 ## Software to create Voxel files
 
 Most of our artists use the freely available [MagicaVoxel](https://ephtracy.github.io/) from ephtracy.
-It's available for Mac, Windows and runs with Vine on Linux.
+It's available for Mac, Windows and runs with Wine on Linux.
 
 Of course you are not obliged to use this software but it's highly suggested as some block properties are determined directly with palette parameters shown in Magica.
 
