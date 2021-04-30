@@ -8,23 +8,29 @@ All sound files should be in .ogg format, exported at around 120 kbps bitrate. T
 
 Most sound effects go in an appropriate folder in `assets\voxygen\audio\sfx\`.
 
+Sound effects that emit from an in-world source, like footsteps (but not like ambient wind) should be exported as mono.
+
 There are two main ways of triggering a sound effect in-game: sfx events and outcomes.
 
 Sfx events retrieve sfx from the `sfx.ron` file. They are mostly triggered by any of the various `mod.rs`'s in `voxygen\src\audio\sfx\`.
 
-Outcomes retrieve sfx from `voxygen\src\audio\sfx\mod.rs`. Outcomes are emitted from whichever code is related to it, be it combat, server event, etc. The outcome must also be added to `common\src\outcome.rs`.
+Outcome sfx are retrieved from `sfx.ron` and handled in `voxygen\src\audio\sfx\mod.rs`. Outcomes are emitted from whichever code is related to it, be it combat, server event, etc. The outcome must also be added to `common\src\outcome.rs`.
 
-Be sure to have a sfx tested in-game before trying to merge it; ensure it sounds right and plays at the right volume. Be sure to get a second opinion from the Discord channel!
+There are also ambient sfx, used for things like wind. The code for it is in `voxygen\src\audio\ambient.rs`, the files are in `assets\voxygen\audio\ambient`, and its manifest is `assets\voxygen\audio\ambient.ron`.
+
+Be sure to have your sfx tested in-game before trying to merge it; ensure it sounds right and plays at the right volume. Be sure to get a second opinion from the Discord channel!
 
 # Music
 
 Music files are found in `assets\voxygen\audio\soundtrack\`. The game retrieves the files via the `soundtrack.ron` file. Music should be normalized at -1dB after mastering.
 
+It is customary to check in with one of the audio leads on Discord to get your music approved for the game.
+
 **Exploration**
 
-The game plays exploration music as single, standalone tracks in the background. When one track ends, some time passes before another track plays. Which track is played is determined by which biome the player is in. The tracks are separated by site, biome, and time of day.
+The game plays exploration music as single, standalone tracks in the background. When one track ends, some time passes before another track plays. Which track is played is determined by which site, biome, and time of day the player is in.
 
-The available sites currently are the overworld, dungeons, and caves.
+The available sites currently are the overworld, dungeons, caves, and towns.
 
 The available biomes currently are Grassland, Forest, Desert, Snowland, Lake, Mountain, Ocean, and Jungle. Savannah and Swamp biomes are planned, but don't exist in the code.
 
@@ -32,7 +38,7 @@ It is worth noting that biomes are *descriptive*, not *prescriptive*, when it co
 
 Also note that music may play in more than one biome and time of day, though we generally want to minimize this as more music gets added, to give each biome a more distinct tone.
 
-The times of day are simply day and night.
+The times of day are day and night.
 
 The best way to get a feel for the tone of the soundtrack is to simply listen to it. The music should, in general, be anywhere on the electronic-acoustic spectrum, though not fully on either side. They should have soft starts and endings since they come in at essentially random times.
 
