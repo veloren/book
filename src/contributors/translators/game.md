@@ -3,9 +3,9 @@
 ### File and directory structure explained
 
 You can see the localization files inside the `assets/voxygen/i18n` directory.
-Each file in this directory represents a language (or a variant of it).
-The files are named after [the ISO 639-1 codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
-(`en.ron`, `de_DE.ron`, `pt_BR.ron` etc.)
+Each directory in this directory represents a language (or a variant of it).
+The directories are named after [the ISO 639-1 codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
+(`en/`, `de_DE/`, `pt_BR/` etc.)
 
 Veloren uses a key-value system to translate content. Files use the [RON data 
 serialization format](https://github.com/ron-rs/ron) (`.ron`).
@@ -68,14 +68,15 @@ vector_map: {
 
 Veloren includes a localization test for translated languages. This test
 gathers information about every key and compares them with the reference
-language (English, `en.ron` file). Then it classifies and counts these
+language (English, `en/` directory). Then it classifies and counts these
 comparisons and prints them in a neat way for translators to inspect.
 This guide explains where to find the test and how to read the results of it.
 
 Open [this link](https://gitlab.com/veloren/veloren/-/pipelines) where you
 can see a list of pipelines currently running in our CI system. Try to find a
 relatively new (top is new) pipeline which is already green and contains the
-title `unittests`. Not every pipeline might have one and it is not essential to
+title `build` in `Stages` column, tap on it and you should find a `unittests`
+field. Not every pipeline might have one and it is not essential to
 get the newest one, just find `unittests` and you are good to go. Then click on
 it. A page will open with a black box and a lot of text. You have to scroll up a 
 bit and find something like what we see below:
@@ -84,73 +85,85 @@ bit and find something like what we see below:
 -----------------------------------------------------------------------------
 Overall Translation Status
 -----------------------------------------------------------------------------
-            | up-to-date | outdated | untranslated
-tr_TR.ron   |     206    |    11    |      19
-pt_PT.ron   |     123    |    15    |      98
-es_ES.ron   |     213    |     5    |      18
-fr_FR.ron   |     100    |    18    |     118
-it_IT.ron   |     120    |    17    |      99
-ru_RU.ron   |     198    |     6    |      32
-de_DE.ron   |     223    |    10    |       3
-pt_BR.ron   |     199    |     8    |      29
-73.20% up-to-date, 4.77% outdated, 22.03% untranslated
+            | up-to-date | outdated | untranslated | unused   | errors  
+uk_UA       |     713    |     7    |       0      |     1    |       0
+pt_BR       |     699    |    18    |       3      |     3    |       0
+PL          |     702    |     2    |      16      |     3    |       0
+zh_CN       |     673    |     6    |      41      |     7    |       0
+es_ES       |     663    |    13    |      44      |     7    |       0
+de_DE       |     670    |     0    |      50      |     7    |       0
+fr_FR       |     656    |    11    |      53      |     8    |       0
+ja_JP       |     655    |     8    |      57      |     8    |       0
+es_la       |       6    |   346    |     368      |     3    |       0
+tr_TR       |     340    |    12    |     368      |     2    |       0
+ru_RU       |       5    |   343    |     372      |     3    |       0
+no_nb       |       6    |   328    |     386      |     2    |       0
+nl          |       3    |   305    |     412      |     3    |       0
+it_IT       |       1    |   229    |     490      |     4    |       0
+pt_PT       |       1    |   135    |     584      |     5    |       0
+zh_TW       |       1    |   133    |     586      |    12    |       0
+sv          |       1    |   104    |     615      |    13    |       0
+vi_VI       |      74    |     2    |     644      |     1    |       0
+
+45.29% up-to-date, 15.45% outdated, 39.27% untranslated
 -----------------------------------------------------------------------------
 ```
 
 This is the indication that you did everything right and got to the statistics.
 This is an overview page that shows you the available languages and if there are
-some missing or outdated translations. Let's say we want to focus on the German
-one, `de_DE`. We have to scroll further up till we get the detailed information:
+some missing or outdated translations. Let's say we want to focus on the Ukrainian
+one, `uk_UA`. We have to scroll further up till we get the detailed information:
 
 **Tip:** Use Ctrl+F to search for your language!
+**Tip:** If you can't find your language, press 'Complete Raw' to get full log.
 
 ```
 -----------------------------------
-"assets/voxygen/i18n/de_DE.ron"
+"assets/voxygen/i18n/uk_UA.ron"
 -----------------------------------
-Key hud.bag.stats_title does not have a Git line in its state! Skipping key.
-Commit ID of key hud.bag.stats_title in i18n file assets/voxygen/i18n/de_DE.ron is missing! Skipping key.
-State       | Key name                                                    | assets/voxygen/i18n/de_DE.ron            | assets/voxygen/i18n/en.ron              
-[Unused   ] | char_selection.chest_color                                  | 1af82604b55839275998d6afe7ee51a9ffbfdfe4 | None                                    
-[Unused   ] | char_selection.create_charater                              | ecb7963730ad2eb8d6e10f6df5dfaf99abccca5b | None                                    
-[Outdated ] | char_selection.eye_color                                    | 1af82604b55839275998d6afe7ee51a9ffbfdfe4 | ddaa0a9246abddcd623d32c2c1fcf4cd794882df
-[Outdated ] | char_selection.plains_of_uncertainty                        | 1af82604b55839275998d6afe7ee51a9ffbfdfe4 | ecb7963730ad2eb8d6e10f6df5dfaf99abccca5b
-[Outdated ] | char_selection.skin                                         | 1af82604b55839275998d6afe7ee51a9ffbfdfe4 | f7d6f76a0458716ceaf5a53d3a70ee7f0fb9eda6
-[Outdated ] | common.sound                                                | 1af82604b55839275998d6afe7ee51a9ffbfdfe4 | 45217915911ddf1b5ea6a8ff36c2394fd755fcc6
-[Outdated ] | gameinput.slot2                                             | f24ba71d9446ea8bcf259020125eaa4290bfde49 | ddaa0a9246abddcd623d32c2c1fcf4cd794882df
-[Outdated ] | hud.auto_walk_indicator                                     | 9b2785aeae5b60984691c18a324b1d62ce2b9ed2 | ddaa0a9246abddcd623d32c2c1fcf4cd794882df
-[Unknown  ] | hud.bag.stats_title                                         | None                                     | 88a938653be9a95128e938d24afba559bf57fdf5
-[Outdated ] | hud.chat.loot_msg                                           | 89400264dc0fb9babb93bcdd04f97c4252dcd772 | ddaa0a9246abddcd623d32c2c1fcf4cd794882df
-[Outdated ] | hud.chat.offline_msg                                        | 89400264dc0fb9babb93bcdd04f97c4252dcd772 | ddaa0a9246abddcd623d32c2c1fcf4cd794882df
-[Outdated ] | hud.press_key_to_toggle_debug_info_fmt                      | 1af82604b55839275998d6afe7ee51a9ffbfdfe4 | e10f27f4806d9c9493bda4b5990a3d44b317fe10
-[NotFound ] | hud.settings.reset_keybinds                                 | None                                     | 8e523364ac8b3a155938c98010562c664d577c57
-[Outdated ] | hud.settings.toggle_shortcuts                               | 1af82604b55839275998d6afe7ee51a9ffbfdfe4 | ddaa0a9246abddcd623d32c2c1fcf4cd794882df
-[NotFound ] | hud.settings.unbound                                        | None                                     | 198c875559dbb1895249ea5d959b61dbff8901bf
-223 up-to-date, 10 outdated, 2 unused, 2 not found, 1 unknown entries
-94.49% up-to-date, 4.24% outdated, 1.27% untranslated
+Key name                                                    | assets/voxygen/i18n/uk_UA/_manifest.ron  | assets/voxygen/i18n/en/_manifest.ron    
+
+	[NotFound]
+buff.desc.cursed                                            | None                                     | 531c38c3ad08af5370bfa2cd5f501224b55b4c22
+buff.title.cursed                                           | None                                     | 531c38c3ad08af5370bfa2cd5f501224b55b4c22
+
+	[Unused]
+hud.settings.cancel_inputs_on_chat                          | ef8926bc5c10fe80bfe7ee8d69763d710c229afb | None                                    
+
+	[Outdated]
+common.stats.poise_res                                      | 4717ad25a8fb5856951360d4e01eb741eb289fe4 | 6772e71aaac034ac03917e67988176cbf2772cb1
+gameinput.autowalk                                          | 4e7aba5b3f8a2499785bc4f1776eddbdaf6fe96d | a17bb0ad733e0dbe2c649ebb31a94990db438b01
+gameinput.secondary                                         | 4e7aba5b3f8a2499785bc4f1776eddbdaf6fe96d | 2e24fcf165545405e13a3eb5f8b3e3eeadf3f1c0
+hud.auto_walk_indicator                                     | 4e7aba5b3f8a2499785bc4f1776eddbdaf6fe96d | a17bb0ad733e0dbe2c649ebb31a94990db438b01
+hud.map.dungeons                                            | 7be836318bbae1e26b03500b4235eef22e6be4e4 | db573f6b2dc5ae91f33296b07709c4c66c6e4c16
+hud.settings.refresh_rate                                   | 7be836318bbae1e26b03500b4235eef22e6be4e4 | 60e2ed3e7dfad7c88fc7c6c1fa2fefefec6240a4
+main.login.network_wrong_version                            | 4717ad25a8fb5856951360d4e01eb741eb289fe4 | 2e08c2f76f29e98b29f997bcff6456c373c8117a
+
+711 up-to-date, 7 outdated, 1 unused, 2 not found, 0 unknown entries
+98.75% up-to-date, 0.97% outdated, 0.00% untranslated
 ```
 
-Here we have detailed information about all language keys used in the German
-translation (`de_DE.ron` file) in comparison with the reference English
-translation (`en.ron` file). Here is what the `State` section for keys mean:
+Here we have detailed information about all language keys used in the Ukrainian
+translation (`uk_UA` directory) in comparison with the reference English
+translation (`en` directory). Here is what the `State` section for keys mean:
 
-- `Unused`: The key exists in the German translation but not in the English
+- `Unused`: The key exists in the Ukrainian translation but not in the English
   translation. These are keys that have been used before in the game but 
   have been removed since they weren't needed or have been renamed. These
   are safe to remove.
   
 - `NotFound`: The key exists in the English translation but doesn't exist in
-  the German translation. Here we need your translation!
+  the Ukrainian translation. Here we need your translation!
   
-- `Outdated`: The English translation was changed but the German translation
-  wasn't updated. This might be a hint that the German version is outdated
+- `Outdated`: The English translation was changed but the Ukrainian translation
+  wasn't updated. This might be a hint that the Ukrainian version is outdated
   and needs an update. Note that this doesn't necessarily mean that the
   English localization has been changed in a way that it affects the meaning -
   it might simply have been a typo fix.
   
 - `Unknown`: This signifies that an error occured while getting information
   about this key. This is not an user issue, so you don't need to worry about
-  these keys.
+  these keys. But if you've found this, please tell us about it.
 
 ## Guide to translating the game
 
@@ -171,12 +184,13 @@ First of all, you need a copy of the Veloren repository. Refer to the
 [working with git](../working-with-git.md) section for this.
 
 After you have obtained a copy of the repository, navigate to the `assets/voxygen/i18n`
-directory. Here you'll see a list of translations, and the reference English file (`en.ron`).
-Make a copy of the `en.ron` file, named after your language. For example, if you want
-to translate Turkish, your file would be named `tr_TR.ron`.
+directory. Here you'll see a list of translations, and the reference English directory
+(`en/`).
+Make a copy of the `en/` directory, named after your language. For example, if you want
+to translate Turkish, your directory would be named `tr_TR/`.
 
-Then, you can start editing the file! First go to the metadata section. This
-section has the display name and the identifier for your translation. Change
+Then, you can start editing the file! First go to the metadata section in `_manifest.ron`.
+This section has the display name and the identifier for your translation. Change
 `language_name` to a human readable name in your language (eg. `Türkçe (Türkiye)`,
 means `Turkish (Turkey)` in English) and change `language_identifier` to the
 identifier of your language (usually same with the file name, eg. `tr_TR`).
@@ -195,6 +209,11 @@ and setting the language setting to your new in-translation language. If there
 are missing characters, don't worry, you can ask us about these in our Discord
 server.
 
+**Tip:** you don't need to compile game to test your changes, you can
+just copy your changes to `assets` directory in app folder.
+If you have installed the game via Airshipper look in these
+[directories](../../players/airshipper.md#files)
+
 **Tip:** You can set `convert_utf8_to_ascii` option to `true` to
 convert everything to ASCII, so that the missing characters can be seen properly.
 
@@ -210,19 +229,19 @@ notify us on the Discord server that there is a new translation available
 If you are lucky, you may already find that there is a translation for your
 language. If you see that it has some missing, incorrect translations or
 you think that you have a better translation for something, then this guide
-is for you! Don't forget to replace the German example with your own
-language (if you aren't translating the German language).
+is for you! Don't forget to replace the Ukrainian example with your own
+language (if you aren't translating the Ukrainian language).
 
-Okay, let's say we want to add the correct translation for the German of `hud.settings.reset_keybinds`.
-So we first want to look it up in the reference language (English) [`assets/voxygen/i18n/en.ron`](https://gitlab.com/veloren/veloren/-/blob/master/assets/voxygen/i18n/en.ron).
-After the key we find this English sentence: `Reset to Defaults`. We know that
-the German equivalent would be `Standarteinstellungen wiederherstellen` (Well,
-some of us do :P). Then, we open the translated language (German)
-[`assets/voxygen/i18n/de_DE.ron`](https://gitlab.com/veloren/veloren/-/blob/master/assets/voxygen/i18n/de_DE.ron).
+Okay, let's say we want to add the correct translation for the Ukrainian of
+`buff.desc.cursed`.
+So we first want to look it up in the reference language (English) [`assets/voxygen/i18n/en/buff.ron`](https://gitlab.com/veloren/veloren/-/blob/master/assets/voxygen/i18n/en/buff.ron).
+After the key we find this English sentence: `Cursed`. We know that
+the Ukrainian equivalent would be `Проклін` (Well,
+some of us do :P). Then, we open the translated language (Ukrainian)
+[`assets/voxygen/i18n/uk_UA/buff.ron`](https://gitlab.com/veloren/veloren/-/blob/master/assets/voxygen/i18n/uk_UA/buff.ron).
 
 If you are already a developer in Gitlab you'll now see an edit button. If you
-don't, no need to worry! You can ask in our Discord server for the developer
-privileges.
+don't, no need to worry! You can do the same operations with your fork.
 
 **Tip:** Keep both the reference language and the translated langauge open,
 so that you can find in which place your entry is missing by looking at the
@@ -232,15 +251,40 @@ Once you are editing the file on Gitlab, go to the place where our entry is
 missing and add it here:
 
 ```rust, ignore
-"hud.settings.awaitingkey": "Drückt eine Taste...",
-"hud.settings.reset_keybinds": "Standarteinstellungen wiederherstellen",
+"buff.title.cursed": "Проклін",
+"buff.desc.cursed": "Вас прокляли.",
+```
+### Getting information about translation
+If you are able to compile, you can use special tool to get information about translation.
+Basically, it is the same programm that runs on our CI, but you can cut out unneded
+information.
+For example, you want to get information about Ukrainian translation.
+
+```
+$ cargo run veloren-i18n --features=bin -- uk_UA
 ```
 
+You can also run it with `--help` argument to find out more ways to use it.
+
+**Note:** arguments go after `--`, it's where `cargo` arguments end and actual
+arguments start.
+
+**Note:** you need to commit your changes for `veloren-i18n` to know about it.
+
+### Push changes
 When you're done, enter a specific commit message such as `update the <language> translation`.
-In our example this would be `update the German translation`. You'll then
+In our example this would be `update the Ukrainian translation`. You'll then
 create a target branch with name `<yourusername>/update-<language>`. An example
-would be `xMAC94x/update-de`. Finally, you'll need to create a merge request.
+would be `juliancoffee/update-uk_UA`. Finally, you'll need to create a merge request.
 Read and check the boxes to agree that your code will be under the GPL3 license.
+
+If you don't have Developer role, you will need to push your changes
+to your fork and then create MR from your fork to main repo.
+
+```
+$ git remote add fork https://gitlab.com/<yourusername>/veloren
+$ git push fork <yourusername>/update-uk_UA
+```
 
 You now requested to change the file, and we will then take a look at it and if
 we found it okay we will merge it into the game! From that point on your
