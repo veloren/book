@@ -142,11 +142,31 @@ Sitting near a campfire (with the `K` key) will heal you over time. If you ever 
 
 ![glider](glider.jpg)
 
+Getting a hang on gliders may cost you a few broken bones, but once you get a feel for it you may find yourself looking for any excuse to explore a high place.
+
+## Pre-flight
+
 Pressing the `Shift` key will equip the glider. You can run around with it equipped, but you won’t be able to roll or draw your weapon at the same time.
 
-When gliding, holding a direction key will maintain your altitude, and holding no direction keys will make you slowly descend.
+You're going to need a steep slope or a cliff with enough vertical margin that you have time to redirect your fall into a glide. If you need to jump for some extra initial elevation it is recommended that you deploy the glider mid-jump, or else it will push against you on the way up. Another trick is to roll-jump for an extra initial boost.
 
-*Note that you are not able to re-equip the glider if you retract it early in midair.*
+## Take-off
+
+Once airborn, you probably want to let go of any movement keys, as you'll mainly control the glider by looking in the direction you want to orient it towards. The controls used for movement on the ground are used for quickly adjusting pitch and direction while gliding.
+
+Gliding in Veloren uses a simulated model of aerodynamics; the only acceleration you get is from falling due to gravity, and your only control mechanism is angling the glider against the wind in a way such that the produced lift and drag pushes you in the desired direction. These forces scale with the square of airflow velocity relative to you, so gaining and maintaining speed is important.
+
+## Angle of attack
+
+The angle of attack is your pitch relative to the direction of air flow. It's zero when the glider is perfectly aligned with the wind, positive when pitched up and negative when pitched down. By default (when there is no control input) the glider is slightly pitched up relative to the direction you're looking to make you glide most efficiently (in terms of distance) while looking straight into the wind. 
+
+You get the best performance out of small angles of attack, so pitch and swoop with smooth, minute movements. Pitching too much will cause you to stall; an effect which causes the lift produced to drop sharply, putting you at risk of losing too much speed due to drag with little ability to regain control.
+
+## Hints
+
+- A controlled stall can be used to great effect for braking, but if you overdo it you may find yourself gliding backwards (or not at all).
+- Look out for cliffs or steep inclines and pitch down to swoop into a glide.
+- Lift scales linearly with angle of attack (for small angles), but the ("induced") drag scales _exponentially_. Balancing lift and drag is key to controlling your velocity, elevation and ultimately gliding distance.
 
 
 # Dungeons
