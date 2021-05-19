@@ -55,3 +55,6 @@
 	- [Adding Weapons](contributors/guides/adding-weapons/guide.md)
 	- [Using const_tweaker](contributors/guides/using-const_tweaker/guide.md)
 	- [Adding Weapon Skills](contributors/guides/adding-weapon-skills/guide.md)
+- [Internals](internals/internals.md)
+  - [Worldgen](internals/worldgen/worldgen.md)
+  - [Wiring](internals/wiring/wiring.md)
