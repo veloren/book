@@ -40,7 +40,7 @@ cd veloren-docker-ci/runner
 The script will take about 10 minutes and when it's done a docker container is started in the background.
 It will only take processing power when there are [Pipelines](https://gitlab.com/veloren/veloren/-/pipelines) to be done.
 
-Currently, the script is linux only, if you run windows your best bet is to create a linux vm (e.g. using virtualbox and ubuntu server 20.04)
+Currently, the script is Linux only, if you run Windows your best bet is to create a Linux VM (e.g. using Virtualbox and Ubuntu Server 20.04)
 
 ## Update a runner
 
