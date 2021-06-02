@@ -1,17 +1,17 @@
 # Before you contribute
 
-Incase you want to contribute code (or added the assets yourself to the game) continue reading.
+In case you want to contribute code (or added the assets yourself to the game) continue reading.
 If you do not want to add your assets yourself skip to [Contributing Assets](#contributing-assets).
 
 ## Git Workflow
 
 ### Forking
 
-Incase it is your **first contribution** your first step will be to **create a fork of Veloren in GitLab and clone it**.
+In case it is your **first contribution** your first step will be to **create a fork of Veloren in GitLab and clone it**.
 
-Incase you've access to the Veloren repository you develop directly on the repository.
+In case you have access to the Veloren repository you develop directly on the repository.
 
-When working off a fork instead of on a branch in the main repo, you'll need to do the following for the time being due to a bug in git-lfs:
+When working on a fork instead of on a branch in the main repo, you'll need to do the following for the time being due to a bug in git-lfs:
 
 1. Configure git-lfs to ignore smudging:
 
@@ -40,7 +40,7 @@ In your own branch you can then create commits and push them to your branch how 
 
 ### Rules For Commits
 
-We want our code basis to be clean and make it easy to keep track of our past, this also benefits our future productivity. So there are a few rules regarding code style everyone needs to follow to get accepted.
+We want our codebase to be clean and make it easy to keep track of our past, this also benefits our future productivity. So there are a few rules regarding code style everyone needs to follow to get accepted.
 
 1. Split your code in reasonable sized logical chunks of work.
 
@@ -48,14 +48,14 @@ We want our code basis to be clean and make it easy to keep track of our past, t
 
 2. Name each commit.
 
-   > Find a good caption for each commit and name it. `fix things` is to unspecific, if a issue exists link it and it's title, e.g. `fixing #123 - UDP buffer overflow when too many players are on the server`.<br/>
+   > Find a good caption for each commit and name it. `fix things` is too unspecific, if a issue exists link it and it's title, e.g. `fixing #123 - UDP buffer overflow when too many players are on the server`.<br/>
    > If no issue exists, evaluate creating one.
    > Otherwise, describe shortly but precisely what a commit is about, e.g. `fixup several issues in physics related to collisions`.<br/>
    > Tip: If you struggle finding one title that covers you whole commit, it might be better to split in 2 parts next time.
 
 3. Use `git commit --amend` in case you forgot to include something in your commit.
 
-   > For example you pushed your change and now format check is failing, then instead of creating a separate commit fixing this commit, run `cargo fmt` locally, run `git add` and then run `git commit --amend` and `git push -f` to fix up the incomplete commit instead of creating a new one.<br/>
+   > For example you pushed your change and now the format check is failing, then instead of creating a separate commit fixing this commit, run `cargo fmt` locally, run `git add` and then run `git commit --amend` and `git push -f` to fix the incomplete commit instead of creating a new one.<br/>
    > The same applies to smaller fixes like spelling errors introduced by yourself, fix the commit where the mistake was made instead creating a new one on top.<br/> **Exception**: Sometimes fmt changes their rules and untouched code becomes invalid, in case the formatting failure is related to fmt and not us, it's okay to use `apply fmt on whole codebase`. Please don't include other changes in such a commit.
 
 4. Fixup your commits afterwards.
@@ -65,7 +65,7 @@ We want our code basis to be clean and make it easy to keep track of our past, t
    > Use the number in `git rebase -i HEAD~4`, e.g. for 4 commits on top of master.
    > Read the instructions in the editor. You can change a commit name by modifying the text in a line.
    > To Squash Commit 2 and 3 into a single commit, write `squash` in front of the 3rd commit, don't change the second one
-   > 
+   >
    > Run fmt on every commit in your branch
    > `git filter-branch -f --tree-filter "cargo fmt" $(git merge-base origin/master HEAD)..HEAD`
 
@@ -80,7 +80,7 @@ The codebase uses the [rebase strategy](https://www.atlassian.com/git/tutorials/
 First, make sure you have no uncommitted work, e.g. by creating a new commit.<br/>
 Run `git fetch --all` and `git rebase origin/master`.<br/>
 If it returns with no error you are fine, if it returns some, fix the errors and follow the instructions.
-**Tip**: Incase of an error use `git status` to show next instructions.
+**Tip**: In case of an error use `git status` to show next instructions.
 
 ## Getting your contribution into the game
 
