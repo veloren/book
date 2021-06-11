@@ -1,7 +1,7 @@
-image: busybox:stable
+image: debian:stable-slim
 
 before_script:
-  - curl -L https://github.com/rust-lang/mdBook/releases/download/v0.4.1/mdbook-v0.4.1-x86_64-unknown-linux-gnu.tar.gz | tar -xvz -C /usr/local/bin
+  - curl -L https://github.com/rust-lang/mdBook/releases/download/v0.4.10/mdbook-v0.4.10-x86_64-unknown-linux-gnu.tar.gz | tar -xvz -C /usr/local/bin
   - chmod 0755 /usr/local/bin/mdbook
 
 # the 'pages' job will build your site and deploy if on master
