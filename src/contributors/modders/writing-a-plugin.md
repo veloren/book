@@ -92,10 +92,10 @@ rustup override set nightly
 
 ## Packaging the plugin
 
-Plugins are packaged in uncompressed (compression may later be supported, but is not currently) `.tar` archives. Each
-archive contains:
+Plugins are packaged in uncompressed (compression may later be supported, but is not currently)
+[tar](https://en.wikipedia.org/wiki/Tar_(computing)) archives with the extension `.plugin.tar`. Each archive contains:
 
-- A file with the extension `.plugin.toml` that specifies plugin metadata
+- A file with the name `.toml` that specifies plugin metadata
 
 - And any number of WASM modules (conventionally with the extension `.wasm`).
 
