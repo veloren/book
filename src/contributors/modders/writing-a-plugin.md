@@ -28,13 +28,15 @@ Plugins for Veloren are written in Web Assembly (herein referred to as 'WASM'), 
 high-performance, memory-safe web executables, but also perfectly suited to a variety of other applications. This
 implies the following things about Veloren plugins:
 
-- They are [sandboxed](https://en.wikipedia.org/wiki/Sandbox_(computer_security))
+- They are [sandboxed](https://en.wikipedia.org/wiki/Sandbox_(computer_security)), and so are safe to run client-side
+  automatically
 
 - WASM does not yet have a well-defined host ABI, so communication with the game engine is event-driven
 
 - They are portable and will work on all architectures and platforms
 
-- Plugins are stored server-side and get sent to clients when they connect to a server
+- Plugins are managed by the server and get sent to clients when they connect to a server, so joining a plugin-enabled
+  server is a seamless process.
 
 ## Setting up
 
@@ -73,16 +75,16 @@ works) by running the following:
 cargo build --target wasm32-unknown-unknown
 ```
 
-If you get a `error[E0463]: can't find crate for `core`, you can install the relevant version of `core` using the
+If you get a `error[E0463]: can't find crate for 'core'`, you can install the relevant version of `core` using the
 following `rustup` command:
 
 ```
 rustup target add wasm32-unknown-unknown
 ```
 
-You will also require the nightly version of the Rust compiler. If you are not already using nightly, you can set a
-directory-specific override for this with the following command (ensure you are in the `my-plugin` directory before
-running this):
+Veloren's codebase currently requires the nightly version of the Rust compiler (we hope for this not to be the case in
+the future), and so you also need it. If you are not already using nightly, you can set a directory-specific override
+for this with the following command (ensure you are in the `my-plugin` directory before running this):
 
 ```
 rustup override set nightly
@@ -91,20 +93,32 @@ rustup override set nightly
 ## Packaging the plugin
 
 Plugins are packaged in uncompressed (compression may later be supported, but is not currently) `.tar` archives. Each
-archive contains a file with the extension `.plugin.toml` that specifies plugin metadata and any number of WASM modules
-(conventionally with the extension `.wasm`). `plugin.toml` looks like the following:
+archive contains:
+
+- A file with the extension `.plugin.toml` that specifies plugin metadata
+
+- And any number of WASM modules (conventionally with the extension `.wasm`).
+
+```
+my_plugin.plugin.tar
+  |- plugin.toml
+  |- foo.wasm
+  `- bar.wasm
+```
+
+The format of `plugin.toml` is [TOML](https://en.wikipedia.org/wiki/TOML). The required fields are quite simple, as
+the example shown below demonstrates (you can omit the comments):
 
 ```toml
 # The name of the plugin (lowercase, no spaces)
 name = "my_plugin"
 
-# A list of paths to WASM modules in the plugin
-
+# A list of paths to WASM modules in the plugin (this can be used to group
+# plugins together in a rudimentary way until we implement dependencies).
 modules = []
 
-# Other plugins that this plugin depends on (currently not supported)
+# Plugins required by this plugin (currently unsupported, keep this empty)
 dependencies = []
-```
 ```
 
 We'll want to start off by creating a single module. Let's call it 'main'. Start off by adding it to the `modules` set
@@ -141,7 +155,7 @@ cd ..
 ## Running the plugin
 
 To run the plugin, simply copy it into the `plugins` directory in the asset directory of Veloren. The plugin will be
-sent over the network to connecting clients, so it's important that it's accessible to the server only (or Voxygen if
+sent over the network to connecting clients, so it's only important that it's accessible to the server (or Voxygen if
 you wish to run the plugin in singleplayer).
 
 In my case, this just involves copying the final archive to `assets/plugins/my_plugin.tar` within my local repository
@@ -150,9 +164,9 @@ and running the game.
 When a server starts (or when singleplayer is started) you should see messages similar to the following in the console:
 
 ```
-Jun 11 10:05:27.723  INFO veloren_common_state::plugin: Searching "/home/zesterer/projects/veloren/assets/plugins" for plugins...
-Jun 11 10:05:27.723  INFO veloren_common_state::plugin: Loading plugin at "/home/zesterer/projects/veloren/assets/plugins/my_plugin.plugin.tar"
-Jun 11 10:05:27.733  INFO veloren_common_state::plugin: Loaded plugin 'my_plugin' with 1 module(s)
+INFO veloren_common_state::plugin: Searching "/home/zesterer/projects/veloren/assets/plugins" for plugins...
+INFO veloren_common_state::plugin: Loading plugin at "/home/zesterer/projects/veloren/assets/plugins/my_plugin.plugin.tar"
+INFO veloren_common_state::plugin: Loaded plugin 'my_plugin' with 1 module(s)
 ```
 
 If you got this far, congratulations: you've officially created a plugin for the game!
@@ -160,12 +174,13 @@ If you got this far, congratulations: you've officially created a plugin for the
 ## Handling events
 
 At this point, it's worth taking a brief look over the documentation for the plugin API,
-[here](https://docs.veloren.net/veloren_plugin_api/). Although we are depending on `veloren-plugin-rt`, the API crate is
-exported by the runtime crate. We're now ready to write our first event handler for our plugin.
+[here](https://docs.veloren.net/veloren_plugin_api/). Although we are depending on `veloren-plugin-rt`, the similarly-named
+`veloren-plugin-api` crate is exported by it for our convenience. We're now ready to write the first event handler for
+our plugin.
 
 In `lib.rs`, enter the following:
 
-```rs
+```rust
 use veloren_plugin_rt::{*, api::{*, event::*}};
 
 #[event_handler]
@@ -176,13 +191,13 @@ pub fn on_load(load: PluginLoadEvent) {
 
 This is worth taking a little time to explain, especially if you're not so familiar with Rust.
 
-```rs
+```rust
 use veloren_plugin_rt::{event_handler, api::event::*};
 ```
 
 Here, we import the necessary macros, types and functions we need to write our plugin.
 
-```rs
+```rust
 #[event_handler]
 pub fn on_load(load: PluginLoadEvent) { ... }
 ```
@@ -192,7 +207,9 @@ Here, we declare a new functon that accepts a
 `event_handler` attribute to tell the runtime that we'd like to use this function as an *event handler* that will be
 called when the event of the specified type occurs.
 
-```rs
+In this case, the `on_load` event simply gets called once when the plugin is first loaded during server startup.
+
+```rust
 emit_action(Action::Print(String::from("Hello, Veloren!")));
 ```
 
@@ -203,7 +220,7 @@ Through `Action`s! An `Action` is a thing that you want the server to perform, a
 If you run the server with the newly compiled plugin, you should now see the following in the server console:
 
 ```
-Jun 11 10:20:16.087  INFO veloren_common_state::plugin::module: Hello, Veloren!
+INFO veloren_common_state::plugin::module: Hello, Veloren!
 ```
 
 If you're running the game in singleplayer, you'll see this twice: once for the internal server, and once for the
@@ -216,7 +233,7 @@ Why? No specific reason, but it's a good demonstration of chat functionality.
 
 Add the following to `lib.rs`:
 
-```rs
+```rust
 #[event_handler]
 pub fn on_command_ping(chat_cmd: ChatCommandEvent) -> Result<Vec<String>, String> {
     Ok(vec![String::from("Pong!")])
@@ -246,7 +263,7 @@ Thankfully, the plugin API has a feature for this!
 
 To define the type of your global state, you can add the `global_state` attribute above a type like so:
 
-```rs
+```rust
 #[global_state]
 #[derive(Default)]
 struct State {
@@ -259,7 +276,7 @@ global state to be initialised via the `on_load` event handler.
 
 To access this global state in an event handler, simply add a second parameter to the event handler like so:
 
-```rs
+```rust
 #[event_handler]
 pub fn on_command_ping(chat_cmd: ChatCommandEvent, state: &mut State) -> Result<Vec<String>, String> {
     state.ping_count += 1;
@@ -278,4 +295,5 @@ Possible future topics to cover include:
 - Modifying entity attributes
 - Persistent plugin state
 - Controlling NPC AI
+- More plugin API features
 - Plugin-specific assets
