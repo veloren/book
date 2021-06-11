@@ -1,7 +1,7 @@
 image: ubuntu:18.04
 
 before_script:
-  - apt-get update && DEBIAN_FRONTEND=noninteractive && apt-get install -y --no-install-recommends --assume-yes curl
+  - apt-get update && DEBIAN_FRONTEND=noninteractive && apt-get install -y --no-install-recommends --assume-yes curl ca-certificates 
   - curl -L https://github.com/rust-lang/mdBook/releases/download/v0.4.10/mdbook-v0.4.10-x86_64-unknown-linux-gnu.tar.gz | tar -xvz -C /usr/local/bin
   - chmod 0755 /usr/local/bin/mdbook
 
