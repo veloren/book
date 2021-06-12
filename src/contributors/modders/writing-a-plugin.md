@@ -121,8 +121,8 @@ modules = []
 dependencies = []
 ```
 
-We'll want to start off by creating a single module. Let's call it 'main'. Start off by adding it to the `modules` set
-like so:
+We'll want to start off by creating a single module. Let's give it the same name as our project. Start off by adding it
+to the `modules` list like so:
 
 ```toml
 modules = ["my_plugin.wasm"]
@@ -192,7 +192,7 @@ pub fn on_load(load: PluginLoadEvent) {
 This is worth taking a little time to explain, especially if you're not so familiar with Rust.
 
 ```rust
-use veloren_plugin_rt::{event_handler, api::event::*};
+use veloren_plugin_rt::{*, api::{*, event::*}};
 ```
 
 Here, we import the necessary macros, types and functions we need to write our plugin.
@@ -286,6 +286,11 @@ pub fn on_command_ping(chat_cmd: ChatCommandEvent, state: &mut State) -> Result<
 
 Now any player can use `/ping` and the server will tell them how many times the command has been used since the server
 started!
+
+## Reducing plugin size
+
+See [min-sized-rust](https://github.com/johnthagen/min-sized-rust) for information about reducing the size of Rust
+binaries.
 
 ## Future topics
 
