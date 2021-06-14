@@ -5,11 +5,34 @@ If you do not want to add your assets yourself skip to [Contributing Assets](#co
 
 ## Git Workflow
 
-### Forking
+### Collaboration Repository
 
-In case it is your **first contribution** your first step will be to **create a fork of Veloren in GitLab and clone it**.
+For your **first contribution** we encourage you to join our collaboration group: https://gitlab.com/veloren/collaboration and ping us on our discord in #general channel.
+We will hand out developer access rights to everyone.
+There you'll find repositories like https://gitlab.com/veloren/collaboration/veloren for the main game.
+Clone the repository to your computer and create a **feature branch**.
+There you can either work on your own or work together with others on the same branch.
 
-In case you have access to the Veloren repository you develop directly on the repository.
+<sub><sup>We cannot hand our developer rights on the main repo due to security concerns, that's why we have the collaboration group</sup></sub>
+
+#### Feature branches
+We use feature branches with a name scheme, create them like this:
+```bash
+git checkout -b <your_nickname/some_branch_name>
+```
+In your own branch you can then create commits and push them to your branch how you like it. (see Rule For Commits)
+
+#### Alternative: Forking
+
+Forking has some downsides:
+- you need to set up CI in your Fork
+- maintainers can't easily modify your Merge Requests
+
+But you are free to choose this workflow instead of your Collaboration Repo (see above).
+Go to gitlab, to the main repository (not the collaboration one) and use their fork button.
+Apply the troubleshooting steps in the next section to get Lfs to work.
+
+#### Git-Lfs Troubleshooting
 
 When working on a fork instead of on a branch in the main repo, you'll need to do the following for the time being due to a bug in git-lfs:
 
@@ -27,16 +50,6 @@ When working on a fork instead of on a branch in the main repo, you'll need to d
    ```
 
 3. Go ahead and run `git lfs pull upstream`, and continue to do so when new assets are added to the repo.
-
-### Feature Branches
-
-We develop in feature branches, so before you start contributing, create your own branch:
-
-```bash
-git checkout -b <your_nickname/some_branch_name>
-```
-
-In your own branch you can then create commits and push them to your branch how you like it. (see Rule For Commits)
 
 ### Rules For Commits
 
