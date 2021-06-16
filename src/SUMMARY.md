@@ -21,6 +21,7 @@
     - [Development tools](contributors/development-tools.md)
     - [Working with git](contributors/working-with-git.md)
     - [Compiling](contributors/compiling.md)
+    - [Cross-Compiling](contributors/cross-compiling.md)
     - [Before you contribute](contributors/before-you-contribute.md)
     - [Joining a team](contributors/joining-a-team.md)
     - [FAQ](contributors/faq.md)
