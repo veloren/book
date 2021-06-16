@@ -26,7 +26,13 @@ linker="Y"
 
 where `X` was `aarch64-unknown-linux-gnu` in our case, and `Y` was `aarch64-linux-gnu-gcc` respectively. These should correspond with the target mentioned above, and the compiler toolchain respectively.
 
-Now you can compile as usual with `cargo build` (with the optionally added `--release` flag for optimizations on the target architecture).
+For the compilation itself, you'll need to tell Cargo where the correct libraries are. Given that we've mounted the root filesystem of our target at `/mnt`, we can use the `PKG_CONFIG_SYSROOT_DIR` environment variable. 
+As such, the compilation command line looks like this in our case:
+```
+PKG_CONFIG_SYSROOT_DIR=/mnt cargo build --release --target aarch64-unknown-linux-gnu
+```
+
+Feel free to adjust the command for your needs, as per the original compilation instructions. You should find the built binaries in the `target` subfolder of the project root.
 
 #### Note
 
