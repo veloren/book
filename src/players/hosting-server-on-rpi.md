@@ -53,6 +53,8 @@ Run the server binary, optionally with `-h` or `--help` to see the list of argum
 **Note**: _Compilation on a Raspberry Pi 4 running Ubuntu Server 64-bit can take around 30 minutes for an optimized build._
 <br/>
 **Note**: _Remember to replace \<username\> by your own username and \<ip\> by the ip address of your Raspberry Pi!_
+<br/>
+**Note**: _The process itself is resource heavy. Maybe still consider cross compiling. RAM usage can go over 8G, so you may consider creating a swap (although swap slows down the entire compilation process)_
 
 
 ## Cross Compiling
