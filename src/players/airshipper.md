@@ -7,7 +7,7 @@ Currently due to our irregular and frequent updates we recommend using it.
 
 ### Download
 
-Visit the [website](https://songtronix.com) of the developer to download it.
+Visit the [download page](https://veloren.net/download/) to download Airshipper.
 
 ### Files
 
