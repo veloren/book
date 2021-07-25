@@ -6,9 +6,23 @@ This section covers building Veloren from rust source with `cargo` and running i
 
 ## Required Libraries
 
-On **Windows** you will need [Visual Studio Build Tools](https://visualstudio.microsoft.com/de/downloads/).
+On **Windows** you will need to install the following programs:
 
-**Note**: _Install "C++ tools" and "Windows 10 SDK", you won't need to install Visual Studio itself so scroll down and open "Tools for Visual Studio \<year\>" to find the latest buildtools._
+* [Visual Studio Build Tools](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019)
+* [CMake](https://cmake.org/download/#latest)
+* [Ninja build system](https://github.com/ninja-build/ninja/releases)
+* [Python 3](https://www.python.org/downloads/windows/)
+
+Fortunately, there's a **quick way to install** most of these
+1. Download and run Visual Studio Build Tools and install "C++ tools" and "Windows 10 SDK",
+you won't actually be needing Visual Studio itself.
+2. Open Powershell (you should have it installed by default) and run the following commands:
+    ```
+    iwr -useb get.scoop.sh | iex
+    scoop install cmake ninja python
+    ```
+    The first line installs the Scoop package manager and
+    the second line installs CMake, Ninja and Python through Scoop in one go.
 
 On **Linux** you need to have `GTK3` installed.
 
