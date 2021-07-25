@@ -24,7 +24,7 @@ you won't actually be needing Visual Studio itself.
     The first line installs the Scoop package manager and
     the second line installs CMake, Ninja and Python through Scoop in one go.
 
-On **Linux** you need to have `GTK3` installed.
+On **Linux** you will need to have installed GTK3, Python and CMake.
 
 On **Debian** systems additional libraries may need to be downloaded, below is a non-exhaustive list:
 
