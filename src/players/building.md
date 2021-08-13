@@ -99,6 +99,8 @@ pre-built structures that may be interacted with. Below are a few ideas to get y
 
 - Visual customisations to existing world structures like towns and dungeons that make them more interesting to explore
 
+- PvP or PvE arenas for players to battle monsters and each other in an environment where others can watch
+
 If you do something neat with this feature, feel free to tell us! It might even get featured in the weekly blog!
 
 
