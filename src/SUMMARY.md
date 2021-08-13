@@ -14,6 +14,7 @@
   - [Userdata Folder Structure](players/userdata-folder-structure.md)
   - [Hosting a Server](players/hosting-a-server.md)
     - [Hosting on the Raspberry Pi](players/hosting-server-on-rpi.md)
+    - [Building](players/building.md)
   - [Generating or loading a custom world](players/world-generation.md)
   - [Troubleshooting](players/troubleshooting.md)
 - [Veloren for Contributors](contributors/README.md)
