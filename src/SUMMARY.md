@@ -9,7 +9,6 @@
     - [Reporting Bugs](players/reporting-bugs.md)
     - [Changelog](players/changelog.md)
     - [Roadmap](players/roadmap.md)
-  - [Getting started - A Short Guide](players/getting-started/README.md)
   - [Airshipper - Veloren Launcher](players/airshipper.md)
   - [Userdata Folder Structure](players/userdata-folder-structure.md)
   - [Hosting a Server](players/hosting-a-server.md)
