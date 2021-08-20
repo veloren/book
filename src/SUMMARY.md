@@ -10,6 +10,7 @@
     - [Changelog](players/changelog.md)
     - [Roadmap](players/roadmap.md)
   - [Airshipper - Veloren Launcher](players/airshipper.md)
+  - [Commands](players/commands.md)
   - [Userdata Folder Structure](players/userdata-folder-structure.md)
   - [Hosting a Server](players/hosting-a-server.md)
     - [Hosting on the Raspberry Pi](players/hosting-server-on-rpi.md)
