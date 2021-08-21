@@ -5,3 +5,4 @@ src = "src"
 title = "Veloren: An Owner's Manual"
 
 [output.html]
+additional-css = ["custom.css"]
