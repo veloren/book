@@ -46,20 +46,21 @@ Contains hotbar infomation, per-character and per-server. Should never need to b
 
 This file is intended for manual editing, and should never be overwritten by the game. If the file is in an invalid state, the server will emit a warning in including the position of the error, create a settings.template.ron file full of the default values, and start up with all default values.
 
-| Setting                 | Description                                                                                                                                                                            | Default value                      |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
-| `gameserver_address`    | Address and port the game server will listen to. Note that clients will use the port `14004` by default. _Changing the port will require to specify it in the client too._             | `"0.0.0.0:14004"`                  |
-| `metrics_address`       | Address and port the game server will expose [prometheus](https://prometheus.io) metrics.                                                                                              | `"0.0.0.0:14005"`                  |
-| `auth_server_address`   | When using `Some(<value>)`: The value is the IP address or domain the **game server and client** will use. If you want to disable authentication, you replace `Some(...)` with `None`. | `Some("https://auth.veloren.net")` |
-| `max_players`           | Maximum number of players connected to the game server.                                                                                                                                | `100`                              |
-| `world_seed`            | seed number used to setup the random generation of the world.                                                                                                                          | `59686`                            |
-| `server_name`           | displayed server name                                                                                                                                                                  | `"Veloren Alpha"`                  |
-| `start_time`            | Server daylight start time in seconds.                                                                                                                                                 | `32400`                            |
-| `map_file`              | Sets which map to load. [See here](world-generation.html#map_file-options) for allowed values.                                                                                         | `None`                             |
-| `max_view_distance`     | The maximum view distance that clients may request. Useful for low-RAM servers.                                                                                                        | `Some(30)`                         |
-| `banned_words_files`    | List of files containing words to be censored. None are distributed by default.                                                                                                        | `[]` (Empty array)                 |
-| `max_player_group_size` | The maximum party size players can have, for purposes of XP sharing and ignoring friendly fire.                                                                                        | `6`                                |
-| `client_timeout`        |                                                                                                                                                                                        | `(secs: 40, nanos: 0,)`            |
+|Setting|Description|Default value|
+|-|-|-|
+| `gameserver_address`| Address and port the game server will listen to. Note that clients will use the port `14004` by default. _Changing the port will require to specify it in the client too._ | `"0.0.0.0:14004"`|
+| `metrics_address` | Address and port the game server will expose [prometheus](https://prometheus.io) metrics. | `"0.0.0.0:14005"`|
+| `auth_server_address` | When using `Some(<value>)`: The value is the IP address or domain the **game server and client** will use. If you want to disable authentication, you replace `Some(...)` with `None`. | `Some("https://auth.veloren.net")` |
+| `max_players` | Maximum number of players connected to the game server. | `100`|
+| `world_seed`| seed number used to setup the random generation of the world. | `59686`|
+| `server_name` | displayed server name | `"Veloren Alpha"` |
+| `start_time`| Server daylight start time in seconds. | `32400`|
+| `map_file`| Sets which map to load. [See here](world-generation.html#map_file-options) for allowed values. | `None` |
+| `max_view_distance` | The maximum view distance that clients may request. Useful for low-RAM servers. | `Some(30)` |
+| `banned_words_files`| List of files containing words to be censored. None are distributed by default. | `[]` (Empty array) |
+| `max_player_group_size` | The maximum party size players can have, for purposes of XP sharing and ignoring friendly fire. | `6`|
+| `client_timeout`| | `(secs: 40, nanos: 0,)`|
+| `battle_mode`| Can be `Global(mode)` or `PerPlayer(default: mode)`, where `mode` can be `PvP` or `PvE` and will be given to each player on join. The difference between `Global` and `PerPlayer` is that `PerPlayer` enables `/battlemode` [command](commands.html). | `Global(PvP)`|
 
 ## description.ron
 
