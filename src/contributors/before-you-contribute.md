@@ -20,7 +20,7 @@ as you can avoid all the shortcomings of having a fork.
 
 To make your **first contribution**, follow these steps to gain access to our development repository:
 1. Join our collaboration group: https://gitlab.com/veloren/dev.
-2. Ping either Core Developers or Admins on [our Discord](https://veloren.net/joinus/) in the #general channel (or whichever channel seems suitable).
+2. Ping either Core Developers or Admins on [our Discord](https://veloren.net/joinus/) in the #new-contributors channel (or whichever channel seems suitable).
    Let us know of your GitLab username and we'll be able to give you developer permissions.
 3. Head over to https://gitlab.com/veloren/dev/veloren and clone the repository to your computer.
 4. Create a **feature branch** (more details about it below).
@@ -136,7 +136,7 @@ Now the branch must be reviewed by other members; to do this you must create a M
     Feel free to add additional information to the description.
     Unless the commit history of your branch comprises of clean commits with descriptive titles,
     your MR will be squashed — you may preemptively check the *squash commits* checkbox if you want this to happen.
-3. Send a message on our Discord (if you have access in `#programmers` or in a working group channel otherwise in `#general`)
+3. Send a message on our Discord (if you have access in `#programmers` or in a working group channel otherwise in `#new-contributors`)
     and mention `@Code Reviewer` with a link to the MR, someone will look over it and will work with you together to get it merged.
 
 ## Contributing Assets
