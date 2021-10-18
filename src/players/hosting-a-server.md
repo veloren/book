@@ -45,3 +45,17 @@ If you want to run a dedicated Veloren server 24/7 follow this.<br/>
 You are done!
 
 **Note**: _This will automatically keep the game server updated to the latest nightly release._
+
+### Running commands on a game server using docker (i.e. the dedicated game server setup)
+
+The game server has a CLI interface that can be used to run commands for tasks such as adding admins and moderators.
+The steps for accessing this interface while the server is running inside docker are outlined below:
+
+1. Run `docker ps` to see the list of running docker container and their IDs.
+2. Copy the container ID of the Veloren game server.
+3. Run `docker attach <game server container ID>` (e.g. if the ID is `e002d350ab26` then run `docker attach e002d350ab26`).
+4. You can now run server CLI commands. To see the available options type `help` and press enter.  
+    **Note:**: _Logging output from the server can break up the visualization of command input but this can be ignored and broken up commands will still work._
+5. Once you are done, to escape press **Ctrl+p** followed by **Ctrl+q**.
+
+
