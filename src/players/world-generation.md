@@ -15,17 +15,25 @@
 | Value                            | Description                                                                                                            |
 | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | `None`                           | Loads the default world map, located in the `assets/world/map` folder.                                                 |
-| `Some(Generate)`                 | Generates a new world, using `world_seed`, and starts the server using it. **Does not save the resulting world file.** |
-| `Some(Save)`                     | Same as with `Generate`, but will save the world as a binary file in a `maps` directory.                               |
+| `Some(Generate(([options])))`    | Generates a new world, using `world_seed`, and starts the server using it. **Does not save the resulting world file.** |
+| `Some(Save(([options])))`        | Same as with `Generate`, but will save the world as a binary file in a `maps` directory.                               |
 | `Some(Load("maps/example.bin"))` | Loads a map from file                                                                                                  |
 
-## Advanced Methods
+## Generation Options
 
-If you are able to compile the game, you can generate maps with custom sizes and terrain scales, through the same steps as above.
+The options above can be filled out to change the size of generated maps, and to change the scale of mountains within them. Options you do not wish to change can be left blank, and will be replaced by defaults, however you must keep the spare braces. Manually writing out the default set of options would give `Some(Generate((x_lg: 10, y_lg: 10, scale: 2.0)))`.
 
-To change map size, edit the `x` and `y` values [here](https://gitlab.com/veloren/veloren/-/blob/34c3bab6ad5046b059f824b94118cbe657f6c286/world/src/sim/mod.rs#L68). Each increment will **double** map scale. Be warned that worldgen times similarly increase, and that actually loading larger worlds can be quite RAM-heavy.
+#### World size
 
-To change terrain scale, edit [here](https://gitlab.com/veloren/veloren/-/blob/34c3bab6ad5046b059f824b94118cbe657f6c286/world/src/sim/mod.rs#L455). `4.0` is based on earth-like values, and gives a much grander scale to terrain than the default.
+`x_lg` and `y_lg` give the binary logarithm of the number of chunks along each axis of the world, that is, `x_lg: 10` results in a world 2^10=1024 chunks wide.
+
+Each increment doubles length, and each decrement halves it. Rectangular worlds are fully supported, however each doubling of each dimension also roughly doubles world generation time and RAM consumption, which can quickly get out of hand.
+
+A maximum of 14 is supposed to be supported in each dimension, giving a square world 524 km across, roughly equivalent to the United Kingdom in area, but it would look pretty bad due to the current lack of tectonics simulation, which becomes more important at larger scales. 13x13 is the largest so far attempted.
+
+#### World scale
+
+`scale` simply changes the scale of mountains, landmasses, etc. A value of `4.0` grants a roughly Earthlike scale, although a larger-than-default world is recommended for this. Going beyond `4.0` is not considered supported, but generally works. As a guide, the tallest mountains will be a little taller than this value, in kilometres.
 
 ## Loading a pre-generated map with a specific seed
 
