@@ -2,7 +2,7 @@
 
 1. Open your singleplayer or server's settings file. See [here](userdata-folder-structure.md).
 
-2. Set your custom `world_seed`, and `map_file` to `Some(Save)`.
+2. Set your custom `world_seed`, and `map_file` to `Some(Save(()))`.
 
 3. Launch your game as normal, whether you're doing it through singleplayer or the server cli.
 
@@ -21,7 +21,7 @@
 
 ## Generation Options
 
-The options above can be filled out to change the size of generated maps, and to change the scale of mountains within them. Options you do not wish to change can be left blank, and will be replaced by defaults, however you must keep the spare braces. Manually writing out the default set of options would give `Some(Generate((x_lg: 10, y_lg: 10, scale: 2.0)))`.
+The options above can be filled out to change the size of generated maps, and to change the scale of mountains within them. Options you do not wish to change can be left blank, and will be replaced by defaults, however you must keep the spare braces. Manually writing out the default set of options would give `Some(Save((x_lg: 10, y_lg: 10, scale: 2.0)))`.
 
 #### World size
 
