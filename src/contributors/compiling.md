@@ -46,6 +46,9 @@ And a one liner to download and install them all:<br/>
 
 On **Fedora** you can follow this [awesome guide](https://web.archive.org/web/20201028204013/https://kwiecien.us/building-veloren-on-fedora.html).
 
+On **macOS** you only need to install cmake. 
+This can be done using either **homebrew** or **macports**. Using homebrew, enter `brew install cmake` or similarly, using macports enter `sudo port install cmake`. **Note**: Do not use sudo with homebrew.
+
 **Note**: _Feel free to open an issue incase these dependencies are incorrect._
 
 ## Compile and Run Veloren
