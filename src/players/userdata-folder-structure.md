@@ -32,17 +32,20 @@ Airshipper currently stores the items under the `voxygen` heading outside of `us
 - server-cli
   - [settings.ron](#settingsron-server-cli-edition)
 
-## settings.ron (voxygen edition)
+## `voxygen/settings.ron`
 
-Contains all of the settings accessible from the in-game GUI, and usually shouldn't require manual intervention.
+Contains settings for [Voxygen](voxygen.md), Veloren's official 3D client frontend.
+
+This file is almost entirely configurable through Voxygen's in-game settings UI. For more information, see
+[here](voxygen.md#settingsron).
 
 The main thing not accessible from main game menus is gamepad keybindings, which can only be changed by directly editing the file.
 
-## profile.ron
+## `profile.ron`
 
 Contains hotbar infomation, per-character and per-server. Should never need to be manually modified.
 
-## settings.ron (server edition)
+## `server/server_config/settings.ron`
 
 This file is intended for manual editing, and should never be overwritten by the game. If the file is in an invalid state, the server will emit a warning in including the position of the error, create a settings.template.ron file full of the default values, and start up with all default values.
 
@@ -62,7 +65,7 @@ This file is intended for manual editing, and should never be overwritten by the
 | `client_timeout`| | `(secs: 40, nanos: 0,)`|
 | `battle_mode`| Can be `Global(mode)` or `PerPlayer(default: mode)`, where `mode` can be `PvP` or `PvE` and will be given to each player on join. The difference between `Global` and `PerPlayer` is that `PerPlayer` enables `/battlemode` [command](commands.html). | `Global(PvP)`|
 
-## description.ron
+## `server/server_config/description.ron`
 
 Contains the introductory chat message clients get when entering the server, as a quoted string. Can be multiple lines.
 
@@ -71,7 +74,7 @@ Example:
 "This is the best Veloren server"
 ```
 
-## whitelist.ron
+## `server/server_config/whitelist.ron`
 
 Contains a list of whitelisted account IDs, and is considered disabled if empty. Heavily recommended to use the `/whitelist add/remove` ingame command, rather than manual editing.
 
@@ -84,7 +87,7 @@ Example: Result of using `/whitelist add Treeco` and `/whitelist add treeco2`.
 ]
 ```
 
-## banlist.ron
+## `server/server_config/banlist.ron`
 
 Contains a list of banned accounts, and reasons. Heavily recommended to use the `/ban` and `/unban` ingame commands, rather than manual editing.
 
@@ -102,7 +105,7 @@ Example: Result of using `/ban Treeco General nuisance` and `/ban treeco2 alt ac
     ),
 }
 ```
-## admins.ron
+## `server/server_config/admins.ron`
 
 Contains a list of admin account IDs. Heavily recommended to use `admin add/remove ` from the server's TUI, rather than manual editing. There is no in-game command to permanently add admins, for security reasons.
 
@@ -121,6 +124,6 @@ Example:
 veloren-server-cli admin add Treeco
 ```
 
-## settings.ron (server-cli edition)
+## `server-cli/settings.ron`
 
 The settings in this file govern the warning period the server gives for automatic shutdowns for updates.
