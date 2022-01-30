@@ -43,6 +43,23 @@ After that make the following modifcations to `launch.json` (remember to build w
 }
 ```
 
+# Jetbrains Integrated Development Environments
+Please do note that debugging on Jetbrains IDEs is only supported on a small subset of their products (like CLion or IntelliJ Idea Ultimate). Visit [this link](https://github.com/intellij-rust/intellij-rust) for further information.
+
+Install [This plugin](https://github.com/intellij-rust/intellij-rust) in your IDE (either via File -> Settings -> Plugins [Ctrl + Alt + x], or via your browser) and open your rust project in the IDE.
+
+Click the button "Add Configuration..." in the upper right corner. This will open a window giving you the ability to create launch / debug profiles.
+
+Click the little "+" button and select "Cargo in the dropdown". This will create you a launch profile.
+
+Edit the "Name" field however you want. Then here's the interesting part : Editing the "Command" field 
+
+By default, the "Command" field should have "run" in it, keep it and add "--bin {bin} --profile debuginfo -Z unstable-options" where bin is the name of the binary to debug (veloren-server-cli, veloren-voxygen, ...).
+
+The "Command" field should then contain something similar to "run --bin veloren-server-cli --profile=debuginfo -Z unstable-options".
+
+If you have any question, please reach out to me (infrandomness#4003) on the Veloren discord server :P.
+
 ## Troubleshooting
 
 Note: Some users have reported needing to run VSCode as an administrator for debugging to work correctly.
