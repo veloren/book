@@ -19,10 +19,10 @@ Having a branch without forking can be more convenient for contributors
 as you can avoid all the shortcomings of having a fork.
 
 To make your **first contribution**, follow these steps to gain access to our development repository:
-1. Join our collaboration group: https://gitlab.com/veloren/dev.
+1. Join our collaboration group: [https://gitlab.com/veloren/dev](https://gitlab.com/veloren/dev).
 2. Ping either Core Developers or Admins on [our Discord](https://veloren.net/joinus/) in the #new-contributors channel (or whichever channel seems suitable).
    Let us know of your GitLab username and we'll be able to give you developer permissions.
-3. Head over to https://gitlab.com/veloren/dev/veloren and clone the repository to your computer.
+3. Head over to [https://gitlab.com/veloren/dev/veloren](https://gitlab.com/veloren/dev/veloren) and clone the repository to your computer.
 4. Create a **feature branch** (more details about it below).
    You can now either work on your own or work together with others on the same branch.
 
