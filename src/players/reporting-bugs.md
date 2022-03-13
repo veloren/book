@@ -92,6 +92,23 @@ For more details about wgpu's API tracing see <https://github.com/gfx-rs/wgpu/wi
 
 First, check that you are using the dx12 or dx11 graphics backend.
 
+#### Using DebugView
+
+1. Force the debug layer on for Voxygen (Note: if you compiled the game yourself without `--release` then this step can be skipped):
+    1. Run `dxcpl`.
+    2. Click "edit list".
+    3. Add `veloren-voxygen.exe` and click ok.
+    4. Make sure "Force On" is selected in the debug layer section.
+    5. Click "Apply".
+2. [Download DebugView](https://docs.microsoft.com/en-us/sysinternals/downloads/debugview).
+3. Start DebugView.
+4. Start voxygen and run until the crash/error occurs.
+5. In DebugView, File -> Save.
+6. Share output file.
+7. Run `dxcpl` again and remove voxygen from the list.
+
+#### Using Visual Studio
+
 1. Install visual studio <https://visualstudio.microsoft.com/downloads/>.
 2. Force the debug layer on for Voxygen (Note: if you compiled the game yourself without `--release` then this step can be skipped):
     1. Open visual studio.
