@@ -16,7 +16,7 @@ If you want to play with your friends and do not have a dedicated server, follow
 1. Forward port `14004` TCP and UDP on your router.
 2. [Start the server](#starting-the-server)
 3. [Find your public IP address](https://www.showmyipaddress.eu/) and share it with your friends. They will need to enter it in-game to join the server.
-5. Have fun! :)
+4. Have fun! :)
 
 > **Note:** _If you need your computer's local IP address for port forwarding, refer to the [Finding your local IP address](#finding-your-local-ip-address) section below._
 

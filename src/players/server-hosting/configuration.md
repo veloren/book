@@ -1,4 +1,4 @@
-# Configuring the server
+# Configuring The Server
 
 Whichever route you chose for hosting the server, you might want to configure it. This section contains an explanation of all the config files related to a Veloren server, their purposes and contents.
 
@@ -79,7 +79,12 @@ This folder is the most interesting to us. It contains various important configu
 >     max_player_for_kill_broadcast: Some(20),
 > ) 
 > ```
-> Explanations of non-obvious things:
+> 
+> > **Note:** While you can use a custom auth server, if you do it, players will see a **security warning** when connecting to your game server.  
+> 
+> > **Note:** While you can disable authentication completely, it would allow **anyone** to log in using **any username**, including as a **server admin**.
+> 
+> Explanations of non-obvious options:
 > - Some values use the `Option` type, which means they can either be set to either `Some(value)` or `None`.
 > - `max_player_for_kill_broadcast` might sound scary, but it only prevents chat spam by only sending death messages of others to their group and nearby players if the set player count is exceeded. Setting it to `None` means the server will never broadcast kill messages globally.
 
