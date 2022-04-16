@@ -2,23 +2,23 @@
 If you want to play with your friends and do not have a dedicated server, follow these instructions to set one up on your computer. 
 
 ## Playing over LAN
-> **Note**: _This will only work when everyone is connected to the same Local Area Network (generally that means the same WiFi network or router)._
+> **Note:** _This will only work when everyone is connected to the same Local Area Network (generally that means the same WiFi network or router)._
 
 1. [Start the server](#starting-the-server)
 2. [Find your local IP address](#finding-your-local-ip-address) and share it with your friends. They will need to enter it in-game to join the server.
 3. Have fun! :)
 
 ## Playing over the internet
-> **Note**: _You will need access to your router and knowledge about port forwarding._
+> **Note:** _You will need access to your router and knowledge about port forwarding._
 
-> **Tip**: _If you are unable to set up port forwarding, there exist programs such as [ZeroTier](https://www.zerotier.com/), [Netbird](https://netbird.io/) or [Hamachi](https://vpn.net/), which allow a limited amount of users to connect to a local server through the internet._
+> **Tip:** _If you are unable to set up port forwarding, there exist programs such as [ZeroTier](https://www.zerotier.com/), [Netbird](https://netbird.io/) or [Hamachi](https://vpn.net/), which allow a limited amount of users to connect to a local server through the internet._
 
 1. Forward port `14004` TCP and UDP on your router.
 2. [Start the server](#starting-the-server)
 3. [Find your public IP address](https://www.showmyipaddress.eu/) and share it with your friends. They will need to enter it in-game to join the server.
 5. Have fun! :)
 
-> **Note**: _If you need your computer's local IP address for port forwarding, refer to the [Finding your local IP address](#finding-your-local-ip-address) section below._
+> **Note:** _If you need your computer's local IP address for port forwarding, refer to the [Finding your local IP address](#finding-your-local-ip-address) section below._
 
 ## Starting the server
 ### Using the server provided by Airshipper:  
@@ -33,7 +33,7 @@ If you want to play with your friends and do not have a dedicated server, follow
    3. Launch `veloren-server-cli[.exe]`.
 
 ## Finding your local IP address
-> **Tip**: _Generally local IPv4 addresses have the form of `192.168.xxx.xxx` or, more rarely, `10.xxx.xxx.xxx`. For IPv6 addresses, local ones generally start with `fe80:`_
+> **Tip:** _Generally local IPv4 addresses have the form of `192.168.xxx.xxx` or, more rarely, `10.xxx.xxx.xxx`. For IPv6 addresses, local ones generally start with `fe80:`_
 
 ### On Linux and MacOS
 1. Open the Terminal.

@@ -2,11 +2,11 @@
 
 This section describes the initial setup and maintenance of your local repository.<br>
 
-_**Note**: To understand the following we highly recommend reading about git!_
+_**Note:** To understand the following we highly recommend reading about git!_
 
 ## Download source code
 
-**Note**: Veloren needs [git LFS installed](development-tools.md#git-lfs) before cloning to be able to download the assets. If you already cloned the repository before setting up git LFS use [these steps](troubleshooting.md#when-lfs-was-not-setup-before-cloning-the-repo) to get the assets downloaded.
+**Note:** Veloren needs [git LFS installed](development-tools.md#git-lfs) before cloning to be able to download the assets. If you already cloned the repository before setting up git LFS use [these steps](troubleshooting.md#when-lfs-was-not-setup-before-cloning-the-repo) to get the assets downloaded.
 
 Clone the repository
 
@@ -20,7 +20,7 @@ Change your working directory to the cloned repository
 cd veloren
 ```
 
-**Note**: _All commands in this chapter from now on should be executed from there._
+**Note:** _All commands in this chapter from now on should be executed from there._
 
 # Basic repo navigation
 
@@ -94,7 +94,7 @@ Over time as dependencies get updated, the old compiled versions start to take u
 cargo clean
 ```
 
-**NOTE**: Keep in mind that cargo will need to recompile all dependencies which can take a long time.
+**NOTE:** Keep in mind that cargo will need to recompile all dependencies which can take a long time.
 
 ## Updating the Rust toolchain
 

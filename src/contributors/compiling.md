@@ -2,7 +2,7 @@
 
 This section covers building Veloren from rust source with `cargo` and running it.
 
-**Note**: _all commands need to be run from the repository._
+**Note:** _all commands need to be run from the repository._
 
 ## Required Libraries
 
@@ -47,7 +47,7 @@ And a one liner to download and install them all:<br/>
 On **macOS** you only need to install cmake. 
 This can be done using either **homebrew** or **macports**. Using homebrew, enter `brew install cmake` or similarly, using macports enter `sudo port install cmake`. **Note**: Do not use sudo with homebrew.
 
-**Note**: _Feel free to open an issue incase these dependencies are incorrect._
+**Note:** _Feel free to open an issue incase these dependencies are incorrect._
 
 ## Compile and Run Veloren
 
@@ -59,7 +59,7 @@ cargo run
 
 To compile without running, use `cargo build` instead.
 
-**Note**: _The initial compilation will take from 5min up to 30min therefore grab a tea and some snacks and come back later._
+**Note:** _The initial compilation will take from 5min up to 30min therefore grab a tea and some snacks and come back later._
 
 ## Compile and Run Veloren Server
 
@@ -73,7 +73,7 @@ We use [`tracing`](https://crates.io/crates/tracing) to collect logs. They can b
 
 For all available filtering options visit [the docs](https://docs.rs/tracing-subscriber/0.2.7/tracing_subscriber/filter/struct.EnvFilter.html#examples).
 
-**Tip**: _this works both for the server and client_
+**Tip:** _this works both for the server and client_
 
 ## Optimized Release builds
 

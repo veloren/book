@@ -129,7 +129,7 @@ Before creating your sprites there are a few things you should know:
    1.0 are corresponding to 11 small scale voxels.
    So if your model is 18 small scale voxels tall you will need to put in 18/11 = 1.64 in here.
 
-   **Note**: _**3.0** is the maximum height as of now and this collision height will apply to **all** sprite variants of a single type_
+   **Note:** _**3.0** is the maximum height as of now and this collision height will apply to **all** sprite variants of a single type_
 
 3. Next we'll define if your sprite `is_collectible`.
 

@@ -6,7 +6,7 @@
    (**Note:** make sure no sensitive information is included in the log files)
 4. Submit the issue
 
-**Tip**: _Incase you do not want to create an gitlab account you can join our [discord](https://discord.gg/BvQuGze)
+**Tip:** _Incase you do not want to create an gitlab account you can join our [discord](https://discord.gg/BvQuGze)
 and report the bug in `#bugs-and-support`._
 
 # Collect Logs
