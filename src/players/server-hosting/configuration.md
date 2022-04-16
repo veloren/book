@@ -3,6 +3,7 @@
 Whichever route you chose for hosting the server, you might want to configure it. This section contains an explanation of all the config files related to a Veloren server, their purposes and contents.
 
 ## The userdata folder structure
+
 After running `veloren-server-cli` for the first time, a `userdata` folder will be created, containing all of it's configuration and data. It's contents will look like this:
 ```
 userdata

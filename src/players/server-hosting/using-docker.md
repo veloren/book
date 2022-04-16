@@ -9,6 +9,7 @@ If you want to run a dedicated Veloren server 24/7 follow this.
 > **Tip:** Check out the [Docker Compose file reference](https://docs.docker.com/compose/compose-file/compose-file-v3/) for more information about the `docker-compose.yml` file.
 
 ### Setup
+
 1. Create a folder for the server data and `cd` into it.
 2. Download `docker-compose.yml` from the [repository](https://gitlab.com/veloren/veloren/-/blob/master/server-cli/docker-compose.yml) into the folder.  
 `wget https://gitlab.com/veloren/veloren/-/raw/master/server-cli/docker-compose.yml`
@@ -17,7 +18,7 @@ If you want to run a dedicated Veloren server 24/7 follow this.
 If you modify the `docker-compose.yml` file, you'll need to run that command again for it to take effect.
 
 > **Tip:** `veloren-server-cli` provides a CLI for modifying the administrator list.  
-To add an admin or mod, run `docker exec <veloren-container-name> veloren-server-cli admin add -u <USER> -r <ROLE>`, where `ROLE` is one of `Admin`, `Moderator`
+To add an admin or mod, run `veloren-server-cli admin add -u <USER> -r <ROLE>`, where `ROLE` is one of `Admin`, `Moderator`
 
 ### Monitoring and maintenance
 
