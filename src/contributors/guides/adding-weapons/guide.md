@@ -222,7 +222,7 @@ Full Command:
 /give_item common.items.weapons.<weapon type(ex: staff)>.<Weapon Kind>
 ```
 
-**Tip**: *You can type `/give_item common.items.weapons.` and then press tab to cycle through available weapons*
+**Tip:** *You can type `/give_item common.items.weapons.` and then press tab to cycle through available weapons*
 
 If you dont like how your character holds your weapon you have to mess with the weapons offsets.
 

@@ -2,7 +2,7 @@
 
 If you want to contribute to Veloren in any form you probably need to deal with Veloren's [_source code_](https://en.wikipedia.org/wiki/source_code). Therefore these basic tools have to be installed to interact with it.<br/>
 
-_**Note**: Throughout the book we will mention alot of commands. Therefore we highly recommend getting comfortable with a [terminal]()._
+_**Note:** Throughout the book we will mention alot of commands. Therefore we highly recommend getting comfortable with a [terminal]()._
 
 ## Git
 
@@ -28,7 +28,7 @@ _Keeping track of the really big giants out there (aka. asset files)_
 
 2. Git LFS needs to be set up by running `git lfs install` or `git-lfs install` (macOS) in a terminal.
 
-**Note**: _git-lfs has a known bug with working off remotes. If you plan to work off a fork, [refer to this section](before-you-contribute.html#forking)._
+**Note:** _git-lfs has a known bug with working off remotes. If you plan to work off a fork, [refer to this section](before-you-contribute.html#forking)._
 
 ## Rust
 

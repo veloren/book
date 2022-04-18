@@ -26,7 +26,7 @@ Notice how it has to be dereferenced in order to work.
 
 `Const_tweaker` is feature gated in Veloren/voxygen. So you need to compile with `cargo run --features tweak`.
 
-**Note**: _go into voxygen folder for this as the compiler won't accept running `--features` from the root directory._
+**Note:** _go into voxygen folder for this as the compiler won't accept running `--features` from the root directory._
 
 This will create a local web GUI at [127.0.0.1:9938](https://127.0.0.1:9938/) where you can play around with the values.
 

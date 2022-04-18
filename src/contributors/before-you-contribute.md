@@ -94,7 +94,7 @@ In order to ensure clean commits, we've made a list of suggested practices and t
     Do note, sometimes `cargo fmt` formatting rules have changed, in which case formatting may change parts of the codebase you haven't touched.
     In this case, feel free to make a separate commit that formats the entire codebase.
 
-    **Tip**: As you may have noticed, if you already pushed to remote, you will have to force push your amended commit (both `git push --force-with-lease` or `git push -f` will work for this.)
+    **Tip:** As you may have noticed, if you already pushed to remote, you will have to force push your amended commit (both `git push --force-with-lease` or `git push -f` will work for this.)
 
 * **Rebasing is a good way to change your commits later on.**
 
@@ -122,7 +122,7 @@ Fortunately, you can catch up on any changes your branch has missed by [rebasing
     ask for help on our Discord with that.
 3. Run `git push -f` to push your rebased feature branch. It must be a force push as you've changed the existing commit history.
 
-**Tip**: Run `git status` to see the current state of your branch.
+**Tip:** Run `git status` to see the current state of your branch.
 
 ## Getting your contribution into the game
 
@@ -143,7 +143,7 @@ Now the branch must be reviewed by other members; to do this you must create a M
 
 If you never worked before with git and just want to contribute assets,
 post them in `#veloren-art` on our Discord and ask for feedback. Make sure you own the rights to the assets and agree it being publicly available under [GPLv3](https://choosealicense.com/licenses/gpl-3.0/) license.
-**Tip**: Check out the [Artists section](artists) for further information.
+**Tip:** Check out the [Artists section](artists) for further information.
 
 ## After your first contribution
 

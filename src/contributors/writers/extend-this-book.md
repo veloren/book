@@ -10,7 +10,7 @@ Consistency is key. Therefore here are common elements used in the book and how 
 
 content
 
-**Note**: _Highlight important notice which the reader should keep in mind._
+**Note:** _Highlight important notice which the reader should keep in mind._
 
 ---
 
@@ -36,6 +36,6 @@ Brown: (
 ---
 
 content<br/>
-**Tip**: notice which can help reduce time and effort.
+**Tip:** notice which can help reduce time and effort.
 
 ---

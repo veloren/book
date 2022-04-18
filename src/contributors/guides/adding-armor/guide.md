@@ -28,7 +28,7 @@ Before creating your armour in a voxel editor there are a few things you should 
 
 In order to place “skin” (parts that are not covered by armour) to your work you have to use whatever colour is stored in the 1st (light tone) and 5th (dark tone) slot/index of your palette.
 
-**Note**: _The important thing is not the colour but the **position** on the palette to get the right result._
+**Note:** _The important thing is not the colour but the **position** on the palette to get the right result._
 
 ![Image3](image3.png)
 
