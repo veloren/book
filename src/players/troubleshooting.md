@@ -30,6 +30,13 @@ Otherwise you have to manually disable audio by
     ```
 4.  Save file and retry. In case it didn't help visit [Reporting Bugs](reporting-bugs.md) page.
 
+## Graphical issues
+
+In Arch Linux, it is necessary to install a rendering backend such as `vulkan-radeon` or `vulkan-intel` to fix graphical issues in Airshipper. Otherwise the game will not start and will result in a "Voxygen has panicked" error.
+
+![Graphical issues](https://media.discordapp.net/attachments/464698017283440640/887397846259744809/Graphical_glitches.png)
+
+
 ## PS4 or other controller not working
 
 Currently only XInput controllers are supported on Windows. This means that controllers like the PS4, Switch, and some older generic controllers won't work with Veloren.
