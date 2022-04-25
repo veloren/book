@@ -42,136 +42,104 @@ Before creating your sprites there are a few things you should know:
 - Numbers are added with a single dash(`-`) in front of them.
 - Your model name should always end with a number, unless you are absolutely positive there isn't going to be an alternative version/design of the item
 
-### Load the file and store it inside the code
+### Import the model and add it to the codebase
 
-`voxygen/src/scene/terrain.rs`
+`assets/voxygen/voxel/sprite_manifest.ron`
 
 > Here you define how many variations your sprite can have, how much it sways in the wind and which model(s) to load from the asset folders.
 
-`common/src/terrain/block.rs`
+`common/src/terrain/sprite.rs`
 
 > Here you define the sprites' properties like collision, orientation, the height of their "collision frame" or if they can be collected.
 
-`common/src/comp/inventory/item/mod.rs`
-
-> Sprites listed here will drop items when collected and marked as collectible in block.rs.
-
-`world/src/block/mod.rs` / `world/src/site/dungeon/mod.rs`
-
-> Sprites are part of worldgen and will be treated as blocks with certain spawning rules within 'world':
-
 ### Step by Step: Addition of an example sprite
 
-1. In `voxygen/src/scene/terrain.rs` find a `match` that looks like this:
+1. **Adding a voxel model**
 
-   ```rust,ignore
-   match kind {
-       BlockKind::Window1 => Some(SpriteConfig {
-           variations: 1,
-           wind_sway: 0.0,
-       }),
-   ```
+   In `assets/voxygen/voxel/sprite_manifest.ron` copy and paste one of the code blocks, eg:
+      ```rust,ignore
+        Window1: Some((
+          variations: [
+              (
+                  model: "voxygen.voxel.sprite.window.window-0",
+                  offset: (-5.5, -5.5, 0.0),
+                  lod_axes: (1.0, 1.0, 1.0),
+              ),
+          ],
+          wind_sway: 0.0,
+        )),
+      ```
+   ... and put it behind the last entry in the file, making sure to leave the last `)` at the very end of the file.
+   Replace the name of the object (eg, `Window1`), with the name you'd like to call your sprite object (no spaces in the name).
 
-   Copy and paste one of the code-blocks i.e. ...
+   Next add your .vox model to `assets/voxygen/voxel/sprite/`, either in the appropriate subfolder or create a new folder if it doesn't fit anywhere else. For example, if your sprite is a piece of furniture, add it to the `furniture` subfolder. Follow the naming scheme for .vox files mentioned earlier on this page. 
 
-   ```rust,ignore
-   BlockKind::Door => Some(SpriteConfig {
-           variations: 1,
-           wind_sway: 0.0,
-       }),
-   ```
+   In the new codeblock you pasted, edit the `model` section to point to your .vox file; making sure to keep the double-quotes and the comma at the end. In the example above, the file `window-0.vox` was added to the `window` subfolder and the model was defined as `"voxygen.voxel.sprite.window.window-0",`
+  
+   Next, the center-point of the model needs to be defined in the `offset` section. In your voxel editor, set the workspace to fit your model. If you're using MagicaVoxel, press the button labeled 'Fit Model Size' to do this. The workspace will shrink to fit your model. The center point is half the number of blocks in the x and y axes. For example, in the Window1 codeblock above, the model is 11 x 11 blocks. So we've entered `-5.5, -5.5` for the x-axis and y-axis respectively. Set the z-axis to `0.0` unless the model is supposed to sink into the ground (eg, ore).
 
-   ... and put it behind the last entry.
-   Replace the parts inside according the sprite you want to add.
+   The `lod_axes` refers to an object's level of detail the further away it is from the player. Reducing the level of detail when an object is far away helps with game performance. This setting tells the game how to scale the level of detail reduction across all three axes (x, y, z). For now, just use 1.0 for all three axes, like the Window1 example above, or find another object that is similar to yours and copy it's lod_axes values.
 
-   Much lower you'll find a something called `sprite_models: vec!`.
+   If your sprite is designed to sway in the wind (eg, grass or flowers), modify the `wind_sway` to a number between 0.0 and 1.0. The higher the number the more it will sway. Take a look at some other objects to get an idea of the what value to use. 
 
-   Inside it is every sprite type model variation listed. Here you can set the offsets for them, too.
+2. **Telling the game the sprite exists and making it solid**
 
-   If you want to center your model (and set the .vox file's workspace to fit your model) it's the negative half of your models dimensions for x and y. The z-axis determines if the model is supposed to sink into the ground.
+   In `common/src/terrain/sprite.rs`
 
-   _Example:_
+   Near the beginning of the file, look for a long list of objects with a heaxdecimals number after each object (eg, 0x0A). The name of the objects in this list matches the name in the previous step. For example, in the previous step we were looking at `Window1`. In the list of objects here, we will find ` Window1 = 0x28,`.
 
-   ```rust,ignore
-   (
-        (BlockKind::Velorite, 0),
-        make_models(
-            "voxygen.voxel.sprite.velorite.velorite_ore",
-            Vec3::new(-5.0, -5.0, -5.0),
-            Vec3::one(),
-        ),
-    ),
-   ```
+   To add your object to this list, scroll down to the bottom of this list (it's pretty long). At the **END** of the list add your object name and give it a value of the next hexadecimal number in the sequence.
+   
+   > _Tip: hexadecimal numbers range from 0 to 15, but numbers with two digits are represented by a letter: 0 1 2 3 4 5 6 7 8 9 A B C D E F. Notice how 10 is actually A, 11 is B, and so on. So if the last object in the list had a value of 0xB9, the next object would need to be 0xBA. (0xB9 + 1 = 0xBA). If you need help, you can type `0xB9 + 1` into Google and it will tell you the answer._
 
-   This loads the first model variant for Velorite. Counting starts at 0.
-   The model's Dimensions are 10.0, 10.0, 10.0.
-   Using `Vec3::new(-5.0, -5.0, -5.0)`
-   will center the model on the block it's spawned. Doing offcentered models is possible but only recommended for non-colliding sprites.
-   Putting in `-5.0` will put the sprite model 5 blocks below the ground.
-   Most models use `0.0` though to not have any offset at all.
+   Next, if your sprite is solid, and players should collide with it, you need to add it to a function called `pub fn solid_height`. Search for this function in the `sprite.rs` file. This function tells the game how tall the collision box for the object should be. You can skip this if your sprite isn't meant to be collided with and players should move right through it (for example, grass and flowers).
+   
+   Within the function you will see a long list of objects that looks like this: `SpriteKind::Tomato => 1.65,`. Scroll to the bottom of this list and add your sprite at the end. You'll need to calculate what number value to assign your sprite though. This number is simply the height of your sprite in voxels divided by 11. For example, if your voxel model is 18 voxels tall, the calculation is 18/11 = 1.64. You can find the height of your model by going to your voxel editor and counting the number of blocks. 
+   
+   _Note: 3.0 is the maximum value that can go in this list. If you have definied multiple variations of a sprite in the previous step, they will all share the same height._
 
-   If there's less variants listed in this `vec` than stated in the `match` above the client might panic.
-   So if you put in a "3" above you need at least 3 variants stated as variants "0", "1" and "2" below.
+   Finally, in the `pub fn has_ori` function, add your sprite to the end of the list. Follow the examples already there and don't forget the `|` at the start (eg, `| SpriteKind::Window1`). Adding your sprite to this function will allow it to be rotated (oriented) by code when it's spawned in the world.
+   
+3. **Other properties for the sprite**
 
-2. In `common\src\terrain\block.rs`
+   Other than being solid, sprites can also be collectible or minable.
+   
+   A collectible sprite can be picked up from the world by the player (eg, stones). Or can be opened by the player with an item taken from it (eg, a chest).
 
-   First add your new BlockKind to the _END_(!) of the `BlockKind` enum directly at the file's beginning.
+   A minable sprite requires a mining tool before it can be collected (eg, an ore).
 
-   Next thing you'll have to do is define whether your sprite behaves like air/clips with figures.
-   `pub fn is_air` is the function you're looking for. Add your new BlockKind to the bottom of this `match`and set it to either true or false. Not adding it to this list will make your sprite solid.
+   The steps required to make sprites collectible or minable are too involved for this page and need be addressed in a separate guide.
 
-   `pub fn is_opaque` and `is_solid` are probably self explanatory and work just like the `is_air`function.
+   However, for those who wish to dive into the code and figure it out for themselves, here are some pointers to get you started.
 
-   Next is `pub fn get_height`. In order to be able to define a collision height for your sprites in the next function they need to be solid.
-
-   How do the numbers in there work?
-
-   1.0 are corresponding to 11 small scale voxels.
-   So if your model is 18 small scale voxels tall you will need to put in 18/11 = 1.64 in here.
-
-   **Note:** _**3.0** is the maximum height as of now and this collision height will apply to **all** sprite variants of a single type_
-
-3. Next we'll define if your sprite `is_collectible`.
-
-   Only add it to this function if you want to make it collectible. This `match` may also hold Blocks that are meant to be collectible at a later point but are not yet.
-
-   In order for them to actually add an item to the player's inventory they need to be listed in
-
-   `common/src/comp/inventory/item/mod.rs`
-
-   In there you are looking for the `try_reclaim_from_block` function.
-
-   How items are added will be addressed in another guide but adding one of the existing ones for testing purposes is recommended at this point.
+   - Add sprite to `pub fn collectible_id` in `common/src/terrain/sprite.rs`.
+   - If the sprite requires mining, add it to `pub fn mine_tool` in `common/src/terrain/sprite.rs`.
+   - If your sprite is meant to be opened, and will give the player an item, follow the examples for crates and chests in `common/src/terrain/sprite.rs`. This will involve creating a .ron file in `assets/common/loot_tables`.
+   - If your sprite is to be collected, and goes into the player's inventory:
+      - Create a .ron file for your collectible sprite in subfolder of `assets/common/items` and use an example that most closely matches what your sprite does (eg, food).
+      - Add your item to `assets/voxygen/item_image_manifest.ron`. You'll also need to add a copy of your voxel model file to another folder, which is defined in this manifest. Find an item which most closely resembles yours and use it as an example.
+      - Add your item `assets/voxygen/voxel/item_drop_manifest.ron` in the appropriate section with similar items.
+      - Add your item to `common/src/states/sprite_interact.rs` in the section `fn from(sprite_kind: SpriteKind) -> Self`.
 
 ### Making sprites spawn in the world
 
-When and how sprites spawn is mostly determined by worldgen code.<br/>
-This guide will give a short insight into how this works for things like mushrooms in the open world.
+Sprites are spawned into the world through code, rather than being placed manually. This means in order to make your new sprite spawn where you intend (eg, in a house, field, dungeon, etc), you'll need to be able to modify code.
 
-`world/src/block/mod.rs` is the file determining the spawning variables for them.
+But... if you're looking for a quick way to see what your sprite looks like in the game, without coding, there is an easier way to marvel at your handiwork. This is useful to check if your sprite is the right size, for example.
 
-BlockKinds that are supposed to spawn under certain conditions are stored in arrays:
+- You'll need to compile the code you've written so far in the steps above. There are [other parts](/contributors/compiling.md) of the guide that explain how to do this, but in essence you type: `cargo run`
+  - _Tip: Don't be surprised if your compile fails with an error, it's usually just a typo. Take a look at the code you wrote, see if there are any obvious mistakes, and repeat the steps above if necessary_.
+- Find and remember the name of the sprite you created in step 1 above. We've been using `Window1` as an example.
+- Once your local copy has been compiled, and is running, start a singleplayer game.
+- In the game, type: `/make_sprite YourSpriteName` replacing the word "YourSpriteName" with the name of your sprite in step 1.
+  - Example: `/make_sprite Window1`
+- Your sprite will be spawned where your character is standing. Huzzah!
 
-```rust,ignore
-let flowers = [
-    BlockKind::BlueFlower,
-    BlockKind::PinkFlower,
-    BlockKind::PurpleFlower,
-    BlockKind::RedFlower,
-    BlockKind::WhiteFlower,
-    BlockKind::YellowFlower,
-    BlockKind::Sunflower,
-    BlockKind::Mushroom,
-    BlockKind::LeafyPlant,
-    BlockKind::Blueberry,
-    BlockKind::LingonBerry,
-    BlockKind::Fern,
-];
-```
+If you want to take it to the next level, and see your sprite appearing properly in the world, you'll need to get your hands dirty with Rust coding. This is beyond the scope of this page, but here are a few tips to get you started:
 
-Further down spawning rules are applied to them.
-Details about those might be addressed in another guide about world generation.
+- `world/src/layer/scatter.rs` contains code for items such as flowers, twigs, stones, etc. Anything that is 'scattered' about in the environment randomly.
+- `world/src/site2/plot/house.rs`contains furniture in houses, such as tables, beds and coat racks.
+- Take a look around  `world/src/` for other examples.
+- The #new-contributors channel on the Veloren Discord server is a good place to ask questions.
 
-Although at this point we can consider this guide..
-
-**Done. You added a new sprite to Veloren. :)**
+**Congratulations on adding a new sprite to Veloren :)**
