@@ -7,3 +7,4 @@ This section of the book will explain basic game concepts for players and genera
 - [Reporting Bugs](reporting-bugs.md)
 - [Changelog](changelog.md)
 - [Roadmap](roadmap.md)
+- [FAQ](faq.md)

@@ -9,6 +9,7 @@
     - [Reporting Bugs](players/reporting-bugs.md)
     - [Changelog](players/changelog.md)
     - [Roadmap](players/roadmap.md)
+    - [FAQ](players/faq.md)
   - [Airshipper - Launcher](players/airshipper.md)
   - [Voxygen - 3D client frontend](players/voxygen.md)
   - [Commands](players/commands.md)
