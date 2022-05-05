@@ -23,7 +23,7 @@ If you want to play with your friends and do not have a dedicated server, follow
 ## Starting the server
 ### Using the server provided by Airshipper:  
    *This is a good option if everyone playing uses Airshipper.*
-   1. [Find your game installation folder](airshipper.md#files).
+   1. [Find your game installation folder](../airshipper.md#files).
    2. Go into `profiles/default`.
    3. Launch `veloren-server-cli[.exe]`.
 ### Using a custom server executable:  
