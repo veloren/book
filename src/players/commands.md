@@ -10,7 +10,7 @@ All commands that can be executed in-game are listed below, note that many comma
 |/alias|Change your alias|Moderator|`<name>`|
 |/buff|Cast a buff on player|Admin|`<buff> [strength] [duration]`|
 |/ban|Ban a player with a given username, for a given duration (if provided).  Pass true for overwrite to alter an existing ban..|Moderator|`<player> [overwrite] [ban duration] [message]`|
-|/battlemode|Set your battle mode to `pvp` (player vs player) or `pve` (player vs environment). If called without arguments will show current battle mode.||`[battle mode]`|
+|/battlemode|Set your battle mode to: * pvp (player vs player) * pve (player vs environment). If called without arguments will show current battle mode.||`[battle mode]`|
 |/battlemode_force|Change your battle mode flag without any checks|Admin|`<battle mode>`|
 |/build|Toggles build mode on and off|||
 |/build_area_add|Adds a new build area|Admin|`<name> <xlo> <xhi> <ylo> <yhi> <zlo> <zhi>`|
@@ -49,6 +49,7 @@ All commands that can be executed in-game are listed below, note that many comma
 |/permit_build|Grants player a bounded box they can build in|Admin|`<area_name>`|
 |/players|Lists players currently online|||
 |/region|Send messages to everyone in your region of the world||`[message]`|
+|/reload_chunks|Reloads all chunks loaded on the server|Admin||
 |/remove_lights|Removes all lights spawned by players|Admin|`[radius]`|
 |/revoke_build|Revokes build area permission for player|Admin|`<area_name>`|
 |/revoke_build_all|Revokes all build area permissions for player|Admin||
@@ -56,7 +57,8 @@ All commands that can be executed in-game are listed below, note that many comma
 |/say|Send messages to everyone within shouting distance||`[message]`|
 |/server_physics|Set/unset server-authoritative physics for an account|Moderator|`<player> [enabled]`|
 |/set_motd|Set the server description|Admin|`[message]`|
-|/site|Teleport to a site|Moderator|`<message>`|
+|/ship|Spawns a ship|Admin|`[destination_degrees_ccw_of_east]`|
+|/site|Teleport to a site|Moderator|`<site>`|
 |/skill_point|Give yourself skill points for a particular skill tree|Admin|`<skill tree> [amount]`|
 |/skill_preset|Gives your character desired skills.|Admin|`<preset_name>`|
 |/spawn|Spawn a test entity|Admin|`<alignment> <entity> [amount] [ai]`|
