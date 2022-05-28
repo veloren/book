@@ -54,6 +54,38 @@ If you used the previous submodules system, you can deactivate it with:
 git submodule deinit --force --all
 ```
 
-### Dependencies
+## Autoformat with git commit hook
+
+You can setup a git commit hook to automatically format your code before commiting if your IDE doesn't support it by default.
+Just create a file `.git/hooks/pre-commit` with the following content.
+```bash
+#!/bin/sh
+#
+# An example hook script to verify what is about to be committed.
+# Called by "git commit" with no arguments.  The hook should
+# exit with non-zero status after issuing an appropriate message if
+# it wants to stop the commit.
+#
+# To enable this hook, rename this file to "pre-commit".
+
+# run rustfmt to auto check changed files
+changefmt=$(git config --bool hooks.changefmt)
+
+rustup component add rustfmt-preview
+if [ "$changefmt" != "true" ]
+then
+  exec cargo fmt --all -- --check
+else
+  echo "change files via fmt"
+  cargo fmt --all --
+  echo "adding all files via git add ."
+  exec git add .
+fi
+
+# enable change to make fmt change files instead of just warn
+# git config hooks.changefmt true
+```
+
+## Dependencies
 
 Make sure you have all [runtime dependencies](../introduction/download.md#runtime-dependencies) installed.
