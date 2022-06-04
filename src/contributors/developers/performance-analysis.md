@@ -32,19 +32,42 @@ You'll find example dashboards in the veloren infrastructure repo (not yet avail
 
 ## Tracy
 
-Tracy https://bitbucket.org/wolfpld/tracy/src/master/ enables you to track the time spend in certain spans based on trace spans.
-It allows to get a detailed level into certain blocks of code, when they execute and how long they take.
+Tracy https://github.com/wolfpld/tracy enables you to track the time spent in certain spans based
+instrumentation inserted into code. It allows to get a detailed level into certain blocks of code,
+when they execute and how long they take.
 
-Enable tracy support with the feature `tracy`:
+Tracy has an extensive manual here https://github.com/wolfpld/tracy/releases/latest/download/tracy.pdf
+
+Enable tracy support with the feature `tracy` on one of the binary crates:
 ```bash
-cargo -Zunstable-options -Zpackage-features run --bin veloren-voxygen --no-default-features --features tracy,gl --profile releasedebuginfo
+cargo run --bin veloren-voxygen --no-default-features --features tracy,simd,egui-ui,shaderc-from-source --profile no_overflow"
+```
+We have an alias defined for this in `.cargo/config`, so the following shorthand can be used if you
+don't need to customize the profile or what features are enabled:
+```bash
+cargo tracy-voxygen
+```
+Similarly, we have an alias for running the server with the tracy feature enabled:
+```bash
+cargo tracy-server
 ```
 
-Connect to the running process via you tracy tool https://aur.archlinux.org/packages/tracy/
+Connect to the running process via you Tracy tool: https://github.com/wolfpld/tracy/releases
+
+> **Note:** The version of Tracy required depends on the current version of the `tracy_client`
+> crate being used by veloren. This can be found in the `Cargo.lock` file at the repo root and
+> checked against this table [https://github.com/nagisa/rust_tracy_client#version-support-table]()      
+
+<!---
+TODO: section on compiling Tracy (multiple platforms!)
+TODO: section on instrumenting code and the relevant macros defined in common_base 
+-->
 
 ## 'cargo build -Z timings'
 
-When you want to analyse compile time, you can use cargos feature `-Z timings`. It will output a .html file with individual compile times, and dependencies and a total graph showing inactive, active and indling projects.
+When you want to analyse compile time, you can use cargo's feature `-Z timings`. It will output a
+.html file with individual compile times, and dependencies and a total graph showing inactive,
+active and indling projects.
 
 # External tooling
 
@@ -63,3 +86,5 @@ https://docs.microsoft.com/de-de/visualstudio/profiling/cpu-usage?view=vs-2019
 
 you can use valgrind/cachegrind profiler to generate a output file and later analyse it via valgrind.
 Tutorial: https://www.valgrind.org/docs/manual/cg-manual.html
+
+<!--- TODO: highlight Hotspot and Heaptrack -->
