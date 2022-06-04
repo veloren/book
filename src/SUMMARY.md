@@ -39,6 +39,7 @@
     - [Learning Rust](contributors/developers/learn-rust.md)
     - [ECS](contributors/developers/ecs.md)
     - [Project Architecture](contributors/developers/codebase-structure.md)
+    - [Coordinate Systems](contributors/developers/coordinate-systems.md)
     - [Debugging](contributors/developers/debugging.md)
     - [Performance Analysis](contributors/developers/performance-analysis.md)
   - [For Artists](contributors/artists/README.md)
