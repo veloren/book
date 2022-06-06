@@ -29,10 +29,6 @@ If you modify the `docker-compose.yml` file, you'll need to run that command aga
 The game server has a CLI interface that can be used to run commands for tasks such as adding admins and moderators.
 The steps for accessing this interface while the server is running inside docker are outlined below:
 
-> **Tip:** _To run a single command, you can use `docker exec <CONTAINER_ID> <command>`_
-
-> **Tip:** _To add an admin or mod, run `veloren-server-cli admin add -u <USER> -r <ROLE>` inside the container. `<ROLE>` can be either `Admin` or `Moderator`_
-
 1. Run `docker attach <CONTAINER_ID>`  
 Otherwise run `docker ps` to find the ID of the game server container,  
 then if the ID is for example `e002d350ab26`, 
@@ -40,7 +36,14 @@ run `docker attach e002d350ab26`.
 2. You can now run server CLI commands. To see the available options type `help` and press enter.
 3. Once you are done, to escape press **Ctrl+p** followed by **Ctrl+q**.
 
+> **Tip:** _To add an admin or mod, use `admin add <USER> <ROLE>`. `<ROLE>` can be either `Admin` or `Moderator`._
+
 > **Note:** _Logging output from the server can break up the visualization of command input but this can be ignored and broken up commands will still work._
+
+If your server isn't currently running, a single command can be executed via `docker exec
+<CONTAINER_ID> <command>`.
+> **⚠️** _If your server IS currently running, changes from executing commands like this may be lost
+> and could overwrite changes in settings, ban lists, etc, being made by the running server._
 
 You are done!
 
