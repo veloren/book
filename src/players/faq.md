@@ -30,7 +30,7 @@
 - [How to change account password](#how-to-change-account-password)
 - [Will there be a User Access panel on the website for accounts?](will-there-be-a-user-access-panel-on-the-website-for-accounts)
 - [Can I transfer my character between servers?](#can-i-transfer-my-character-between-servers)
-- ["Veloren is open-source and community-driven" How do you plan to overcome the problem of going in too many directions at the same time? Do you plan to create more than one version of the game or hope that too many features will not break the code/game identity, etc.?](#veloren-is-open-source-and-community-driven-how-do-you-plan-to-overcome-the-problem-of-going-in-too-many-directions-at-the-same-time-do-you-plan-to-create-more-than-one-version-of-the-game-or-hope-that-too-many-features-will-not-break-the-code-game-identity-etc)
+- ["Veloren is open-source and community-driven" How do you plan to overcome the problem of going in too many directions at the same time? Do you plan to create more than one version of the game or hope that too many features will not break the code/game identity, etc.?](#veloren-is-open-source-and-community-driven-how-do-you-plan-to-overcome-the-problem-of-going-in-too-many-directions-at-the-same-time-do-you-plan-to-create-more-than-one-version-of-the-game-or-hope-that-too-many-features-will-not-break-the-codegame-ide)
 ## Answers
 
 ### Is there a death punishment?
