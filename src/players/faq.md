@@ -146,7 +146,7 @@
 > Yes. This game is open source, meaning that anyone can fork the project to make a mod with their own vision. We plan to have many mods in this game! 
 
 ### Can I add an email to my account to change my password?
-> For now (07.06.2022) it is impossible to add email to account. We plan to add User Account Panel which will make that possible.
+> For now (2022-06-07) it is impossible to add email to account. We plan to add User Account Panel which will make that possible.
 
 ### How frequently is the game updated? 
 > We should have an update every Thursday, but the amount of content in each update depends on what has been worked on in the week, which will vary quite often. 
