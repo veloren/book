@@ -40,10 +40,5 @@ run `docker attach e002d350ab26`.
 
 > **Note:** _Logging output from the server can break up the visualization of command input but this can be ignored and broken up commands will still work._
 
-If your server isn't currently running, a single command can be executed via `docker exec
-<CONTAINER_ID> <command>`.
-> **⚠️** _If your server IS currently running, changes from executing commands like this may be lost
-> and could overwrite changes in settings, ban lists, etc, being made by the running server._
-
 You are done!
 
