@@ -163,8 +163,8 @@ Becoming a mod is relatively natural.
 > Those that do not tie their accounts to it will not be able to change their passwords as may be guessed
 
 ### Can I remove my account? 
-> You cannot currently remove your account. 
-> Certain devs can remove it but it's such a difficult and dangerous task that we attempt to dissuade people from requesting account deletion. 
+> In theory you can currently remove your account. 
+> Certain devs can remove it (AngelOnFira) but it is difficult task that we attempt to dissuade people from requesting account deletion. 
 > There is absolutely no drawback towards keeping an account, all the passwords are encrypted. We hash it once clientside with the auth domain as a salt using argon2id and then once again serverside with a randomized 256 bit salt.
 > The clientside prehash is to prevent third party auth servers from discovering potentially reused user passwords
 > If you decide to keep your account then it simply means that you can log onto it whenever you'd like.
