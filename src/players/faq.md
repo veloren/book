@@ -107,6 +107,7 @@
 >    - In windows cmd: `set WGPU_BACKEND="vulkan"`
 >    - In powershell: `$env:WGPU_BACKEND="vulkan"`
 >    - On Mac and Linux: `export WGPU_BACKEND="vulkan"`
+> Then running the game through `airshipper run`
 
 ### Cannot connect to the server
 > For some people switching DNS server fixes this problem. [Here is a guide](https://www.hellotech.com/guide/for/how-to-change-dns-server-windows-mac). \
@@ -140,7 +141,7 @@
 
 ### How to host a server?
 > suggest to take a look at this and following the steps. 
-> If there's anything you don't understand don't be afraid to reach out to the devs on Discord and ask for help through our multitude of channels, such as #support: [Hosting Guide]https://book.veloren.net/players/server-hosting/introduction.html
+> If there's anything you don't understand don't be afraid to reach out to the devs on Discord and ask for help through our multitude of channels, such as #support: [Hosting Guide](server-hosting/introduction.md)
 
 ### Will there be mods? 
 > Yes. This game is open source, meaning that anyone can fork the project to make a mod with their own vision. We plan to have many mods in this game! 
