@@ -261,7 +261,7 @@ information.
 For example, you want to get information about Ukrainian translation.
 
 ```
-$ cargo run veloren-i18n --features=bin -- uk_UA
+$ cargo run --bin i18n-check --features=bin -- uk_UA
 ```
 
 You can also run it with `--help` argument to find out more ways to use it.
