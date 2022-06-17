@@ -50,3 +50,10 @@ Likely, the first address which doesn't belong to the loopback interface is what
 3. You will see all of your computer's IP addresses, grouped by network card/interface.  
 Lines starting with `IPv4 address` or `IPv6 address` show the respective address types.
 Likely, the first address which isn't `127.0.0.1` or `::1` will be what you are looking for.
+
+### Windows Firewall (Optional)
+If you use windows firewall, open cmd as admin and write those commands, and press enter. It will automatically add rules to the windows firewall. Remember to configure your router firewall accordingly too. 
+```
+netsh advfirewall firewall add rule name="Veloren 14004" dir=in action=allow protocol=TCP localport=14004
+netsh advfirewall firewall add rule name="Veloren Metrics" dir=in action=allow protocol=TCP localport=14005  
+```
