@@ -38,6 +38,11 @@ run `docker attach e002d350ab26`.
 
 > **Tip:** _To add an admin or mod, use `admin add <USER> <ROLE>`. `<ROLE>` can be either `Admin` or `Moderator`._
 
+> **Tip:** _To gracefully shutdown the server for maintenance with 2 minute countdown, use:_
+> ```sh
+> shutdown graceful --reason "Shutting down for maintenance :)" 120
+> ```
+
 > **Note:** _Logging output from the server can break up the visualization of command input but this can be ignored and broken up commands will still work._
 
 You are done!
