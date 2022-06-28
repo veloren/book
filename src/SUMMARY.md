@@ -22,6 +22,7 @@
       - [On The Raspberry Pi](players/server-hosting/on-the-rpi.md)
     - [Configuring the server](players/server-hosting/configuration.md)
     - [In-Game Build Mode](players/building.md)
+  - [Environment Variables](players/env-vars.md)
   - [Generating or loading a custom world](players/world-generation.md)
   - [Troubleshooting](players/troubleshooting.md)
 - [Veloren for Contributors](contributors/README.md)
