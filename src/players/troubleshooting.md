@@ -36,6 +36,10 @@ In Arch Linux, it is necessary to install a rendering backend such as `vulkan-ra
 
 ![Graphical issues](https://media.discordapp.net/attachments/464698017283440640/887397846259744809/Graphical_glitches.png)
 
+## Airshipper and/or Veloren fail to start
+
+If the launcher or game fail to start and starting from console only prints an error like `[wayland-client error] Attempted to dispatch unknown opcode 0 for wl_shm, aborting`, the issue is likely to be a compatibility issue with wayland.
+As a workaround the windowing backend can be forced to X11 by setting the env variable `WINIT_UNIX_BACKEND=x11`.
 
 ## PS4 or other controller not working
 
