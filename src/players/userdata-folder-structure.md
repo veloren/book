@@ -2,9 +2,9 @@
 
 The `userdata` folder unifies all player and server configuration in a single place, which should be transferrable between different Veloren installations from v0.8 onwards.
 
-The folder will be next to your Veloren executable, or in your repository's root if self-compiling. See [where Airshipper stores files](airshipper.html#files) if using the launcher.
+The folder will be next to your Veloren executable, or in your repository's root if self-compiling. 
+See [where Airshipper stores files](airshipper.md#files) if using the launcher.
 
-Airshipper currently stores the items under the `voxygen` heading outside of `userdata`, but this will change in the future.
 
 - voxygen
   - logs
