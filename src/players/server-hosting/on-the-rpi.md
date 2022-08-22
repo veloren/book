@@ -58,6 +58,7 @@ Run the server binary, optionally with `-h` or `--help` to see the list of argum
 
 > **Note:** _The process itself is resource heavy. Maybe still consider cross compiling. RAM usage can go over 8G, so you may consider creating a swap (although swap slows down the entire compilation process)_
 
+> **Note:** _If you experience an error when compiling `wasmer-vm`, you will need to disable plugin support by removing `plugins = ["server/plugins"]` from `server-cli/Cargo.toml`._
 
 ## Cross Compiling
 
