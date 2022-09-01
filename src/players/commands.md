@@ -80,48 +80,49 @@ All commands that can be executed in-game are listed below, note that many comma
 
 ## References
 All the parameters that can be used in the commands that can be executed in-game are listed below.
+
 |Parameter|Description|Link|
 |-|-|-|
-`ai`| spawned entity has an agent/ai, true/false||
-`alignment`|`wild`, `enemy`, `npc`, `pet`|[code reference](https://docs.veloren.net/src/veloren_common/cmd.rs.html#70)|
-`amount`| number ||
-`area_name`| name of an area||
-`args...`|additional parameters, e.g. in `/sudo player tell Hello, how are you?` `args...` would be `Hello, how are you?`||
-`ban duration`| duration of the ban, e.g. `3d2h30m`||
-`battle mode`| "pvp" (player vs player) or "pve" (player vs environment)||
-`block`| name of block |[blocks](https://docs.veloren.net/veloren_common/terrain/block/enum.BlockKind.html)|
-`buff`| Name of Buff; be careful, docs use CamelCase and command expects snake_case, e.g. docs: "IncreaseMaxHealth" command: "increase_max_health"| [docs reference](https://docs.veloren.net/veloren_common/comp/buff/enum.BuffKind.html#)
-`[/]command`| e.g. `give_item` or `/give_item`||
-`confirm`| "confirm", to confirm||
-`destination_degrees_ccw_of_east`|||
-`duration`| duration in seconds||
-`enabled`| boolean, true/false||
-|`entity_config`|path to the entity starting from `veloren.assets.common.entity` with `.` as seperator of directory names; with the prefix `common.entity.`! e.g.: `common.entity.dungeon.fallback.boss`|[folder with the enities](https://gitlab.com/veloren/veloren/-/tree/master/assets/common/entity)|
-`faction`|String of Characters, e.g. "Hello"||
-`hp`| Health Points as number||
-`item`| path to the item starting from `veloren.assets.common.items` with `.` as seperator of directory names; with the prefix `common.items.`! e.g.: `common.items.armor.assassin.belt`  | [folder with the items](https://gitlab.com/veloren/veloren/-/tree/master/assets/common/items) |
-`kit_name`| name of a kit, e.g. `debug` |[definition of the kits](https://gitlab.com/veloren/veloren/-/blob/master/assets/server/manifests/kits.ron)|
-`message`| String of Characters, e.g. "Hello"||
-`name`| String of Characters, e.g. "Hello" ||
-`num`| number ||
-`object`| name of the object |[definition of objects](https://docs.veloren.net/veloren_common/comp/body/object/enum.Body.html)|
-`overwrite`| set to true to overwrite previous ban||
-`player`| Name of Player's Character||
-`preset_name`|path to the skillset starting from `veloren.assets.common.skillset` with `.` as seperator of directory names; with the prefix `common.skillset.`! e.g.: `common.skillset.preset.max.sceptre`  | [folder with the skillset](https://gitlab.com/veloren/veloren/-/tree/master/assets/common/skillset) ||
-`radius`| a number to define the radius, has to be higher than 0 and lower than 512||
-`r, g, b`| red, green, blue; numbers used to define a color||
-`role`| "admin" or "moderator"||
-`skill tree`| name of a skill tree, e.g. `general`|[skill tree names from code](https://docs.veloren.net/src/veloren_server/cmd.rs.html#2887)|
-`sprite`| name of the sprite |[definition of sprites](https://docs.veloren.net/veloren_common/terrain/sprite/enum.SpriteKind.html)|
-`strength`| number||
-`time`|options: `midnight`, `night`, `dawn`, `morning`, `day`, `noon`, `dusk` or %H:%M format e.g. `12:21`|[code reference](https://docs.veloren.net/src/veloren_server/cmd.rs.html#940)|
-`username`| username of a player||
-`xhi`| point x on hi|| 
-`xlo`| point x on lo || 
-`x` | point x||
-`yhi`| point y on hi|| 
-`ylo`| point y on lo|| 
-`y`| point y||
-`zhi`| point z on hi|| 
-`zlo`| point z on lo|| 
-`z`| point z||
+|`ai`| spawned entity has an agent/ai, true/false||  
+|`alignment`|`wild`, `enemy`, `npc`, `pet`|[code reference](https://docs.veloren.net/src/veloren_common/cmd.rs.html#70)|  
+|`amount`| number ||  
+|`area_name`| name of an area||  
+|`args...`|additional parameters, e.g. in `/sudo player tell Hello, how are you?` `args...` would be `Hello, how are you?`||  
+|`ban duration`| duration of the ban, e.g. `3d2h30m`||  
+|`battle mode`| "pvp" (player vs player) or "pve" (player vs environment)||  
+|`block`| name of block |[blocks](https://docs.veloren.net/veloren_common/terrain/block/enum.BlockKind.html)|  
+|`buff`| Name of Buff; be careful, docs use CamelCase and command expects snake_case, e.g. docs: "IncreaseMaxHealth" command: "increase_max_health"| [docs reference](https://docs.veloren.net/veloren_common/comp/buff/enum.BuffKind.html#)|
+|`[/]command`| e.g. `give_item` or `/give_item`||  
+|`confirm`| "confirm", to confirm||  
+|`destination_degrees_ccw_of_east`|||  
+|`duration`| duration in seconds||  
+|`enabled`| boolean, true/false||  
+|`entity_config`|path to the entity starting from `veloren.assets.common.entity` with `.` as seperator of directory names; with the prefix `common.entity.`! e.g.: `common.entity.dungeon.fallback.boss`|[folder with the enities](https://gitlab.com/veloren/veloren/-/tree/master/assets/common/entity)|  
+|`faction`|String of Characters, e.g. "Hello"||
+|`hp`| Health Points as number||
+|`item`| path to the item starting from `veloren.assets.common.items` with `.` as seperator of directory names; with the prefix `common.items.`! e.g.: `common.items.armor.assassin.belt`  | [folder with the items](https://gitlab.com/veloren/veloren/-/tree/master/assets/common/items) |  
+|`kit_name`| name of a kit, e.g. `debug` |[definition of the kits](https://gitlab.com/veloren/veloren/-/blob/master/assets/server/manifests/kits.ron)|  
+|`message`| String of Characters, e.g. "Hello"||  
+|`name`| String of Characters, e.g. "Hello" ||  
+|`num`| number ||  
+|`object`| name of the object |[definition of objects](https://docs.veloren.net/veloren_common/comp/body/object/enum.Body.html)|  
+|`overwrite`| set to true to overwrite previous ban||  
+|`player`| Name of Player's Character||  
+|`preset_name`|path to the skillset starting from `veloren.assets.common.skillset` with `.` as seperator of directory names; with the prefix `common.skillset.`! e.g.: `common.skillset.preset.max.sceptre`  | [folder with the skillset](https://gitlab.com/veloren/veloren/-/tree/master/assets/common/skillset) |  
+|`radius`| a number to define the radius, has to be higher than 0 and lower than 512||  
+|`r, g, b`| red, green, blue; numbers used to define a color||  
+|`role`| "admin" or "moderator"||  
+|`skill tree`| name of a skill tree, e.g. `general`|[skill tree names from code](https://docs.veloren.net/src/veloren_server/cmd.rs.html#2887)|  
+|`sprite`| name of the sprite |[definition of sprites](https://docs.veloren.net/veloren_common/terrain/sprite/enum.SpriteKind.html)|  
+|`strength`| number||  
+|`time`|options: `midnight`, `night`, `dawn`, `morning`, `day`, `noon`, `dusk` or %H:%M format e.g. `12:21`|[code reference](https://docs.veloren.net/src/veloren_server/cmd.rs.html#940)|  
+|`username`| username of a player||  
+|`xhi`| point x on hi||   
+|`xlo`| point x on lo ||   
+|`x` | point x||  
+|`yhi`| point y on hi||   
+|`ylo`| point y on lo||  
+|`y`| point y||  
+|`zhi`| point z on hi||   
+|`zlo`| point z on lo||  
+|`z`| point z||  
