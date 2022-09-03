@@ -16,7 +16,7 @@ top of the page to search for keywords.
 - [🎮 Input & Controllers](#-input-and-controllers)
 
 If you've found a solution to a problem that wasn't mentioned here, you can
-[contribute to this section](contributors/writers/extend-this-book.md)!
+[contribute to this section](../contributors/writers/extend-this-book.md)!
 
 If you can't find a solution to your problem here, you can ask for help from the community:
 
