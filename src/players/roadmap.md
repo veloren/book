@@ -42,5 +42,10 @@ status:
 - Improved efficiency of the game (and in particular, the server) with the long-term goal of hosting 1,000 players on a
   single server at once
 
+# Out of scope (for now)
+
+There are a few features that we're like to see eventually, but that we don't consider to be essential for a beta
+release.
+
 - Server federations, where servers can opt in to sharing characters and economies in a 'circle of trust', allowing for
   truly enormous player-driven economies
