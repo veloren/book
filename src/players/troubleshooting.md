@@ -4,18 +4,30 @@ Veloren runs on many operating systems, architectures, GPUs, and system configur
 
 This page contains a list of common problems and solutions.
 
-Use the links below to navigate to the section most relevant to you.
+Use the links below to navigate to the section most relevant to you. You can also use the search functionality at the
+top of the page to search for keywords.
 
 - [⛔ Crashes](#-crashes)
 
-- [🖌 Graphics](#-graphics)
+- [🎨 Graphics](#-graphics)
 
 - [🎧 Audio](#-audio)
 
-- [🎮 Controllers](#-controllers)
+- [🎮 Input & Controllers](#-input-and-controllers)
 
 If you've found a solution to a problem that wasn't mentioned here, you can
 [contribute to this section](contributors/writers/extend-this-book.md)!
+
+If you can't find a solution to your problem here, you can ask for help from the community:
+
+- [Discord Community](https://discord.gg/ecUxc9N)
+
+- [Reddit Community](https://www.reddit.com/r/Veloren/)
+
+- [Matrix Community](https://matrix.to/#/!XE8JMjIKOzVcryA0kc:conduit.rs?via=conduit.rs&via=matrix.org&via=tchncs.de)
+
+If you think you've encountered a more serious bug, you can
+[report the bug on GitLab](https://gitlab.com/veloren/veloren/issues).
 
 ---
 
@@ -53,7 +65,7 @@ Possible solutions:
 
 ---
 
-# 🖌 Graphics
+# 🎨 Graphics
 
 Veloren requires that your computer supports one of the following:
 
@@ -143,7 +155,20 @@ can do this by:
 
 ---
 
-# 🎮 Controllers
+# 🎮 Input and controllers
+
+## Mouse is invisible or window resizing isn't working properly when using Wayland on Linux
+
+Although Veloren does support Wayland, this support can sometimes be buggy. You can resolve these problems by telling
+the game to use the `xwayland` compatibility layer when running.
+
+- If using Airshipper, add `WINIT_UNIX_BACKEND=x11` to the 'Environment Variables' field in the settings
+
+- If running as a standalone program, have your desktop environment set `WINIT_UNIX_BACKEND` to `x11` when running the
+  game
+
+- If running via the command line, prepend `WINIT_UNIX_BACKEND=x11` to the command you use to run the game, like
+  `WINIT_UNIX_BACKEND=x11 ./veloren-voxygen`
 
 ## PS4 or other controller not working
 
