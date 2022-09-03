@@ -59,7 +59,7 @@ Possible solutions:
 
 - [Update your graphics drivers](#drivers)
 
-- Switch to another [graphics backend](#graphicsbackend)
+- Switch to another [graphics backend](#graphics-backend)
 
 - Try [disabling audio](#disablingaudio)
 
@@ -121,8 +121,11 @@ To fix this, you may need to [update your graphics drivers](#drivers).
 
 ![In-game graphics problems](https://cdn.discordapp.com/attachments/464698017283440640/1015302288685928498/unknown.png)
 
-You may need to update [update your graphics drivers](#drivers). Make sure that your system supports the required
-graphics.
+You may need to update [update your graphics drivers](#drivers).
+
+Alternatively, switching to another [graphics backend](#graphics-backend) may solve the problem.
+
+Ensure that your computer has the required [graphics support](#graphics).
 
 ---
 
