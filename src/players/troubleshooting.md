@@ -42,7 +42,7 @@ Possible solutions:
 
 - [Update your graphics drivers](#drivers)
 
-- [Run Airshipper in compatibility mode](#compatibilitymode)
+- [Run Airshipper in compatibility mode](#compatibility-mode)
 
 ### Compatibility Mode
 
@@ -115,6 +115,9 @@ You can switch between the available graphics backends in the Airshipper Setting
 
 - On Mac OS, only Metal is supported
 
+If you're running airshipper in [compatibility mode](#compatibility-mode), you can still change graphics backend by opening the file `%appdata%/airshipper/airshipper_state.ron` in a text editor. 
+Near the bottom of the file you'll find the line `wgpu_backend: Auto,`, change that to `wgpu_backend: DX11,`
+
 ## Airshipper is missing UI elements or flickers when moving the mouse
 
 ![Airshipper graphics problems](https://media.discordapp.net/attachments/464698017283440640/887397846259744809/Graphical_glitches.png)
@@ -129,7 +132,7 @@ You may need to update [update your graphics drivers](#drivers).
 
 Alternatively, switching to another [graphics backend](#graphics-backend) may solve the problem.
 
-Ensure that your computer has the required [graphics support](#graphics).
+Ensure that your computer has the required [graphics support](#-graphics).
 
 ---
 
