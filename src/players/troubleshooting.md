@@ -93,6 +93,10 @@ Running Veloren might require that you update your graphics drivers, or install 
 - If running Mac OS, you may need to perform a system update to obtain the latest drivers
 
 ## Graphics Backend
+<video width="640" height="460" autoplay loop muted>
+  <source src="https://cdn.discordapp.com/attachments/464698017283440640/1016333211472764928/airshipper_qDdxbKVHnq.mp4" type="video/mp4">
+  Your browser does not support video tag
+</video>
 
 On some platforms, Veloren can be run using one of several different graphics APIs.
 
