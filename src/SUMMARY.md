@@ -25,6 +25,7 @@
   - [Environment Variables](players/env-vars.md)
   - [Generating or loading a custom world](players/world-generation.md)
   - [Troubleshooting](players/troubleshooting.md)
+  - [Performance](players/performance.md)
 - [Veloren for Contributors](contributors/README.md)
   - [Introduction](contributors/introduction.md)
     - [Development tools](contributors/development-tools.md)
