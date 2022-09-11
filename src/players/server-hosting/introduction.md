@@ -9,7 +9,7 @@ This allows players to register just once on our website, and log into any serve
 
 ## How to use this guide
 
-1. Follow one of the setup guides:
+1. Follow one of the [Setup Guides](setup-guides.md):
     - [Running a Server on Your PC](on-your-pc.md)
     - [Running a Server using Docker (For Dedicated Servers)](on-docker.md)
     - [Running a Server on a Raspberry Pi](on-the-rpi.md)
