@@ -28,8 +28,8 @@ can:
 ### Vertex-limited
 
 If you're *vertex-limited*, anything that results in the game rendering more polygons to the screen worsens your
-performance. If reducing sprite or entity view distance improves your framerate, this likely applies to you. To rectify
-this situation, you can:
+performance. If reducing sprite view distance improves your framerate, this likely applies to you. To rectify this
+situation, you can:
 
 - Reduce the view distance (reduces the amount of terrain the game must render)
 - Reduce the sprite/entity/entity detail view distance

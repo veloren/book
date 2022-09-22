@@ -36,6 +36,7 @@
     - [Joining a team](contributors/joining-a-team.md)
     - [FAQ](contributors/faq.md)
     - [Troubleshooting](contributors/troubleshooting.md)
+    - [Tracking Issues](contributors/tracking-issues.md)
   - [For Developers](contributors/developers/README.md)
     - [Installing an IDE](contributors/developers/install-ide.md)
     - [Learning Rust](contributors/developers/learn-rust.md)
