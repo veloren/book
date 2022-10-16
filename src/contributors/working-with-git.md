@@ -11,7 +11,7 @@ _**Note:** To understand the following we highly recommend reading about git!_
 Clone the repository
 
 ```
-git clone https://gitlab.com/veloren/veloren.git
+git clone https://gitlab.com/veloren/dev/veloren.git
 ```
 
 Change your working directory to the cloned repository
