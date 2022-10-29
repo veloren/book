@@ -92,7 +92,7 @@ For more details about wgpu's API tracing see <https://github.com/gfx-rs/wgpu/wi
 
 First, check that you are using the dx12 or dx11 graphics backend.
 
-#### Using DebugView
+#### Using DebugView++
 
 1. Force the debug layer on for Voxygen (Note: if you compiled the game yourself without `--release` then this step can be skipped):
     1. Run `dxcpl`.
@@ -100,12 +100,20 @@ First, check that you are using the dx12 or dx11 graphics backend.
     3. Add `veloren-voxygen.exe` and click ok.
     4. Make sure "Force On" is selected in the debug layer section.
     5. Click "Apply".
-2. [Download DebugView](https://docs.microsoft.com/en-us/sysinternals/downloads/debugview).
-3. Start DebugView.
-4. Start voxygen and run until the crash/error occurs.
-5. In DebugView, File -> Save.
-6. Share output file.
-7. Run `dxcpl` again and remove voxygen from the list.
+    > **Warning:** Enabling debug layers adds extra overhead, make sure to follow the last step to
+    disable them again.
+2. Setup DebugView++:
+    1. Download the latest `DebugView++.exe` version from this page: <https://github.com/CobaltFusion/DebugViewPP/releases>.
+    2. Download the filter settings here: <https://cdn.discordapp.com/attachments/467073814208053248/953299753217704007/View.xml>.
+    3. Run `DebugView++.exe`.
+    4. Open filter settings screen with `F5`.
+    5. Click "Load" button, select the downloaded filter settings file, click "Open", and then
+       click "Ok" to close the filter settings screen.
+3. Start voxygen (with the dx backend has issues) and run until the crash/error occurs.
+4. In DebugView++, press `Ctrl + S` to save the current view containing all the debug messages from
+   voxygen.
+5. Share the saved file.
+6. Run `dxcpl` again and remove voxygen from the list.
 
 #### Using Visual Studio
 
