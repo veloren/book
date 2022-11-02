@@ -104,7 +104,7 @@ First, check that you are using the dx12 or dx11 graphics backend.
     disable them again.
 2. Setup DebugView++:
     1. Download the latest `DebugView++.exe` version from this page: <https://github.com/CobaltFusion/DebugViewPP/releases>.
-    2. Download the filter settings here: <https://cdn.discordapp.com/attachments/467073814208053248/953299753217704007/View.xml>.
+    2. Download the filter settings here: <a href="assets/debugview++/View.xml" download="View.xml">View.xml</a>
     3. Run `DebugView++.exe`.
     4. Open filter settings screen with `F5`.
     5. Click "Load" button, select the downloaded filter settings file, click "Open", and then
