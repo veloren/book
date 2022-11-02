@@ -9,7 +9,7 @@
 - [Will the game release on steam?](#will-the-game-release-on-steam)
 - [Will we have shields?](#will-we-have-shields)
 - [How to donate?](#how-to-donate)
-- [Will we be able to build in the game?](will-we-be-able-to-build-in-the-game)
+- [Will we be able to build in the game?](#will-we-be-able-to-build-in-the-game)
 - [How do I become a moderator?](#how-do-i-become-a-moderator)
 - [Will Veloren contributors add NFT and crypto to the game?](#Will-veloren-contributors-add-NFT-and-crypto-to-the-game)
 - [Will the game ever have paying content?](#Will-the-game-ever-have-paying-content)
