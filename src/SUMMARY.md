@@ -15,8 +15,7 @@
   - [Commands](players/commands.md)
   - [Userdata Folder Structure](players/userdata-folder-structure.md)
   - [Hosting a Server](players/server-hosting/introduction.md)
-    <!-- Two links to the same file because this is the best way to organize this. -->
-    - [Setup guides](players/server-hosting/introduction.md)
+    - [Setup guides](players/server-hosting/setup-guides.md)
       - [On Your Computer](players/server-hosting/on-your-pc.md)
       - [On Docker](players/server-hosting/on-docker.md)
       - [On The Raspberry Pi](players/server-hosting/on-the-rpi.md)
