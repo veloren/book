@@ -169,8 +169,19 @@ can do this by:
 
 ## Mouse is invisible or window resizing isn't working properly when using Wayland on Linux
 
-Although Veloren does support Wayland, this support can sometimes be buggy. You can resolve these problems by telling
-the game to use the `xwayland` compatibility layer when running.
+Although Veloren does support Wayland, this support can sometimes be buggy.
+These problems may be fixed by explicitly specifying an xcursor theme for the
+program to use.
+
+- If using Airshipper, add `XCURSOR_THEME=Adwaita` to the 'Environment Variables' field in the settings
+
+- If running as a standalone program, have your desktop environment set `XCURSOR_THEME` to `Adwaita` when running
+the game
+
+- If running via the command line, prepend `XCURSOR_THEME=Adwaita` to the command you use to run the game, like
+  `XCURSOR_THEME=Adwaita ./veloren-voxygen`
+
+If that doesn't work, you can try using the `xwayland` compatibility layer when running.
 
 - If using Airshipper, add `WINIT_UNIX_BACKEND=x11` to the 'Environment Variables' field in the settings
 
