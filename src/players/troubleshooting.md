@@ -171,7 +171,15 @@ can do this by:
 
 Although Veloren does support Wayland, this support can sometimes be buggy.
 These problems may be fixed by explicitly specifying an xcursor theme for the
-program to use.
+program to use. To do that, first run the following command in a terminal to
+get a usable theme:
+
+```
+find /usr/share/icons/ -type d -name "cursors" | head -1 | awk -F / '{print $5}'
+```
+
+Set the `XCURSOR_THEME` environment variable to the result. If you got `Adwaita`, for example, you would
+do the following:
 
 - If using Airshipper, add `XCURSOR_THEME=Adwaita` to the 'Environment Variables' field in the settings
 
