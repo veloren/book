@@ -45,7 +45,7 @@ And a one liner to download and install them all:<br/>
 `sudo apt install libglib2.0-dev libasound2-dev libcairo2-dev libpango1.0-dev libatk1.0-dev libgtk-3-dev libxcb-shape0-dev libxcb-xfixes0-dev libudev-dev libxkbcommon-x11-dev libxcb-xkb-dev`
 
 On **Fedora** systems additional libraries may need to be downloaded, below is a command to install them:<br/>
-`sudo dnf install alsa-lib libxkbcommon-x11-devel libudev-devel`
+`sudo dnf install alsa-lib-devel libxkbcommon-x11-devel libudev-devel`
 
 On **macOS** you only need to install cmake. 
 This can be done using either **homebrew** or **macports**. Using homebrew, enter `brew install cmake` or similarly, using macports enter `sudo port install cmake`. **Note**: Do not use sudo with homebrew.
