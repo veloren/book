@@ -122,9 +122,14 @@ Airshipper's settings in a similar manner to the GUI.
 ![Changing the graphics backend in compatibility mode](https://cdn.discordapp.com/attachments/464698017283440640/1052953152971886592/image.png)
 
 In older versions of Airshipper, you can still change the graphics backend by opening the file
-`airshipper_state.ron` ([see here to find this file](airshipper.md#files)) in a text editor. Near the bottom of the file
-you'll find the line `wgpu_backend: Auto,`, change that to `wgpu_backend: BACKEND,`, replacing `BACKEND` with one of
-`DX12` (Windows/WINE only), `Vulkan` (Windows/WINE/Linux only), or `Metal` (Mac OS only).
+[`airshipper_state.ron`](airshipper.md#files) in a text editor. Toward the bottom of the file is the following line:
+
+```
+wgpu_backend: Auto,
+```
+
+You can replace `Auto` with one of `DX11`, `DX12`, `Vulkan`, or `Metal`
+([depending on your operating system](#graphics-backend)). Please note that this field *is* case-sensitive.
 
 ## Airshipper is missing UI elements or flickers when moving the mouse
 
