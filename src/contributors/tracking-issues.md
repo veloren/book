@@ -37,6 +37,7 @@ Here follows a list of currently existing tracking issues. Feel free to
 - [🗡 Combat](https://gitlab.com/veloren/veloren/-/issues/754)
 - [🧠 NPC/enemy AI](https://gitlab.com/veloren/veloren/-/issues/576)
 - [✋ Server-side anti-cheat](https://gitlab.com/veloren/veloren/-/issues/431)
+- [📑 GDPR and Privacy](https://gitlab.com/veloren/veloren/-/issues/1771)
 
 # Platform Support
 
