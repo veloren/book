@@ -6,3 +6,4 @@ title = "Veloren: An Owner's Manual"
 
 [output.html]
 additional-css = ["custom.css"]
+git-repository-url = "https://gitlab.com/veloren/book"
