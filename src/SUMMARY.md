@@ -75,6 +75,8 @@
     - [Adding Weapon Skills](contributors/guides/adding-weapon-skills/guide.md)
   - [For Modders](contributors/modders/README.md)
     - [Writing a plugin](contributors/modders/writing-a-plugin.md)
+  - [For Journalists](contributors/journalists/README.md)
+    - [Writing a plugin](contributors/journalists/press-kit.md)
 - [Internals](internals/internals.md)
   - [Worldgen](internals/worldgen/worldgen.md)
   - [Wiring](internals/wiring/wiring.md)
