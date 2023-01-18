@@ -76,7 +76,7 @@
   - [For Modders](contributors/modders/README.md)
     - [Writing a plugin](contributors/modders/writing-a-plugin.md)
   - [For Journalists](contributors/journalists/README.md)
-    - [Writing a plugin](contributors/journalists/press-kit.md)
+    - [Press Kit](contributors/journalists/press-kit.md)
 - [Internals](internals/internals.md)
   - [Worldgen](internals/worldgen/worldgen.md)
   - [Wiring](internals/wiring/wiring.md)
