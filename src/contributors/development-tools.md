@@ -37,8 +37,11 @@ like images and audio files. You need to install it in order to download the ass
 
 2. Git LFS needs to be set up by running `git lfs install` or `git-lfs install` (macOS) in a terminal.
 
-**Note:** _git-lfs has a known bug with working off remotes. If you plan to work off a fork, [refer
-to this section](before-you-contribute.html#forking)._
+> **Note:** _If you already cloned the repo before setting up Git LFS, [additional steps are
+> necessary](troubleshooting.html#when-lfs-was-not-setup-before-cloning-the-repo)._
+
+> **Note:** _git-lfs has a known bug with working off remotes. If you plan to work off a fork, [refer
+> to this section](before-you-contribute.md#forking)._
 
 ## Rust
 
