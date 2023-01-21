@@ -26,6 +26,10 @@ you won't actually be needing Visual Studio itself.
 
 On **Linux** you will need to have installed GTK3, Python and CMake.
 
+On **Gentoo** you may require having to enable certain use flags for specific packages.
+- sys-devel/binutils (with the `gold` use flag to enable the ld.gold linker)
+- media-libs/mesa (with the `vulkan`use flag)
+
 On **Debian** systems additional libraries may need to be downloaded, below is a non-exhaustive list:
 
 - libglib2.0-dev
