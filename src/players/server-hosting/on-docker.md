@@ -29,10 +29,7 @@ If you modify the `docker-compose.yml` file, you'll need to run that command aga
 The game server has a CLI interface that can be used to run commands for tasks such as adding admins and moderators.
 The steps for accessing this interface while the server is running inside docker are outlined below:
 
-1. Run `docker attach <CONTAINER_ID>`  
-Otherwise run `docker ps` to find the ID of the game server container,  
-then if the ID is for example `e002d350ab26`, 
-run `docker attach e002d350ab26`.
+1. Run `docker attach <CONTAINER_ID>` (run `docker ps` to find the ID of the game server container, then if the ID is for example `e002d350ab26`, run `docker attach e002d350ab26`).
 2. You can now run server CLI commands. To see the available options type `help` and press enter.
 3. Once you are done, to escape press **Ctrl+p** followed by **Ctrl+q**.
 
