@@ -10,7 +10,7 @@ Most tools work better with debug symbols AND in release mode:
 You can build the project with debug symbols included by running this command:
 
 ```bash
-cargo build -Z unstable-options --profile releasedebuginfo
+cargo build --profile releasedebuginfo
 ```
 
 # Integrated tooling

@@ -7,7 +7,7 @@ This section covers some helpful debugging tips within the Veloren project. This
 In order for debug symbols to be generated for the project, the `debuginfo` profile must be used. You can build the project with debug symbols included by running this command:
 
 ```bash
-cargo build -Z unstable-options --profile debuginfo
+cargo build --profile debuginfo
 ```
 
 # Visual Studio Code
@@ -54,9 +54,9 @@ Click the little "+" button and select "Cargo in the dropdown". This will create
 
 Edit the "Name" field however you want. Then here's the interesting part : Editing the "Command" field 
 
-By default, the "Command" field should have "run" in it, keep it and add "--bin {bin} --profile debuginfo -Z unstable-options" where bin is the name of the binary to debug (veloren-server-cli, veloren-voxygen, ...).
+By default, the "Command" field should have "run" in it, keep it and add "--bin {bin} --profile debuginfo" where bin is the name of the binary to debug (veloren-server-cli, veloren-voxygen, ...).
 
-The "Command" field should then contain something similar to "run --bin veloren-server-cli --profile=debuginfo -Z unstable-options".
+The "Command" field should then contain something similar to "run --bin veloren-server-cli --profile=debuginfo".
 
 If you have any question, please reach out to me (infrandomness#4003) on the Veloren discord server :P.
 
