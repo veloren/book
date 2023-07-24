@@ -38,7 +38,7 @@ The output looks like this:
 ## Reshaping stage
 | *local, temporary, natural elements*
 
-(Exact quote from *zesterer* is pretty self-explainatory:)<br/>
+(Exact quote from *zesterer* is pretty self-explanatory:)<br/>
 So these are things like cliffs and caves<br/>
 We layer these on top of the world using a variety of techniques<br/>
 Exactly how isn't too important<br/>

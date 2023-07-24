@@ -26,7 +26,7 @@ pub enum CharacterAbilityType {
   }
 ```
 
-These character states can be (and are) reused for multiple skills. Your new skill may fit easily into one of these states. The state may need to be adjusted slightly to accomodate your skill. The third alternative is the addition of a new character state. All three of these possibilities are covered in the following sections.
+These character states can be (and are) reused for multiple skills. Your new skill may fit easily into one of these states. The state may need to be adjusted slightly to accommodate your skill. The third alternative is the addition of a new character state. All three of these possibilities are covered in the following sections.
 
 #### If your skill can be handled by an existing character state
 
@@ -120,7 +120,7 @@ Around line 90 add your skill to the HotbarImage enum.
 
 Around line 120 make the appropriate weapon match return the proper skill from the HotbarImage enum.
 
-Around line 130 add your skill to the match. Copy the logic of one of the other skills herebut make `energy.current() < ENERGY_DRAIN` where `ENERGY_DRAIN` is the energy drain of your skill. This will make the icon fade when the player does not have enough stamina.
+Around line 130 add your skill to the match. Copy the logic of one of the other skills here, but make `energy.current() < ENERGY_DRAIN` where `ENERGY_DRAIN` is the energy drain of your skill. This will make the icon fade when the player does not have enough stamina.
 
 In the `image_id` function around line 165, add the path identifier for your skill (copy the logic of the other skills).
 

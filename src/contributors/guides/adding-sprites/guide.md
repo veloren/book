@@ -27,7 +27,7 @@ Before creating your sprites there are a few things you should know:
 
 - Things like grass should have no collision. While scarecrows and windows should.
 
-- As of now they will always act like a single row of up to three lanscape blocks (33 small scale voxels) above each others.
+- As of now they will always act like a single row of up to three landscape blocks (33 small scale voxels) above each others.
   That means you can control the collision height of your sprite but not the width.<br/>
   Every part of a sprite that exceeds the x and y-axis bounds of a single block will not clip with figures and objects.
 
@@ -86,7 +86,7 @@ Before creating your sprites there are a few things you should know:
 
    In `common/src/terrain/sprite.rs`
 
-   Near the beginning of the file, look for a long list of objects with a heaxdecimals number after each object (eg, 0x0A). The name of the objects in this list matches the name in the previous step. For example, in the previous step we were looking at `Window1`. In the list of objects here, we will find ` Window1 = 0x28,`.
+   Near the beginning of the file, look for a long list of objects with a hexadecimals number after each object (eg, 0x0A). The name of the objects in this list matches the name in the previous step. For example, in the previous step we were looking at `Window1`. In the list of objects here, we will find ` Window1 = 0x28,`.
 
    To add your object to this list, scroll down to the bottom of this list (it's pretty long). At the **END** of the list add your object name and give it a value of the next hexadecimal number in the sequence.
    
@@ -96,7 +96,7 @@ Before creating your sprites there are a few things you should know:
    
    Within the function you will see a long list of objects that looks like this: `SpriteKind::Tomato => 1.65,`. Scroll to the bottom of this list and add your sprite at the end. You'll need to calculate what number value to assign your sprite though. This number is simply the height of your sprite in voxels divided by 11. For example, if your voxel model is 18 voxels tall, the calculation is 18/11 = 1.64. You can find the height of your model by going to your voxel editor and counting the number of blocks. 
    
-   _Note: 3.0 is the maximum value that can go in this list. If you have definied multiple variations of a sprite in the previous step, they will all share the same height._
+   _Note: 3.0 is the maximum value that can go in this list. If you have defined multiple variations of a sprite in the previous step, they will all share the same height._
 
    Finally, in the `pub fn has_ori` function, add your sprite to the end of the list. Follow the examples already there and don't forget the `|` at the start (eg, `| SpriteKind::Window1`). Adding your sprite to this function will allow it to be rotated (oriented) by code when it's spawned in the world.
    

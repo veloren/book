@@ -68,7 +68,7 @@ TODO: section on instrumenting code and the relevant macros defined in common_ba
 
 When you want to analyse compile time, you can use cargo's feature `-Z timings`. It will output a
 .html file with individual compile times, and dependencies and a total graph showing inactive,
-active and indling projects.
+active and idling projects.
 
 # External tooling
 

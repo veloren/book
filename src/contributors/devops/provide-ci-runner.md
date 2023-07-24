@@ -5,7 +5,7 @@ We need to host our own CI runners, if you have a spare pc or server and have so
 ## What is CI?
 
 Continuous Integration (CI) is a set of automated tests and tasks that run on the Gitlab repo every time code is added.
-This means that Merge Requests have a lower chance of breaking the codebase, and we can automatically get builds of the contributed code, among other benifits.
+This means that Merge Requests have a lower chance of breaking the codebase, and we can automatically get builds of the contributed code, among other benefits.
 
 We need your computer to help us with the testing. It's not free to run CI, so we use our own computers to do it.
 
@@ -46,7 +46,7 @@ Currently, the script is Linux only, if you run Windows your best bet is to crea
 
 In order to use caches effectively, we need at least `gitlab-runner v13.8.0`.
 If your runner is older, please recreate the runner, you can use the `update-runner.sh` script.
-Note, it is interactive and requieres your input
+Note, it is interactive and requires your input
 
 ```bash
 # 1. update repo veloren-docker-ci repo

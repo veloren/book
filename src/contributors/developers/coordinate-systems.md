@@ -3,7 +3,7 @@
 Various coordinate systems are used for different tasks throughout the codebase so it can be useful
 to have a reference for how they work and relate to each other.
 
-A not neccesarily exhaustive list: 
+A not necessarily exhaustive list:
 * ["world" coordinates](#world-coordinates)
 * chunk coordinates
 * weather sim cell coordinates

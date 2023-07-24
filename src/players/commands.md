@@ -97,10 +97,10 @@ All the parameters that can be used in the commands that can be executed in-game
 |`destination_degrees_ccw_of_east`|||  
 |`duration`| duration in seconds||  
 |`enabled`| boolean, true/false||  
-|`entity_config`|path to the entity starting from `veloren.assets.common.entity` with `.` as seperator of directory names; with the prefix `common.entity.`! e.g.: `common.entity.dungeon.fallback.boss`|[folder with the enities](https://gitlab.com/veloren/veloren/-/tree/master/assets/common/entity)|  
+|`entity_config`|path to the entity starting from `veloren.assets.common.entity` with `.` as separator of directory names; with the prefix `common.entity.`! e.g.: `common.entity.dungeon.fallback.boss`|[folder with the entities](https://gitlab.com/veloren/veloren/-/tree/master/assets/common/entity)|
 |`faction`|String of Characters, e.g. "Hello"||
 |`hp`| Health Points as number||
-|`item`| path to the item starting from `veloren.assets.common.items` with `.` as seperator of directory names; with the prefix `common.items.`! e.g.: `common.items.armor.assassin.belt`  | [folder with the items](https://gitlab.com/veloren/veloren/-/tree/master/assets/common/items) |  
+|`item`| path to the item starting from `veloren.assets.common.items` with `.` as separator of directory names; with the prefix `common.items.`! e.g.: `common.items.armor.assassin.belt`  | [folder with the items](https://gitlab.com/veloren/veloren/-/tree/master/assets/common/items) |
 |`kit_name`| name of a kit, e.g. `debug` |[definition of the kits](https://gitlab.com/veloren/veloren/-/blob/master/assets/server/manifests/kits.ron)|  
 |`message`| String of Characters, e.g. "Hello"||  
 |`name`| String of Characters, e.g. "Hello" ||  
@@ -108,7 +108,7 @@ All the parameters that can be used in the commands that can be executed in-game
 |`object`| name of the object |[definition of objects](https://docs.veloren.net/veloren_common/comp/body/object/enum.Body.html)|  
 |`overwrite`| set to true to overwrite previous ban||  
 |`player`| Name of Player's Character||  
-|`preset_name`|path to the skillset starting from `veloren.assets.common.skillset` with `.` as seperator of directory names; with the prefix `common.skillset.`! e.g.: `common.skillset.preset.max.sceptre`  | [folder with the skillset](https://gitlab.com/veloren/veloren/-/tree/master/assets/common/skillset) |  
+|`preset_name`|path to the skillset starting from `veloren.assets.common.skillset` with `.` as separator of directory names; with the prefix `common.skillset.`! e.g.: `common.skillset.preset.max.sceptre`  | [folder with the skillset](https://gitlab.com/veloren/veloren/-/tree/master/assets/common/skillset) |
 |`radius`| a number to define the radius, has to be higher than 0 and lower than 512||  
 |`r, g, b`| red, green, blue; numbers used to define a color||  
 |`role`| "admin" or "moderator"||  
