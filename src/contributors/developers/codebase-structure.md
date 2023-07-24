@@ -120,7 +120,7 @@ The core plugin runtime. This crate facilitates communication with the host engi
 
 [_Read the docs for this crate_](https://docs.veloren.net/veloren_plugin_api)
 
-Contains type defintions that constitute the plugin interface used to communicate with Veloren. This includes types and
+Contains type definitions that constitute the plugin interface used to communicate with Veloren. This includes types and
 structures used to represent in-game state and communicate about changes in that state.
 
 ### `plugin-derive`

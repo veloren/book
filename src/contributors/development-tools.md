@@ -4,7 +4,7 @@ If you want to contribute to Veloren in any form you probably need to deal with 
 code_](https://en.wikipedia.org/wiki/source_code). Therefore these basic tools have to be installed
 to interact with it.<br/>
 
-_**Note:** Throughout the book we will mention alot of commands. Therefore we highly recommend
+_**Note:** Throughout the book we will mention a lot of commands. Therefore we highly recommend
 getting comfortable with a [terminal]()._
 
 ## Git

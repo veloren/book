@@ -49,7 +49,7 @@ rectify this situation because most of the CPU's work is *essential* to the func
 ## What compromise are you looking for?
 
 Veloren has a much larger number of settings (and a wider range of those settings) than most other games. We don't like
-it when games artifically limit the way we play, so Veloren is designed to allow you to choose the effects *you* care
+it when games artificially limit the way we play, so Veloren is designed to allow you to choose the effects *you* care
 about. Here are a few archetypes you might fit into, along with some tips you might want to follow:
 
 ### The pixel perfectionist

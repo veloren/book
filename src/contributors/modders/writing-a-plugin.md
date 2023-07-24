@@ -202,7 +202,7 @@ Here, we import the necessary macros, types and functions we need to write our p
 pub fn on_load(load: PluginLoadEvent) { ... }
 ```
 
-Here, we declare a new functon that accepts a
+Here, we declare a new function that accepts a
 [`PluginLoadEvent`](https://docs.veloren.net/veloren_plugin_api/event/struct.PluginLoadEvent.html). We use the
 `event_handler` attribute to tell the runtime that we'd like to use this function as an *event handler* that will be
 called when the event of the specified type occurs.

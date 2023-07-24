@@ -14,7 +14,7 @@ cargo build --profile debuginfo
 
 Follow [this guide](https://www.forrestthewoods.com/blog/how-to-debug-rust-with-visual-studio-code/) to setup your vscode installation.
 
-After that make the following modifcations to `launch.json` (remember to build with the `cargo` command listed above!)
+After that make the following modifications to `launch.json` (remember to build with the `cargo` command listed above!)
 
 ```json
 {

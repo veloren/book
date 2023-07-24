@@ -72,7 +72,7 @@ Sometimes it can be useful to collect extra information when debugging graphics 
     ```shell
         mkdir wgpu-trace
     ```
-2. Run the game with the envionment variable `WGPU_TRACE_DIR` set to the new folder.  
+2. Run the game with the environment variable `WGPU_TRACE_DIR` set to the new folder.
     (the path can be absolute or relative)
     #### Linux
     ```shell

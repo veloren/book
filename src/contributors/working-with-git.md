@@ -28,7 +28,7 @@ cd veloren
 
 In order to try out new unmerged or unfinished features, you may want to switch to a different branch.
 
-To switch to a developement branch
+To switch to a development branch
 
 ```
 git checkout <branch_name>

@@ -48,7 +48,7 @@ Whenever we look for new models and don't have them available in our local asset
 
 ## How do I get the rank of an artist?
 
-Self motivated model creation, shwoing general excitement about Veloren and high quality content along with a moderate to high activity on the Discord will earn you the rank of an Artist.
+Self motivated model creation, showing general excitement about Veloren and high quality content along with a moderate to high activity on the Discord will earn you the rank of an Artist.
 Becoming a Contributor is easier and only involves showing any kind of motivation to contribute to Veloren.
 
 ## What is the art-and-assets working group?

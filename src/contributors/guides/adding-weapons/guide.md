@@ -41,7 +41,7 @@
 
 The non-bolded ones are either a work in progress or have not started their development yet.
 
-**2.** The Veloren google drive files are useful becuase it allows you to use the existing weapon models as format
+**2.** The Veloren google drive files are useful because it allows you to use the existing weapon models as format
 
 **3.** You need to have your model(s) approved by the core-devs if you want your model to make it into the actual game
 
@@ -183,7 +183,7 @@ pub enum ShortbowKind {
 Find where the code for your weapon type is located and copypaste it in the same location
 
 
-You can either use a .png or .vox file as an item image. But it is only pratical to use a vox model for weapons.
+You can either use a .png or .vox file as an item image. But it is only practical to use a vox model for weapons.
 
 
 Example for a .vox:
@@ -224,7 +224,7 @@ Full Command:
 
 **Tip:** *You can type `/give_item common.items.weapons.` and then press tab to cycle through available weapons*
 
-If you dont like how your character holds your weapon you have to mess with the weapons offsets.
+If you don't like how your character holds your weapon you have to mess with the weapons offsets.
 
 To set the right offset you need to revisit `assets/voxygen/voxel/humanoid_main_weapon_manifest.ron`<br>
 

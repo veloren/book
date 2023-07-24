@@ -34,7 +34,7 @@ In order to place “skin” (parts that are not covered by armour) to your work
 
 Armour can be coloured in the code, too.
 
-To do that just use greyscale colours in your model. (Later you will learn how to apply the colours with code.)
+To do that just use grayscale colours in your model. (Later you will learn how to apply the colours with code.)
 
 Another thing you might notice is the neck added to the chest armour. This is needed to not make the head appear disconnected from the body when it’s turned.
 
