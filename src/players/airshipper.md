@@ -1,6 +1,7 @@
 # Airshipper
 
-![Airshipper](https://songtronix.com/airshipper-0.4.0.gif)
+<video src="https://cdn.discordapp.com/attachments/523568428905398283/1135936028562165842/airshipper.webm" type="video/webm" autoplay controls > </video>
+
 
 Airshipper is a cross-platform Veloren launcher taking care of keeping Veloren up to date.
 Due to our frequent updates it is the recommended way of installing Veloren.
