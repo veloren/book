@@ -57,8 +57,13 @@ And a one liner to download and install them all:<br/>
 On **Fedora** systems additional libraries may need to be downloaded, below is a command to install them:<br/>
 `sudo dnf install alsa-lib-devel libxkbcommon-x11-devel libudev-devel`
 
-On **macOS** you only need to install cmake.
-This can be done using either **homebrew** or **macports**. Using homebrew, enter `brew install cmake` or similarly, using macports enter `sudo port install cmake`. **Note**: Do not use sudo with homebrew.
+On **openSUSE Tumbleweed** systems, additional dependencies may be needed:<br/>
+`sudo zypper in binutils-gold alsa-devel systemd-devel libxkbcommon-devel libxkbcommon-x11-devel`
+
+On **macOS** you only need to install cmake.  
+This can be done using either **homebrew** or **macports**.
+Using homebrew, enter `brew install cmake` or similarly, using macports enter `sudo port install cmake`.  
+**Note**: Do not use sudo with homebrew.
 
 **Note:** _Feel free to open an issue incase these dependencies are incorrect._
 
