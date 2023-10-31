@@ -13,7 +13,7 @@ have a precise roadmap! The goal of this roadmap is to provide a rough idea of w
 
 How it works
 
-Every piece of equipment, consisting of armor and weapons, starts off with 12/12 charges of durability with each death reducing said charge by 1. Durability has no effect on the stats of the equipment for a vast majority of charge, with the player only seeing a reduction in stats once the armor reaches 4/12 durability and steeply continues to decline the closer it gets to 0/12. Once a piece of equipment reaches 0/12 durability the item will still be usable, however, due to the steep decline in stats it becomes unviable for combat. A player can repair their damaged items at repair benches found in towns, costing the primary material and, at higher levels, some quantity of Velorite.
+Every piece of equipment, consisting of armor and weapons, starts off with 12/12 charges of durability with each death reducing said charge by 1. Durability has no effect on the stats of the equipment for a vast majority of charge, with the player only seeing a reduction in stats once the armor reaches 4/12 durability and steeply continues to decline the closer it gets to 0/12. Once a piece of equipment reaches 0/12 durability the item will still be usable, however, due to the steep decline in stats it becomes unviable for combat. A player can repair their damaged items at repair benches found in towns, costing Velorite and the primary material at lower levels.
 
 Why do we want this?
 
@@ -21,7 +21,17 @@ Durability is an important death penalty as it hinders players from continuously
 
 Future plans
 
-Durability is a relatively new mechanic within the world of Veloren and thereby lacks polish. To help integrate the death penalty into the game we would like to see a variety of items that make the mechanic as unobtrusive yet interesting as possible. To give an example, one such item would be the Velorite Hammer which can repair equipment while traveling. Additionally, we would like to incorporate more Points of Interest in the open world of Veloren such as Inns or other resting locations which allow you to repair your items outside of towns.
+Durability is a relatively new mechanic within the world of Veloren and thereby lacks polish. With the current implementation of the mechanic being unclear and frustrating for a lot of players, we are looking at a few tweaks that would make it more accessible and understandable for the players. The planned changes consist of:
+- Reducing the maximum durability to 8.
+- Making all repairs free.
+- Adding an option to *reinforce* durability, temporarily raising the maximum durability by eg. 6 on every reinforcement
+  - Each reinforcement would cost extra materials (velorite + primary materials).
+  - Reinforced durability cannot be repaired.
+- UI Changes:
+  - Make the durability section of the death screen more explanatory (and flash!).
+  - Add a durability bar below damaged items.
+
+Additionally, we would like to incorporate more Points of Interest in the open world of Veloren such as Inns or other resting locations which allow you to repair your items outside of towns.
 
 For more information, feel free to contact us on the Veloren Discord. 
 
