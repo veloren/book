@@ -35,7 +35,7 @@ implies the following things about Veloren plugins:
 
 - They are portable and will work on all architectures and platforms
 
-- Plugins are managed by the server and get sent to clients when they connect to a server, so joining a plugin-enabled
+- (Planned) Plugins are managed by the server and get sent to clients when they connect to a server, so joining a plugin-enabled
   server is a seamless process.
 
 ## Setting up
@@ -72,14 +72,14 @@ Because we need to compile our plugin to a WASM module, first ensure that the ap
 works) by running the following:
 
 ```
-cargo build --target wasm32-unknown-unknown
+cargo build --target wasm32-wasi
 ```
 
 If you get a `error[E0463]: can't find crate for 'core'`, you can install the relevant version of `core` using the
 following `rustup` command:
 
 ```
-rustup target add wasm32-unknown-unknown
+rustup target add wasm32-wasi
 ```
 
 Veloren's codebase currently requires the nightly version of the Rust compiler (we hope for this not to be the case in
@@ -129,7 +129,7 @@ modules = ["my_plugin.wasm"]
 ```
 
 To package the plugin, we can copy the compiled WASM module from the previous steps located at
-`target/wasm32-unknown-unknown/debug/my_plugin.wasm` into a packaging directory of your own making, along with the
+`target/wasm32-wasi/debug/my_plugin.wasm` into a packaging directory of your own making, along with the
 `plugin.toml`, and then use the `tar` command (or your favourite tar-capable archive manager) to package them up. The
 following command, executed from within the packaging directory, should work fine:
 
@@ -145,8 +145,8 @@ In the future, we'd like to create a cargo subcommand that automates this step, 
 For reference, I just use a simple shell script with the following contents:
 
 ```sh
-cargo build --target wasm32-unknown-unknown
-cp target/wasm32-unknown-unknown/debug/my_plugin.wasm build_dir/.
+cargo build --target wasm32-wasi
+cp target/wasm32-wasi/debug/my_plugin.wasm build_dir/.
 cd build_dir
 tar -cvf ../my_plugin.plugin.tar plugin.toml my_plugin.wasm
 cd ..
