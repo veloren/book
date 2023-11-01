@@ -1,4 +1,4 @@
-# Adding in game items from a plugin
+# Adding in-game items from a plugin
 
 To add new armor or weapon types, you don't need to write and compile Rust,
 this guide will show you the necessary steps.
