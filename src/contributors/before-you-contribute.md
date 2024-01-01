@@ -149,5 +149,3 @@ post them in `#veloren-art` on our Discord and ask for feedback. Make sure you o
 
 Congratulations on your first contribution and thank you for helping out!
 After your first contribution you should get the `Contributor` role on Discord which gives you access to important channels.
-
-For future contributions develop on a feature branch, _in the Veloren repository_, such as our CI tests can run through and assure you that your work is following the basic rules.
