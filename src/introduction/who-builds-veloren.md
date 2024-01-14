@@ -18,4 +18,5 @@ You can join the server using the link below:
 ## Social Media
 
 We're on [Youtube](https://www.youtube.com/channel/UCmRjlnKnSRRihWPPNasl_Qw)
-and [Reddit](https://www.reddit.com/r/veloren) and don't forget to follow us on [Twitter](https://twitter.com/velorenproject).
+and [Reddit](https://www.reddit.com/r/veloren) and don't forget to follow us
+on [Mastodon](https://floss.social/@veloren).
