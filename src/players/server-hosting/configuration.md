@@ -23,8 +23,10 @@ userdata
 This folder is the most interesting to us. It contains various important configuration files.
 
 #### admins.ron
-> This file contains a list of UUIDs of players with administrator privileges.  
-> You need access to server console to modify it.  
+> This file contains a list of UUIDs of players with administrator privileges.
+>
+> You need access to server console to modify this file.
+>
 > Example:
 > ```ron
 > [
@@ -33,8 +35,10 @@ This folder is the most interesting to us. It contains various important configu
 > ```
 
 #### banlist.ron
-> This file contains the banlist, and associated information about each ban.  
-> Server admins can use in-game commands to modify it.  
+> This file contains the list of banned players, and associated information about each ban.
+
+> Server admins can use in-game commands to modify this file.
+>
 > Example:
 > ```ron
 > {
@@ -45,17 +49,39 @@ This folder is the most interesting to us. It contains various important configu
 > }
 > ```
 #### description.ron
-> This file contains the server description - a single quoted string of text.
-> You need direct access to the server files to modify it.
+> This file contains the server description (also known as 'Message Of The Day' (MTOD)), and server rules.
+>
+> Both support localisation. If the user's locale matches one of the entries, they will see the corresponding
+> localised entry for both.
+>
+> If the `rules` field is set to `Some("...")` rather than `None`, users will see the rules when they first join the
+> server, with a mandatory 'accept' button (any changes to the rules will also cause them to be shown to users again).
+>
+> The `default_locale` field determines which set of descriptions users are shown if their locale does not match any of
+> those present in the file (by default, this field is `"en"` i.e: English).
+>
+> Server admins can use in-game commands to modify this file.
+>
 > Example:
 > ```ron
-> "This is the best Veloren server"
+> V2((
+>     default_locale: "en",
+>     descriptions: {
+>         "en": (
+>             motd: "This is the best Veloren server",
+>             rules: None,
+>         ),
+>     },
+> ))
 > ```
 
 #### settings.ron
-> This is the file containing most of the configuration options.  
-> Most of the options are self-explanatory.
-> You need direct access to the server files to modify it.
+> This is the file containing most of the configuration options.
+>
+> Most fields are self-explanatory, but more information can be found [here](https://docs.veloren.net/veloren_server/settings/struct.Settings.html).
+>
+> You need direct access to the server files to modify this file.
+>
 > Example:
 > ```ron
 > (
@@ -77,24 +103,26 @@ This folder is the most interesting to us. It contains various important configu
 >     spawn_town: None,
 >     safe_spawn: true,
 >     max_player_for_kill_broadcast: Some(20),
-> ) 
+> )
 > ```
-> 
-> > **Note:** While you can use a custom auth server, if you do it, players will see a **security warning** when connecting to your game server.  
-> 
+>
+> > **Note:** While you can use a custom auth server, if you do it, players will see a **security warning** when connecting to your game server.
+>
 > > **Note:** While you can disable authentication completely, it would allow **anyone** to log in using **any username**, including as a **server admin**.
-> 
+>
 > Explanations of non-obvious options:
 > - Some values use the `Option` type, which means they can either be set to either `Some(value)` or `None`.
 > - `max_player_for_kill_broadcast` might sound scary, but it only prevents chat spam by only sending death messages of others to their group and nearby players if the set player count is exceeded. Setting it to `None` means the server will never broadcast kill messages globally.
 
 #### whitelist.ron
-> If this file is not empty, only players whose UUIDs it contains will be able to join the server.  
-> Server admins can use in-game commands to modify it.  
+> If this file is not empty, only players whose UUIDs it contains will be able to join the server.
+>
+> Server admins can use in-game commands to modify this file.
+>
 > Example:
 > ```ron
 > [
->      "f60e23c6-345c-449b-b05a-e431d53fc65c", 
+>      "f60e23c6-345c-449b-b05a-e431d53fc65c",
 > ]
 > ```
 
