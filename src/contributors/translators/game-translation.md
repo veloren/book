@@ -2,6 +2,45 @@
 
 [![Translation status](https://translate.codeberg.org/widget/veloren/multi-auto.svg)](https://translate.codeberg.org/engage/veloren/)
 
+## Preface
+
+Veloren uses the Fluent localization system to translate content.
+Translation files have the `.ftl` file extension.
+
+`.ftl` files contain a list of messages in key-value format.
+
+Fluent messages may or may not have variables inside via syntax of [placeables](https://projectfluent.org/fluent/guide/placeables.html).
+
+```fluent
+main-servers-other_error = Server general error: { $raw_error }
+main-credits = Credits
+```
+
+Fluent messages may have multiple attributes attached to them.
+Presently, we use attributes to create randomized messages.
+
+```fluent
+loading-tips =
+    .a0 = Press '{ $gameinput-togglelantern }' to light your lantern.
+    .a1 = Press '{ $gameinput-help }' to see all default keybindings.
+    .a2 = You can type /say or /s to only chat with players directly around you.
+    .a3 = You can type /region or /r to only chat with players a couple of hundred blocks around you.
+```
+
+Fluent also supports plural selectors via
+[Unicode rules](https://www.unicode.org/cldr/cldr-aux/charts/30/supplemental/language_plural_rules.html).
+
+```fluent
+hud-trade-buy_price = Buy Price: {$coins ->
+  [1] 1 coin
+  *[other] { $coins } coins
+}
+```
+
+You can learn more about Fluent and its syntax here:
+
+<https://projectfluent.org/>
+
 ## Using Weblate (recommended)
 
 Weblate is the most convenient way to translate Veloren to your language.
@@ -31,7 +70,17 @@ translation strings get into the GitLab repository.
 If you would like to become a dedicated reviewer for a language, feel free
 to discuss it with us.
 
-## Previewing your translation
+## Translation tools
+
+Before Weblate was available for contributors, translating the game was
+harder because translators needed to make use of the Git version control
+system to submit their translations.
+
+Some translation tools complemented those older workflows.
+They are still available.
+Nevertheless, you should use Weblate for translating the game at present.
+
+### Previewing your translation
 
 Veloren supports viewing your changes to translation files in real time.
 The game must have been compiled with a "debug" build to support this feature.
@@ -44,8 +93,6 @@ After you have compiled the game and, effectively, can run a "debug" build of
 Veloren, any changes you do to the Fluent files will be reflected in the game
 in real time.
 These are the files contained inside `assets/voxygen/i18n` directory.
-
-## Translation tools
 
 ### Getting information about the translation
 
@@ -113,3 +160,8 @@ the Veloren translation.
 Please, contact the translation team, either on Discord or through an
 issue on GitLab.
 We will review your permissions and help you resolve the issue.
+
+### Some of the text characters are missing or displayed incorrectly
+
+Please, raise an issue on GitLab to add the missing characters to the game
+fonts for your language.

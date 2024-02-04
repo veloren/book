@@ -78,6 +78,7 @@ If you need to add a language quickly, follow these steps:
     ```
 
 2. Create a new branch.
+
     ```bash
     cd veloren
     git checkout -b <yourusername>/add-<language>
@@ -175,10 +176,6 @@ This is a comprehensive list of available language subtags:
 
 [IANA Language Subtag Registry](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry)
 
-Veloren uses a key-value system to translate content. Files use the [Fluent
-localization format](https://projectfluent.org) (`.ftl`). Check examples at the
-main page and the [syntax guide](https://projectfluent.org/fluent/guide/).
-
 They must be formatted in UTF-8, without [BOM](https://en.wikipedia.org/wiki/Byte_order_mark).
 Each language directory contains a `_manifest.ron` file with a metadata section,
 font settings that will be used in the game and a `convert_utf8_to_ascii` option,
@@ -198,37 +195,6 @@ metadata: (
 
 > Note: The language identifier must match the name of the containing language folder. This requirement implies the identifier must also comply with the IETF BCP 47 naming standard.
 
-`.ftl` files contain a list of messages in key-value format.
-
-Fluent messages may or may not have variables inside via syntax of [placeables](https://projectfluent.org/fluent/guide/placeables.html).
-
-```fluent
-main-servers-other_error = Server general error: { $raw_error }
-main-credits = Credits
-```
-
-Some messages may have multiple attributes attached to them.
-Attributes can have various uses, as of the time of writing we use it to create
-randomized messages.
-
-```fluent
-loading-tips =
-    .a0 = Press '{ $gameinput-togglelantern }' to light your lantern.
-    .a1 = Press '{ $gameinput-help }' to see all default keybindings.
-    .a2 = You can type /say or /s to only chat with players directly around you.
-    .a3 = You can type /region or /r to only chat with players a couple of hundred blocks around you.
-```
-
-Fluent also supports plural selectors via
-[Unicode rules](https://www.unicode.org/cldr/cldr-aux/charts/30/supplemental/language_plural_rules.html).
-
-```fluent
-hud-trade-buy_price = Buy Price: {$coins ->
-  [1] 1 coin
-  *[other] { $coins } coins
-}
-```
-
 ## Troubleshooting
 
 ### I am receiving hundreds or even thousands of emails from Weblate
@@ -240,8 +206,3 @@ amount of notifications via email from Weblate. Seemingly, it was caused either 
 If you are an administrator of our project on Weblate and want to get notified via email, just in case, we suggest you set up custom Inbox rules to move messages from the following sender to an email folder of your choice:
 
 <weblate@codeberg.org>
-
-### Some of the text characters are missing or displayed incorrectly
-
-Please, raise an issue on GitLab to add the missing characters to the game
-fonts for your language.
