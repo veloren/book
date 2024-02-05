@@ -6,8 +6,7 @@
 
 Veloren uses the Fluent localization system to translate content.
 Translation files have the `.ftl` file extension.
-
-`.ftl` files contain a list of messages in key-value format.
+Fluent files contain a list of messages in key-value format.
 
 Fluent messages may or may not have variables inside via syntax of [placeables](https://projectfluent.org/fluent/guide/placeables.html).
 
@@ -16,15 +15,11 @@ main-servers-other_error = Server general error: { $raw_error }
 main-credits = Credits
 ```
 
-Fluent messages may have multiple attributes attached to them.
-Presently, we use attributes to create randomized messages.
+Fluent messages may have attributes attached to them.
 
 ```fluent
-loading-tips =
-    .a0 = Press '{ $gameinput-togglelantern }' to light your lantern.
-    .a1 = Press '{ $gameinput-help }' to see all default keybindings.
-    .a2 = You can type /say or /s to only chat with players directly around you.
-    .a3 = You can type /region or /r to only chat with players a couple of hundred blocks around you.
+common-abilities-hammer-leap = Smash of Doom
+    .desc = An AOE attack with knockback. Leaps to position of cursor.
 ```
 
 Fluent also supports plural selectors via
@@ -34,6 +29,18 @@ Fluent also supports plural selectors via
 hud-trade-buy_price = Buy Price: {$coins ->
   [1] 1 coin
   *[other] { $coins } coins
+}
+```
+
+Fluent handles language genders as well. You can translate sentences using
+the provided gender of actors. Remember to set a default option with the `*`
+character for those cases where messages fail to provide the gender.
+
+```fluent
+hud-chat-offline_msg = { $user_gender ->
+    [she] [{ $name }] вийшла з серверу
+    [he] [{ $name }] вийшов з серверу
+    *[any] [{ $name }] оффлайн
 }
 ```
 
@@ -70,7 +77,7 @@ translation strings get into the GitLab repository.
 If you would like to become a dedicated reviewer for a language, feel free
 to discuss it with us.
 
-## Translation tools
+## Using programming tools (old way)
 
 Before Weblate was available for contributors, translating the game was
 harder because translators needed to make use of the Git version control
@@ -78,7 +85,9 @@ system to submit their translations.
 
 Some translation tools complemented those older workflows.
 They are still available.
-Nevertheless, you should use Weblate for translating the game at present.
+
+We recommend using Weblate unless you have strong programming skills and
+developer experience.
 
 ### Previewing your translation
 
@@ -92,7 +101,7 @@ following the instructions here:
 After you have compiled the game and, effectively, can run a "debug" build of
 Veloren, any changes you do to the Fluent files will be reflected in the game
 in real time.
-These are the files contained inside `assets/voxygen/i18n` directory.
+These are the files contained inside the `assets/voxygen/i18n` directory.
 
 ### Getting information about the translation
 
