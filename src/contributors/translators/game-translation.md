@@ -107,9 +107,10 @@ These are the files contained inside the `assets/voxygen/i18n` directory.
 
 Veloren includes a localization test tool if you have compiled the game.
 
-This special tool compares the Fluent keys of your selected language and
-compares them with those of the reference language, English.
-The tool then classifies and counts these comparisons and prints them in a neat way for translators to inspect.
+This special tool compares the Fluent keys of your selected language
+with those of the reference language, English.
+The tool then classifies, counts and prints these comparisons
+in a neat way for translators to inspect.
 
 It is the same program we run in our automated CI pipelines,
 but less verbose.
@@ -137,7 +138,7 @@ We offer a web service to display translations statistics.
 
 We will use the Ukrainian translation as our example.
 
-![Grafana for Ukrainian](./grafana.png)
+![Grafana for Ukrainian](./grafana-uk.png)
 
 Here we have detailed information about all language keys used in the Ukrainian
 translation (`uk` directory) in comparison with the reference language
