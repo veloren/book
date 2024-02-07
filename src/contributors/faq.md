@@ -1,3 +1,7 @@
+<!-- markdownlint-disable no-trailing-punctuation -->
+
+# FAQ
+
 ## 1) How come you chose Rust for this game? It's not exactly the most mature language for game development.
 
 > Rust may seem like an unusual choice for a project like this. It's a new language that has yet to properly prove itself in production environments, and is still undergoing relatively rapid changes. We chose Rust because it has several unique features that we believe will come to benefit the project in the long-term.
@@ -17,9 +21,9 @@
 > **Rust is well-designed**
 > Rust's syntax is designed to be user-friendly (wherever it can without compromising on features) and well-suited to system programming. Its unique combination of low-level control and safety makes it perfect for building both game engines and high-level game logic.
 
-## 2) Why use gitlab over github?
+## 2) Why use GitLab over GitHub?
 
-> Gitlab has better integrated ci/cd and offers everything else that Github has. Both of them are only a service on top of git on the computer, so not too much different.
+> GitLab has better integrated CI/CD and offers everything else that GitHub has. Both of them are only a service on top of git on the computer, so not too much different.
 
 ## 3) What noise function do we actually use?
 
@@ -32,9 +36,9 @@
 ## 5) How is the movement/physics/mechanics programming handled?
 
 > That's implemented in [`common`](developers/codebase-structure.md#common), which is a crate for code that's common between both the server and the client.
-> (because the server needs to be the ultimate authority on physics, but the client needs to do physics prediction so that lag/latency doesn't look bad)
+> (because the server needs to be the ultimate authority on physics, but the client needs to do physics prediction so that lag/latency doesn't look bad).
 
-### 6) Does it have all the OOP stuff you need for a project like this? Are there times when you are coding in Rust and there is something you feel could be expressed much better in C++? I originally dismissed Rust when I first encountered it since it looked like it was just C with different syntax and some functional programming stuff, but I heard recently it is supposedly much more than that.
+## 6) Does it have all the OOP stuff you need for a project like this? Are there times when you are coding in Rust and there is something you feel could be expressed much better in C++? I originally dismissed Rust when I first encountered it since it looked like it was just C with different syntax and some functional programming stuff, but I heard recently it is supposedly much more than that.
 
 > Although Rust has features that on the surface appear to make it an object-oriented language (it has objects, methods, interfaces, etc.) it's not actually an object-oriented language.
 > One of the common trip-ups new developers make is to try to force Rust to behave like an OO language when a particular problem is better solved in a more Rust-y way.

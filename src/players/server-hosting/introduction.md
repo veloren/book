@@ -4,7 +4,7 @@
 
 At its core Veloren is split into 2 components, a client (`veloren-voxygen`) and a server (`veloren-server-cli`).  
 In *singleplayer* mode, the game starts a server listening on a random port in the background and connects to it automatically.  
-In *multiplayer* mode however, Veloren also uses an authentication server (`veloren-auth`). 
+In *multiplayer* mode however, Veloren also uses an authentication server (`veloren-auth`).
 This allows players to register just once on our website, and log into any server with the same account, similar to for example Minecraft.
 
 ## How to use this guide

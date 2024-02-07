@@ -6,7 +6,7 @@ by letting the respective team lead know.
 **Tip** _You can join multiple groups and are free to work outside of the groups' focus. Mainly it helps
 to find out who to talk to for a specific part of Veloren._
 
-### Audio (led by Aeronic (@Aeronic#8377) & badbbad (@badbbad#5150))
+## Audio (led by Aeronic (@Aeronic#8377) & badbbad (@badbbad#5150))
 
 Discussing, sharing and approving of music and SFX that will be featured in Veloren.
 
@@ -53,7 +53,7 @@ Members:
 - WelshPixie (@WelshPixie#9174)
 - zesterer (@zesterer#3131)
 
-### Combat (led by Sam (@GoldFalcon9#7302))
+## Combat (led by Sam (@GoldFalcon9#7302))
 
 Weapons, armor, combat abilities, enemies, and other combat-related things.
 
@@ -75,7 +75,7 @@ Members:
 - xMAC94x (@xMAC94x#2493)
 - zesterer (@zesterer#3131)
 
-### Game Design (led by Silentium (@Silentium#2318))
+## Game Design (led by Silentium (@Silentium#2318))
 
 Works on designing how the game is played by the player. Designs the way the player interacts with the world, and the system they use to do so.
 
@@ -104,7 +104,7 @@ Members:
 - Warspawn (@Warspawn#9707)
 - zesterer (@zesterer#3131)
 
-### Meta (led by AngelOnFira (@AngelOnFira#8441))
+## Meta (led by AngelOnFira (@AngelOnFira#8441))
 
 Heads up CI, the website, the Discord, and lots inbetween.
 
@@ -118,7 +118,7 @@ Members:
 - xMAC94x (@xMAC94x#2493)
 - zesterer (@zesterer#3131)
 
-### Rendering (led by imbris (@imbris#4559))
+## Rendering (led by imbris (@imbris#4559))
 
 Graphics, windowing, and UI logic for Voxygen.
 
@@ -129,7 +129,7 @@ Members:
 - xMAC94x (@xMAC94x#2493)
 - zesterer (@zesterer#3131)
 
-### Server & Multiplayer (led by xMAC94x (@xMAC94x#2493))
+## Server & Multiplayer (led by xMAC94x (@xMAC94x#2493))
 
 Create servers that can host many people, and make multiplayer experience as great as possible.
 
@@ -140,7 +140,7 @@ Members:
 - xMAC94x (@xMAC94x#2493)
 - zesterer (@zesterer#3131)
 
-### Testing (led by YuriMomo (@YuriMomo#3795))
+## Testing (led by YuriMomo (@YuriMomo#3795))
 
 Testing the game by using specialized tools and making sure new features don't introduce any bugs.
 
@@ -155,7 +155,7 @@ Members:
 - YuriMomo (@YuriMomo#3795)
 - zesterer (@zesterer#3131)
 
-### UX (led by Songtronix (@Songtronix#4790))
+## UX (led by Songtronix (@Songtronix#4790))
 
 We improve Veloren's user experience by applying well-known UX practices to existing features and collecting information, bug reports from users to work out which Quality of Life improvements are needed the most.
 
@@ -166,7 +166,7 @@ Members:
 - YuriMomo (@YuriMomo#3795)
 - zesterer (@zesterer#3131)
 
-### Worldgen (led by zesterer (@zesterer#3131))
+## Worldgen (led by zesterer (@zesterer#3131))
 
 World generation, world simulation and terrain generation.
 

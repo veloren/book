@@ -30,7 +30,7 @@ experienced players.
 Experimental shaders can be enabled by adding them to the relevant section. For example, to enable the `Brickloren`
 and `NoNoise` shaders:
 
-```
+```ron
 (
     ...
     graphics: (

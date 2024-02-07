@@ -2,9 +2,8 @@
 
 The `userdata` folder unifies all player and server configuration in a single place, which should be transferrable between different Veloren installations from v0.8 onwards.
 
-The folder will be next to your Veloren executable, or in your repository's root if self-compiling. 
+The folder will be next to your Veloren executable, or in your repository's root if self-compiling.
 See [where Airshipper stores files](airshipper.md#files) if using the launcher.
-
 
 - voxygen
   - logs
@@ -43,7 +42,7 @@ The main thing not accessible from main game menus is gamepad keybindings, which
 
 ## `profile.ron`
 
-Contains hotbar infomation, per-character and per-server. Should never need to be manually modified.
+Contains hotbar information per-character and per-server. Should never need to be manually modified.
 
 ## `server/server_config/settings.ron`
 
@@ -52,7 +51,7 @@ This file is intended for manual editing, and should never be overwritten by the
 |Setting|Description|Default value|
 |-|-|-|
 | `gameserver_address`| Address and port the game server will listen to. Note that clients will use the port `14004` by default. _Changing the port will require to specify it in the client too._ | `"0.0.0.0:14004"`|
-| `metrics_address` | Address and port the game server will expose [prometheus](https://prometheus.io) metrics. | `"0.0.0.0:14005"`|
+| `metrics_address` | Address and port the game server will expose [Prometheus](https://prometheus.io) metrics. | `"0.0.0.0:14005"`|
 | `auth_server_address` | When using `Some(<value>)`: The value is the IP address or domain the **game server and client** will use. If you want to disable authentication, you replace `Some(...)` with `None`. | `Some("https://auth.veloren.net")` |
 | `max_players` | Maximum number of players connected to the game server. | `100`|
 | `world_seed`| seed number used to setup the random generation of the world. | `59686`|
@@ -70,17 +69,18 @@ This file is intended for manual editing, and should never be overwritten by the
 Contains the introductory chat message clients get when entering the server, as a quoted string. Can be multiple lines.
 
 Example:
-```
+
+```txt
 "This is the best Veloren server"
 ```
 
 ## `server/server_config/whitelist.ron`
 
-Contains a list of whitelisted account IDs, and is considered disabled if empty. Heavily recommended to use the `/whitelist add/remove` ingame command, rather than manual editing.
+Contains a list of whitelisted account IDs, and is considered disabled if empty. Heavily recommended to use the `/whitelist add/remove` in-game command, rather than manual editing.
 
 Example: Result of using `/whitelist add Treeco` and `/whitelist add treeco2`.
 
-```
+```ron
 [
     "6f15b915-074f-f78d-df88-34fb33e4e13f",
     "3445349e-d03c-64bf-6ecf-a15806275a1f",
@@ -89,11 +89,11 @@ Example: Result of using `/whitelist add Treeco` and `/whitelist add treeco2`.
 
 ## `server/server_config/banlist.ron`
 
-Contains a list of banned accounts, and reasons. Heavily recommended to use the `/ban` and `/unban` ingame commands, rather than manual editing.
+Contains a list of banned accounts, and reasons. Heavily recommended to use the `/ban` and `/unban` in-game commands, rather than manual editing.
 
 Example: Result of using `/ban Treeco General nuisance` and `/ban treeco2 alt account`.
 
-```
+```ron
 {
     "6f15b915-074f-f78d-df88-34fb33e4e13f": (
         username_when_banned: "treeco2",
@@ -105,13 +105,14 @@ Example: Result of using `/ban Treeco General nuisance` and `/ban treeco2 alt ac
     ),
 }
 ```
+
 ## `server/server_config/admins.ron`
 
-Contains a list of admin account IDs. Heavily recommended to use `admin add/remove ` from the server's TUI, rather than manual editing. There is no in-game command to permanently add admins, for security reasons.
+Contains a list of admin account IDs. Heavily recommended to use `admin add/remove` from the server's TUI, rather than manual editing. There is no in-game command to permanently add admins, for security reasons.
 
 Example: Result of using `admin add Treeco`.
 
-```
+```ron
 [
     "ee193d08-8f5a-4862-a279-1a8c4bd357f3",
 ]
@@ -120,7 +121,8 @@ Example: Result of using `admin add Treeco`.
 If you have the TUI disabled or are otherwise unable to use it, you can instead use the server CLI to add/remove admins.
 
 Example:
-```
+
+```bash
 veloren-server-cli admin add Treeco
 ```
 

@@ -7,16 +7,16 @@ Welcome to the section about getting your voxel models into Veloren!
 Most of our artists use the freely available [MagicaVoxel](https://ephtracy.github.io/) from ephtracy.
 It's available for Mac, Windows and runs with Wine on Linux.
 
-Of course you are not obliged to use this software but it's highly suggested as some block properties are determined directly with palette parameters shown in Magica.
+Of course you are not obliged to use this software but it's highly suggested as some block properties are determined directly with palette parameters shown in MagicaVoxel.
 
 At some point we might create our own voxel editor with built in model rigging and animating.
 
 ## Getting started - Useful links
 
-Magica is easy to begin with but hard to master.
+MagicaVoxel is easy to begin with but hard to master.
 [YouTube](https://www.youtube.com/results?search_query=magica+voxel) is always a great idea to start with.
 
-You should totally have a look at [controls](https://ephtracy.github.io/index.html?page=mv_controls) in Magica as they highly optimise your workflow.
+You should totally have a look at [controls](https://ephtracy.github.io/index.html?page=mv_controls) in MagicaVoxel as they highly optimise your workflow.
 
 Our [GitLab assets repo](https://gitlab.com/veloren/veloren/-/tree/master/assets) will give you an idea of how assets are organized and what kind of style we try to achieve with them.
 
@@ -38,9 +38,9 @@ So that's 1x2 landscape blocks.
 
 Objects/figures made from small scale voxels can be arbitrarily scaled to change their size in relation to the world.
 
-## I made a model, it's approved by Core-Devs, what now?!
+## I made a model, it's approved by Core-Devs, what now?
 
-The best way to make your creations available to us is to upload them into our [google drive model directory](https://drive.google.com/drive/folders/1jkn8v9I0fo1nJlM29YAI_wWb_V-w456q).
+The best way to make your creations available to us is to upload them into our [Google Drive model directory](https://drive.google.com/drive/folders/1jkn8v9I0fo1nJlM29YAI_wWb_V-w456q).
 
 If you can't find a folder that fits your model you can just create a new one.
 

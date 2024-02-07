@@ -52,13 +52,13 @@ Make sure to **export your model(s) as .vox** and NOT just copy a saved .vox fil
 
 The file path inside the assets folder is something like
 
-```
+```txt
 assets/voxygen/voxel/armor/<Armor Type>/<Model Name>
 ```
 
 So for a chest armour called “leather_vest-0.vox” it is:
 
-```
+```txt
 assets/voxygen/voxel/armor/chest/leather_vest-0.vox
 ```
 
@@ -76,7 +76,7 @@ Your item name should always end with a number, unless you are absolutely positi
 
 Those are the file paths you will need after opening the root folder of Veloren in your IDE:
 
-```
+```txt
 assets/voxygen/voxel/humanoid_armor_<armour type>_manifest.ron
 ```
 
@@ -84,19 +84,19 @@ assets/voxygen/voxel/humanoid_armor_<armour type>_manifest.ron
 
 (sets the filepath and offsets of the .vox)
 
-```
+```txt
 assets/common/items/armor/<armour type>
 ```
 
-(create a new .ron in here to create an ingame item)
+(create a new .ron in here to create an in-game item)
 
-```
+```txt
 assets\voxygen\item_image_manifest.ron
 ```
 
 (create a new entry in here to add an item image to the item)
 
-```
+```txt
 common/src/comp/inventory/item/armor.rs
 ```
 
@@ -218,7 +218,7 @@ Your new item will **only be available locally**, so make sure to connect to a l
 
 To drop the item into your inventory use the chat command `/give_item:`
 
-```
+```txt
 /give_item common.items.armor.back.new_cape
 ```
 
@@ -228,7 +228,7 @@ When equipping your new item you might be presented with this sight.
 
 To set the right offset you need to revisit `ssets/voxygen/voxel/humanoid/<armour type>_manifest.ron`
 
-The values in there can be hot-reloaded. That means just saving them will immediately take effect ingame.
+The values in there can be hot-reloaded. That means just saving them will immediately take effect in-game.
 
 ```rust,ignore
 "Admin": (

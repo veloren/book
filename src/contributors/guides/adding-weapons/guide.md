@@ -4,8 +4,7 @@
 
 ![Image1](image1.png)
 
-
-### What you need:
+## What you need
 
 1. An IDE of your choice (A programme that lets you view and edit code)
 
@@ -17,16 +16,13 @@
 
 3. A [compiled](/contributors/introduction.md) version of veloren(So you can edit the game's files)
 
-
-
-#### Optional:
+### Optional
 
 1. A [character template](https://drive.google.com/file/d/1IUp35fsX1gKXEKpC2k_uDcNJ36cHChLI/view). (Can be opened with any voxel-editor that supports layers; i.e. Magicavoxel.)
 
 2. Access to the veloren [google drive model directory](https://drive.google.com/drive/folders/1jkn8v9I0fo1nJlM29YAI_wWb_V-w456q).
 
-
-### Some things you might want to know before you start creating your weapon: 
+### Some things you might want to know before you start creating your weapon
 
 **1.** Veloren has 12 types of weapons:
 
@@ -47,67 +43,48 @@ The non-bolded ones are either a work in progress or have not started their deve
 
 **4.** The handelbar for the weapon has to be at the most, three voxels long and three voxels wide
 
-# Importing the model and adding it as an weapon to the game
+## Importing the model and adding it as an weapon to the game
 
 To make the game actually load your creation there are several steps you have to follow.
 
 They can be done in any order.
 
-
-
-## Step 1: Export and copy the .vox file into the asset folder:
+### Step 1: Export and copy the .vox file into the asset folder
 
 Before you export you models please double check that you have...<br>
 
+1. Exported your model(s) as **.vox** and NOT just copied a saved .vox file from magicavoxel. Just copying will result in a ~10x bigger file size.
 
-1.  Exported your model(s) as **.vox** and NOT just copied a saved .vox file from magicavoxel. Just copying will result in a ~10x bigger file size.
+2. Made sure that there is **No** extra space can be shaved of without sacrificing voxels.
 
+Go to the file path below and paste your .vox file and rename it according to the naming scheme below.
 
-
-2. Made sure that there is **No** extra space can be shaved of without sacrificing voxels. 
-
-
-
-
-Go to the filepath below and paste your .vox file and rename it according to the naming scheme below.
-
-```
+```txt
 assets/voxygen/voxel/weapons/<Weapon Type>/<Model Name>
 ```
 
-The filepath to the file should look something like this by the time you finish
-```
+The file path should look something like this by the time you finish
+
+```txt
 assets/voxygen/voxel/weapon/sword/long_2h_fine-0.vox
 ```
 
-#### Naming scheme for .vox files:
+#### Naming scheme for .vox files
 
- - Single words are parted with an underscore (“\_”)
+- Single words are parted with an underscore (“\_”)
+- Counting starts at zero.
+- Numbers are added with a single dash(“-”) in front of them.
+- Your weapon name should always end with a number, unless you are absolutely positive there isn't going to be an alternative version/design of the item
 
- - Counting starts at zero.
+## Step 2: Create a .ron file
 
- - Numbers are added with a single dash(“-”) in front of them.
+### 1. Create a New Entry in
 
- - Your weapon name should always end with a number, unless you are absolutely positive there isn't going to be an alternative version/design of the item
-
-## Step 2: Create a .ron file:
-
-
-
-
-#### 1. Create a New Entry in 
-
-```
+```txt
 assets/common/items/weapons/<weapon type>
 ```
 
-
-
-
-
-
-
-##### Copy and paste one of the existing .ron files of the same type of weapon you aim to create and edit the parts encapsoulated in [ ] to your preference
+#### Copy and paste one of the existing .ron files of the same type of weapon you aim to create and edit the parts encapsoulated in [ ] to your preference
 
 ```rust,ignore
 Item(
@@ -124,21 +101,17 @@ Item(
 
 ```
 
-
 **Note:** *From now on when I refer to the "Weapon Kind" I am talking about the case-sensitive name you put for "BasicHammer"*
 
+## Step 3: Create a new entry in the weapon manifest file
 
-## Step 3: Create a new entry in the weapon manifest file.
+### Go to this file path and open humanoid_main_weapon_manifest in a text editor
 
-#### Go to this file path and open humanoid_main_weapon_manifest in a text editor
 `assets/voxygen/voxel/humanoid_main_weapon_manifest.ron`
-
 
  Copy and Paste a module of code where the same type of weapons you are adding are grouped (make sure to include the brackets and comma!)
 
 Then adjust `WornIronAxe0` with your "Weapon Kind"
-
-
 
 ```rust,ignore
 Axe(WornIronAxe0): (
@@ -147,23 +120,15 @@ Axe(WornIronAxe0): (
     ),
 ```
 
-
 **The offset will be explained at a later point!** <br>Just keeping the numbers from the example you copied should be good for now.
 
-
-
-
-
 **Optional:** `color: None` is used for giving a weapon a specific tint. Just specify the rgb values by replacing `None` with `Some((<R>, <G>, <B>))`
-
-
 
 ## 3. Step 4: Adding the armour style to tool.rs
 
 Open `common/src/comp/inventory/item/tool.rs` in a text editor
 
 and add your "Weapon Kind" to the respective enum
-
 
 ```rust,ignore
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, Serialize, Deserialize)]
@@ -175,16 +140,11 @@ pub enum ShortbowKind {
 }
 ```
 
-
-
-
-## Step 5: Add a new item image in image manifest file:
+## Step 5: Add a new item image in image manifest file
 
 Find where the code for your weapon type is located and copypaste it in the same location
 
-
 You can either use a .png or .vox file as an item image. But it is only practical to use a vox model for weapons.
-
 
 Example for a .vox:
 
@@ -206,9 +166,7 @@ Armor(Back(NewCape)): VoxTrans(
 
 You can use the same .vox as the actual 3D asset shown equipped on the character later.
 
-
-
-## Step 6: Finding the right offset for your item:
+## Step 6: Finding the right offset for your item
 
 In order to test your weapon in-game you need to compile your game now.
 
@@ -218,7 +176,7 @@ Drop the weapon into your inventory by using the following chat command:<br>
 
 Full Command:
 
-```
+```txt
 /give_item common.items.weapons.<weapon type(ex: staff)>.<Weapon Kind>
 ```
 
@@ -236,7 +194,8 @@ Sword(LongFine4): (
     color: None
 ),
 ```
-The values in there can be hot-reloaded. That means just saving them will immediately take effect ingame.
+
+The values in there can be hot-reloaded. That means just saving them will immediately take effect in-game.
 
 They represent the coordinates:
 
@@ -250,6 +209,4 @@ Z = Up(increase the number) and Down (lower the number) <br/>
 
 Change the numbers until you get the desired offset.
 
-
-
-**Done. You added a new weapon style and item to Veloren. :)**
+**Done. You added a new weapon style and item to Veloren.**

@@ -13,37 +13,43 @@ On **Windows** you will need to install the following programs:
 * [Ninja build system](https://github.com/ninja-build/ninja/releases)
 * [Python 3](https://www.python.org/downloads/windows/)
 
-Fortunately, there's a **quick way to install** most of these
-1. Download and run Visual Studio Build Tools and install "C++ tools" and "Windows 10 SDK",
-you won't actually be needing Visual Studio itself.
-2. Open Powershell (you should have it installed by default) and run the following commands:
-    ```
-    iwr -useb get.scoop.sh | iex
+Fortunately, there is a **quick way to install** most of these
+
+1. Download and run the Visual Studio Build Tools and install:
+   * C++ tools.
+   * Windows 10 SDK.
+2. Open a PowerShell terminal and run the following commands:
+
+    ```powershell
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+    Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
     scoop install cmake ninja python
     ```
-    The first line installs the Scoop package manager and
-    the second line installs CMake, Ninja and Python through Scoop in one go.
+
+The first two lines install the Scoop package manager and
+the third line installs CMake, Ninja and Python through Scoop in one go.
 
 On **Linux** you will need to have installed GTK3, Python and CMake.
 
 On **Gentoo** you may require having to enable certain use flags for specific packages.
-- sys-devel/binutils (with the `gold` use flag to enable the ld.gold linker)
-- media-libs/mesa (with the `vulkan`use flag)
+
+* sys-devel/binutils (with the `gold` use flag to enable the ld.gold linker)
+* media-libs/mesa (with the `vulkan`use flag)
 
 On **Debian** systems additional libraries may need to be downloaded, below is a non-exhaustive list:
 
-- libglib2.0-dev
-- libcairo2-dev
-- libasound2-dev
-- libpango1.0-dev
-- libatk1.0-dev
-- libgdk-pixbuf2.0-dev
-- libgtk-3-dev
-- libxcb-shape0-dev
-- libxcb-xfixes0-dev
-- libudev-dev
-- libxkbcommon-x11-dev
-- libxcb-xkb-dev
+* libglib2.0-dev
+* libcairo2-dev
+* libasound2-dev
+* libpango1.0-dev
+* libatk1.0-dev
+* libgdk-pixbuf2.0-dev
+* libgtk-3-dev
+* libxcb-shape0-dev
+* libxcb-xfixes0-dev
+* libudev-dev
+* libxkbcommon-x11-dev
+* libxcb-xkb-dev
 
 And a one liner to download and install them all:<br/>
 `sudo apt install libglib2.0-dev libasound2-dev libcairo2-dev libpango1.0-dev libatk1.0-dev libgtk-3-dev libxcb-shape0-dev libxcb-xfixes0-dev libudev-dev libxkbcommon-x11-dev libxcb-xkb-dev`
@@ -51,7 +57,7 @@ And a one liner to download and install them all:<br/>
 On **Fedora** systems additional libraries may need to be downloaded, below is a command to install them:<br/>
 `sudo dnf install alsa-lib-devel libxkbcommon-x11-devel libudev-devel`
 
-On **macOS** you only need to install cmake. 
+On **macOS** you only need to install cmake.
 This can be done using either **homebrew** or **macports**. Using homebrew, enter `brew install cmake` or similarly, using macports enter `sudo port install cmake`. **Note**: Do not use sudo with homebrew.
 
 **Note:** _Feel free to open an issue incase these dependencies are incorrect._

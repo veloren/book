@@ -2,7 +2,7 @@
 
 You can find the source for this book at our [GitLab](https://gitlab.com/veloren/book), feel free to make changes, correct errors and add more content.
 
-### Common elements
+## Common elements
 
 Consistency is key. Therefore here are common elements used in the book and how they should be styled:
 

@@ -2,14 +2,14 @@
 
 \\\_ made by @Pfau
 
-### What you can do with it
+## What you can do with it
 
 The [const_tweaker](https://crates.io/crates/const-tweaker) crate allows you to modify constants at runtime.
 This can be used to tweak animations, UI widget positions and much more!
 
-### Short guide by example
+## Short guide by example
 
-#### Add a new const to your file:
+### Add a new const to your file
 
 ```rust,ignore
 #[const_tweaker::tweak(min = -100.0, max = 20.0, step = 1.0)]

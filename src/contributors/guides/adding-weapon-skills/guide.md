@@ -2,12 +2,12 @@
 
 \\\_ written by @Sam with additions from @James
 
-### Define your skill
+## Define your skill
 
 The first thing you need to do is define your skill and figure out what parameters it will need.
 It is important to do this as sometimes the new skill can be handled by one of the current character states, and if it’s close, then only 1 or 2 additional could be added to a pre-existing character state.
 
-### Adding your skill
+## Adding your skill
 
 Weapon attack skills are handled by character states. As of this edit, these are the following character states (though ComboMelee is in the works and TripleStrike is on the way out).
 
@@ -28,13 +28,13 @@ pub enum CharacterAbilityType {
 
 These character states can be (and are) reused for multiple skills. Your new skill may fit easily into one of these states. The state may need to be adjusted slightly to accommodate your skill. The third alternative is the addition of a new character state. All three of these possibilities are covered in the following sections.
 
-#### If your skill can be handled by an existing character state
+### If your skill can be handled by an existing character state
 
 Go to `common/src/somp/inventory/item/tool.rs`
 
-Once there, add an additional attack to the weapon which you are adding an attack to. Note that a weapon’s abilities are handled by a vector, with the first ability tied to M1, the second to M2, the third to skillbar slot 1, and additional ones to more skillbar slots (only skillbar slot 1 might be implemented right now).
+Once there, add an additional attack to the weapon which you are adding an attack to. Note that a weapon’s abilities are handled by a vector, with the first ability tied to M1, the second to M2, the third to skill bar slot 1, and additional ones to more skill bar slots (only skill bar slot 1 might be implemented right now).
 
-#### If your skill requires modifying an existing character state
+### If your skill requires modifying an existing character state
 
 Go to `common/src/states/`.
 
@@ -48,7 +48,7 @@ Go to `common/src/comp/inventory/item/tool.rs`.
 
 Once there add your new attack to the weapon you want. Also, if any weapon already had the attack, update the fields to include the new variable you added.
 
-#### If your skill requires creating a new character state
+### If your skill requires creating a new character state
 
 Go to `common/src/states/`.
 
@@ -80,13 +80,13 @@ Go to `common/src/sys/stats.rs`.
 
 Add logic for how your character state affects natural energy regen here. (If it’s an attack or consumes energy it should disable natural energy regen).
 
-### Adding an Ability to the Skillbar
+## Adding an Ability to the skill bar
 
 (When skill trees are implemented this section will be updated)
 
-As every weapon currently implemented already has at least 2 abilities, the chances are high you will need to either add your ability to the skillbar or move a currently existing ability to the skillbar. 
+As every weapon currently implemented already has at least 2 abilities, the chances are high you will need to either add your ability to the skill bar or move a currently existing ability to the skill bar.
 
-In the tool.rs file, the ordering of abilities in the vector determines what slot they’ll be assigned to. The first slot is M1, the second M2, the third skillbar 1, the fourth skillbar 2, etc. So when adding your ability, ensure that it is in the correct location in the abilities vector.
+In the tool.rs file, the ordering of abilities in the vector determines what slot they’ll be assigned to. The first slot is M1, the second M2, the third skill bar 1, the fourth skill bar 2, etc. So when adding your ability, ensure that it is in the correct location in the abilities vector.
 
 Go to `voxygen/src/hud/hotbar.rs`
 
@@ -102,7 +102,7 @@ Add an icon in `assets/voxygen/element/icons`. Skill icons should be 20 x 20 pix
 
 Go to `voxygen/src/hud/img_ids.rs`.
 
-There is a section around line 140 listing all M1 and M2 icon locations. Add your skill here with the path to its icon. If your skill is going on the skillbar, add your skill/icon pair to the "Icons" section around line 270 instead.
+There is a section around line 140 listing all M1 and M2 icon locations. Add your skill here with the path to its icon. If your skill is going on the skill bar, add your skill/icon pair to the "Icons" section around line 270 instead.
 
 Go to `voxygen/src/hud/skillbar.rs`.
 
@@ -124,13 +124,12 @@ Around line 130 add your skill to the match. Copy the logic of one of the other 
 
 In the `image_id` function around line 165, add the path identifier for your skill (copy the logic of the other skills).
 
-### Animations
+## Animations
 
 Ping @Slipped on Discord.
 You can also dig through previous MRs (like this one: `https://gitlab.com/veloren/veloren/-/merge_requests/1171/diffs`) if you want to see how to do it yourself (this’ll show where to add stuff, and show you what code for other animations looks like).
 
-### Changelog
+## Changelog
 
 Go to `CHANGELOG.md`
 Add a line saying you added an attack
-

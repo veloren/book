@@ -1,6 +1,6 @@
 # Developers bug-free sky
 
-_Introducing the power of Rust development_
+_Introducing the power of Rust development._
 
 - [Installing an IDE](install-ide.md)
 - [Learning Rust](learn-rust.md)

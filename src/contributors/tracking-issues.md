@@ -11,7 +11,7 @@ community!*
 Here follows a list of currently existing tracking issues. Feel free to
 [contribute to this section](../contributors/writers/extend-this-book.md) if you think something is missing!
 
-# Features
+## Features
 
 - [🌦 Weather](https://gitlab.com/veloren/veloren/-/issues/1593)
 - [🛠 Player-driven building](https://gitlab.com/veloren/veloren/-/issues/1721)
@@ -39,12 +39,12 @@ Here follows a list of currently existing tracking issues. Feel free to
 - [✋ Server-side anti-cheat](https://gitlab.com/veloren/veloren/-/issues/431)
 - [📑 GDPR and Privacy](https://gitlab.com/veloren/veloren/-/issues/1771)
 
-# Platform Support
+## Platform Support
 
 - [🎮 Steam Deck](https://gitlab.com/veloren/veloren/-/issues/1486)
 - [🖌 Graphics bugs](https://gitlab.com/veloren/veloren/-/issues/1177)
 
-# Internals
+## Internals
 
 - [📋 Entity performance improvements](https://gitlab.com/veloren/veloren/-/issues/1656)
 - [📋 Networking and sync](https://gitlab.com/veloren/veloren/-/issues/991)

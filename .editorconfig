@@ -1,0 +1,11 @@
+# SPDX-FileCopyrightText: 2023 Javier Pérez
+#
+# SPDX-License-Identifier: CC0-1.0
+
+# Reference: https://editorconfig.org/
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+charset = utf-8

@@ -1,5 +1,6 @@
 # Summary
 
+<!-- markdownlint-disable no-empty-links -->
 - [Introduction](introduction/README.md)
   - [What is Veloren?](introduction/what-is-veloren.md)
   - [Who develops Veloren?](introduction/who-builds-veloren.md)
