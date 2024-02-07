@@ -33,6 +33,7 @@ In this case the resulting binaries will be `target/release/veloren-voxygen` and
 
 - You need to include the assets for the game to run. The expected location for them is `/usr/share/veloren/assets`.
 - In the assets folder, we provide a `.desktop`<sup>[[spec]](https://specifications.freedesktop.org/desktop-entry-spec/latest/)</sup> file, an icon and a `.metainfo.xml`<sup>[[spec]](https://www.freedesktop.org/software/appstream/docs/sect-Metadata-Application.html)</sup> file. You should place them as follows:
-    - `assets/voxygen/net.veloren.veloren.png` -> `/usr/share/pixmaps/net.veloren.veloren.png`
-    - `assets/voxygen/net.veloren.veloren.desktop` -> `/usr/share/applications/net.veloren.veloren.desktop`
-    - `assets/voxygen/net.veloren.veloren.metainfo.xml` -> `/usr/share/metainfo/net.veloren.veloren.metainfo.xml`
+
+- `assets/voxygen/net.veloren.veloren.png` -> `/usr/share/pixmaps/net.veloren.veloren.png`
+- `assets/voxygen/net.veloren.veloren.desktop` -> `/usr/share/applications/net.veloren.veloren.desktop`
+- `assets/voxygen/net.veloren.veloren.metainfo.xml` -> `/usr/share/metainfo/net.veloren.veloren.metainfo.xml`

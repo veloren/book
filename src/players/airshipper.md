@@ -2,15 +2,14 @@
 
 <video src="https://cdn.discordapp.com/attachments/523568428905398283/1135936028562165842/airshipper.webm" type="video/webm" autoplay controls > </video>
 
-
 Airshipper is a cross-platform Veloren launcher taking care of keeping Veloren up to date.
 Due to our frequent updates it is the recommended way of installing Veloren.
 
-### Download
+## Download
 
 Visit the [download page](https://veloren.net/download/) to download Airshipper.
 
-### Files
+## Files
 
 Airshipper stores its files in the following directories depending on your operating system:
 
@@ -19,14 +18,14 @@ Airshipper stores its files in the following directories depending on your opera
 |     Windows     |               `%appdata%/airshipper`                |
 |      Linux      |            `~/.local/share/airshipper`              |
 | Linux (Flatpak) | `~/.var/app/net.veloren.airshipper/data/airshipper` |
-|      MacOS      |     `~/Library/Application Support/airshipper`      |
+|      macOS      |     `~/Library/Application Support/airshipper`      |
 
 Airshipper will support profiles in future and and already stores the game files in a profile called `default`.  
 Logs, screenshots, assets are all located in the [`userdata` directory](userdata-folder-structure.md) inside a profile.
 
-### Troubleshooting
+## Troubleshooting
 
-If airshipper does not open or display correctly, you can use the CLI by
+If Airshipper does not open or display correctly, you can use the CLI by
 
 1. Opening a terminal
 

@@ -5,7 +5,8 @@ Whichever route you chose for hosting the server, you might want to configure it
 ## The userdata folder structure
 
 After running `veloren-server-cli` for the first time, a `userdata` folder will be created, containing all of it's configuration and data. It's contents will look like this:
-```
+
+```txt
 userdata
 ├── server
 │   ├── saves
@@ -19,7 +20,9 @@ userdata
 └── server-cli
     └── settings.ron
 ```
+
 ### server/server_config
+
 This folder is the most interesting to us. It contains various important configuration files.
 
 #### admins.ron
@@ -28,6 +31,7 @@ This folder is the most interesting to us. It contains various important configu
 > You need access to server console to modify this file.
 >
 > Example:
+>
 > ```ron
 > [
 >     "f60e23c6-345c-449b-b05a-e431d53fc65c",
@@ -40,6 +44,7 @@ This folder is the most interesting to us. It contains various important configu
 > Server admins can use in-game commands to modify this file.
 >
 > Example:
+>
 > ```ron
 > {
 >     "7ea1a4cd-3002-4fe6-957e-4483f3fda3e7": (
@@ -48,6 +53,7 @@ This folder is the most interesting to us. It contains various important configu
 >     ),
 > }
 > ```
+>
 #### description.ron
 > This file contains the server description (also known as 'Message Of The Day' (MTOD)), and server rules.
 >
@@ -63,6 +69,7 @@ This folder is the most interesting to us. It contains various important configu
 > Server admins can use in-game commands to modify this file.
 >
 > Example:
+>
 > ```ron
 > V2((
 >     default_locale: "en",
@@ -83,6 +90,7 @@ This folder is the most interesting to us. It contains various important configu
 > You need direct access to the server files to modify this file.
 >
 > Example:
+>
 > ```ron
 > (
 >     gameserver_address: "0.0.0.0:14004",
@@ -111,6 +119,7 @@ This folder is the most interesting to us. It contains various important configu
 > > **Note:** While you can disable authentication completely, it would allow **anyone** to log in using **any username**, including as a **server admin**.
 >
 > Explanations of non-obvious options:
+>
 > - Some values use the `Option` type, which means they can either be set to either `Some(value)` or `None`.
 > - `max_player_for_kill_broadcast` might sound scary, but it only prevents chat spam by only sending death messages of others to their group and nearby players if the set player count is exceeded. Setting it to `None` means the server will never broadcast kill messages globally.
 
@@ -120,6 +129,7 @@ This folder is the most interesting to us. It contains various important configu
 > Server admins can use in-game commands to modify this file.
 >
 > Example:
+>
 > ```ron
 > [
 >      "f60e23c6-345c-449b-b05a-e431d53fc65c",
@@ -127,14 +137,18 @@ This folder is the most interesting to us. It contains various important configu
 > ```
 
 ### server/saves
+
 This folder contains the server database.
 
 ### server-cli
+
 This folder only contains the `settings.ron` file with the following contents:
+
 ```ron
 (
     update_shutdown_grace_period_secs: 120,
     update_shutdown_message: "The server is restarting for an update",
 )
 ```
+
 It allows you to customize the waiting time before restarting to update the server, and the message it uses when warning players about that. This is only used by the Docker hosting method.

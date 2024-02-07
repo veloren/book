@@ -16,7 +16,7 @@ You can find the code for this example plugin [here](https://gitlab.com/veloren/
 
 - Knowledge of basic Rust
 
-- Ability to use simple unix-like terminals and commands
+- Ability to use simple Unix-like terminals and commands
 
 - An *up-to-date* instance of Veloren (a local repository is preferred for compatibility purposes)
 
@@ -46,7 +46,7 @@ We assume that you're using either a Unix-like system, or some environment with 
 
 First, create a new cargo project.
 
-```
+```bash
 cargo new --lib my_plugin
 ```
 
@@ -71,14 +71,14 @@ pieces together into what we colloquially call the 'plugin runtime' (rt).
 Because we need to compile our plugin to a WASM module, first ensure that the appropriate toolchain is installed (and
 works) by running the following:
 
-```
+```bash
 cargo build --target wasm32-wasi
 ```
 
 If you get a `error[E0463]: can't find crate for 'core'`, you can install the relevant version of `core` using the
 following `rustup` command:
 
-```
+```bash
 rustup target add wasm32-wasi
 ```
 
@@ -86,7 +86,7 @@ Veloren's codebase currently requires the nightly version of the Rust compiler (
 the future), and so you also need it. If you are not already using nightly, you can set a directory-specific override
 for this with the following command (ensure you are in the `my-plugin` directory before running this):
 
-```
+```bash
 rustup override set nightly
 ```
 
@@ -99,7 +99,7 @@ Plugins are packaged in uncompressed (compression may later be supported, but is
 
 - And any number of WASM modules (conventionally with the extension `.wasm`)
 
-```
+```txt
 my_plugin.plugin.tar
   |- plugin.toml
   |- foo.wasm
@@ -133,7 +133,7 @@ To package the plugin, we can copy the compiled WASM module from the previous st
 `plugin.toml`, and then use the `tar` command (or your favourite tar-capable archive manager) to package them up. The
 following command, executed from within the packaging directory, should work fine:
 
-```
+```bash
 tar -cvf ../my_plugin.plugin.tar *
 ```
 
@@ -163,7 +163,7 @@ and running the game.
 
 When a server starts (or when singleplayer is started) you should see messages similar to the following in the console:
 
-```
+```txt
 INFO veloren_common_state::plugin: Searching "/home/zesterer/projects/veloren/assets/plugins" for plugins...
 INFO veloren_common_state::plugin: Loading plugin at "/home/zesterer/projects/veloren/assets/plugins/my_plugin.plugin.tar"
 INFO veloren_common_state::plugin: Loaded plugin 'my_plugin' with 1 module(s)
@@ -219,7 +219,7 @@ Through `Action`s! An `Action` is a thing that you want the server to perform, a
 
 If you run the server with the newly compiled plugin, you should now see the following in the server console:
 
-```
+```txt
 INFO veloren_common_state::plugin::module: Hello, Veloren!
 ```
 
@@ -267,7 +267,7 @@ To define the type of your global state, you can add the `global_state` attribut
 #[global_state]
 #[derive(Default)]
 struct State {
-	ping_count: u64,
+    ping_count: u64,
 }
 ```
 
@@ -280,7 +280,7 @@ To access this global state in an event handler, simply add a second parameter t
 #[event_handler]
 pub fn on_command_ping(chat_cmd: ChatCommandEvent, state: &mut State) -> Result<Vec<String>, String> {
     state.ping_count += 1;
-	Ok(vec![format!("Pong! The total number of pings so far is {}", state.ping_count)])
+    Ok(vec![format!("Pong! The total number of pings so far is {}", state.ping_count)])
 }
 ```
 

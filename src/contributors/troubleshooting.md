@@ -16,6 +16,8 @@ git lfs status
 
 ### When LFS was not setup before cloning the repo
 
+#### Windows and Linux
+
 To setup LFS and download the asset files on **Linux** or **Windows**
 
 ```bash
@@ -24,7 +26,7 @@ git lfs fetch
 git lfs checkout
 ```
 
-**MacOs**
+#### macOS
 
 ```bash
 git-lfs install
@@ -56,8 +58,9 @@ git submodule deinit --force --all
 
 ## Autoformat with git commit hook
 
-You can setup a git commit hook to automatically format your code before commiting if your IDE doesn't support it by default.
+You can setup a git commit hook to automatically format your code before committing if your IDE doesn't support it by default.
 Just create a file `.git/hooks/pre-commit` with the following content.
+
 ```bash
 #!/bin/sh
 #

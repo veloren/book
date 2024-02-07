@@ -6,11 +6,11 @@ It also aims to discuss future plans the development team has for Veloren.
 
 ## Building and Viewing
 
-This manual uses the [`mdbook`](https://github.com/rust-lang-nursery/mdBook) crate.
+This manual uses the [`mdbook`](https://github.com/rust-lang/mdBook) crate.
 
 To view this manual, please ensure that you have a working copy of Rust installed.
 
-First, install `mdbook` ([`detailed install steps`](https://rust-lang-nursery.github.io/mdBook/cli/index.html)) with:
+First, install `mdbook` ([`detailed install steps`](https://rust-lang.github.io/mdBook/cli/index.html)) with:
 
 `cargo install mdbook`
 
@@ -23,8 +23,9 @@ You can then read the book in a web-browser using: <http://localhost:3000>
 ## Live version
 
 You can find the deployed version of this book under:
-https://book.veloren.net
+
+<https://book.veloren.net>
 
 ## Editing the manual
 
-This manual is a collaborative project. You can contribute to it by opening a merge request with the [`book` Gitlab repository](https://gitlab.com/veloren/book).
+This manual is a collaborative project. You can contribute to it by opening a merge request with the [`book` GitLab repository](https://gitlab.com/veloren/book).

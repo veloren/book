@@ -1,9 +1,9 @@
 [book]
-authors = ["Joshua Barretto", "Marcel Märtens"]
-multilingual = false
-src = "src"
 title = "Veloren: An Owner's Manual"
+authors = ["Joshua Barretto", "Marcel Märtens"]
 
 [output.html]
+default-theme = "dark"
 additional-css = ["custom.css"]
 git-repository-url = "https://gitlab.com/veloren/book"
+git-repository-icon = "fa-gitlab"

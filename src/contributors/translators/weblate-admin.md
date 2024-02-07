@@ -124,7 +124,7 @@ The `_manifest.ron` file has a metadata section.
 This section has the display name and the language identifier for your translation.
 Change `language_name` to a human readable name in your language with this format:
 
-```text
+```txt
 <name_in_original_language> (<name_in_english>)
 ```
 
@@ -139,7 +139,7 @@ metadata: (
 
 If the language is a variant spoken in a certain region or country, follow this format:
 
-```text
+```txt
 <name_in_original_language> (<name_in_english> - <region>)
 ```
 

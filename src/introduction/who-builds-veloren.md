@@ -13,10 +13,10 @@ You can find it at [www.veloren.net](https://www.veloren.net)
 The Veloren community (both developers and players) are most active on the Veloren Discord server.
 You can join the server using the link below:
 
-<https://discord.gg/BvQuGze>
+<https://discord.gg/veloren-community-449602562165833758>
 
 ## Social Media
 
-We're on [Youtube](https://www.youtube.com/channel/UCmRjlnKnSRRihWPPNasl_Qw)
+We're on [YouTube](https://youtube.com/@Veloren)
 and [Reddit](https://www.reddit.com/r/veloren) and don't forget to follow us
 on [Mastodon](https://floss.social/@veloren).

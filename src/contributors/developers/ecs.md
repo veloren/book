@@ -26,7 +26,7 @@ However, this comes with problems. Modern CPUs have deep caches, meaning that th
 memory that is closer in the address space to memory they have already accessed. The most efficient storage formats pack
 data to be processed very close together in memory. Our current representation looks like the following:
 
-```
+```txt
 | Entity 0            | Entity 1            | Entity 2            |
 |---------------------|---------------------|---------------------|
 | position | velocity | position | velocity | position | velocity |
@@ -52,7 +52,7 @@ struct World {
 Now our representation is much more densely packed and our application of gravity to entities is more efficient because
 we no longer need to skip over the position data while iterating through entity velocities.
 
-```
+```txt
 | Entity 0 | Entity 1 | Entity 2 |     | Entity 0 | Entity 1 | Entity 2 |
 |----------|----------|----------| ... |----------|----------|----------|
 | position | position | position |     | velocity | velocity | velocity |

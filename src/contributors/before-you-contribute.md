@@ -19,6 +19,7 @@ Having a branch without forking can be more convenient for contributors
 as you can avoid all the shortcomings of having a fork.
 
 To make your **first contribution**, follow these steps to gain access to our development repository:
+
 1. Join our collaboration group: [https://gitlab.com/veloren/dev](https://gitlab.com/veloren/dev).
 2. Ping either Core Developers or Admins on [our Discord](https://veloren.net/joinus/) in the #new-contributors channel (or whichever channel seems suitable).
    Let us know of your GitLab username and we'll be able to give you developer permissions.
@@ -43,6 +44,7 @@ Example: `zesterer/fix_scrolling_in_chat`
 ### Option #2: fork the repository
 
 The downsides of using a fork:
+
 * You need to configure CI to run on your fork.
 * Maintainers can't easily make changes to your merge requests.
 
@@ -55,6 +57,7 @@ Apply the troubleshooting steps in the next section to get LFS to work.
 When working on a fork instead of on a branch in the main repo, you'll need to do the following for the time being due to a bug in git-lfs:
 
 1. Configure git-lfs to ignore smudging:
+
     ```bash
     git config filter.lfs.smudge "git-lfs smudge --skip -- %f"
     git config filter.lfs.process "git-lfs filter-process --skip"
@@ -120,7 +123,7 @@ Fortunately, you can catch up on any changes your branch has missed by [rebasing
     If you do, you will have to resolve the conflicts. These usually arise from recent changes on
     master conflicting with changes of your own and git needs to be told which to prefer. Feel free to
     ask for help on our Discord with that.
-3. Run `git push -f` to push your rebased feature branch. It must be a force push as you've changed the existing commit history.
+4. Run `git push -f` to push your rebased feature branch. It must be a force push as you've changed the existing commit history.
 
 **Tip:** Run `git status` to see the current state of your branch.
 

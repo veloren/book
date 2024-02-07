@@ -1,4 +1,21 @@
-book
-index.html
-# IDEs
-.idea
+# SPDX-FileCopyrightText: 2023 Javier Pérez
+#
+# SPDX-License-Identifier: CC0-1.0
+
+# Project-specific
+## Output of the mdbook build command
+book/**
+public/**
+
+
+# Integrated development environments (IDEs) and text editors
+## Visual Studio Code
+.vscode/**
+
+## JetBrains
+.idea/**
+
+
+# Operating systems
+## macOS
+.DS_Store

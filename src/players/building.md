@@ -11,7 +11,7 @@ part of the Veloren experience. It is a fun feature to use if you wish to experi
 
 ### Regions
 
-*TODO: Add documentation for region manipulation commands*
+<!-- TODO: Add documentation for region manipulation commands. -->
 
 By default, there is a region that covers the entire world named `world`. You can enable permissions for it with
 `/permit_build world` (this requires admin permissions).
@@ -102,24 +102,3 @@ pre-built structures that may be interacted with. Below are a few ideas to get y
 - PvP or PvE arenas for players to battle monsters and each other in an environment where others can watch
 
 If you do something neat with this feature, feel free to tell us! It might even get featured in the weekly blog!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

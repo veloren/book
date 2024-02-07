@@ -23,7 +23,7 @@
 
 The options above can be filled out to change the size of generated maps, and to change the scale of mountains within them. Options you do not wish to change can be left blank, and will be replaced by defaults, however you must keep the spare braces. Manually writing out the default set of options would give `Some(Save((x_lg: 10, y_lg: 10, scale: 2.0)))`.
 
-#### World size
+### World size
 
 `x_lg` and `y_lg` give the binary logarithm of the number of chunks along each axis of the world, that is, `x_lg: 10` results in a world 2^10=1024 chunks wide.
 
@@ -31,7 +31,7 @@ Each increment doubles length, and each decrement halves it. Rectangular worlds 
 
 A maximum of 14 is supposed to be supported in each dimension, giving a square world 524 km across, roughly equivalent to the United Kingdom in area, but it would look pretty bad due to the current lack of tectonics simulation, which becomes more important at larger scales. 13x13 is the largest so far attempted.
 
-#### World scale
+### World scale
 
 `scale` simply changes the scale of mountains, landmasses, etc. A value of `4.0` grants a roughly Earthlike scale, although a larger-than-default world is recommended for this. Going beyond `4.0` is not considered supported, but generally works. As a guide, the tallest mountains will be a little taller than this value, in kilometres.
 
@@ -39,18 +39,17 @@ A maximum of 14 is supposed to be supported in each dimension, giving a square w
 
 Navigate to your server's or singleplayer settings file like shown [here](userdata-folder-structure.md).
 
-In there 
-1. Change the world seed, e.g. `world_seed: 40382,`\
+In there
 
+1. Change the world seed, e.g. `world_seed: 40382,`\
 2. Change `map_file` to something like\
 `map_file: Some(Load("userdata/server/maps/map_1624935538562.bin")),`\
-
 3. Optionally you can also set a spawn town: `spawn_town: Some("Elden"),`
 
-Make sure to use the correct filepath (from the root of your veloren folder) and filenames!\
+Make sure to use the correct file path (from the root of your veloren folder) and filenames!\
 There needs to be a `,` behind all of these inputs or the server will use the fallback settings template file.\
 
-Note: The filepath used in this example requires the creation of an additional folder called "maps" inside the userdata/server folder.
+Note: The file path used in this example requires the creation of an additional folder called "maps" inside the `userdata/server` folder.
 
 ## Map Viewer
 
