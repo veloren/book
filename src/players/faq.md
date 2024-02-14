@@ -38,14 +38,13 @@
 ## Answers
 
 ### Is there a death punishment?
-
-> No, not right now. But there will be in the future, presumably losing durability.
+> Yes, players lose durability on their gear when dying.
 
 ### Is there voxel building?
 
 > There is some destruction - you can mine ore chunks and certain kinds of rock with a pickaxe.\
 > \
-> Building isn't intended to be a major part of the game though and is currently only available for server admins and in singleplayer mode through commands. [You can read more about it here](building.md)
+> Building isn't intended to be a major part of the game though and is currently only available for server admins and in singleplayer mode through commands. [You can read more about it here](building.md).
 
 ### Is the map infinite?
 
@@ -66,7 +65,8 @@
 
 > The contributors are divided on this matter but the common agreement is that flying mounts could make certain parts of the game skippeable (air travel with airships notably), but we do think that with the right approach and balance flying mounts could be a thing in the long term.
 
-### Is there a roadmap?
+### Is there a roadmap? 
+> Yes! You can find it on this [page](roadmap.md).
 
 > Not really no. The reason for that is that this is a hobby project worked on by many contributors and there is no way to know what feature will come out first or what feature will be worked on next.
 > The closest thing we can offer is looking at our #working groups channels on Discord where you can see what’s being worked on.
