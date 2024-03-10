@@ -4,6 +4,23 @@
 
 ![Veloren translation workflow on Weblate](./weblate-veloren-workflow.jpg)
 
+Sometimes, it's needed to make changes to translation files outside of Weblate,
+in this case, it's important to comply with the following requirements:
+
+- Changes that **only affect the English source** files can be merged at any
+time.
+- Changes that modify translated language files can only be merged in
+coordination with Weblate:
+  - Translations from Weblate are all committed ("Commit pending changes").
+  - The translations are pushed and a merge request is opened.
+  - The translations are locked in Weblate for modifications.
+  - The Weblate MR is merged, Weblate remains locked.
+  - After resolving potential merge conflicts itself, the external changes
+  are merged.
+  - After all changes are in the master branch, Weblate is updated and unlocked.
+- Updating translated language files must only happen when they are in sync with
+Weblate, and Weblate is locked to prevent conflicting modifications.
+
 ## Language types
 
 Languages are classified into two types:
