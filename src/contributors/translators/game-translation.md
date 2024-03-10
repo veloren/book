@@ -22,19 +22,42 @@ common-abilities-hammer-leap = Smash of Doom
     .desc = An AOE attack with knockback. Leaps to position of cursor.
 ```
 
-Fluent also supports plural selectors via
-[Unicode rules](https://www.unicode.org/cldr/cldr-aux/charts/30/supplemental/language_plural_rules.html).
+Fluent also supports plural selectors via Unicode rules:
+
+<https://www.unicode.org/cldr/cldr-aux/charts/30/supplemental/language_plural_rules.html>
+
+> NOTE: each language has its own plural-set. Don't copy-paste what English
+> does.
 
 ```fluent
-hud-trade-buy_price = Buy Price: {$coins ->
-  [1] 1 coin
-  *[other] { $coins } coins
+hud-trade-buy_price = { $coin_num ->
+  [1] Buy Price: one coin
+  *[other] Buy Price: { $coin_formatted } coins
 }
 ```
+Branch marked with `*` will be used as default.
 
-Fluent handles language genders as well. You can translate sentences using
-the provided gender of actors. Remember to set a default option with the `*`
-character for those cases where messages fail to provide the gender.
+The plural selectors allow Fluent to select by "group" (distinct for each language). Fluent can also use literals in the selectors for direct
+comparison. The same example, in Ukrainian may look like this:
+```fluent
+hud-trade-buy_price = { $coin_num ->
+  [1] Ціна покупки: одна монета
+  [one] Ціна покупки: { $coin_formatted } монета
+  [few] Ціна покупки: { $coin_formatted } монети
+  *[other] Ціна покупки: { $coin_formatted } монет
+}
+```
+> NOTE: [1] and [one] are different in most languages, despite being the same
+> in English. In Ukrainian, both 1 and 21 would go to [one], but because here
+> we explicitly put [1] at the beginning, it will match sooner, allowing us to
+> special-case single coin.
+>
+> Don't overdo it, if something is possible, doesn't mean it's required.
+
+Fluent allows us to handle grammatic genders as well. You can translate
+sentences using the provided gender of actors. Remember to set a default
+option with the `*` character for those cases where messages fail to
+provide the gender.
 
 ```fluent
 hud-chat-offline_msg = { $user_gender ->
@@ -43,6 +66,10 @@ hud-chat-offline_msg = { $user_gender ->
     *[any] [{ $name }] оффлайн
 }
 ```
+
+> NOTE: not all messages provide genders. If in doubt, check comments in the English translation or
+> ask the translation team. If gender information is not available, try to remake the sentence into
+> one where grammar doesn't require you to specify the gender.
 
 You can learn more about Fluent and its syntax here:
 
@@ -84,10 +111,8 @@ harder because translators needed to make use of the Git version control
 system to submit their translations.
 
 Some translation tools complemented those older workflows.
-They are still available.
-
-We recommend using Weblate unless you have strong programming skills and
-developer experience.
+They are still available, but the only supported way to contribute translations
+to the game is using Weblate.
 
 ### Previewing your translation
 
