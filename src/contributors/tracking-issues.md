@@ -22,6 +22,7 @@ Here follows a list of currently existing tracking issues. Feel free to
 - [🗣 Chat](https://gitlab.com/veloren/veloren/-/issues/1518)
 - [🏗 Build mode](https://gitlab.com/veloren/veloren/-/issues/1473)
 - [⛰ Worldgen](https://gitlab.com/veloren/veloren/-/issues/1444)
+- [🐉 Quests](https://gitlab.com/veloren/veloren/-/issues/1970)
 - [💥 Hitboxes](https://gitlab.com/veloren/veloren/-/issues/1343)
 - [🏹 Aiming (ranged weapons)](https://gitlab.com/veloren/veloren/-/issues/1304)
 - [🗡 Scrolling combat text (SCT)](https://gitlab.com/veloren/veloren/-/issues/1104)
