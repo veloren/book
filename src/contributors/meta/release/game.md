@@ -207,10 +207,11 @@ This is required to align our testing and review strategies to ensure a smooth r
 1. Copy over CHANGELOG, update only `server`, `client`, `server-cli`, `voxygen` crates - the others are on a independent [semver](https://semver.org/).
 [example MR](https://gitlab.com/veloren/veloren/-/merge_requests/3219)
 2. Create release branch from master `git checkout -b "r0.12"`
-3. Create release tag `git tag -a "v0.12.0" -m "release 0.12.0"`
+3. Create release tag `git tag -a "v0.12.0" -m "Version 0.12.0"`
 4. Push release tag `git push --tag "v0.12.0"`
 5. Verify a release tag pipeline runs: <https://gitlab.com/veloren/veloren/-/pipelines>
-6. Verify release container is build: <https://gitlab.com/veloren/veloren/container_registry>
-7. Add link to <https://veloren.net/download-other/>
-8. Create a release on GitLab
-9. Verify a release binary is copied to wasabi
+6. Trigger a scheduled pipeline runs afterward: <https://gitlab.com/veloren/veloren/-/pipelines>
+7. verify release container is build: <https://gitlab.com/veloren/veloren/container_registry>
+8. Add link to <https://veloren.net/download-other/>
+9. Create a release on GitLab
+10. Verify a release binary is copied to wasabi
