@@ -1,179 +1,194 @@
-# Release Cycle
+# Release cycle
 
-This page aims to document the release process of veloren. It first describes an overview and has more detailed chapters for single steps
+This page aims to document the release process of Veloren.
+It first describes an overview and has more detailed chapters for single steps.
 
 ## Tasks
 
-### When: 2 month before release
+### 2 months before release
 
-#### Where: Sunday Meeting
+On the Sunday meeting:
 
-- Roughly select a release-date and communicate that to internal parties (Note: it might be changed is not official yet!)
-- The following questions are answered:
-  - What is the theme of this party
-  - what features should be definitely in it, what features might get in
-  - A map responsible is chosen, we plan how it will look like
-  - A trailer responsible is chosen, we plan what it should contain
-  - A release blog writer is chosen
-  - A responsible for the feature freeze is chosen
-  - A responsible for the release-binary is chosen
-  - A responsible for social-media posts is chosen
-  - A schedule for the party is created, we plan activities, how long they will take and responsible for those activities
-- A GitLab Milestone is created to track progress of this release.
+1. Estimate a release date and communicate it to internal parties.
+The date is subject to change until it becomes official later on.
+2. Settle the following points:
+   1. The theme of the release party.
+   2. The features to implement with the release and those which would be nice-to-have.
+   3. The people assigned to the party map.
+      - The design of the party map.
+   4. The people assigned to the release trailer.
+      - The contents of the trailer.
+   5. The people assigned to writing a blog post about the release.
+   6. The people assigned to managing the feature freeze period.
+   7. The people assigned to creating and publishing the release binaries.
+   8. The people assigned to announcing the release on our social media accounts.
+   9. The schedule for the release party:
+      - The activities for the party.
+      - The duration of each activity.
+      - The people responsible for (each of) the activities.
+3. Create a milestone on GitLab to track progress of the release.
 
-### When: 1 month before release
+### 1 month before release
 
-#### Where: Sunday Meeting
+On the Sunday meeting:
 
-- Pick a final release date when core devs (e.g. Angle, xMac) are available and responsibles can make it.
-- Feedback from the activities, trailer and map responsibles is discussed, what is their state, what do they plan. Do they need to adjust? Can they make the schedule?
+1. Choose an official release date when the core developers and the corresponding assignees are available.
+2. Gather feedback about the activities and the trailer.
+3. Discuss with the people responsible for the map:
+    - What is the current state of the map?
+    - What are their plans for the map?
+    - Can they make the schedule?
 
-#### Who: feature freeze-responsible
+| People in charge | Task |
+|------------------|------|
+| Feature freeze assignee(s) | Post the feature freeze schedule |
+| Blog post assignee(s) | Write the blog post |
+| Social media assignee(s) | Write the social media posts |
+| Social media assignee(s) | Create an event on our Open Collective profile for the release party |
 
-- feature freeze schedule is posted
+### 3 weeks before release
 
-#### Who: Blog post responsible
+| People in charge | Task |
+|------------------|------|
+| Map assignee(s) | Prepare the map for the trailer |
+| Activities assignee(s). | Prepare the activities for the trailer |
+| Core developers | Review the map and the activities |
+| Feature freeze assignee(s) | Gather feedback on what features are necessary, who will review them and when merge will be done |
 
-- Blog is prepared and written
+### 2 weeks before release
 
-#### Who: Social Media responsible
+| People in charge | Task |
+|------------------|------|
+| Trailer assignee(s) | Prepare the trailer for review |
+| Core developers | Review the trailer |
 
-- Posts are prepared and written
+### 1 week before release
 
-### When: 3 weeks before release
+| People in charge | Task |
+|------------------|------|
+| Feature freeze assignee(s) | Apply and watch the schedule over the next week |
+| Map and activities assignee(s) | Wait until all tasks are completed |
+| Trailer assignee(s) | Publish the trailer |
+| Blog post assignee(s) | Publish the blog post |
 
-#### Who: Map responsible
+### 8 hours before release
 
-- Map is ready enough for the trailer
+| People in charge | Task |
+|------------------|------|
+| Social media assignee(s) | Post the release announcement |
+| Map and activities assignee(s) | Upload map and activities to the server |
+| Release binaries assignee(s) | Merge the release commit and publish the release binaries |
 
-#### Who: Activities responsible
+### Sunday after release
 
-- Activities are ready enough for the trailer
+On Sunday meeting:
 
-#### Who: Core Devs
+- Discuss how the release party went.
+  - What was done well?
+  - What could have been done better?
 
-- Map and Activities are reviewed by Core Devs
+## Plan for releasing the binaries
 
-#### Who: Feature Freeze responsible
+The sample commands in this section would be run for version 0.12.0 of the game.
+Remember to adjust these commands to your applicable version.
 
-- Features that are necessary are collected and are planned who reviews and merging is done.
+1. Copy over `CHANGELOG.md`.
+   - Update only the `server`, `client`, `server-cli` and `voxygen` crates.
+   Other crates have an independent [semantic versioning](https://semver.org/).
+   [Example MR](https://gitlab.com/veloren/veloren/-/merge_requests/3219)
+2. Create a release branch from `master`:
+    ```bash
+    git checkout -b "r0.12"
+    ```
+3. Create a release tag:
+    ```bash
+    git tag -a "v0.12.0" -m "Version 0.12.0"
+    ```
+4. Push the release tag.
+    ```bash
+    git push --tag "v0.12.0"
+    ```
+5. Verify the release tag pipeline executed successfully.
+    - <https://gitlab.com/veloren/veloren/-/pipelines>
+6. Trigger a scheduled pipeline.
+    - <https://gitlab.com/veloren/veloren/-/pipelines>
+7. Verify the release container is built.
+    - <https://gitlab.com/veloren/veloren/container_registry>
+8. Add a link on the website to the release.
+    - <https://veloren.net/download-other/>
+9. Create a release on GitLab.
+10. Verify the release binaries have been copied to Wasabi.
 
-### When: 2 weeks before release
+## Social media cheat sheet
 
-#### Who: trailer responsible
+| Timeframe | Location | Notes |
+|-----------|----------|-------|
+| T-1 week | Discord | Ping the `@NewsPingSquad` and `@MediaPingSquad` roles. |
+| T-30 mins | Discord | Ping the `@everyone` role. |
+| T-8 hours | Reddit | The subreddit is `r/veloren`. |
+| T-8 hours | Mastodon ||
 
-- Trailer is ready enough to be reviewed
+## Templates
 
-#### Who: Core Devs
-
-- Trailer is reviewed by Core Devs
-
-### When: 1 week before release
-
-#### Who: Feature Freeze responsible
-
-- Schedule is applied over the next week and watched by responsible
-
-#### Who: map/activities
-
-- all tasks are completed and are waiting to be executed
-
-#### Who: trailer responsible
-
-- the trailer is uploaded and live
-
-#### Who: Blog post responsible
-
-- the Blog post is uploaded and live
-
-### When: 8 hours before release
-
-#### Who: Social Media Responsible
-
-- Posts are done
-
-#### Who: map/activities
-
-- upload map and activities to the server
-
-#### Who: release-binary responsible
-
-- Release commit is merged and Release Binaries are distributed
-
-### When: Sunday after release
-
-#### Where: Sunday Meeting
-
-- Discuss pro and contra of the release party
-
-## Details
-
-### GitLab Milestone
+### GitLab milestone
 
 ```txt
 # v0.xx Release
 
-## Responsibles
-blog:
-trailer:
-map:
-feature-freeze:
-release-binary:
-social-media:
+## People responsible
+Blog post:
+Trailer:
+Map:
+Feature freeze:
+Release binaries:
+Social media:
 
 ## Overview
 Theme is: ``
-Rough Release day is: ``
+Rough release day is: ``
 Included features are:
 -
 Excluded features are:
 -
-Party Schedule is:
-- 18:00 GMT+0 start of party
+Party schedule is:
+- 18:00 UTC+00 start of party
 
 ## Checklist
 
-Sunday Meeting:
-- [ ] Fixed Release day is: `` *(T-1 month)*
-- [ } Map is approved by CoreDevs
-- [ } Activities are approved by CoreDevs
-- [ } Trailer is approved by CoreDevs
+Sunday meeting:
+- [ ] Fixed release day is: `` *(T-1 month)*
+- [ ] Map is approved by the core developers
+- [ ] Activities are approved by core developers
+- [ ] Trailer is approved by core developers
 
 Blog:
-- [ ] release blog is prepared *(T-1 month)*
-- [ ] release blog is uploaded *(T-1 week)*
+- [ ] Release blog is prepared *(T-1 month)*
+- [ ] Release blog is uploaded *(T-1 week)*
 
 Trailer:
-- [ ] trailer is ready for review *(T-2 weeks)*
-- [ ] trailer is uploaded *(T-1 week)*
+- [ ] Trailer is ready for review *(T-2 weeks)*
+- [ ] Trailer is uploaded *(T-1 week)*
 
 Map:
-- [ ] map is ready for review *(T-3 weeks)*
-- [ ] map is uploaded *(T-8 hours)*
+- [ ] Map is ready for review *(T-3 weeks)*
+- [ ] Map is uploaded *(T-8 hours)*
 
-Feature-freeze:
-- [ ] freeze-period is announced to public in #town-hall *(T-1 month)*
-- [ ] Feature Freeze is enforced *(T-1 week)*
+Feature freeze:
+- [ ] Freeze period is announced to public in #town-hall *(T-1 month)*
+- [ ] Feature freeze is enforced *(T-1 week)*
 
-Release-Binary:
-- [ ] Release Binaries are producuded uploaded and verified *(T-8 hours)*
+Release binaries:
+- [ ] Release binaries are produced, uploaded and verified *(T-8 hours)*
 
-Social-Media:
-- [ ] posts are prepared *(T-1 month)*
-- [ ] posts are uploaded uploaded *(T-8 hours)*
+Social media:
+- [ ] Posts are prepared *(T-1 month)*
+- [ ] Posts are uploaded *(T-8 hours)*
 ```
 
-### Social-Media plan
-
-- T-1 week    @NewsPingSquad @MediaPingSquad
-- T-30 mins   @everyone
-- T-8 hours   reddit/<insertsubreddithere>
-- T-8 hours   twitter
-
-### Feature Freeze Posts
+### Feature freeze announcement
 
 ```txt
-Hey @Contributor  @DevPingSquad ,
+Hey @Contributor @DevPingSquad ,
 
 **0.13 release is on Saturday, 2022-07-23 18:00 GMT**
 
@@ -182,9 +197,10 @@ As usual, there will be a **feature freeze** starting from 2022-07-16 18:00 GMT.
 This release will also have a **stress test event** between the feature freeze and the release. We will be sharing further details of this later.
 
 __Getting your large MR merged before feature freeze__
-Please mention @xMAC94x#2493  in the <#992383235332001942> thread with a short summary with the following details (the more, the better):
-* What is complete
-* What needs to be done
+Please mention @xmac94x in the <#992383235332001942> thread with a short summary with the following details:
+
+* What is complete.
+* What needs to be done.
 * Can your feature be partially introduced to master in its current state (as multiple MRs)?
 * Do you foresee any issues with your MR and if so, which ones?
 * Why should this feature be in 0.13?
@@ -201,17 +217,3 @@ This is required to align our testing and review strategies to ensure a smooth r
 2022-07-23 18:00:00 GMT Release party!
 ``
 ```
-
-### Binary Release Plan
-
-1. Copy over CHANGELOG, update only `server`, `client`, `server-cli`, `voxygen` crates - the others are on a independent [semver](https://semver.org/).
-[example MR](https://gitlab.com/veloren/veloren/-/merge_requests/3219)
-2. Create release branch from master `git checkout -b "r0.12"`
-3. Create release tag `git tag -a "v0.12.0" -m "Version 0.12.0"`
-4. Push release tag `git push --tag "v0.12.0"`
-5. Verify a release tag pipeline runs: <https://gitlab.com/veloren/veloren/-/pipelines>
-6. Trigger a scheduled pipeline runs afterward: <https://gitlab.com/veloren/veloren/-/pipelines>
-7. verify release container is build: <https://gitlab.com/veloren/veloren/container_registry>
-8. Add link to <https://veloren.net/download-other/>
-9. Create a release on GitLab
-10. Verify a release binary is copied to wasabi
