@@ -13,5 +13,5 @@ to develop the game.
 
 ## What status is the project currently in?
 
-After rewriting the engine from scratch (old game can be found [here](https://gitlab.com/veloren/game)) we're now at a stage
+After rewriting the engine from scratch (old game can be found [here](https://gitlab.com/veloren/legacygame)) we're now at a stage
 where multiple features are introduced quite rapidly.
