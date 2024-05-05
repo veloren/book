@@ -66,5 +66,5 @@ for what amount to the ability to radically alter the behaviour of the game and 
 running and without sacrificing performance.
 
 The specific ECS crate that Veloren uses is [SPECS](https://github.com/amethyst/specs/). You can read more about ECS and
-the specifics of how SPECS works [here](https://specs.amethyst.rs/docs/tutorials/). If you're looking to work on
+the specifics of how SPECS works [here](https://amethyst.github.io/specs/docs/tutorials/). If you're looking to work on
 Veloren, I strongly recommend reading this resource from cover to cover (it's quite short).

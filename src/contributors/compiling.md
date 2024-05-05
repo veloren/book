@@ -26,8 +26,8 @@ Fortunately, there is a **quick way to install** most of these
     scoop install cmake ninja python
     ```
 
-The first two lines install the Scoop package manager and
-the third line installs CMake, Ninja and Python through Scoop in one go.
+    The first two lines install the Scoop package manager and
+    the third line installs CMake, Ninja and Python through Scoop in one go.
 
 On **Linux** you will need to have installed GTK3, Python and CMake.
 
