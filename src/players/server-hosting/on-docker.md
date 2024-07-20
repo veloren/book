@@ -35,7 +35,7 @@ The steps for accessing this interface while the server is running inside Docker
 2. You can now run server CLI commands. To see the available options type `help` and press enter.
 3. Once you are done, to escape press **Ctrl+p** followed by **Ctrl+q**.
 
-> **Tip:** _To add an admin or mod, use `admin add <USER> <ROLE>`. `<ROLE>` can be either `Admin` or `Moderator`._
+> **Tip:** _To add an admin or mod, use `admin add <USER> <ROLE>`. `<ROLE>` can be either `admin` or `moderator`._
 
 > **Tip:** _To gracefully shutdown the server for maintenance with 2 minute countdown, use:_
 >
