@@ -98,5 +98,5 @@ cargo clean
 
 ### Updating the Rust toolchain
 
-We use a [`rust-toolchain`](https://github.com/rust-lang/rustup#the-toolchain-file) file in the repository which will automatically update
+We use a [`rust-toolchain`](https://rust-lang.github.io/rustup/overrides.html#the-toolchain-file) file in the repository which will automatically update
 your rust toolchain to whichever version we use. There shouldn't be any additional effort needed on your side.
