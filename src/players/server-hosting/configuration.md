@@ -25,6 +25,9 @@ userdata
 
 This folder is the most interesting to us. It contains various important configuration files.
 
+> **Tip:** _To add an admin or mod by username, type `admin add <USER> <ROLE>` into the server console._
+> _`<ROLE>` can be either `admin` or `moderator`._
+
 #### admins.ron
 > This file contains a list of UUIDs of players with administrator privileges.
 >
