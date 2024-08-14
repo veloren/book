@@ -1,6 +1,6 @@
 # Airshipper
 
-<video src="https://cdn.discordapp.com/attachments/523568428905398283/1135936028562165842/airshipper.webm" type="video/webm" autoplay controls > </video>
+<video src="https://s3.eu-central-2.wasabisys.com/veloren-blog/cdn/523568428905398283/1135936028562165842/airshipper.webm" type="video/webm" autoplay controls > </video>
 
 Airshipper is a cross-platform Veloren launcher taking care of keeping Veloren up to date.
 Due to our frequent updates it is the recommended way of installing Veloren.
