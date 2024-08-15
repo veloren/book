@@ -2,30 +2,47 @@
 
 All commands that can be executed in-game are listed below, note that many commands require Admin or Moderator permissions. Arguments surrounded by `<>` are required, `[]` indicates an optional argument.
 
->Note: The table below is auto-generated from the commands within the Veloren source code using the command `cargo cmd-doc-gen`.
+>Note: The tables below are auto-generated from the commands within the Veloren source code using the command `cargo cmd-doc-gen`.
+
+<style>
+    table {
+        width: 100%;
+    }
+</style>
+
+## Server Commands
 
 |Command|Description|Requires|Arguments|
 |-|-|-|-|
 |/adminify|Temporarily gives a player a restricted admin role or removes the current one (if not given)|Admin|`<player> [role]`|
-|/airship|Spawns an airship|Admin|`[destination_degrees_ccw_of_east]`|
+|/airship|Spawns an airship|Admin|`[kind] [destination_degrees_ccw_of_east]`|
 |/alias|Change your alias|Moderator|`<name>`|
-|/buff|Cast a buff on player|Admin|`<buff> [strength] [duration]`|
+|/area_add|Adds a new build area|Admin|`<name> <kind> <xlo> <xhi> <ylo> <yhi> <zlo> <zhi>`|
+|/area_list|List all build areas|Admin||
+|/area_remove|Removes specified build area|Admin|`<name> <kind>`|
+|/aura|Create an aura|Admin|`<aura_radius> [aura_duration] [new_entity] [aura_target] <aura_kind> [aura spec]`|
 |/ban|Ban a player with a given username, for a given duration (if provided).  Pass true for overwrite to alter an existing ban..|Moderator|`<player> [overwrite] [ban duration] [message]`|
-|/battlemode|Set your battle mode to: *pvp (player vs player)* pve (player vs environment). If called without arguments will show current battle mode.||`[battle mode]`|
+|/battlemode|Set your battle mode to: <ul><li> pvp (player vs player)</li><li>pve (player vs environment)</li></ul> If called without arguments will show current battle mode.||`[battle mode]`|
 |/battlemode_force|Change your battle mode flag without any checks|Admin|`<battle mode>`|
+|/body|Change your body to different species|Admin|`<body>`|
+|/buff|Cast a buff on player|Admin|`<buff> [strength] [duration] [buff data spec]`|
 |/build|Toggles build mode on and off|||
-|/build_area_add|Adds a new build area|Admin|`<name> <xlo> <xhi> <ylo> <yhi> <zlo> <zhi>`|
-|/build_area_list|List all build areas|Admin||
-|/build_area_remove|Removes specified build area|Admin|`<name>`|
 |/campfire|Spawns a campfire|Admin||
-|/debug_column|Prints some debug information about a column|Moderator|`<x> <y>`|
+|/clear_persisted_terrain|Clears nearby persisted terrain|Admin|`<chunk_radius>`|
+|/create_location|Create a location at the current position|Moderator|`<name>`|
+|/debug_column|Prints some debug information about a column|Admin|`<x> <y>`|
+|/debug_ways|Prints some debug information about a column's ways|Admin|`<x> <y>`|
+|/delete_location|Delete a location|Moderator|`<name>`|
+|/destroy_tethers|Destroy all tethers connected to you|Admin||
 |/disconnect_all_players|Disconnects all players from the server|Admin|`<confirm>`|
+|/dismount|Dismount if you are riding, or dismount anything riding you|Admin|`<entity>`|
 |/dropall|Drops all your items on the ground|Moderator||
 |/dummy|Spawns a training dummy|Admin||
 |/explosion|Explodes the ground around you|Admin|`<radius>`|
 |/faction|Send messages to your faction||`[message]`|
-|/give_item|Give yourself some items. For an example or to auto complete use Tab.|Admin|`<item> [num]`|
-|/goto|Teleport to a position|Admin|`<x> <y> <z>`|
+|/give_item|Give yourself some items.
+For an example or to auto complete use Tab.|Admin|`<item> [num]`|
+|/goto|Teleport to a position|Admin|`<x> <y> <z> [Dismount from ship]`|
 |/group|Send messages to your group||`[message]`|
 |/group_invite|Invite a player to join a group||`<player>`|
 |/group_kick|Remove a player from a group||`<player>`|
@@ -33,50 +50,74 @@ All commands that can be executed in-game are listed below, note that many comma
 |/group_promote|Promote a player to group leader||`<player>`|
 |/health|Set your current health|Admin|`<hp>`|
 |/help|Display information about commands||`[[/]command]`|
-|/home|Return to the home town|Moderator||
+|/into_npc|Convert yourself to an NPC. Be careful!|Admin|`<entity_config>`|
 |/join_faction|Join/leave the specified faction||`[faction]`|
-|/jump|Offset your current position|Admin|`<x> <y> <z>`|
+|/jump|Offset your current position|Admin|`<x> <y> <z> [Dismount from ship]`|
 |/kick|Kick a player with a given username|Moderator|`<player> [message]`|
 |/kill|Kill yourself|||
-|/kill_npcs|Kill the NPCs|Admin||
+|/kill_npcs|Kill the NPCs|Admin|`[radius] [--also-pets]`|
 |/kit|Place a set of items into your inventory.|Admin|`<kit_name>`|
 |/lantern|Change your lantern's strength and color|Admin|`<strength> [r] [g] [b]`|
 |/light|Spawn entity with light|Admin|`[r] [g] [b] [x] [y] [z] [strength]`|
+|/lightning|Lightning strike at current position|Admin||
+|/location|Teleport to a location||`<name>`|
 |/make_block|Make a block at your location with a color|Admin|`<block> [r] [g] [b]`|
-|/make_npc|Spawn entity from config near you. For an example or to auto complete use Tab.|Admin|`<entity_config> [num]`|
+|/make_npc|Spawn entity from config near you.
+For an example or to auto complete use Tab.|Admin|`<entity_config> [num]`|
 |/make_sprite|Make a sprite at your location|Admin|`<sprite>`|
-|/motd|View the server description||`[message]`|
+|/make_volume|Create a volume (experimental)|Admin|`[size]`|
+|/motd|View the server description|||
+|/mount|Mount an entity|Admin|`<entity>`|
 |/object|Spawn an object|Admin|`<object>`|
 |/permit_build|Grants player a bounded box they can build in|Admin|`<area_name>`|
 |/players|Lists players currently online|||
+|/portal|Spawns a portal|Admin|`<x> <y> <z> [requires_no_aggro] [buildup_time]`|
 |/region|Send messages to everyone in your region of the world||`[message]`|
-|/reload_chunks|Reloads all chunks loaded on the server|Admin||
+|/reload_chunks|Reloads chunks loaded on the server|Admin|`[chunk_radius]`|
 |/remove_lights|Removes all lights spawned by players|Admin|`[radius]`|
+|/repair_equipment|Repairs all equipped items|Admin||
+|/reset_recipes|Resets your recipe book|Admin||
+|/respawn|Teleport to your waypoint|Moderator||
 |/revoke_build|Revokes build area permission for player|Admin|`<area_name>`|
 |/revoke_build_all|Revokes all build area permissions for player|Admin||
+|/rtsim_chunk|Display information about the current chunk from rtsim|Admin||
+|/rtsim_info|Display information about an rtsim NPC|Admin|`<npc index>`|
+|/rtsim_npc|List rtsim NPCs that fit a given query (e.g: simulated,merchant) in order of distance|Admin|`<query> [max number]`|
+|/rtsim_purge|Purge rtsim data on next startup|Admin|`<whether purging of rtsim data should occur on next startup>`|
+|/rtsim_tp|Teleport to an rtsim npc|Admin|`<npc index> [Dismount from ship]`|
 |/safezone|Creates a safezone|Moderator|`[range]`|
 |/say|Send messages to everyone within shouting distance||`[message]`|
+|/scale|Scale your character|Admin|`<factor> [reset_mass]`|
 |/server_physics|Set/unset server-authoritative physics for an account|Moderator|`<player> [enabled]`|
-|/set_motd|Set the server description|Admin|`[message]`|
-|/ship|Spawns a ship|Admin|`[destination_degrees_ccw_of_east]`|
-|/site|Teleport to a site|Moderator|`<site>`|
+|/set_motd|Set the server description|Admin|`[locale] [message]`|
+|/ship|Spawns a ship|Admin|`[kind] [Whether the ship should be tethered to the target (or its mount)] [destination_degrees_ccw_of_east]`|
+|/site|Teleport to a site|Moderator|`<site> [Dismount from ship]`|
 |/skill_point|Give yourself skill points for a particular skill tree|Admin|`<skill tree> [amount]`|
 |/skill_preset|Gives your character desired skills.|Admin|`<preset_name>`|
-|/spawn|Spawn a test entity|Admin|`<alignment> <entity> [amount] [ai]`|
-|/sudo|Run command as if you were another player|Moderator|`<player> <[/]command> [args...]`|
+|/spawn|Spawn a test entity|Admin|`<alignment> <entity> [amount] [ai] [scale] [tethered]`|
+|/sudo|Run command as if you were another entity|Moderator|`<entity> <[/]command> [args...]`|
 |/tell|Send a message to another player||`<player> [message]`|
+|/tether|Tether another entity to yourself|Admin|`<entity> [automatic length]`|
 |/time|Set the time of day|Admin|`[time]`|
-|/tp|Teleport to another player|Moderator|`[player]`|
+|/time_scale|Set scaling of delta time|Admin|`[time scale]`|
+|/tp|Teleport to another entity|Moderator|`[entity] [Dismount from ship]`|
 |/unban|Remove the ban for the given username|Moderator|`<player>`|
 |/version|Prints server version|||
 |/waypoint|Set your waypoint to your current position|Admin||
+|/weather_zone|Create a weather zone|Admin|`<weather kind> [radius] [time]`|
 |/whitelist|Adds/removes username to whitelist|Moderator|`<add/remove> <player>`|
 |/wiring|Create wiring element|Admin||
 |/world|Send messages to everyone on the server||`[message]`|
-|/make_volume|Create a volume (experimental)|Admin||
-|/location|Teleport to a location||`<name>`|
-|/create_location|Create a location at the current position|Moderator|`<name>`|
-|/delete_location|Delete a location|Moderator|`<name>`|
+
+## Voxygen Client Commands
+
+|Command|Description|Requires|Arguments|
+|-|-|-|-|
+|/clear|Clears all messages in chat. Affects all chat tabs.|||
+|/experimental_shader|Toggles an experimental shader.||`[Shader]`|
+|/help|Display information about commands||`[[/]command]`|
+|/mute|Mutes chat messages from a player.||`<player>`|
+|/unmute|Unmutes a player muted with the 'mute' command.||`<player>`|
 
 ## References
 
