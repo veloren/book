@@ -21,7 +21,7 @@ All commands that can be executed in-game are listed below, note that many comma
 |/area_list|List all build areas|Admin||
 |/area_remove|Removes specified build area|Admin|`<name> <kind>`|
 |/aura|Create an aura|Admin|`<aura_radius> [aura_duration] [new_entity] [aura_target] <aura_kind> [aura spec]`|
-|/ban|Ban a player with a given username, for a given duration (if provided).  Pass true for overwrite to alter an existing ban..|Moderator|`<player> [overwrite] [ban duration] [message]`|
+|/ban|Ban a player with a given username, for a given duration (if provided). Pass true for overwrite to alter an existing ban.|Moderator|`<player> [overwrite] [ban duration] [message]`|
 |/battlemode|Set your battle mode to: <ul><li> pvp (player vs player)</li><li>pve (player vs environment)</li></ul> If called without arguments will show current battle mode.||`[battle mode]`|
 |/battlemode_force|Change your battle mode flag without any checks|Admin|`<battle mode>`|
 |/body|Change your body to different species|Admin|`<body>`|
@@ -40,8 +40,7 @@ All commands that can be executed in-game are listed below, note that many comma
 |/dummy|Spawns a training dummy|Admin||
 |/explosion|Explodes the ground around you|Admin|`<radius>`|
 |/faction|Send messages to your faction||`[message]`|
-|/give_item|Give yourself some items.
-For an example or to auto complete use Tab.|Admin|`<item> [num]`|
+|/give_item|Give yourself some items. For an example or to auto complete use Tab.|Admin|`<item> [num]`|
 |/goto|Teleport to a position|Admin|`<x> <y> <z> [Dismount from ship]`|
 |/group|Send messages to your group||`[message]`|
 |/group_invite|Invite a player to join a group||`<player>`|
@@ -49,7 +48,6 @@ For an example or to auto complete use Tab.|Admin|`<item> [num]`|
 |/group_leave|Leave the current group|||
 |/group_promote|Promote a player to group leader||`<player>`|
 |/health|Set your current health|Admin|`<hp>`|
-|/help|Display information about commands||`[[/]command]`|
 |/into_npc|Convert yourself to an NPC. Be careful!|Admin|`<entity_config>`|
 |/join_faction|Join/leave the specified faction||`[faction]`|
 |/jump|Offset your current position|Admin|`<x> <y> <z> [Dismount from ship]`|
