@@ -16,7 +16,7 @@ Discussing, sharing and approving of music and SFX that will be featured in Velo
 
 3D models, 2D pixel art/icons, UI design, concept art.
 
-### Balance (led by crab (@crebmen))
+### Balance (led by Necti (@nectical))
 
 Balancing the mechanics and gameplay
 
