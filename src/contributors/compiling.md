@@ -8,7 +8,7 @@ This section covers building Veloren from rust source with `cargo` and running i
 
 On **Windows** you will need to install the following programs:
 
-* [Visual Studio Build Tools](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019)
+* [Visual Studio Build Tools](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2022)
 * [CMake](https://cmake.org/download/#latest)
 * [Ninja build system](https://github.com/ninja-build/ninja/releases)
 * [Python 3](https://www.python.org/downloads/windows/)
