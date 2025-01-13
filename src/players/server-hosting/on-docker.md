@@ -13,7 +13,10 @@ If you want to run a dedicated Veloren server 24/7 follow this.
 1. Create a folder for the server data and `cd` into it.
 2. Download the sample `docker-compose.yml` from [the repository](https://gitlab.com/veloren/veloren/-/blob/master/server-cli/docker-compose.yml) into the folder.  
 `wget https://gitlab.com/veloren/veloren/-/raw/master/server-cli/docker-compose.yml`
-3. If needed, open port `14004` (`14005` for metrics) in your firewall.
+3. If needed, open the following ports in your firewall:
+    - `14004` (TCP, required): Gameserver
+    - `14005` (TCP, optional): HTTP metrics
+    - `14006` (UDP, optional): Query server protocol
 4. To create and start the containers, run `sudo docker-compose up -d`.  
 If you modify the `docker-compose.yml` file, you'll need to run that command again for it to take effect.
 5. Add moderators/admins by following [the instructions below](#running-commands-inside-the-docker-container)
