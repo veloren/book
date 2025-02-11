@@ -2,10 +2,12 @@
 
 The best way to contribute audio is to first visit the Discord, ask for a contributor role in the #new-contributors channel, and start a conversation in the #audio channel.
 
-All sound files should be in Vorbis format (with the `.ogg` file extension) and
+All sound files must be in Vorbis format (with the `.ogg` file extension) and
 exported at Variable Bit Rate level 5.
 The quick and easy way to do this is to export as a .wav, open it in Audacity,
 and export it again as an Ogg Vorbis file at compression level "5".
+
+It is customary to check in with one of the audio leads on Discord to get your music and sound effects approved for the game.
 
 ## Sound Effects
 
@@ -19,9 +21,9 @@ SFX events retrieve SFX from the `sfx.ron` file. They are mostly triggered by an
 
 Outcome SFX are retrieved from `sfx.ron` and handled in `voxygen\src\audio\sfx\mod.rs`. Outcomes are emitted from whichever code is related to it, be it combat, server event, etc. The outcome must also be added to `common\src\outcome.rs`.
 
-UI SFX usually stereo sounds that play directly to the player (i.e. not from a place in the world).
+UI SFX are usually stereo sounds that play directly to the player (i.e. not from a place in the world).
 
-There are is also ambience, used for things like wind and rain. These sounds are always stereo. The code for it is in `voxygen\src\audio\ambient.rs`, the files are in `assets\voxygen\audio\ambient`, and its manifest is `assets\voxygen\audio\ambient.ron`.
+There are is also ambience, used for things like wind and rain. These sounds are always stereo. The code for it is in `voxygen\src\audio\ambience.rs`, the files are in `assets\voxygen\audio\ambience`, and its manifest is `assets\voxygen\audio\ambience.ron`.
 
 If possible, have your SFX tested in-game before trying to merge it; ensure it sounds right and plays at the right volume. Be sure to get a second opinion from the Discord channel!
 
@@ -29,16 +31,14 @@ If possible, have your SFX tested in-game before trying to merge it; ensure it s
 
 Music files are found in `assets\voxygen\audio\soundtrack\`. The game retrieves the files via the `soundtrack.ron` file. Music should be normalized at -1dB after mastering.
 
-It is customary to check in with one of the audio leads on Discord to get your music approved for the game.
-
 >Rough loudness guidelines:
 > For people with LUFS analysis software, try to keep the max LUFS-S (after normalization) between -14 and -13 for exploration tracks, and between -13 and -12 for combat tracks. If in doubt, compare directly with existing tracks.
 
 ### Exploration
 
-The game plays exploration music as single, standalone tracks in the background. When one track ends, some time passes before another track plays. Which track is played is determined by which site, biome, and time of day the player is in.
+The game plays exploration music as single, standalone tracks in the background. When one track ends, some time passes before another track plays. Which track is played is determined by which site, biome, weather, and time of day the player is in.
 
-The available sites currently are the overworld, dungeons, caves, and towns.
+The available sites currently are the overworld, dungeons, caves, and towns. For an up-to-date list of sites, see `/common/src/terrain/site.rs`.
 
 The available biomes currently are Grassland, Forest, Desert, Tundra, Lake, Mountain, Ocean, Jungle, Savannah and Taiga.  A Swamp biome is planned, but doesn't exist yet. For an up-to-date list of biomes, see `common\src\terrain\biome.rs`.
 
@@ -55,6 +55,8 @@ The times of day are day and night.
 Exploration music should have soft starts and endings since they come in at essentially random times.
 
 ### Combat
+
+**Note: Currently, combat music is a disabled feature, as it doesn't work well with the new dungeons nor the new backend. It is due for redesigning.**
 
 The current implementation of the combat music system is as follows:
 
