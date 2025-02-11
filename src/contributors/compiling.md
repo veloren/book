@@ -38,6 +38,7 @@ On **Gentoo** you may require having to enable certain use flags for specific pa
 
 On **Debian** systems additional libraries may need to be downloaded, below is a non-exhaustive list:
 
+* g++
 * libglib2.0-dev
 * libcairo2-dev
 * libasound2-dev
@@ -52,7 +53,7 @@ On **Debian** systems additional libraries may need to be downloaded, below is a
 * libxcb-xkb-dev
 
 And a one liner to download and install them all:<br/>
-`sudo apt install libglib2.0-dev libasound2-dev libcairo2-dev libpango1.0-dev libatk1.0-dev libgtk-3-dev libxcb-shape0-dev libxcb-xfixes0-dev libudev-dev libxkbcommon-x11-dev libxcb-xkb-dev`
+`sudo apt install g++ libglib2.0-dev libasound2-dev libcairo2-dev libpango1.0-dev libatk1.0-dev libgtk-3-dev libxcb-shape0-dev libxcb-xfixes0-dev libudev-dev libxkbcommon-x11-dev libxcb-xkb-dev`
 
 On **Fedora** systems additional libraries may need to be downloaded, below is a command to install them:<br/>
 `sudo dnf install gcc gcc-c++ binutils-gold cmake alsa-lib-devel libxkbcommon-x11-devel libudev-devel`
