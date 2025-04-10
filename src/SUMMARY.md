@@ -53,6 +53,7 @@
   - [For Translators](contributors/translators/README.md)
     - [Translating the game](contributors/translators/game-translation.md)
     - [Managing Weblate](contributors/translators/weblate-admin.md)
+    - [Developer's Guide](contributors/translators/developers-guide.md)
   - [For Animators]()
     - [Animate a skeleton]()
   - [For Game Designers](contributors/game-designers/README.md)

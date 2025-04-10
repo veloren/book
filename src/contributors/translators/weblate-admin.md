@@ -180,8 +180,72 @@ metadata: (
 
 Remember to set the value of `language_identifier` to match the parent directory's name.
 
-**Tip:** You can set `convert_utf8_to_ascii` option to `true` to
-convert everything to ASCII, so that the missing characters can be seen properly.
+Here's the complete example:
+```rust, ignore
+/// Localization for Čeština
+(
+    metadata: (
+        language_name: "Čeština (Czech)",
+        language_identifier: "cs",
+    ),
+    fonts: {
+        "alkhemi": Font (
+            asset_key: "voxygen.font.Alkhemikal",
+            scale_ratio: 1.0,
+        ),
+        "cyri": Font (
+            asset_key: "voxygen.font.EnterCommand",
+            scale_ratio: 1.0,
+        ),
+    }
+)
+```
+Fonts have two required entries and one optional one:
+- alkhemi stands for super fancy font we use for special strings. English only usually.
+- cyri stands for regular font we use for everything else. Used for translated strings.
+- universal stands for font that should cover every language. Used for chat or similar cases.
+
+You don't need to set "universal" font usually, but if universal font doesn't cover your language,
+you would want to override it.
+That's what Korean does.
+```rust, ignore
+/// WARNING: Localization files shall be saved in UTF-8 format without BOM
+
+/// Localization for Korean
+(
+    metadata: (
+        language_name: "한국어 (Korean)",
+        language_identifier: "ko",
+    ),
+    fonts: {
+        "universal": Font (
+            asset_key: "voxygen.font.bdfUMplus-outline",
+            scale_ratio: 0.75,
+        ),
+        "alkhemi": Font (
+            asset_key: "voxygen.font.bdfUMplus-outline",
+            scale_ratio: 0.75,
+        ),
+        "cyri": Font (
+            asset_key: "voxygen.font.bdfUMplus-outline",
+            scale_ratio: 0.75,
+        ),
+    }
+)
+```
+
+#### Adding new font
+If available fonts in `assets/voxygen/font/` folder aren't enough for you, you can add a new one, or modify existing fonts.
+Instruction of how to modify existing fonts are out of scope, but keep in mind that fonts have different licences, and
+potentially not all fonts support modifications.
+
+If you want to add new font, you need to find it, get its license, check that it is compatible with our project and that we can
+redistribute it.
+
+When you have the font file (in TTF format), and the LICENSE, steps are as following:
+1. Put the font into `assets/voxygen/font`
+2. Add `<font>-license.txt` with a license
+3. Mention the font in `assets/credits.ron`
 
 ## Translation system explained
 
