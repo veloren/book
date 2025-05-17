@@ -6,7 +6,7 @@ colourful, fun world that can be explored and interacted with in unique and inte
 ## Website
 
 The Veloren website contains weekly blog updates, developer information and download links.
-You can find it at [www.veloren.net](https://www.veloren.net)
+You can find it at [veloren.net](https://veloren.net)
 
 ## Discord
 
