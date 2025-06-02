@@ -85,7 +85,7 @@
 
 ### How to donate?
 
-> You can support Veloren here: <https://opencollective.com/veloren>. All donations go into server upkeep and management.
+> You can support Veloren here: <https://veloren.net/donate>. All donations go into server upkeep and management.
 
 ### Will we be able to build in the game?
 
@@ -164,7 +164,7 @@
 > 3. Open terminal and write chmod +x ~/Downloads/airshipper-macos/airshipper
 > 4. Double click the file
 > 5. Enable running in system preferences>Security & Privacy>Allow
-> Linux: You can download the Linux Airshipper here: <https://veloren.net/download/>
+> Linux: You can download the Linux Airshipper here: <https://veloren.net/download>
 
 ### How to host a server?
 
