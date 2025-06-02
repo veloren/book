@@ -6,7 +6,7 @@
    (**Note:** make sure no sensitive information is included in the log files)
 4. Submit the issue
 
-**Tip:** _Incase you do not want to create an GitLab account you can join our [Discord](https://discord.gg/veloren-community-449602562165833758)
+**Tip:** _Incase you do not want to create an GitLab account you can join our [Discord](https://veloren.net/discord)
 and report the bug in `#bugs-and-support`._
 
 ## Collect Logs

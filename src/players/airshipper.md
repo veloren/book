@@ -7,7 +7,7 @@ Due to our frequent updates it is the recommended way of installing Veloren.
 
 ## Download
 
-Visit the [download page](https://veloren.net/download/) to download Airshipper.
+Visit the [download page](https://veloren.net/download) to download Airshipper.
 
 ## Files
 

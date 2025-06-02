@@ -115,7 +115,7 @@ Remember to adjust these commands to your applicable version.
 7. Verify the release container is built.
     - <https://gitlab.com/veloren/veloren/container_registry>
 8. Add a link on the website to the release.
-    - <https://veloren.net/download-other/>
+    - <https://veloren.net/download-other>
 9. Create a release on GitLab.
 10. Verify the release binaries have been copied to Wasabi.
 

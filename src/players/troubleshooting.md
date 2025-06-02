@@ -20,11 +20,9 @@ If you've found a solution to a problem that wasn't mentioned here, you can
 
 If you can't find a solution to your problem here, you can ask for help from the community:
 
-- [Discord Community](https://discord.gg/veloren-community-449602562165833758)
-
+- [Discord Community](https://veloren.net/discord)
+- [Zulip Community](https://veloren.net/zulip)
 - [Reddit Community](https://www.reddit.com/r/Veloren/)
-
-- [Matrix Community](https://matrix.to/#/!XE8JMjIKOzVcryA0kc:conduit.rs?via=conduit.rs&via=matrix.org&via=tchncs.de)
 
 If you think you've encountered a more serious bug, you can
 [report the bug on GitLab](https://gitlab.com/veloren/veloren/issues).
@@ -92,7 +90,7 @@ Running Veloren might require that you update your graphics drivers, or install 
 ### Graphics Backend
 
 <video width="640" height="460" autoplay loop muted>
-  <source src="https://cdn.discordapp.com/attachments/464698017283440640/1016333211472764928/airshipper_qDdxbKVHnq.mp4" type="video/mp4">
+  <source src="https://s3.eu-central-2.wasabisys.com/veloren-blog/cdn/464698017283440640/1016333211472764928/airshipper_qDdxbKVHnq.mp4" type="video/mp4">
   Your browser does not support video tag
 </video>
 
@@ -112,7 +110,7 @@ If you're running Airshipper in [compatibility mode](#compatibility-mode), you c
 running `airshipper config` into your console. You will be presented with a menu that will allow you to configure
 Airshipper's settings in a similar manner to the GUI.
 
-![Changing the graphics backend in compatibility mode](https://cdn.discordapp.com/attachments/464698017283440640/1052953152971886592/image.png)
+![Changing the graphics backend in compatibility mode](https://s3.eu-central-2.wasabisys.com/veloren-blog/cdn/464698017283440640/1052953152971886592/image.png)
 
 In older versions of Airshipper, you can still change the graphics backend by opening the file
 [`airshipper_state.ron`](airshipper.md#files) in a text editor. Toward the bottom of the file is the following line:
@@ -126,13 +124,13 @@ You can replace `Auto` with one of `DX11`, `DX12`, `Vulkan`, or `Metal`
 
 ### Airshipper is missing UI elements or flickers when moving the mouse
 
-![Airshipper graphics problems](https://media.discordapp.net/attachments/464698017283440640/887397846259744809/Graphical_glitches.png)
+![Airshipper graphics problems](https://s3.eu-central-2.wasabisys.com/veloren-blog/cdn/464698017283440640/887397846259744809/Graphical_glitches.png)
 
 To fix this, you may need to [update your graphics drivers](#drivers).
 
 ### Graphical glitches in-game
 
-![In-game graphics problems](https://cdn.discordapp.com/attachments/464698017283440640/1015302288685928498/unknown.png)
+![In-game graphics problems](https://s3.eu-central-2.wasabisys.com/veloren-blog/cdn/464698017283440640/1015302288685928498/unknown.png)
 
 You may need to update [update your graphics drivers](#drivers).
 
